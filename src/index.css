@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
+
+  --color-teal: #008080;
+  --color-teal-dark: #006666;
+  --color-teal-light: #E0F2F2;
+  --color-offwhite: #FAFAF7;
+  --color-charcoal: #1F2937;
+  --color-charcoal-light: #2B3748;
+  --color-gold: #C9A961;
+  --color-gold-muted: #B8943E;
+}
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-offwhite);
+    color: var(--color-charcoal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .section-container {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(circle, #CBD5E1 1.5px, transparent 1.5px);
+    background-size: 28px 28px;
+  }
+}
