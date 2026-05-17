@@ -1,6 +1,6 @@
 import { useLang } from '../context/LangContext';
 import { demo } from '../data/content';
-import { demoUrl } from '../utils/links';
+import { enrollUrl } from '../utils/links';
 
 export default function Demo() {
   const { t } = useLang();
@@ -24,59 +24,32 @@ export default function Demo() {
             {t(demo.body)}
           </p>
 
-          {/* Video placeholder */}
+          {/* Product video */}
           <div
-            className="relative rounded-3xl overflow-hidden mb-8 cursor-pointer group"
-            style={{
-              background: 'linear-gradient(135deg, #1F2937 0%, #111827 100%)',
-              aspectRatio: '16 / 9',
-            }}
+            className="relative rounded-3xl overflow-hidden mb-8 bg-charcoal shadow-2xl shadow-charcoal/20 ring-1 ring-charcoal/5"
+            style={{ aspectRatio: '16 / 9' }}
           >
-            {/* Subtle teal glow */}
-            <div
-              className="absolute inset-0 opacity-20"
-              style={{ background: 'radial-gradient(ellipse at center, #008080 0%, transparent 65%)' }}
-              aria-hidden="true"
-            />
-
-            {/* WhatsApp icon in background */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none" aria-hidden="true">
-              <span className="text-[160px]">💬</span>
-            </div>
-
-            {/* Play button */}
-            <a
-              href={demoUrl}
-              className="absolute inset-0 flex flex-col items-center justify-center gap-4"
-              aria-label={t(demo.cta)}
+            <video
+              className="absolute inset-0 h-full w-full"
+              src="/sofia-overview.mp4"
+              poster="/sofia-overview-poster.jpg"
+              controls
+              playsInline
+              preload="metadata"
             >
-              <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center group-hover:bg-teal/80 group-hover:border-teal transition-all duration-300 shadow-xl">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-white ml-1" aria-hidden="true">
-                  <path d="M8 5.14v14l11-7-11-7z" />
-                </svg>
-              </div>
-              <div>
-                <p className="text-white font-semibold text-sm">
-                  {t(demo.cta)}
-                </p>
-                <p className="text-white/50 text-xs mt-1">
-                  {t({ es: 'Sin guion. Sin edición.', en: 'No script. No edits.' })}
-                </p>
-              </div>
-            </a>
-
-            {/* Duration badge */}
-            <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur text-white text-xs font-mono px-2.5 py-1 rounded-lg">
-              5:00
-            </div>
+              {t({
+                es: 'Su navegador no reproduce este video.',
+                en: 'Your browser does not support this video.',
+              })}
+            </video>
           </div>
 
           {/* CTA link */}
           <a
-            href={demoUrl}
+            href={enrollUrl}
             className="inline-flex items-center gap-2 text-teal font-semibold hover:underline underline-offset-2"
           >
-            {t(demo.cta)}
+            {t({ es: 'Solicitar una de las 3 plazas →', en: 'Apply for one of the 3 spots →' })}
           </a>
         </div>
       </div>

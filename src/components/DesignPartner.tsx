@@ -1,6 +1,6 @@
 import { useLang } from '../context/LangContext';
 import { designPartner } from '../data/content';
-import { formUrl } from '../utils/links';
+import { enrollUrl } from '../utils/links';
 
 export default function DesignPartner() {
   const { t } = useLang();
@@ -74,9 +74,7 @@ export default function DesignPartner() {
           {/* CTA */}
           <div className="flex flex-col items-center gap-3">
             <a
-              href={formUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={enrollUrl}
               className="inline-flex items-center bg-gold text-white font-bold px-8 py-4 rounded-xl text-base hover:bg-gold-muted transition-colors shadow-lg shadow-gold/30"
             >
               {t(designPartner.cta)}

@@ -150,10 +150,10 @@ export const features = {
 export const demo = {
   title: { es: 'Vea a Sofía en acción', en: 'See Sofía in action' } as Bilingual,
   body: {
-    es: 'Una conversación real de 5 minutos: paciente de San Diego pregunta por implantes, Sofía agenda la consulta, envía mapa para cruzar la frontera, y manda recordatorio. Sin guion, sin trampa.',
-    en: 'A real 5-minute conversation: San Diego patient asks about implants, Sofía books the consultation, sends border-crossing map, and triggers reminders. No script, no trick.',
+    es: 'Un recorrido de menos de dos minutos: el cambio de idioma a media conversación, precios al instante, un horario ya ocupado que Sofía corrige sola, y dos citas resueltas en una sola visita. Momentos reales de WhatsApp.',
+    en: 'An under-two-minute tour: the mid-conversation language switch, instant pricing, an already-booked time Sofía catches on her own, and two appointments handled in a single visit. Real WhatsApp moments.',
   } as Bilingual,
-  cta: { es: 'Ver demo de 5 min →', en: 'Watch 5-min demo →' } as Bilingual,
+  cta: { es: 'Ver el recorrido →', en: 'Watch the tour →' } as Bilingual,
 };
 
 // ──────────────────────────────────────────────────────────────
@@ -328,10 +328,10 @@ export const footerData = {
   product: {
     label: { es: 'Producto', en: 'Product' } as Bilingual,
     links: [
-      { label: { es: 'Cómo funciona', en: 'How it works' } as Bilingual, href: '#como-funciona' },
-      { label: { es: 'Precios', en: 'Pricing' } as Bilingual, href: '#precios' },
-      { label: { es: 'Demo', en: 'Demo' } as Bilingual, href: '#demo' },
-      { label: { es: 'FAQ', en: 'FAQ' } as Bilingual, href: '#faq' },
+      { label: { es: 'Cómo funciona', en: 'How it works' } as Bilingual, href: '/#como-funciona' },
+      { label: { es: 'Precios', en: 'Pricing' } as Bilingual, href: '/#precios' },
+      { label: { es: 'Demo', en: 'Demo' } as Bilingual, href: '/#demo' },
+      { label: { es: 'FAQ', en: 'FAQ' } as Bilingual, href: '/#faq' },
     ],
   },
   legal: {
