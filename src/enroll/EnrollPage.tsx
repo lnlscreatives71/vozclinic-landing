@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import type { ChangeEvent, FormEvent, ReactNode } from 'react';
+import { useState, useRef } from 'react';
+import type { ChangeEvent, ReactNode } from 'react';
 import { useLang } from '../context/LangContext';
 import { designPartner } from '../data/content';
 import { formActionUrl, formUrl, waUrl } from '../utils/links';
@@ -7,8 +7,10 @@ import Footer from '../components/Footer';
 
 // ── Google Form field map ───────────────────────────────────────────────
 // Each key is an entry.<id> from the live VozClinic design-partner Google
-// Form. POSTing to formActionUrl with these names lands every response in the
-// exact same Google Sheet as the original unbranded form.
+// Form. The form ALSO collects the responder's email as a required built-in
+// field, submitted under the reserved name `emailAddress` (not an entry.<id>).
+// Submitting all of these to formActionUrl lands every response in the exact
+// same Google Sheet as the original unbranded form.
 const ENTRY = {
   name: 'entry.1096601393',
   whatsapp: 'entry.613559452',
@@ -18,6 +20,10 @@ const ENTRY = {
   tools: 'entry.1473062399',
   heard: 'entry.2104983565',
 } as const;
+const EMAIL_FIELD = 'emailAddress';
+
+// The form POSTs into this hidden iframe so the page itself never navigates.
+const SINK = 'vc-gform-sink';
 
 type Opt = { v: string; es: string; en: string };
 
@@ -70,6 +76,7 @@ const HEARD: Opt[] = [
 
 type FormState = {
   name: string;
+  email: string;
   whatsapp: string;
   clinicType: string;
   volume: string;
@@ -80,6 +87,7 @@ type FormState = {
 
 const EMPTY: FormState = {
   name: '',
+  email: '',
   whatsapp: '',
   clinicType: '',
   volume: '',
@@ -120,7 +128,9 @@ function Field({
 export default function EnrollPage() {
   const { lang, setLang, t } = useLang();
   const [form, setForm] = useState<FormState>(EMPTY);
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'done' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'done'>('idle');
+  const submittedRef = useRef(false);
+  const doneTimer = useRef<number | undefined>(undefined);
 
   const ol = (o: Opt) => (lang === 'es' ? o.es : o.en);
 
@@ -129,28 +139,26 @@ export default function EnrollPage() {
     (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
       setForm((f) => ({ ...f, [key]: e.target.value }));
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const finish = () => {
+    if (doneTimer.current) window.clearTimeout(doneTimer.current);
+    setStatus('done');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // The native <form> POST proceeds into the hidden iframe (no preventDefault),
+  // exactly like submitting the real Google Form. Browser `required` validation
+  // has already passed if this handler runs.
+  const handleSubmit = () => {
+    submittedRef.current = true;
     setStatus('submitting');
+    // Safety net: the POST has already left the browser; if the iframe's load
+    // event is slow or blocked, still show success after a short wait.
+    doneTimer.current = window.setTimeout(finish, 9000);
+  };
 
-    const body = new URLSearchParams();
-    body.append(ENTRY.name, form.name);
-    body.append(ENTRY.whatsapp, form.whatsapp);
-    body.append(ENTRY.clinicType, form.clinicType);
-    body.append(ENTRY.volume, form.volume);
-    body.append(ENTRY.fixOne, form.fixOne);
-    body.append(ENTRY.tools, form.tools);
-    body.append(ENTRY.heard, form.heard);
-
-    try {
-      // Google Forms does not send CORS headers; `no-cors` lets the POST
-      // through (the response is opaque, but the submission is recorded).
-      await fetch(formActionUrl, { method: 'POST', mode: 'no-cors', body });
-      setStatus('done');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } catch {
-      setStatus('error');
-    }
+  // The iframe fires `load` once on mount (about:blank) — ignore that one.
+  const handleSinkLoad = () => {
+    if (submittedRef.current) finish();
   };
 
   const header = (
@@ -329,7 +337,13 @@ export default function EnrollPage() {
                   })}
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-6" noValidate={false}>
+                <form
+                  action={formActionUrl}
+                  method="POST"
+                  target={SINK}
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                >
                   <Field
                     id="name"
                     label={t({
@@ -339,6 +353,7 @@ export default function EnrollPage() {
                   >
                     <input
                       id="name"
+                      name={ENTRY.name}
                       type="text"
                       required
                       value={form.name}
@@ -352,6 +367,22 @@ export default function EnrollPage() {
                   </Field>
 
                   <Field
+                    id="email"
+                    label={t({ es: 'Su correo electrónico', en: 'Your email' })}
+                  >
+                    <input
+                      id="email"
+                      name={EMAIL_FIELD}
+                      type="email"
+                      required
+                      value={form.email}
+                      onChange={set('email')}
+                      className={fieldCls}
+                      placeholder="ana@clinicasonrisa.com"
+                    />
+                  </Field>
+
+                  <Field
                     id="whatsapp"
                     label={t({
                       es: 'Su WhatsApp (con lada)',
@@ -360,6 +391,7 @@ export default function EnrollPage() {
                   >
                     <input
                       id="whatsapp"
+                      name={ENTRY.whatsapp}
                       type="tel"
                       inputMode="tel"
                       required
@@ -376,6 +408,7 @@ export default function EnrollPage() {
                   >
                     <select
                       id="clinicType"
+                      name={ENTRY.clinicType}
                       required
                       value={form.clinicType}
                       onChange={set('clinicType')}
@@ -401,6 +434,7 @@ export default function EnrollPage() {
                   >
                     <select
                       id="volume"
+                      name={ENTRY.volume}
                       required
                       value={form.volume}
                       onChange={set('volume')}
@@ -430,6 +464,7 @@ export default function EnrollPage() {
                   >
                     <select
                       id="tools"
+                      name={ENTRY.tools}
                       required
                       value={form.tools}
                       onChange={set('tools')}
@@ -455,6 +490,7 @@ export default function EnrollPage() {
                   >
                     <textarea
                       id="fixOne"
+                      name={ENTRY.fixOne}
                       required
                       rows={3}
                       value={form.fixOne}
@@ -473,6 +509,7 @@ export default function EnrollPage() {
                   >
                     <select
                       id="heard"
+                      name={ENTRY.heard}
                       required
                       value={form.heard}
                       onChange={set('heard')}
@@ -488,24 +525,6 @@ export default function EnrollPage() {
                       ))}
                     </select>
                   </Field>
-
-                  {status === 'error' ? (
-                    <div className="rounded-xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
-                      {t({
-                        es: 'No pudimos enviar su solicitud. Revise su conexión e intente de nuevo, o ',
-                        en: "We couldn't send your application. Check your connection and try again, or ",
-                      })}
-                      <a
-                        href={formUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-semibold underline"
-                      >
-                        {t({ es: 'use el formulario clásico', en: 'use the classic form' })}
-                      </a>
-                      .
-                    </div>
-                  ) : null}
 
                   <button
                     type="submit"
@@ -524,6 +543,16 @@ export default function EnrollPage() {
                     })}
                   </p>
                 </form>
+
+                {/* Hidden sink: the form POSTs here so the page never navigates. */}
+                <iframe
+                  name={SINK}
+                  title="form submission target"
+                  aria-hidden="true"
+                  tabIndex={-1}
+                  onLoad={handleSinkLoad}
+                  style={{ display: 'none' }}
+                />
               </div>
 
               <p className="text-center text-sm text-gray-500 mt-6">
@@ -535,6 +564,19 @@ export default function EnrollPage() {
                   className="font-semibold text-teal hover:underline underline-offset-2"
                 >
                   {t({ es: 'Escríbame por WhatsApp', en: 'Message me on WhatsApp' })}
+                </a>
+              </p>
+              <p className="text-center text-xs text-gray-400 mt-2">
+                <a
+                  href={formUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline underline-offset-2"
+                >
+                  {t({
+                    es: '¿Problemas con el formulario? Ábralo en Google Forms',
+                    en: 'Trouble with the form? Open it in Google Forms',
+                  })}
                 </a>
               </p>
             </div>
