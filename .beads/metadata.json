@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "vozclinic_landing",
+  "project_id": "d79013dd-60fa-42bb-91a2-c88a85507e6a"
+}
