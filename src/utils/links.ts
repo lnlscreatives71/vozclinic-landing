@@ -18,3 +18,8 @@ export const formActionUrl =
   'https://docs.google.com/forms/d/e/1FAIpQLSe42ad2xbkXbk33RldTl2-BKyKWF6ZUHudJ25WrDw8CVX9fDg/formResponse';
 
 export const demoUrl = '#demo';
+
+// Waitlist Google Form — the Pricing-section CTAs route here. Responses land
+// in its linked Google Sheet. Separate from `formUrl` (design-partner form).
+export const waitlistUrl =
+  'https://docs.google.com/forms/d/e/1FAIpQLSdOsgZhPaPZjRFEzihqnMjB_Vj7LWrUFt-CqhszZra1YjbDiQ/viewform';

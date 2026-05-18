@@ -1,6 +1,6 @@
 import { useLang } from '../context/LangContext';
 import { pricing } from '../data/content';
-import { calendlyUrl } from '../utils/links';
+import { waitlistUrl } from '../utils/links';
 
 export default function Pricing() {
   const { t } = useLang();
@@ -75,7 +75,7 @@ export default function Pricing() {
 
               {/* CTA */}
               <a
-                href={calendlyUrl(`pricing-${plan.name.toLowerCase()}`)}
+                href={waitlistUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`
@@ -86,8 +86,16 @@ export default function Pricing() {
                   }
                 `}
               >
-                {t({ es: 'Empezar gratis →', en: 'Start free →' })}
+                {t({ es: 'Unirme a la lista de espera →', en: 'Join waitlist →' })}
               </a>
+
+              {/* Waitlist release note */}
+              <p className={`text-xs text-center mt-3 ${plan.highlight ? 'text-white/70' : 'text-gray-400'}`}>
+                {t({
+                  es: 'Lanzamiento previsto: septiembre 2026',
+                  en: 'Expected release: September 2026',
+                })}
+              </p>
             </div>
           ))}
         </div>
