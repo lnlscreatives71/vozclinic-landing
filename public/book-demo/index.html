@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a demo · VozClinic</title>
+  <meta name="description" content="You qualify as Phase 1 fit! Book your 30-minute demo with Lainie.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23008080%22/><path d=%22M25,25 L45,75 Q50,85 55,75 L75,25 L60,25 L50,55 L40,25 Z%22 fill=%22%23FFFFFF%22/></svg>">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .booking-shell { display: flex; flex-direction: column; min-height: 100vh; }
+    .booking-banner {
+      background-color: #ECFDF5;
+      border-bottom: 1px solid #A7F3D0;
+      padding: 1rem 1.5rem;
+      text-align: center;
+    }
+    .booking-banner strong { color: #047857; }
+    .booking-banner p { margin: 0.25rem 0 0; color: #4B5563; font-size: 0.95rem; }
+    .booking-frame-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem 2rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    /* Appointy embed auto-resizes via postMessage (see inline script
+       below). scrolling="no" + width:100% lets the iframe behave like
+       a normal block element. */
+    #appointy-iframe { display: block; width: 100%; border: 0; }
+    .no-border { border: 0; }
+    .booking-fallback {
+      text-align: center;
+      padding: 1rem 0 0;
+      font-size: 0.875rem;
+      color: #6B7280;
+    }
+    .booking-fallback a { color: #008080; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="/" class="logo-link" aria-label="VozClinic Home">
+        <svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100" height="100" rx="20" fill="#008080"/>
+          <path d="M 20 25 L 46 80 Q 50 88 54 80 L 80 25 L 64 25 L 50 56 L 36 25 Z" fill="#FFFFFF"/>
+          <rect x="48.5" y="24" width="3" height="24" rx="1.5" fill="#008080"/>
+          <rect x="42.5" y="28" width="3" height="16" rx="1.5" fill="#008080"/>
+          <rect x="54.5" y="28" width="3" height="16" rx="1.5" fill="#008080"/>
+          <rect x="36.5" y="32" width="3" height="8" rx="1.5" fill="#008080"/>
+          <rect x="60.5" y="32" width="3" height="8" rx="1.5" fill="#008080"/>
+        </svg>
+        <span class="logo-text">VozClinic</span>
+      </a>
+      <a href="/agendar-demo/" class="lang-toggle" aria-label="Cambiar a español">ES</a>
+    </div>
+  </header>
+
+  <div class="booking-shell">
+    <div class="booking-banner">
+      <strong>✓ You qualify as Phase 1 fit!</strong>
+      <p>Book 30 minutes with me for a live demo and to walk through the founding partner terms.</p>
+    </div>
+
+    <div class="booking-frame-wrap">
+      <iframe id="appointy-iframe" class="no-border"
+        src="https://booking.appointy.com/vozclinic?isgadget=1&autoheight=1&sr=1261825&st=798259&cat=579270"
+        scrolling="no" width="100%" frameBorder="0"
+        title="Book a demo with VozClinic"
+        allow="payment; geolocation; microphone; camera"></iframe>
+      <p class="booking-fallback">
+        Calendar not loading? <a href="https://booking.appointy.com/vozclinic?sr=1261825&st=798259&cat=579270" target="_blank" rel="noopener">Open it directly in a new tab →</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Appointy posts {type:"height", data:<px>} on content change so the
+    // iframe matches its internal layout, and {type:"scroll"} to pull the
+    // booking view back into focus after step transitions.
+    (function () {
+      const ifrm = document.getElementById("appointy-iframe");
+      window.addEventListener("message", function (e) {
+        const d = e.data || {};
+        if (d.type === "height") ifrm.style.height = d.data + "px";
+        if (d.type === "scroll") ifrm.scrollIntoView();
+      });
+    })();
+  </script>
+
+  <footer>
+    <div class="footer-content" style="padding: 1.5rem 0;">
+      <div class="footer-signature">— Lainie Mayfield, Founder of VozClinic</div>
+    </div>
+  </footer>
+
+</body>
+</html>

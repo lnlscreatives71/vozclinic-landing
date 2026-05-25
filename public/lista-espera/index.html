@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Únete a la lista de espera · VozClinic</title>
+  <meta name="description" content="¿Tu clínica dental o med spa en Tijuana, Rosarito o Ensenada necesita una recepcionista de WhatsApp 24/7? Califica para el programa de socios fundadores de VozClinic.">
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23008080%22/><path d=%22M25,25 L45,75 Q50,85 55,75 L75,25 L60,25 L50,55 L40,25 Z%22 fill=%22%23FFFFFF%22/></svg>">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="/" class="logo-link" aria-label="VozClinic Inicio">
+        <svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100" height="100" rx="20" fill="#008080"/>
+          <path d="M 20 25 L 46 80 Q 50 88 54 80 L 80 25 L 64 25 L 50 56 L 36 25 Z" fill="#FFFFFF"/>
+          <rect x="48.5" y="24" width="3" height="24" rx="1.5" fill="#008080"/>
+          <rect x="42.5" y="28" width="3" height="16" rx="1.5" fill="#008080"/>
+          <rect x="54.5" y="28" width="3" height="16" rx="1.5" fill="#008080"/>
+          <rect x="36.5" y="32" width="3" height="8" rx="1.5" fill="#008080"/>
+          <rect x="60.5" y="32" width="3" height="8" rx="1.5" fill="#008080"/>
+        </svg>
+        <span class="logo-text">VozClinic</span>
+      </a>
+      <a href="/waitlist/" class="lang-toggle" aria-label="Switch to English">EN</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero-grid" id="hero">
+      <div class="hero-text">
+        <span class="eyebrow">Lista de Espera · Programa de Socios Fundadores</span>
+        <h1>Cuéntame sobre tu clínica.</h1>
+        <p class="hero-subhead">
+          Estamos seleccionando un grupo pequeño de clínicas dentales y med spas en Baja California para nuestro programa de socios fundadores. Si calificas como Phase 1 fit, te contacto en 48 horas para agendar una demo. Si no, te sumo a la lista de espera y te aviso cuando podamos arrancar contigo.
+        </p>
+      </div>
+    </section>
+
+    <section id="formulario">
+      <div class="form-max-wrap">
+        <h2>Aplica en 2 minutos</h2>
+
+        <form id="qualifier-form" class="referral-form" novalidate>
+
+          <div id="form-error-alert" class="error-msg" style="padding: 1rem; background-color: rgba(220, 38, 38, 0.05); border: 1px solid var(--color-error); border-radius: 8px; margin-bottom: 0.5rem; font-weight: 500;"></div>
+
+          <h3 style="margin-top: 0;">Tus datos</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="first_name">Nombre<span class="required">*</span></label>
+              <input type="text" id="first_name" name="first_name" class="input-field" required placeholder="Sofía">
+              <span class="error-msg" id="first_name-error"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="last_name">Apellido<span class="required">*</span></label>
+              <input type="text" id="last_name" name="last_name" class="input-field" required placeholder="Ramírez">
+              <span class="error-msg" id="last_name-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="email">Email<span class="required">*</span></label>
+              <input type="email" id="email" name="email" class="input-field" required autocomplete="email" placeholder="sofia@clinicaramirez.com">
+              <span class="error-msg" id="email-error"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="whatsapp_number">WhatsApp<span class="required">*</span></label>
+              <input type="tel" id="whatsapp_number" name="whatsapp_number" class="input-field" required placeholder="+52 664 123 4567">
+              <span class="error-msg" id="whatsapp_number-error"></span>
+            </div>
+          </div>
+
+          <h3>Tu clínica</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="clinic_name">Nombre de la clínica<span class="required">*</span></label>
+              <input type="text" id="clinic_name" name="clinic_name" class="input-field" required placeholder="Clínica Dental Ramírez">
+              <span class="error-msg" id="clinic_name-error"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="clinic_city">Ciudad</label>
+              <select id="clinic_city" name="clinic_city" class="input-field">
+                <option value="">Selecciona…</option>
+                <option value="Tijuana">Tijuana</option>
+                <option value="Rosarito">Rosarito</option>
+                <option value="Ensenada">Ensenada</option>
+                <option value="Otra (BC)">Otra ciudad en Baja California</option>
+                <option value="Fuera de BC">Fuera de Baja California</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="clinic_type">Tipo de clínica<span class="required">*</span></label>
+              <select id="clinic_type" name="clinic_type" class="input-field" required>
+                <option value="">Selecciona…</option>
+                <option value="dental">Dental</option>
+                <option value="medspa">Med spa / Estética</option>
+                <option value="mixed">Mixta (dental + estética)</option>
+              </select>
+              <span class="error-msg" id="clinic_type-error"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="decision_role">Tu rol</label>
+              <select id="decision_role" name="decision_role" class="input-field">
+                <option value="">Selecciona…</option>
+                <option value="dentist_owner">Dentista (dueño/a)</option>
+                <option value="ops_manager">Gerente de operaciones</option>
+                <option value="dentist_and_manager">Dentista + gerente</option>
+                <option value="marketing_lead">Encargada/o de marketing</option>
+                <option value="unknown">Otro</option>
+              </select>
+            </div>
+          </div>
+
+          <h3>Cómo operan hoy</h3>
+
+          <div class="form-group">
+            <label class="form-label" for="pms_system">Sistema de gestión (PMS) que usan<span class="required">*</span></label>
+            <select id="pms_system" name="pms_system" class="input-field" required>
+              <option value="">Selecciona…</option>
+              <option value="google_calendar">Google Calendar</option>
+              <option value="doctocliq">Doctocliq</option>
+              <option value="dentalink">Dentalink</option>
+              <option value="nimbo">Nimbo</option>
+              <option value="denpro">DenPro</option>
+              <option value="adstra">Adstra</option>
+              <option value="curve_dental">Curve Dental</option>
+              <option value="open_dental">Open Dental</option>
+              <option value="paper_excel">Papel / Excel / WhatsApp directo</option>
+              <option value="other">Otro</option>
+              <option value="unknown">No estoy segura/o</option>
+            </select>
+            <span class="error-msg" id="pms_system-error"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="weekly_whatsapp_volume">Mensajes de WhatsApp por semana<span class="required">*</span></label>
+              <select id="weekly_whatsapp_volume" name="weekly_whatsapp_volume" class="input-field" required>
+                <option value="">Selecciona…</option>
+                <option value="lt_50">Menos de 50</option>
+                <option value="50_200">50 a 200</option>
+                <option value="200_500">200 a 500</option>
+                <option value="500_plus">Más de 500</option>
+              </select>
+              <span class="error-msg" id="weekly_whatsapp_volume-error"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="crossborder_percent">% de pacientes cross-border (EE.UU.)</label>
+              <select id="crossborder_percent" name="crossborder_percent" class="input-field">
+                <option value="">Selecciona…</option>
+                <option value="0_25">0–25%</option>
+                <option value="25_50">25–50%</option>
+                <option value="50_75">50–75%</option>
+                <option value="75_100">75–100%</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" style="margin-bottom: 0.5rem;">¿Tus pacientes prefieren español o inglés?<span class="required">*</span></label>
+            <div class="radio-group">
+              <div class="radio-option">
+                <input type="radio" id="lang-es" name="language_preference" value="es" checked class="radio-input">
+                <label for="lang-es" class="radio-label">
+                  <span class="radio-custom"></span>
+                  Mayormente español
+                </label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="lang-bi" name="language_preference" value="bilingual" class="radio-input">
+                <label for="lang-bi" class="radio-label">
+                  <span class="radio-custom"></span>
+                  Mitad y mitad
+                </label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="lang-en" name="language_preference" value="en" class="radio-input">
+                <label for="lang-en" class="radio-label">
+                  <span class="radio-custom"></span>
+                  Mayormente inglés
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="lead_source_text">¿Cómo te enteraste de VozClinic? (opcional)</label>
+            <input type="text" id="lead_source_text" name="lead_source_text" class="input-field" maxlength="500" placeholder="Ej. me lo recomendó otra clínica, lo vi en Instagram, etc.">
+          </div>
+
+          <button type="submit" id="submit-btn" class="btn-submit">
+            <span class="spinner" id="submit-spinner"></span>
+            <span id="submit-btn-text">Enviar aplicación</span>
+          </button>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p class="footer-text">
+        ¿Dudas antes de aplicar? Escríbeme directamente a
+        <a href="mailto:lainiem@vozclinic.com">lainiem@vozclinic.com</a> o por <a href="https://wa.me/526633154686?text=Hola%20Lainie,%20tengo%20una%20duda%20sobre%20VozClinic" target="_blank" rel="noopener">WhatsApp</a>.
+      </p>
+      <div class="footer-signature">— Lainie Mayfield, Fundadora de VozClinic</div>
+
+      <p class="footer-legal">
+        Las aplicaciones se revisan en 48 horas hábiles. Phase 1 fit recibe invitación a demo y términos de socio fundador (90 días gratis + 50% de descuento de por vida). Clínicas en lista de espera se notifican cuando se libera un cupo. Para Tijuana, Rosarito, Ensenada y otras ciudades de Baja California por ahora.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/qualifier.js"></script>
+
+</body>
+</html>

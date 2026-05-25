@@ -3,8 +3,10 @@
  * Handled by LNL Automations
  */
 
-// Configurable CRM API Endpoint
-const CRM_ENDPOINT = 'https://api.vozclinic.com/v1/referrals';
+// Posts to the same-origin Vercel signing proxy (api/sign-referral.ts),
+// which HMAC-signs the body and forwards to the LNL CRM webhook. Keeps
+// the shared secret server-side -- never in the browser bundle.
+const CRM_ENDPOINT = '/api/sign-referral';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Identify Page Language
@@ -171,15 +173,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       } catch (err) {
         console.error('CRM Submission error:', err);
-        
-        // Premium Fallback Mock Behavior during offline testing
-        console.warn('CRM Endpoint offline or not configured. Activating fallback demo mode.');
-        
-        setTimeout(() => {
-          setLoadingState(false);
-          const successRoute = isSpanish ? '../gracias-referido/index.html' : '../thanks-referral/index.html';
-          window.location.href = successRoute;
-        }, 1500);
+        setLoadingState(false);
+        showGeneralError(
+          isSpanish
+            ? 'No pudimos enviar tu presentación. Por favor inténtalo de nuevo en unos minutos, o escríbeme directo a lainie@vozclinic.com.'
+            : "We couldn't send your introduction. Please try again in a few minutes, or email me directly at lainie@vozclinic.com."
+        );
       }
     });
   }
