@@ -3,10 +3,13 @@
  * Handled by LNL Automations
  */
 
-// Posts to the same-origin Vercel signing proxy (api/sign-referral.ts),
-// which HMAC-signs the body and forwards to the LNL CRM webhook. Keeps
-// the shared secret server-side -- never in the browser bundle.
-const CRM_ENDPOINT = '/api/sign-referral';
+// Absolute URL on the canonical www host so visitors who land on the
+// apex domain (vozclinic.com) don't hit Vercel's apex->www 307 redirect
+// mid-POST, which some browsers handle inconsistently for cross-origin
+// redirects. The signing proxy (api/sign-referral.ts) HMAC-signs the
+// body server-side using VOZCLINIC_WEBHOOK_SECRET and forwards to the
+// LNL CRM webhook.
+const CRM_ENDPOINT = 'https://www.vozclinic.com/api/sign-referral';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Identify Page Language

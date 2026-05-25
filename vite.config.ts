@@ -6,15 +6,16 @@ import { fileURLToPath } from 'node:url'
 
 const root = dirname(fileURLToPath(import.meta.url))
 
-// Multi-page build: the marketing landing page (index.html) plus the branded
-// design-partner enrollment page served at /design-partner-enroll/.
+// Single Vite entry: the marketing landing page (index.html). The retired
+// /design-partner-enroll/ URL is now a static meta-refresh redirect to
+// /lista-espera/ (see design-partner-enroll/index.html) so it no longer
+// needs to be a Vite build target.
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
     rollupOptions: {
       input: {
         main: resolve(root, 'index.html'),
-        enroll: resolve(root, 'design-partner-enroll/index.html'),
       },
     },
   },

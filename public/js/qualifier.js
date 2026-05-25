@@ -9,7 +9,11 @@
  * demo-booking page and waitlist visitors go to the thank-you page.
  */
 
-const CRM_ENDPOINT = '/api/sign-qualifier';
+// Absolute URL on the canonical www host so visitors who land on the
+// apex domain (vozclinic.com) don't hit Vercel's apex->www 307 redirect
+// mid-POST, which some browsers handle inconsistently for cross-origin
+// redirects.
+const CRM_ENDPOINT = 'https://www.vozclinic.com/api/sign-qualifier';
 
 document.addEventListener('DOMContentLoaded', () => {
   const isSpanish =

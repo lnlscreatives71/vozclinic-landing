@@ -4,7 +4,7 @@ import type { Bilingual } from '../types/lang';
 // Navigation
 // ──────────────────────────────────────────────────────────────
 export const nav = {
-  cta: { es: 'Reservar llamada →', en: 'Book 15-min call →' } as Bilingual,
+  cta: { es: 'Solicitar mi lugar →', en: 'Apply for my spot →' } as Bilingual,
 };
 
 // ──────────────────────────────────────────────────────────────
@@ -20,8 +20,8 @@ export const hero = {
     en: 'Sofía replies to your patients in seconds, books appointments, sends reminders, and only escalates to your team when it matters. In Spanish, in English, 24/7.',
   } as Bilingual,
   primaryCta: {
-    es: 'Reservar llamada de 15 min',
-    en: 'Book 15-min call',
+    es: 'Solicitar mi lugar',
+    en: 'Apply for my spot',
   } as Bilingual,
   secondaryCta: {
     es: 'Ver cómo funciona →',
@@ -317,7 +317,7 @@ export const finalCta = {
     es: 'La llamada dura 15 minutos. Si no es para usted, lo sabremos los dos rápido.',
     en: 'The call is 15 minutes. If it\'s not for you, we\'ll both know quickly.',
   } as Bilingual,
-  cta: { es: 'Reservar llamada de 15 min →', en: 'Book 15-min call →' } as Bilingual,
+  cta: { es: 'Solicitar mi lugar →', en: 'Apply for my spot →' } as Bilingual,
 };
 
 // ──────────────────────────────────────────────────────────────

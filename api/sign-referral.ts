@@ -1,17 +1,12 @@
-// Vercel serverless function: receives a referral form POST from the
-// browser, signs the body with HMAC-SHA256 using the shared secret, and
-// forwards to the LNL CRM referral webhook. Returns the CRM response
-// back to the browser so the front-end can react to success/failure.
-//
-// The secret lives in Vercel env vars only (VOZCLINIC_WEBHOOK_SECRET),
-// never in the SPA bundle. Mirror the same value on the CRM side at
-// /var/www/lnl-crm/.env on the VPS.
+// Vercel Edge function: receives a referral form POST from the browser,
+// signs the body with HMAC-SHA256 using the shared secret, and forwards
+// to the LNL CRM referral webhook. Same pattern as sign-qualifier.ts --
+// shares VOZCLINIC_WEBHOOK_SECRET env var.
 
-import { createHmac } from "node:crypto";
+export const config = { runtime: "edge" };
 
 const CRM_URL = "https://lnlcrm.com/api/webhooks/vozclinic-referral";
 
-// Allowed origins for CORS. Includes prod + Vercel preview deploys.
 const ORIGIN_ALLOWLIST = [
   /^https:\/\/vozclinic\.com$/,
   /^https:\/\/www\.vozclinic\.com$/,
@@ -31,7 +26,20 @@ function corsHeaders(origin: string | null): Record<string, string> {
   };
 }
 
-export const config = { runtime: "nodejs" };
+async function hmacSha256Hex(secret: string, message: string): Promise<string> {
+  const enc = new TextEncoder();
+  const key = await crypto.subtle.importKey(
+    "raw",
+    enc.encode(secret),
+    { name: "HMAC", hash: "SHA-256" },
+    false,
+    ["sign"],
+  );
+  const sig = await crypto.subtle.sign("HMAC", key, enc.encode(message));
+  return Array.from(new Uint8Array(sig))
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
+}
 
 export default async function handler(req: Request): Promise<Response> {
   const origin = req.headers.get("origin");
@@ -59,7 +67,7 @@ export default async function handler(req: Request): Promise<Response> {
   }
 
   const rawBody = await req.text();
-  const signature = createHmac("sha256", secret).update(rawBody).digest("hex");
+  const signature = await hmacSha256Hex(secret, rawBody);
 
   try {
     const crmResponse = await fetch(CRM_URL, {
@@ -75,7 +83,8 @@ export default async function handler(req: Request): Promise<Response> {
     return new Response(text, {
       status: crmResponse.status,
       headers: {
-        "Content-Type": crmResponse.headers.get("content-type") ?? "application/json",
+        "Content-Type":
+          crmResponse.headers.get("content-type") ?? "application/json",
         ...cors,
       },
     });
