@@ -1,6 +1,6 @@
 import { useLang } from '../context/LangContext';
 import { demo } from '../data/content';
-import { qualifierUrl } from '../utils/links';
+import { dpUrl } from '../utils/links';
 
 export default function Demo() {
   const { lang, t } = useLang();
@@ -46,8 +46,8 @@ export default function Demo() {
 
           {/* CTA link */}
           <a
-            href={qualifierUrl(lang)}
-            className="inline-flex items-center gap-2 text-teal font-semibold hover:underline underline-offset-2"
+            href={dpUrl(lang)}
+            className="inline-flex items-center gap-2 text-gold font-semibold hover:underline underline-offset-2"
           >
             {t({ es: 'Solicitar una de las 3 plazas →', en: 'Apply for one of the 3 spots →' })}
           </a>

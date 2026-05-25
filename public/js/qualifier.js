@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const submitText = document.getElementById('submit-btn-text');
   const submitSpinner = document.getElementById('submit-spinner');
   const formErrorAlert = document.getElementById('form-error-alert');
+  // Capture the page-defined button label so the loading->idle transition
+  // restores the right text on each page (e.g. "Enviar aplicación" vs
+  // "Enviar mi aplicación" on the DP page).
+  const submitDefaultText = submitText ? submitText.textContent : '';
 
   if (!form) return;
 
@@ -90,6 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
       language_preference: languagePref,
       lead_source_text: String(fd.get('lead_source_text') || '').trim() || undefined,
     };
+
+    // Intent is carried on the inbound URL: ?intent=dp from the homepage's
+    // gold "Apply as founding partner" CTAs marks this as a DP application
+    // so the CRM tags the contact dp-applicant. Waitlist CTAs omit the
+    // param, leaving source undefined.
+    const intent = new URLSearchParams(window.location.search).get('intent');
+    if (intent === 'dp') {
+      payload.source = 'design_partner_intent';
+    }
 
     setLoadingState(true);
 
@@ -187,9 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ? isSpanish
           ? 'Enviando…'
           : 'Sending…'
-        : isSpanish
-          ? 'Enviar aplicación'
-          : 'Send application';
+        : submitDefaultText;
     }
     if (submitSpinner) {
       submitSpinner.style.display = loading ? 'inline-block' : 'none';

@@ -1,6 +1,6 @@
 import { useLang } from '../context/LangContext';
 import { hero } from '../data/content';
-import { qualifierUrl, demoUrl } from '../utils/links';
+import { dpUrl, demoUrl } from '../utils/links';
 import PhoneMockup from './PhoneMockup';
 
 export default function Hero() {
@@ -18,8 +18,8 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      <div className="section-container w-full py-20 lg:py-28">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <div className="section-container w-full py-16 lg:py-24">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-10 max-w-6xl mx-auto">
           {/* Left — copy */}
           <div className="flex-1 max-w-2xl text-center lg:text-left">
             {/* Badge */}
@@ -29,26 +29,26 @@ export default function Hero() {
             </div>
 
             {/* H1 — Fraunces (serif moment) */}
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold leading-[1.08] tracking-tight text-charcoal mb-6">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] font-bold leading-[1.05] tracking-tight text-charcoal mb-6 text-balance">
               {t(hero.h1)}
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8 font-body">
+            <p className="text-lg text-gray-600 leading-relaxed mb-8 font-body text-pretty">
               {t(hero.sub)}
             </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 mb-10">
               <a
-                href={qualifierUrl(lang)}
-                className="w-full sm:w-auto inline-flex items-center justify-center bg-teal text-white font-semibold px-7 py-4 rounded-xl text-base hover:bg-teal-dark transition-colors shadow-lg shadow-teal/20"
+                href={dpUrl(lang)}
+                className="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap bg-gold text-white font-semibold px-7 py-4 rounded-xl text-base hover:bg-gold-muted transition-colors shadow-lg shadow-gold/20"
               >
                 {t(hero.primaryCta)}
               </a>
               <a
                 href={demoUrl}
-                className="w-full sm:w-auto inline-flex items-center justify-center text-charcoal font-semibold px-5 py-4 rounded-xl text-base hover:text-teal transition-colors"
+                className="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap text-charcoal font-semibold px-4 py-4 rounded-xl text-base hover:text-teal transition-colors"
               >
                 {t(hero.secondaryCta)}
               </a>
@@ -61,7 +61,7 @@ export default function Hero() {
           </div>
 
           {/* Right — phone mockup */}
-          <div className="relative shrink-0 w-full max-w-[320px] lg:max-w-none">
+          <div className="relative shrink-0 w-full max-w-[300px] lg:max-w-[340px]">
             <PhoneMockup />
           </div>
         </div>

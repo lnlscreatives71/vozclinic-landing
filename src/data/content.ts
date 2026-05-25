@@ -4,7 +4,7 @@ import type { Bilingual } from '../types/lang';
 // Navigation
 // ──────────────────────────────────────────────────────────────
 export const nav = {
-  cta: { es: 'Solicitar mi lugar →', en: 'Apply for my spot →' } as Bilingual,
+  cta: { es: 'Únete a la lista →', en: 'Join the waitlist →' } as Bilingual,
 };
 
 // ──────────────────────────────────────────────────────────────
@@ -20,8 +20,8 @@ export const hero = {
     en: 'Sofía replies to your patients in seconds, books appointments, sends reminders, and only escalates to your team when it matters. In Spanish, in English, 24/7.',
   } as Bilingual,
   primaryCta: {
-    es: 'Solicitar mi lugar',
-    en: 'Apply for my spot',
+    es: 'Aplicar como socia fundadora',
+    en: 'Apply as a founding partner',
   } as Bilingual,
   secondaryCta: {
     es: 'Ver cómo funciona →',
@@ -312,12 +312,13 @@ export const founder = {
 // Section 10 — Final CTA
 // ──────────────────────────────────────────────────────────────
 export const finalCta = {
-  title: { es: '3 plazas. 90 días gratis. 50% de por vida.', en: '3 spots. 90 days free. 50% off for life.' } as Bilingual,
+  title: { es: '¿Lista para Sofía?', en: 'Ready for Sofía?' } as Bilingual,
   sub: {
-    es: 'La llamada dura 15 minutos. Si no es para usted, lo sabremos los dos rápido.',
-    en: 'The call is 15 minutes. If it\'s not for you, we\'ll both know quickly.',
+    es: 'Si tu clínica encaja en el programa de socias fundadoras (3 plazas, 90 días gratis, 50% de descuento de por vida), aplica abajo. Si prefieres esperar al lanzamiento general en septiembre 2026, únete a la lista de espera.',
+    en: 'If your clinic fits the founding partner program (3 spots, 90 days free, 50% off for life), apply below. If you\'d rather wait for the general launch in September 2026, join the waitlist.',
   } as Bilingual,
-  cta: { es: 'Solicitar mi lugar →', en: 'Apply for my spot →' } as Bilingual,
+  ctaDp: { es: 'Aplicar como socia fundadora →', en: 'Apply as founding partner →' } as Bilingual,
+  ctaWaitlist: { es: 'Unirme a la lista de espera', en: 'Join the waitlist' } as Bilingual,
 };
 
 // ──────────────────────────────────────────────────────────────

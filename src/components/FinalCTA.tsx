@@ -1,6 +1,6 @@
 import { useLang } from '../context/LangContext';
 import { finalCta } from '../data/content';
-import { qualifierUrl } from '../utils/links';
+import { qualifierUrl, dpUrl } from '../utils/links';
 
 export default function FinalCTA() {
   const { lang, t } = useLang();
@@ -43,13 +43,21 @@ export default function FinalCTA() {
           {t(finalCta.sub)}
         </p>
 
-        {/* CTA button */}
-        <a
-          href={qualifierUrl(lang)}
-          className="inline-flex items-center bg-white text-teal font-bold px-10 py-4 rounded-xl text-lg hover:bg-teal-light transition-colors shadow-2xl shadow-black/20"
-        >
-          {t(finalCta.cta)}
-        </a>
+        {/* Dual CTA: DP application (primary, gold) + waitlist (secondary, outline) */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <a
+            href={dpUrl(lang)}
+            className="w-full sm:w-auto inline-flex items-center justify-center bg-gold text-white font-bold px-8 py-4 rounded-xl text-base hover:bg-gold-muted transition-colors shadow-2xl shadow-black/20"
+          >
+            {t(finalCta.ctaDp)}
+          </a>
+          <a
+            href={qualifierUrl(lang)}
+            className="w-full sm:w-auto inline-flex items-center justify-center bg-transparent text-white font-semibold px-8 py-4 rounded-xl text-base border-2 border-white/60 hover:bg-white/10 transition-colors"
+          >
+            {t(finalCta.ctaWaitlist)}
+          </a>
+        </div>
 
         {/* Trust micro-copy */}
         <p className="text-white/50 text-sm mt-6">
