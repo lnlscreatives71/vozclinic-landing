@@ -1,9 +1,9 @@
 import { useLang } from '../context/LangContext';
 import { pricing } from '../data/content';
-import { waitlistUrl } from '../utils/links';
+import { qualifierUrl } from '../utils/links';
 
 export default function Pricing() {
-  const { t } = useLang();
+  const { lang, t } = useLang();
 
   return (
     <section className="bg-white py-24" id="precios" aria-label="Pricing">
@@ -75,9 +75,7 @@ export default function Pricing() {
 
               {/* CTA */}
               <a
-                href={waitlistUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={qualifierUrl(lang)}
                 className={`
                   w-full text-center font-semibold text-sm px-4 py-3 rounded-xl transition-colors
                   ${plan.highlight

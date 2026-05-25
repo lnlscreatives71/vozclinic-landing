@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLang } from '../context/LangContext';
 import { nav } from '../data/content';
-import { calendlyUrl } from '../utils/links';
+import { qualifierUrl } from '../utils/links';
 
 export default function TopBar() {
   const { lang, setLang, t } = useLang();
@@ -72,9 +72,7 @@ export default function TopBar() {
 
           {/* CTA */}
           <a
-            href={calendlyUrl('topbar')}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={qualifierUrl(lang)}
             className="inline-flex items-center bg-teal text-white text-sm font-semibold px-3 py-2 sm:px-4 rounded-xl hover:bg-teal-dark transition-colors"
           >
             {t(nav.cta)}

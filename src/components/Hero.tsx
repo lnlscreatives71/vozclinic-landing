@@ -1,10 +1,10 @@
 import { useLang } from '../context/LangContext';
 import { hero } from '../data/content';
-import { calendlyUrl, demoUrl } from '../utils/links';
+import { qualifierUrl, demoUrl } from '../utils/links';
 import PhoneMockup from './PhoneMockup';
 
 export default function Hero() {
-  const { t } = useLang();
+  const { lang, t } = useLang();
 
   return (
     <section
@@ -41,9 +41,7 @@ export default function Hero() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 mb-10">
               <a
-                href={calendlyUrl('hero')}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={qualifierUrl(lang)}
                 className="w-full sm:w-auto inline-flex items-center justify-center bg-teal text-white font-semibold px-7 py-4 rounded-xl text-base hover:bg-teal-dark transition-colors shadow-lg shadow-teal/20"
               >
                 {t(hero.primaryCta)}

@@ -1,9 +1,9 @@
 import { useLang } from '../context/LangContext';
 import { finalCta } from '../data/content';
-import { calendlyUrl } from '../utils/links';
+import { qualifierUrl } from '../utils/links';
 
 export default function FinalCTA() {
-  const { t } = useLang();
+  const { lang, t } = useLang();
 
   return (
     <section
@@ -45,9 +45,7 @@ export default function FinalCTA() {
 
         {/* CTA button */}
         <a
-          href={calendlyUrl('final-cta')}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={qualifierUrl(lang)}
           className="inline-flex items-center bg-white text-teal font-bold px-10 py-4 rounded-xl text-lg hover:bg-teal-light transition-colors shadow-2xl shadow-black/20"
         >
           {t(finalCta.cta)}
