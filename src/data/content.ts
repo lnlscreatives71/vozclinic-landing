@@ -173,11 +173,10 @@ export const designPartner = {
   ],
   urgency: { es: 'Solo 3 lugares.', en: 'Only 3 spots.' } as Bilingual,
   urgencyBody: {
-    es: 'Cuando se llenen, el siguiente cohort empieza en agosto a precio completo.',
-    en: 'When they fill, the next cohort starts in August at full price.',
+    es: 'Aplicaciones cierran el 15 de junio. Las socias fundadoras arrancan antes del 1 de julio.',
+    en: 'Applications close June 15. Founding partners go live before July 1.',
   } as Bilingual,
   cta: { es: 'Solicitar uno de los 3 lugares →', en: 'Apply for one of the 3 spots →' } as Bilingual,
-  counter: { es: 'Lugares disponibles: 3 de 3', en: 'Spots available: 3 of 3' } as Bilingual,
 };
 
 // ──────────────────────────────────────────────────────────────
@@ -283,8 +282,8 @@ export const faq = {
     {
       q: { es: '¿Por qué solo 3 socias?', en: 'Why only 3 partners?' } as Bilingual,
       a: {
-        es: 'Porque damos acceso directo a la fundadora y construimos el producto con cada una. Más de 3 y se rompe la calidad. El siguiente cohort empieza en agosto.',
-        en: 'Because we give direct founder access and build the product with each one. More than 3 and quality breaks. The next cohort starts in August.',
+        es: 'Porque damos acceso directo a la fundadora y construimos el producto con cada una. Más de 3 y se rompe la calidad. Aplicaciones cierran el 15 de junio.',
+        en: 'Because we give direct founder access and build the product with each one. More than 3 and quality breaks. Applications close June 15.',
       } as Bilingual,
     },
   ],

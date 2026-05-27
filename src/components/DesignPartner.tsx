@@ -79,18 +79,6 @@ export default function DesignPartner() {
             >
               {t(designPartner.cta)}
             </a>
-
-            {/* Slot counter */}
-            <div className="flex items-center gap-2 mt-2">
-              <div className="flex gap-1">
-                {[0, 1, 2].map((i) => (
-                  <span key={i} className="w-2.5 h-2.5 rounded-full bg-gold/80" aria-hidden="true" />
-                ))}
-              </div>
-              <span className="text-sm text-gray-600 font-medium">
-                {t(designPartner.counter)}
-              </span>
-            </div>
           </div>
         </div>
       </div>

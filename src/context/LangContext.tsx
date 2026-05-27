@@ -17,7 +17,7 @@ const LangContext = createContext<LangContextType>({
 function getDefaultLang(): Lang {
   const stored = localStorage.getItem('vc-lang');
   if (stored === 'es' || stored === 'en') return stored;
-  return navigator.language?.startsWith('es') ? 'es' : 'en';
+  return 'es';
 }
 
 export function LangProvider({ children }: { children: ReactNode }) {
