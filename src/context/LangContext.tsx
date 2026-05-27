@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import type { Lang, Bilingual } from '../types/lang';
 
@@ -14,17 +14,22 @@ const LangContext = createContext<LangContextType>({
   t: (c) => c.es,
 });
 
-function getDefaultLang(): Lang {
-  const stored = localStorage.getItem('vc-lang');
-  if (stored === 'es' || stored === 'en') return stored;
-  return 'es';
-}
-
+// SSR/SSG: initial render is always ES so server HTML matches the first client
+// paint. A useEffect then upgrades to the visitor's saved preference (a brief
+// flicker for returning EN-saved visitors is acceptable; most traffic is ES).
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>(getDefaultLang);
+  const [lang, setLangState] = useState<Lang>('es');
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const stored = window.localStorage.getItem('vc-lang');
+    if (stored === 'es' || stored === 'en') setLangState(stored);
+  }, []);
 
   const setLang = (l: Lang) => {
-    localStorage.setItem('vc-lang', l);
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem('vc-lang', l);
+    }
     setLangState(l);
   };
 

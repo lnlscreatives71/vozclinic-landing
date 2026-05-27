@@ -1,10 +1,19 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 
-createRoot(document.getElementById('root')!).render(
+const container = document.getElementById('root')!
+const tree = (
   <StrictMode>
     <App />
-  </StrictMode>,
+  </StrictMode>
 )
+
+// If the server prerendered content, hydrate it. Otherwise mount fresh
+// (e.g. local dev, or any path that bypasses the prerender step).
+if (container.hasChildNodes()) {
+  hydrateRoot(container, tree)
+} else {
+  createRoot(container).render(tree)
+}
