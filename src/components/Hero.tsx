@@ -34,7 +34,7 @@ export default function Hero() {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg text-gray-600 leading-relaxed mb-8 font-body text-pretty">
+            <p className="text-xl sm:text-2xl text-gray-700 leading-relaxed mb-8 font-body text-pretty">
               {t(hero.sub)}
             </p>
 
