@@ -59,11 +59,23 @@ export default function FounderNote() {
               </h2>
 
               {/* Body paragraphs */}
-              <div className="space-y-4 mb-6">
+              <div className="space-y-4 mb-5">
                 {bodyParagraphs.map((para, idx) => (
                   <p key={idx} className="text-gray-600 text-base leading-relaxed">
                     {para}
                   </p>
+                ))}
+              </div>
+
+              {/* Credentials chips */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {founder.credentials.map((cred, idx) => (
+                  <span
+                    key={idx}
+                    className="inline-block text-[11px] font-semibold tracking-wide uppercase text-teal bg-teal/10 border border-teal/20 rounded-full px-2.5 py-1"
+                  >
+                    {typeof cred === 'string' ? cred : t(cred)}
+                  </span>
                 ))}
               </div>
 

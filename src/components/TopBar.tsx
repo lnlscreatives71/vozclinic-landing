@@ -15,7 +15,7 @@ export default function TopBar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-9 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
       }`}
     >
@@ -23,18 +23,16 @@ export default function TopBar() {
         {/* Logo */}
         <a
           href="/"
-          className="flex items-baseline font-bold text-xl tracking-tight text-charcoal font-body shrink-0"
+          className="flex items-center shrink-0"
           aria-label="VozClinic home"
         >
-          <span className="relative inline-block">
-            V
-            <span
-              className="absolute bottom-0 left-0 h-0.5 bg-teal transition-all duration-500 ease-out"
-              style={{ width: scrolled ? '100%' : '0%' }}
-              aria-hidden="true"
-            />
-          </span>
-          <span>ozClinic</span>
+          <img
+            src="/vozclinic-logo.png"
+            alt="VozClinic"
+            className="h-8 sm:h-9 w-auto"
+            width="220"
+            height="44"
+          />
         </a>
 
         {/* Right side */}

@@ -12,12 +12,12 @@ export const nav = {
 // ──────────────────────────────────────────────────────────────
 export const hero = {
   h1: {
-    es: 'Su recepcionista de WhatsApp que nunca duerme — y habla inglés perfecto.',
-    en: 'The WhatsApp front desk that never sleeps — and speaks perfect English.',
+    es: 'Su recepcionista de WhatsApp y llamadas que nunca duerme, y habla inglés perfecto.',
+    en: 'The WhatsApp and phone front desk that never sleeps, and speaks perfect English.',
   } as Bilingual,
   sub: {
-    es: 'Sofía contesta a sus pacientes en segundos, agenda citas, envía recordatorios, y escala a su equipo solo cuando importa. En español, en inglés, 24/7.',
-    en: 'Sofía replies to your patients in seconds, books appointments, sends reminders, and only escalates to your team when it matters. In Spanish, in English, 24/7.',
+    es: 'Sofía contesta mensajes y llamadas en segundos, agenda citas, envía recordatorios, y escala a su equipo solo cuando importa. Para clínicas dentales, estética, cirugía plástica, dermatología y bariátrica. En español, en inglés, 24/7.',
+    en: 'Sofía answers messages and calls in seconds, books appointments, sends reminders, and only escalates to your team when it matters. For dental, aesthetic, plastic surgery, dermatology and bariatric clinics. In Spanish, in English, 24/7.',
   } as Bilingual,
   primaryCta: {
     es: 'Aplicar como socia fundadora',
@@ -50,10 +50,10 @@ export const pain = {
       } as Bilingual,
     },
     {
-      title: { es: 'Pacientes de EE.UU. esperan respuesta en inglés — en 2 minutos', en: 'US patients expect English replies — within 2 minutes' } as Bilingual,
+      title: { es: 'Pacientes de EE.UU. esperan respuesta en inglés en 2 minutos', en: 'US patients expect English replies within 2 minutes' } as Bilingual,
       body: {
-        es: 'El 60% de los pacientes de implantes y estética en Tijuana cruzan la frontera. No esperan. Comparan precios en Yelp mientras le escriben a usted.',
-        en: '60% of implant and aesthetic patients in Tijuana are cross-border. They don\'t wait. They\'re comparing prices on Yelp while they message you.',
+        es: 'La mayoría de los pacientes de estética, dental, plástica y bariátrica en Tijuana son transfronterizos. No esperan. Comparan precios en Yelp mientras le escriben a usted.',
+        en: 'Most aesthetic, dental, plastic surgery and bariatric patients in Tijuana are cross-border. They don\'t wait. They\'re comparing prices on Yelp while they message you.',
       } as Bilingual,
     },
     {
@@ -76,16 +76,16 @@ export const howItWorks = {
       num: '01',
       title: { es: 'Conecta su WhatsApp en 48 horas', en: 'Connect your WhatsApp in 48 hours' } as Bilingual,
       body: {
-        es: 'Usamos su número de clínica con el WhatsApp Business API oficial de Meta. Sin cambios para sus pacientes — el mismo número, el mismo nombre, mejor servicio.',
-        en: 'We use your clinic\'s number on Meta\'s official WhatsApp Business API. No change for your patients — same number, same name, better service.',
+        es: 'Usamos su número de clínica con el WhatsApp Business API oficial de Meta. Sin cambios para sus pacientes: el mismo número, el mismo nombre, mejor servicio.',
+        en: 'We use your clinic\'s number on Meta\'s official WhatsApp Business API. No change for your patients: same number, same name, better service.',
       } as Bilingual,
     },
     {
       num: '02',
       title: { es: 'Aprende su clínica en una sesión de 90 minutos', en: 'Learns your clinic in one 90-minute session' } as Bilingual,
       body: {
-        es: 'Le entrevistamos sobre precios, servicios, doctores, horarios, preguntas frecuentes. Sofía habla con la voz de su clínica — no como un robot genérico.',
-        en: 'We interview you about pricing, services, doctors, hours, FAQs. Sofía speaks in your clinic\'s voice — not like a generic robot.',
+        es: 'Le entrevistamos sobre precios, servicios, doctores, horarios, preguntas frecuentes. Sofía habla con la voz de su clínica, no como un robot genérico.',
+        en: 'We interview you about pricing, services, doctors, hours, FAQs. Sofía speaks in your clinic\'s voice, not like a generic robot.',
       } as Bilingual,
     },
     {
@@ -120,7 +120,7 @@ export const features = {
     {
       icon: 'bell',
       title: { es: 'Envía recordatorios automáticos', en: 'Sends automatic reminders' } as Bilingual,
-      body: { es: '24h y 2h antes de cada cita — reduce no-shows hasta 40%.', en: '24h and 2h before each appointment — cuts no-shows by 40%.' } as Bilingual,
+      body: { es: '24h y 2h antes de cada cita. Reduce no-shows hasta 40%.', en: '24h and 2h before each appointment. Cuts no-shows by up to 40%.' } as Bilingual,
       wide: false,
     },
     {
@@ -138,8 +138,17 @@ export const features = {
     {
       icon: 'chart',
       title: { es: 'Reporte semanal por WhatsApp', en: 'Weekly WhatsApp report' } as Bilingual,
-      body: { es: 'Citas agendadas, mensajes gestionados e ingresos potenciales, cada lunes.', en: 'Appointments booked, messages handled, and potential revenue — every Monday.' } as Bilingual,
+      body: { es: 'Citas agendadas, mensajes gestionados e ingresos potenciales, cada lunes.', en: 'Appointments booked, messages handled, and potential revenue, every Monday.' } as Bilingual,
       wide: false,
+    },
+    {
+      icon: 'phone',
+      title: { es: 'También contesta llamadas telefónicas', en: 'Also takes phone calls' } as Bilingual,
+      body: {
+        es: 'Voz IA en español e inglés para pacientes que prefieren llamar. Toma datos, agenda citas y escala a su equipo igual que en WhatsApp.',
+        en: 'AI voice in Spanish and English for patients who\'d rather call. Collects info, books appointments, and escalates to your team the same way WhatsApp does.',
+      } as Bilingual,
+      wide: true,
     },
   ],
 };
@@ -166,10 +175,10 @@ export const designPartner = {
     en: 'We\'re launching VozClinic with a small group of clinics who help us perfect the product. In exchange:',
   } as Bilingual,
   benefits: [
-    { es: '90 días gratis — sin compromiso, sin tarjeta', en: '90 days free — no commitment, no card' } as Bilingual,
+    { es: '90 días gratis, sin compromiso, sin tarjeta', en: '90 days free, no commitment, no card' } as Bilingual,
     { es: '50% de descuento de por vida después de los 90 días', en: '50% off for life after the 90 days' } as Bilingual,
     { es: 'Setup gratis (valor $1,500 USD)', en: 'Free setup ($1,500 USD value)' } as Bilingual,
-    { es: 'Acceso directo a la fundadora — sin tickets, sin call center', en: 'Direct access to the founder — no tickets, no call center' } as Bilingual,
+    { es: 'Acceso directo a la fundadora, sin tickets, sin call center', en: 'Direct access to the founder, no tickets, no call center' } as Bilingual,
   ],
   urgency: { es: 'Solo 3 lugares.', en: 'Only 3 spots.' } as Bilingual,
   urgencyBody: {
@@ -233,8 +242,8 @@ export const faq = {
     {
       q: { es: '¿Necesito cambiar mi número de WhatsApp?', en: 'Do I need to change my WhatsApp number?' } as Bilingual,
       a: {
-        es: 'No. Usamos su número actual con el WhatsApp Business API oficial. Sus pacientes no notan nada — solo que ahora siempre les contestan rápido.',
-        en: 'No. We use your current number on the official WhatsApp Business API. Your patients notice nothing — except that they\'re always answered quickly now.',
+        es: 'No. Usamos su número actual con el WhatsApp Business API oficial. Sus pacientes no notan nada, solo que ahora siempre les contestan rápido.',
+        en: 'No. We use your current number on the official WhatsApp Business API. Your patients notice nothing, except that they\'re always answered quickly now.',
       } as Bilingual,
     },
     {
@@ -268,8 +277,8 @@ export const faq = {
     {
       q: { es: '¿Qué pasa si quiero cancelar?', en: 'What if I want to cancel?' } as Bilingual,
       a: {
-        es: 'Cancela cuando quiera. Le exportamos sus conversaciones y datos en CSV. Sin penalización, sin papeleo. Es su número y sus pacientes — siempre.',
-        en: 'Cancel anytime. We export your conversations and data in CSV. No penalty, no paperwork. It\'s your number and your patients — always.',
+        es: 'Cancela cuando quiera. Le exportamos sus conversaciones y datos en CSV. Sin penalización, sin papeleo. Es su número y sus pacientes, siempre.',
+        en: 'Cancel anytime. We export your conversations and data in CSV. No penalty, no paperwork. It\'s your number and your patients, always.',
       } as Bilingual,
     },
     {
@@ -295,9 +304,15 @@ export const faq = {
 export const founder = {
   greeting: { es: 'Hola, soy Lainie.', en: 'Hi, I\'m Lainie.' } as Bilingual,
   body: {
-    es: 'Vivo en Tijuana. Construí VozClinic porque mi propia dentista perdía citas todas las semanas — pacientes que escribían a las 9pm y nadie contestaba hasta el día siguiente.\n\nNo soy una empresa de software con call center en India. Soy una persona, en su ciudad, que sabe cómo trabajan las clínicas de aquí. Si me escribe usted, le contesto yo.',
-    en: 'I live in Tijuana. I built VozClinic because my own dentist was losing appointments every week — patients who messaged at 9pm and got no reply until the next day.\n\nI\'m not a software company with a call center in India. I\'m one person, in your city, who understands how clinics here actually work. If you message me, I reply.',
+    es: 'Vivo en Tijuana. Construí VozClinic porque mi propia dentista perdía citas todas las semanas: pacientes que escribían a las 9pm y nadie contestaba hasta el día siguiente.\n\nNo soy una empresa de software con call center en India. Soy una persona, en su ciudad, que sabe cómo trabajan las clínicas de aquí. Si me escribe usted, le contesto yo.',
+    en: 'I live in Tijuana. I built VozClinic because my own dentist was losing appointments every week: patients who messaged at 9pm and got no reply until the next day.\n\nI\'m not a software company with a call center in India. I\'m one person, in your city, who understands how clinics here actually work. If you message me, I reply.',
   } as Bilingual,
+  credentials: [
+    'PMP',
+    'Six Sigma Black Belt',
+    'CSM',
+    { es: '20+ años PM empresarial', en: '20+ yrs enterprise PM' } as Bilingual,
+  ],
   highlight: {
     es: 'Si está pensando en ser una de las 3 socias de diseño, le dedico el tiempo que sea necesario para que esto funcione para su clínica.',
     en: 'If you\'re considering being one of the 3 design partners, I\'ll spend whatever time it takes to make this work for your clinic.',

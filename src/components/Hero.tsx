@@ -8,7 +8,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-screen flex items-center bg-offwhite dot-grid overflow-hidden pt-16"
+      className="relative min-h-screen flex items-center bg-offwhite dot-grid overflow-hidden pt-24"
       aria-label="Hero"
     >
       {/* Subtle teal glow top-left */}

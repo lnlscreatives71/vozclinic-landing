@@ -1,4 +1,5 @@
 import { LangProvider } from './context/LangContext';
+import AnnouncementBar from './components/AnnouncementBar';
 import TopBar from './components/TopBar';
 import Hero from './components/Hero';
 import PainPoints from './components/PainPoints';
@@ -17,6 +18,7 @@ export default function App() {
   return (
     <LangProvider>
       <div className="min-h-screen font-body">
+        <AnnouncementBar />
         <TopBar />
         <main>
           <Hero />
