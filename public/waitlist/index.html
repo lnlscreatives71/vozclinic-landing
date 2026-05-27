@@ -34,13 +34,30 @@
 
     <section class="hero-grid" id="hero">
       <div class="hero-text">
-        <span class="eyebrow">Waitlist</span>
-        <h1>Join the waitlist.</h1>
-        <p class="hero-subhead">
+        <span class="eyebrow" id="page-eyebrow">Waitlist</span>
+        <h1 id="page-h1">Join the waitlist.</h1>
+        <p class="hero-subhead" id="page-subhead">
           VozClinic launches publicly in September 2026. Tell me about your clinic and I'll let you know when we can onboard you.
         </p>
       </div>
     </section>
+
+    <script>
+      // Reframe page copy for design-partner applicants (?intent=dp). Runs
+      // synchronously during HTML parse, after the hero elements declare but
+      // before the browser paints — no FOUC.
+      (function () {
+        if (new URLSearchParams(window.location.search).get('intent') !== 'dp') return;
+        document.title = 'Apply as a design partner · VozClinic';
+        var set = function (id, txt) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = txt;
+        };
+        set('page-eyebrow', 'Design Partner Program');
+        set('page-h1', 'Apply for one of the 3 design partner spots.');
+        set('page-subhead', "90 days free (no card, no commitment). 50% off for life after that. Only 3 spots. Applications close June 15.");
+      })();
+    </script>
 
     <section id="formulario">
       <div class="form-max-wrap">

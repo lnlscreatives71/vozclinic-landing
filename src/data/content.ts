@@ -20,8 +20,8 @@ export const hero = {
     en: 'Sofía answers messages and calls in seconds, books appointments, sends reminders, and only escalates to your team when it matters. For dental, aesthetic, plastic surgery, dermatology and bariatric clinics. In Spanish, in English, 24/7.',
   } as Bilingual,
   primaryCta: {
-    es: 'Aplicar como socia fundadora',
-    en: 'Apply as a founding partner',
+    es: 'Aplicar como socia de diseño',
+    en: 'Apply as a design partner',
   } as Bilingual,
   secondaryCta: {
     es: 'Ver cómo funciona →',
@@ -182,8 +182,8 @@ export const designPartner = {
   ],
   urgency: { es: 'Solo 3 lugares.', en: 'Only 3 spots.' } as Bilingual,
   urgencyBody: {
-    es: 'Aplicaciones cierran el 15 de junio. Las socias fundadoras arrancan antes del 1 de julio.',
-    en: 'Applications close June 15. Founding partners go live before July 1.',
+    es: 'Aplicaciones cierran el 15 de junio. Las socias de diseño arrancan antes del 1 de julio.',
+    en: 'Applications close June 15. Design partners go live before July 1.',
   } as Bilingual,
   cta: { es: 'Solicitar uno de los 3 lugares →', en: 'Apply for one of the 3 spots →' } as Bilingual,
 };
@@ -328,10 +328,10 @@ export const founder = {
 export const finalCta = {
   title: { es: '¿Lista para Sofía?', en: 'Ready for Sofía?' } as Bilingual,
   sub: {
-    es: 'Si tu clínica encaja en el programa de socias fundadoras (3 plazas, 90 días gratis, 50% de descuento de por vida), aplica abajo. Si prefieres esperar al lanzamiento general en septiembre 2026, únete a la lista de espera.',
-    en: 'If your clinic fits the founding partner program (3 spots, 90 days free, 50% off for life), apply below. If you\'d rather wait for the general launch in September 2026, join the waitlist.',
+    es: 'Si tu clínica encaja en el programa de socias de diseño (3 plazas, 90 días gratis, 50% de descuento de por vida), aplica abajo. Si prefieres esperar al lanzamiento general en septiembre 2026, únete a la lista de espera.',
+    en: 'If your clinic fits the design partner program (3 spots, 90 days free, 50% off for life), apply below. If you\'d rather wait for the general launch in September 2026, join the waitlist.',
   } as Bilingual,
-  ctaDp: { es: 'Aplicar como socia fundadora →', en: 'Apply as founding partner →' } as Bilingual,
+  ctaDp: { es: 'Aplicar como socia de diseño →', en: 'Apply as design partner →' } as Bilingual,
   ctaWaitlist: { es: 'Unirme a la lista de espera', en: 'Join the waitlist' } as Bilingual,
 };
 

@@ -34,17 +34,34 @@
 
     <section class="hero-grid" id="hero">
       <div class="hero-text">
-        <span class="eyebrow">Lista de Espera</span>
-        <h1>Únete a la lista de espera.</h1>
-        <p class="hero-subhead">
+        <span class="eyebrow" id="page-eyebrow">Lista de Espera</span>
+        <h1 id="page-h1">Únete a la lista de espera.</h1>
+        <p class="hero-subhead" id="page-subhead">
           VozClinic se lanza al público en septiembre 2026. Cuéntame sobre tu clínica y te aviso cuando podamos arrancar contigo.
         </p>
       </div>
     </section>
 
+    <script>
+      // Reframe page copy for design-partner applicants (?intent=dp). Runs
+      // synchronously during HTML parse, after the hero elements declare but
+      // before the browser paints — no FOUC.
+      (function () {
+        if (new URLSearchParams(window.location.search).get('intent') !== 'dp') return;
+        document.title = 'Aplica como socia de diseño · VozClinic';
+        var set = function (id, txt) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = txt;
+        };
+        set('page-eyebrow', 'Programa de Socias de Diseño');
+        set('page-h1', 'Aplica para una de las 3 plazas de socia de diseño.');
+        set('page-subhead', '90 días gratis (sin tarjeta, sin compromiso). 50% de descuento de por vida después. Solo 3 plazas. Aplicaciones cierran el 15 de junio.');
+      })();
+    </script>
+
     <section id="formulario">
       <div class="form-max-wrap">
-        <h2>Aplica en 2 minutos</h2>
+        <h2 id="page-form-h2">Aplica en 2 minutos</h2>
 
         <form id="qualifier-form" class="referral-form" novalidate>
 
