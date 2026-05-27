@@ -96,12 +96,27 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Intent is carried on the inbound URL: ?intent=dp from the homepage's
-    // gold "Apply as founding partner" CTAs marks this as a DP application
+    // gold "Apply as design partner" CTAs marks this as a DP application
     // so the CRM tags the contact dp-applicant. Waitlist CTAs omit the
     // param, leaving source undefined.
     const intent = new URLSearchParams(window.location.search).get('intent');
     if (intent === 'dp') {
       payload.source = 'design_partner_intent';
+    }
+
+    // Preserve ?intent=dp when redirecting to one of our same-origin thank-you
+    // pages so the destination can reframe its copy for DP applicants. Skips
+    // third-party redirects (e.g. Appointy demo booking) untouched.
+    function preserveIntent(url) {
+      if (intent !== 'dp') return url;
+      try {
+        const u = new URL(url, window.location.origin);
+        if (u.hostname !== window.location.hostname) return url;
+        u.searchParams.set('intent', 'dp');
+        return u.toString();
+      } catch (e) {
+        return url;
+      }
     }
 
     setLoadingState(true);
@@ -118,13 +133,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (response.ok && json && json.data && json.data.redirect_url) {
         // CRM tells us where to go (demo booking for Phase 1 fit,
         // waitlist thank-you otherwise).
-        window.location.href = json.data.redirect_url;
+        window.location.href = preserveIntent(json.data.redirect_url);
         return;
       }
 
       // Fallback redirect if response shape is unexpected but status OK.
       if (response.ok) {
-        window.location.href = isSpanish ? '/lista-gracias/' : '/waitlist-thanks/';
+        window.location.href = preserveIntent(isSpanish ? '/lista-gracias/' : '/waitlist-thanks/');
         return;
       }
 

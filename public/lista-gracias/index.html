@@ -10,7 +10,7 @@
 <body>
 
   <header>
-    <div class="nav-container" style="justify-content: center;">
+    <div class="nav-container">
       <a href="/" class="logo-link" aria-label="VozClinic Inicio">
         <svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="100" height="100" rx="20" fill="#008080"/>
@@ -23,6 +23,7 @@
         </svg>
         <span class="logo-text">VozClinic</span>
       </a>
+      <a href="/waitlist-thanks/" id="lang-toggle" class="lang-toggle" aria-label="Switch to English">EN</a>
     </div>
   </header>
 
@@ -34,12 +35,12 @@
         </svg>
       </div>
 
-      <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">¡Aplicación recibida!</h1>
-      <p style="color: #4B5563; font-size: 1.05rem; margin-bottom: 0.5rem;">
+      <h1 id="thanks-h1" style="font-size: 2rem; margin-bottom: 0.5rem;">¡Aplicación recibida!</h1>
+      <p id="thanks-sub" style="color: #4B5563; font-size: 1.05rem; margin-bottom: 0.5rem;">
         Gracias por tomarte el tiempo de aplicar.
       </p>
 
-      <p style="font-size: 0.95rem; color: #6B7280; line-height: 1.5;">
+      <p id="thanks-body" style="font-size: 0.95rem; color: #6B7280; line-height: 1.5;">
         Tu clínica está en nuestra lista de espera. En este momento estamos arrancando con un grupo pequeño de Phase 1 fits (PMS con API + alto volumen de WhatsApp). Cuando se libere un cupo que encaje con tu situación, te aviso personalmente por WhatsApp o correo. Mientras tanto, si tu PMS cambia o si quieres conversar antes, escríbeme directo.
       </p>
 
@@ -49,6 +50,27 @@
       </div>
     </div>
   </main>
+
+  <script>
+    // Preserve query string on the EN language toggle so ?intent=dp survives
+    // the switch to /waitlist-thanks/.
+    (function () {
+      var t = document.getElementById('lang-toggle');
+      if (t && window.location.search) t.href = '/waitlist-thanks/' + window.location.search;
+    })();
+
+    // Reframe page copy for design-partner applicants (?intent=dp).
+    (function () {
+      if (new URLSearchParams(window.location.search).get('intent') !== 'dp') return;
+      document.title = '¡Aplicación de socia de diseño recibida! · VozClinic';
+      var set = function (id, txt) {
+        var el = document.getElementById(id);
+        if (el) el.textContent = txt;
+      };
+      set('thanks-sub', 'Gracias por aplicar al programa de Socias de Diseño.');
+      set('thanks-body', 'Estamos revisando cada aplicación a mano. Solo hay 3 plazas y priorizamos clínicas con PMS abierta (Dentrix, Eaglesoft, etc.) y volumen alto de WhatsApp. Te contesto antes del 20 de junio con la decisión. Si quieres conversar antes, escríbeme directo.');
+    })();
+  </script>
 
   <footer>
     <div class="footer-content" style="padding: 1.5rem 0;">
