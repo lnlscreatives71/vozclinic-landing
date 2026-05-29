@@ -38,7 +38,7 @@ export default function Demo() {
               preload="metadata"
             >
               {t({
-                es: 'Su navegador no reproduce este video.',
+                es: 'Tu navegador no reproduce este video.',
                 en: 'Your browser does not support this video.',
               })}
             </video>

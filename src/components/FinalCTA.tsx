@@ -61,7 +61,7 @@ export default function FinalCTA() {
 
         {/* Trust micro-copy */}
         <p className="text-white/50 text-sm mt-6">
-          {t({ es: 'Sin tarjeta. Sin compromiso. Cancele cuando quiera.', en: 'No card. No commitment. Cancel anytime.' })}
+          {t({ es: 'Sin tarjeta. Sin compromiso. Cancela cuando quieras.', en: 'No card. No commitment. Cancel anytime.' })}
         </p>
       </div>
     </section>

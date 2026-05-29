@@ -87,25 +87,25 @@ export const howItWorks = {
   steps: [
     {
       num: '01',
-      title: { es: 'Conecta su WhatsApp en 48 horas', en: 'Connect your WhatsApp in 48 hours' } as Bilingual,
+      title: { es: 'Conecta tu WhatsApp en 48 horas', en: 'Connect your WhatsApp in 48 hours' } as Bilingual,
       body: {
-        es: 'Usamos su número de clínica con el WhatsApp Business API oficial de Meta. Sin cambios para sus pacientes: el mismo número, el mismo nombre, mejor servicio.',
+        es: 'Usamos tu número de clínica con el WhatsApp Business API oficial de Meta. Sin cambios para tus pacientes: el mismo número, el mismo nombre, mejor servicio.',
         en: 'We use your clinic\'s number on Meta\'s official WhatsApp Business API. No change for your patients: same number, same name, better service.',
       } as Bilingual,
     },
     {
       num: '02',
-      title: { es: 'Aprende su clínica en una sesión de 90 minutos', en: 'Learns your clinic in one 90-minute session' } as Bilingual,
+      title: { es: 'Aprende tu clínica en una sesión de 90 minutos', en: 'Learns your clinic in one 90-minute session' } as Bilingual,
       body: {
-        es: 'Le entrevistamos sobre precios, servicios, doctores, horarios, preguntas frecuentes. Sofía habla con la voz de su clínica, no como un robot genérico.',
+        es: 'Te entrevistamos sobre precios, servicios, doctores, horarios, preguntas frecuentes. Sofía habla con la voz de tu clínica, no como un robot genérico.',
         en: 'We interview you about pricing, services, doctors, hours, FAQs. Sofía speaks in your clinic\'s voice, not like a generic robot.',
       } as Bilingual,
     },
     {
       num: '03',
-      title: { es: 'Trabaja 24/7 y le entrega lo importante', en: 'Works 24/7 and hands you what matters' } as Bilingual,
+      title: { es: 'Trabaja 24/7 y te entrega lo importante', en: 'Works 24/7 and hands you what matters' } as Bilingual,
       body: {
-        es: 'Contesta preguntas, agenda citas, envía recordatorios, recolecta datos del paciente. Cuando alguien quiere hablar con un humano o pregunta algo fuera del libreto, escala a su equipo en segundos.',
+        es: 'Contesta preguntas, agenda citas, envía recordatorios, recolecta datos del paciente. Cuando alguien quiere hablar con un humano o pregunta algo fuera del libreto, escala a tu equipo en segundos.',
         en: 'Answers questions, books appointments, sends reminders, collects patient info. When someone wants a human or asks something off-script, it escalates to your team in seconds.',
       } as Bilingual,
     },
@@ -116,7 +116,7 @@ export const howItWorks = {
 // Section 4 — Features
 // ──────────────────────────────────────────────────────────────
 export const features = {
-  title: { es: 'Lo que Sofía hace por su clínica', en: 'What Sofía does for your clinic' } as Bilingual,
+  title: { es: 'Lo que Sofía hace por tu clínica', en: 'What Sofía does for your clinic' } as Bilingual,
   tiles: [
     {
       icon: 'chat',
@@ -126,7 +126,7 @@ export const features = {
     },
     {
       icon: 'calendar',
-      title: { es: 'Agenda citas directamente en su calendario', en: 'Books appointments in your calendar' } as Bilingual,
+      title: { es: 'Agenda citas directamente en tu calendario', en: 'Books appointments in your calendar' } as Bilingual,
       body: { es: 'Integra con Google Calendar, Outlook y Dentrix.', en: 'Integrates with Google Calendar, Outlook and Dentrix.' } as Bilingual,
       wide: false,
     },
@@ -145,7 +145,7 @@ export const features = {
     {
       icon: 'shield',
       title: { es: 'Escala solo cuando importa', en: 'Escalates only when it matters' } as Bilingual,
-      body: { es: 'Emergencias, quejas y casos complejos van directo a su equipo.', en: 'Emergencies, complaints, and complex cases go straight to your team.' } as Bilingual,
+      body: { es: 'Emergencias, quejas y casos complejos van directo a tu equipo.', en: 'Emergencies, complaints, and complex cases go straight to your team.' } as Bilingual,
       wide: false,
     },
     {
@@ -158,7 +158,7 @@ export const features = {
       icon: 'phone',
       title: { es: 'También contesta llamadas telefónicas', en: 'Also takes phone calls' } as Bilingual,
       body: {
-        es: 'Voz IA en español e inglés para pacientes que prefieren llamar. Toma datos, agenda citas y escala a su equipo igual que en WhatsApp.',
+        es: 'Voz IA en español e inglés para pacientes que prefieren llamar. Toma datos, agenda citas y escala a tu equipo igual que en WhatsApp.',
         en: 'AI voice in Spanish and English for patients who\'d rather call. Collects info, books appointments, and escalates to your team the same way WhatsApp does.',
       } as Bilingual,
       wide: true,
@@ -198,7 +198,7 @@ export const designPartner = {
     es: 'Aplicaciones cierran el 15 de junio. Las socias de diseño arrancan antes del 1 de julio.',
     en: 'Applications close June 15. Design partners go live before July 1.',
   } as Bilingual,
-  cta: { es: 'Solicitar uno de los 3 lugares →', en: 'Apply for one of the 3 spots →' } as Bilingual,
+  cta: { es: 'Solicita uno de los 3 lugares →', en: 'Apply for one of the 3 spots →' } as Bilingual,
 };
 
 // ──────────────────────────────────────────────────────────────
@@ -236,12 +236,12 @@ export const pricing = {
       name: 'White-label',
       usd: '$4,999',
       mxn: '$99,980 MXN',
-      desc: { es: 'Su agencia o grupo de clínicas, marca propia', en: 'Your agency or clinic group, your brand' } as Bilingual,
+      desc: { es: 'Tu agencia o grupo de clínicas, marca propia', en: 'Your agency or clinic group, your brand' } as Bilingual,
       highlight: false,
     },
   ],
   footer: {
-    es: 'Sin contratos a largo plazo. Cancele cuando quiera. Precios incluyen WhatsApp Business API oficial y soporte en español.',
+    es: 'Sin contratos a largo plazo. Cancela cuando quieras. Precios incluyen WhatsApp Business API oficial y soporte en español.',
     en: 'No long-term contracts. Cancel anytime. Prices include official WhatsApp Business API and Spanish-language support.',
   } as Bilingual,
 };
@@ -255,49 +255,49 @@ export const faq = {
     {
       q: { es: '¿Necesito cambiar mi número de WhatsApp?', en: 'Do I need to change my WhatsApp number?' } as Bilingual,
       a: {
-        es: 'No. Usamos su número actual con el WhatsApp Business API oficial. Sus pacientes no notan nada, solo que ahora siempre les contestan rápido.',
+        es: 'No. Usamos tu número actual con el WhatsApp Business API oficial. Tus pacientes no notan nada, solo que ahora siempre les contestan rápido.',
         en: 'No. We use your current number on the official WhatsApp Business API. Your patients notice nothing, except that they\'re always answered quickly now.',
       } as Bilingual,
     },
     {
       q: { es: '¿Qué pasa si Sofía no sabe la respuesta?', en: 'What if Sofía doesn\'t know the answer?' } as Bilingual,
       a: {
-        es: 'Escala automáticamente a su equipo por WhatsApp interno o por el dashboard. Sofía nunca inventa precios, diagnósticos, ni promesas médicas.',
+        es: 'Escala automáticamente a tu equipo por WhatsApp interno o por el dashboard. Sofía nunca inventa precios, diagnósticos, ni promesas médicas.',
         en: 'It automatically escalates to your team via internal WhatsApp or the dashboard. Sofía never invents prices, diagnoses, or medical promises.',
       } as Bilingual,
     },
     {
       q: { es: '¿Habla inglés de verdad o es traducción de Google?', en: 'Does it really speak English or is it Google Translate?' } as Bilingual,
       a: {
-        es: 'Habla inglés natural. Probada con pacientes reales de San Diego, Los Ángeles, y Phoenix. Si quiere, le mandamos transcripciones reales.',
+        es: 'Habla inglés natural. Probada con pacientes reales de San Diego, Los Ángeles, y Phoenix. Si quieres, te mandamos transcripciones reales.',
         en: 'It speaks natural English. Tested with real patients from San Diego, LA, and Phoenix. If you want, we\'ll send you real transcripts.',
       } as Bilingual,
     },
     {
       q: { es: '¿Qué tan rápido se instala?', en: 'How quickly does it install?' } as Bilingual,
       a: {
-        es: '48 horas desde que firma el acuerdo. La sesión de entrenamiento de 90 minutos sucede en los primeros 5 días. Producción completa: día 7.',
+        es: '48 horas desde que firmas el acuerdo. La sesión de entrenamiento de 90 minutos sucede en los primeros 5 días. Producción completa: día 7.',
         en: '48 hours from signing. The 90-minute training session happens in the first 5 days. Full production: day 7.',
       } as Bilingual,
     },
     {
       q: { es: '¿Cumple con la ley mexicana de protección de datos?', en: 'Does it comply with Mexican data protection law?' } as Bilingual,
       a: {
-        es: 'Sí. Cumplimos con la LFPDPPP. Los datos del paciente se guardan en servidores en México (o EE.UU. si lo prefiere) y nunca se comparten con terceros.',
+        es: 'Sí. Cumplimos con la LFPDPPP. Los datos del paciente se guardan en servidores en México (o EE.UU. si lo prefieres) y nunca se comparten con terceros.',
         en: 'Yes. We comply with LFPDPPP. Patient data is stored on servers in Mexico (or the US if you prefer) and never shared with third parties.',
       } as Bilingual,
     },
     {
       q: { es: '¿Qué pasa si quiero cancelar?', en: 'What if I want to cancel?' } as Bilingual,
       a: {
-        es: 'Cancela cuando quiera. Le exportamos sus conversaciones y datos en CSV. Sin penalización, sin papeleo. Es su número y sus pacientes, siempre.',
+        es: 'Cancela cuando quieras. Te exportamos tus conversaciones y datos en CSV. Sin penalización, sin papeleo. Es tu número y tus pacientes, siempre.',
         en: 'Cancel anytime. We export your conversations and data in CSV. No penalty, no paperwork. It\'s your number and your patients, always.',
       } as Bilingual,
     },
     {
       q: { es: '¿Pueden integrarse con mi sistema (Dentrix, Eaglesoft, etc.)?', en: 'Can it integrate with my system (Dentrix, Eaglesoft, etc.)?' } as Bilingual,
       a: {
-        es: 'En el plan Profesional y arriba, sí. En Esencial, le damos un dashboard para ver todo. La mayoría de clínicas socias empiezan sin integración y agregan después.',
+        es: 'En el plan Profesional y arriba, sí. En Esencial, te damos un dashboard para ver todo. La mayoría de clínicas socias empiezan sin integración y agregan después.',
         en: 'On Professional and above, yes. On Essential, we give you a dashboard to see everything. Most partner clinics start without integration and add it later.',
       } as Bilingual,
     },
@@ -317,7 +317,7 @@ export const faq = {
 export const founder = {
   greeting: { es: 'Hola, soy Lainie.', en: 'Hi, I\'m Lainie.' } as Bilingual,
   body: {
-    es: 'Vivo en Tijuana. Construí VozClinic porque mi propia dentista perdía citas todas las semanas: pacientes que escribían a las 9pm y nadie contestaba hasta el día siguiente.\n\nNo soy una empresa de software con call center en India. Soy una persona, en su ciudad, que sabe cómo trabajan las clínicas de aquí. Si me escribe usted, le contesto yo.',
+    es: 'Vivo en Tijuana. Construí VozClinic porque mi propia dentista perdía citas todas las semanas: pacientes que escribían a las 9pm y nadie contestaba hasta el día siguiente.\n\nNo soy una empresa de software con call center en India. Soy una persona, en tu ciudad, que sabe cómo trabajan las clínicas de aquí. Si me escribes, te contesto yo.',
     en: 'I live in Tijuana. I built VozClinic because my own dentist was losing appointments every week: patients who messaged at 9pm and got no reply until the next day.\n\nI\'m not a software company with a call center in India. I\'m one person, in your city, who understands how clinics here actually work. If you message me, I reply.',
   } as Bilingual,
   credentials: [
@@ -327,11 +327,11 @@ export const founder = {
     { es: '20+ años PM empresarial', en: '20+ yrs enterprise PM' } as Bilingual,
   ],
   highlight: {
-    es: 'Si está pensando en ser una de las 3 socias de diseño, le dedico el tiempo que sea necesario para que esto funcione para su clínica.',
+    es: 'Si estás pensando en ser una de las 3 socias de diseño, te dedico el tiempo que sea necesario para que esto funcione para tu clínica.',
     en: 'If you\'re considering being one of the 3 design partners, I\'ll spend whatever time it takes to make this work for your clinic.',
   } as Bilingual,
   signature: '— Lainie Mayfield, fundadora / founder',
-  cta: { es: 'Escríbame a WhatsApp →', en: 'Message me on WhatsApp →' } as Bilingual,
+  cta: { es: 'Escríbeme a WhatsApp →', en: 'Message me on WhatsApp →' } as Bilingual,
   photoAlt: 'Lainie Mayfield, fundadora de VozClinic',
 };
 
@@ -344,7 +344,7 @@ export const finalCta = {
     es: 'Si tu clínica encaja en el programa de socias de diseño (3 plazas, 90 días gratis, 50% de descuento de por vida), aplica abajo. Si prefieres esperar al lanzamiento general en septiembre 2026, únete a la lista de espera.',
     en: 'If your clinic fits the design partner program (3 spots, 90 days free, 50% off for life), apply below. If you\'d rather wait for the general launch in September 2026, join the waitlist.',
   } as Bilingual,
-  ctaDp: { es: 'Aplicar como socia de diseño →', en: 'Apply as design partner →' } as Bilingual,
+  ctaDp: { es: 'Aplica como socia de diseño →', en: 'Apply as design partner →' } as Bilingual,
   ctaWaitlist: { es: 'Unirme a la lista de espera', en: 'Join the waitlist' } as Bilingual,
 };
 
