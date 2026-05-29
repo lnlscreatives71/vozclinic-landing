@@ -6,6 +6,7 @@ import PainPoints from './components/PainPoints';
 import HowItWorks from './components/HowItWorks';
 import Features from './components/Features';
 import Demo from './components/Demo';
+import TrustBand from './components/TrustBand';
 import DesignPartner from './components/DesignPartner';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
@@ -26,6 +27,7 @@ export default function App() {
           <HowItWorks />
           <Features />
           <Demo />
+          <TrustBand />
           <DesignPartner />
           <Pricing />
           <FAQ />

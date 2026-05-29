@@ -12,20 +12,20 @@ export const nav = {
 // ──────────────────────────────────────────────────────────────
 export const hero = {
   h1: {
-    es: 'Su recepcionista de WhatsApp y llamadas que nunca duerme, y habla inglés perfecto.',
-    en: 'The WhatsApp and phone front desk that never sleeps, and speaks perfect English.',
+    es: 'La recepcionista de WhatsApp y llamadas que nunca duerme y habla inglés perfecto.',
+    en: 'The WhatsApp and call front desk that never sleeps and speaks perfect English.',
   } as Bilingual,
   sub: {
-    es: 'Sofía contesta mensajes y llamadas en segundos, agenda citas, envía recordatorios, y escala a su equipo solo cuando importa. Para clínicas dentales, estética, cirugía plástica, dermatología y bariátrica. En español, en inglés, 24/7.',
-    en: 'Sofía answers messages and calls in seconds, books appointments, sends reminders, and only escalates to your team when it matters. For dental, aesthetic, plastic surgery, dermatology and bariatric clinics. In Spanish, in English, 24/7.',
+    es: 'Sofía contesta a tus pacientes en menos de 2 minutos, recupera consultas perdidas y atiende sin error en inglés, las 24 horas.',
+    en: 'Sofía answers your patients in under 2 minutes, recovers lost inquiries, and handles English flawlessly, 24 hours a day.',
   } as Bilingual,
   primaryCta: {
-    es: 'Aplicar como socia de diseño',
+    es: 'Aplica como socia de diseño',
     en: 'Apply as a design partner',
   } as Bilingual,
   secondaryCta: {
-    es: 'Ver cómo funciona →',
-    en: 'See how it works →',
+    es: 'Conoce a Sofía en 2 minutos',
+    en: 'Meet Sofía in 2 minutes',
   } as Bilingual,
   trust: {
     es: 'HECHO EN TIJUANA · WHATSAPP BUSINESS API OFICIAL · CUMPLE LFPDPPP',
@@ -38,31 +38,44 @@ export const hero = {
 // ──────────────────────────────────────────────────────────────
 export const pain = {
   title: {
-    es: 'Su clínica está perdiendo dinero después de las 7pm.',
-    en: 'Your clinic is losing money after 7pm.',
+    es: 'Tu clínica está perdiendo pacientes, no solo llamadas.',
+    en: 'Your clinic is losing patients, not just calls.',
   } as Bilingual,
   cards: [
     {
-      title: { es: 'Mensajes sin contestar = citas perdidas', en: 'Unanswered messages = lost appointments' } as Bilingual,
+      title: { es: 'El 70% de tu mercado viene de EE.UU.', en: '70% of your market comes from the US' } as Bilingual,
       body: {
-        es: 'El paciente promedio escribe a 3 clínicas a la vez. La que contesta primero se queda con la cita. Si su recepcionista cierra a las 6pm, usted ya perdió.',
-        en: 'The average patient messages 3 clinics at once. Whoever replies first wins the appointment. If your front desk closes at 6pm, you\'ve already lost.',
+        es: 'Más del 70% de los pacientes de turismo médico en México provienen de Estados Unidos, según Baja Health Cluster. Si tu clínica atiende pacientes transfronterizos, ese flujo es tu negocio principal.',
+        en: 'Over 70% of medical tourists in Mexico originate from the United States, according to Baja Health Cluster. If your clinic serves cross-border patients, that flow is your primary business.',
       } as Bilingual,
     },
     {
-      title: { es: 'Pacientes de EE.UU. esperan respuesta en inglés en 2 minutos', en: 'US patients expect English replies within 2 minutes' } as Bilingual,
+      title: { es: 'Mensajes sin contestar después de hora', en: 'Unanswered messages after hours' } as Bilingual,
       body: {
-        es: 'La mayoría de los pacientes de estética, dental, plástica y bariátrica en Tijuana son transfronterizos. No esperan. Comparan precios en Yelp mientras le escriben a usted.',
-        en: 'Most aesthetic, dental, plastic surgery and bariatric patients in Tijuana are cross-border. They don\'t wait. They\'re comparing prices on Yelp while they message you.',
+        es: 'Mensajes de WhatsApp sin contestar a las 11pm. Pacientes de San Diego, Los Ángeles y Phoenix preguntando por precios, preparación pre-quirúrgica y disponibilidad. Cuando nadie responde, contactan a la siguiente clínica de su lista.',
+        en: 'Unanswered WhatsApp messages at 11pm. Patients from San Diego, Los Angeles, and Phoenix asking about pricing, pre-op instructions, and availability. When no one responds, they contact the next clinic on their list.',
       } as Bilingual,
     },
     {
-      title: { es: 'Su equipo está agotado contestando lo mismo 50 veces al día', en: 'Your team is burned out answering the same questions 50 times a day' } as Bilingual,
+      title: { es: 'Llamadas en inglés que no puedes atender', en: 'English calls you can\'t handle' } as Bilingual,
       body: {
-        es: '"¿Cuánto cuesta una limpieza?" "¿Aceptan seguro?" "¿Dónde están?" Su asistente clínica no debería hacer trabajo de centro de llamadas.',
-        en: '"How much is a cleaning?" "Do you take insurance?" "Where are you?" Your clinical assistant shouldn\'t be doing call-center work.',
+        es: 'Llamadas en inglés que tu recepcionista no puede atender. Tu equipo está agotado contestando las mismas preguntas en dos idiomas, 50 veces al día. Y tú estás pagando por leads que se pierden.',
+        en: 'English-language calls your receptionist can\'t handle. Your team is burned out answering the same questions in two languages, 50 times a day. And you\'re paying for leads that are slipping away.',
       } as Bilingual,
     },
+  ],
+};
+
+// ──────────────────────────────────────────────────────────────
+// Trust band — credibility strip (below demo, above pricing)
+// ──────────────────────────────────────────────────────────────
+export const trustBand = {
+  items: [
+    { es: 'Fundada y operada en Tijuana', en: 'Founded and operated in Tijuana' } as Bilingual,
+    { es: 'WhatsApp Business API oficial', en: 'Official WhatsApp Business API' } as Bilingual,
+    { es: 'Cumplimiento con LFPDPPP', en: 'LFPDPPP compliant' } as Bilingual,
+    { es: 'Logs auditables', en: 'Audit-ready logs' } as Bilingual,
+    { es: 'Onboarding en menos de 48 horas', en: 'Onboarding in under 48 hours' } as Bilingual,
   ],
 };
 
