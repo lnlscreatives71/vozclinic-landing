@@ -20,8 +20,8 @@ export const hero = {
     en: 'Sofía answers your patients in under 2 minutes, recovers lost inquiries, and handles English flawlessly, 24 hours a day.',
   } as Bilingual,
   primaryCta: {
-    es: 'Aplica como socia de diseño',
-    en: 'Apply as a design partner',
+    es: 'Únete a la lista de espera',
+    en: 'Join the waitlist',
   } as Bilingual,
   secondaryCta: {
     es: 'Conoce a Sofía en 2 minutos',
@@ -182,33 +182,33 @@ export const demo = {
 // Section 6 — Design Partner
 // ──────────────────────────────────────────────────────────────
 export const designPartner = {
-  title: { es: 'Buscamos 3 clínicas socias en Baja California.', en: 'We\'re looking for 3 partner clinics in Baja California.' } as Bilingual,
+  title: { es: 'Los 3 lugares de socia de diseño están llenos.', en: 'All 3 design partner spots are filled.' } as Bilingual,
   intro: {
-    es: 'Estamos lanzando VozClinic con un grupo pequeño de clínicas que nos ayuden a perfeccionar el producto. A cambio:',
-    en: 'We\'re launching VozClinic with a small group of clinics who help us perfect the product. In exchange:',
+    es: 'Gracias — la respuesta superó lo que esperábamos. Las 3 clínicas socias ya están a bordo y arrancando. Pero esto apenas empieza:',
+    en: 'Thank you — the response beat what we expected. All 3 partner clinics are on board and going live. But this is just the start:',
   } as Bilingual,
   benefits: [
-    { es: '90 días gratis, sin compromiso, sin tarjeta', en: '90 days free, no commitment, no card' } as Bilingual,
-    { es: '50% de descuento de por vida después de los 90 días', en: '50% off for life after the 90 days' } as Bilingual,
-    { es: 'Setup gratis (valor $1,500 USD)', en: 'Free setup ($1,500 USD value)' } as Bilingual,
+    { es: 'Lista de espera abierta para la próxima cohorte', en: 'Waitlist open for the next cohort' } as Bilingual,
+    { es: 'Las primeras 25 clínicas reciben su primer mes gratis', en: 'First 25 clinics get their first month free' } as Bilingual,
+    { es: 'Sé de las primeras en vivo con VozClinic', en: 'Be one of the first live on VozClinic' } as Bilingual,
     { es: 'Acceso directo a la fundadora, sin tickets, sin call center', en: 'Direct access to the founder, no tickets, no call center' } as Bilingual,
   ],
-  urgency: { es: 'Solo 3 lugares.', en: 'Only 3 spots.' } as Bilingual,
+  urgency: { es: 'Cupo de socias: lleno.', en: 'Design partner cohort: full.' } as Bilingual,
   urgencyBody: {
-    es: 'Aplicaciones cierran el 15 de junio. Las socias de diseño arrancan antes del 1 de julio.',
-    en: 'Applications close June 15. Design partners go live before July 1.',
+    es: 'La lista de espera ya está abierta — las primeras 25 clínicas arrancan con su primer mes gratis.',
+    en: 'The waitlist is now open — the first 25 clinics start with their first month free.',
   } as Bilingual,
-  cta: { es: 'Solicita uno de los 3 lugares →', en: 'Apply for one of the 3 spots →' } as Bilingual,
+  cta: { es: 'Únete a la lista de espera →', en: 'Join the waitlist →' } as Bilingual,
 };
 
 // ──────────────────────────────────────────────────────────────
 // Section 7 — Pricing
 // ──────────────────────────────────────────────────────────────
 export const pricing = {
-  title: { es: 'Precios después de los 90 días', en: 'Pricing after the 90 days' } as Bilingual,
+  title: { es: 'Precios mensuales', en: 'Monthly pricing' } as Bilingual,
   subtitle: {
-    es: 'Para socias de diseño: 50% de todos estos precios, de por vida.',
-    en: 'For design partners: 50% off all prices, for life.',
+    es: 'Únete a la lista de espera: las primeras 25 clínicas reciben su primer mes gratis.',
+    en: 'Join the waitlist: the first 25 clinics get their first month free.',
   } as Bilingual,
   plans: [
     {
@@ -302,10 +302,10 @@ export const faq = {
       } as Bilingual,
     },
     {
-      q: { es: '¿Por qué solo 3 socias?', en: 'Why only 3 partners?' } as Bilingual,
+      q: { es: '¿Todavía puedo ser socia de diseño?', en: 'Can I still become a design partner?' } as Bilingual,
       a: {
-        es: 'Porque damos acceso directo a la fundadora y construimos el producto con cada una. Más de 3 y se rompe la calidad. Aplicaciones cierran el 15 de junio.',
-        en: 'Because we give direct founder access and build the product with each one. More than 3 and quality breaks. Applications close June 15.',
+        es: 'Los 3 lugares ya están llenos y esas clínicas están arrancando — limitamos el grupo a 3 para dar acceso directo a la fundadora y construir el producto con cada una. Lo siguiente es la lista de espera: las primeras 25 clínicas arrancan con su primer mes gratis.',
+        en: 'All 3 spots are filled and those clinics are going live — we capped the group at 3 to give direct founder access and build the product with each one. Next up is the waitlist: the first 25 clinics start with their first month free.',
       } as Bilingual,
     },
   ],
@@ -327,8 +327,8 @@ export const founder = {
     { es: '20+ años PM empresarial', en: '20+ yrs enterprise PM' } as Bilingual,
   ],
   highlight: {
-    es: 'Si estás pensando en ser una de las 3 socias de diseño, te dedico el tiempo que sea necesario para que esto funcione para tu clínica.',
-    en: 'If you\'re considering being one of the 3 design partners, I\'ll spend whatever time it takes to make this work for your clinic.',
+    es: 'Si quieres unirte a la próxima cohorte, te dedico el tiempo que sea necesario para que esto funcione para tu clínica.',
+    en: 'If you want to join the next cohort, I\'ll spend whatever time it takes to make this work for your clinic.',
   } as Bilingual,
   signature: '— Lainie Mayfield, fundadora / founder',
   cta: { es: 'Escríbeme a WhatsApp →', en: 'Message me on WhatsApp →' } as Bilingual,
@@ -341,10 +341,10 @@ export const founder = {
 export const finalCta = {
   title: { es: '¿Lista para Sofía?', en: 'Ready for Sofía?' } as Bilingual,
   sub: {
-    es: 'Si tu clínica encaja en el programa de socias de diseño (3 plazas, 90 días gratis, 50% de descuento de por vida), aplica abajo. Si prefieres esperar al lanzamiento general en septiembre 2026, únete a la lista de espera.',
-    en: 'If your clinic fits the design partner program (3 spots, 90 days free, 50% off for life), apply below. If you\'d rather wait for the general launch in September 2026, join the waitlist.',
+    es: 'Las 3 plazas de socia de diseño están llenas y esas clínicas ya están arrancando. Únete a la lista de espera — las primeras 25 clínicas reciben su primer mes gratis.',
+    en: 'All 3 design partner spots are filled and those clinics are going live. Join the waitlist — the first 25 clinics get their first month free.',
   } as Bilingual,
-  ctaDp: { es: 'Aplica como socia de diseño →', en: 'Apply as design partner →' } as Bilingual,
+  ctaDemo: { es: 'Ver la demo en vivo', en: 'See the live demo' } as Bilingual,
   ctaWaitlist: { es: 'Unirme a la lista de espera', en: 'Join the waitlist' } as Bilingual,
 };
 
@@ -365,9 +365,9 @@ export const footerData = {
   legal: {
     label: { es: 'Legal', en: 'Legal' } as Bilingual,
     links: [
-      { label: { es: 'Aviso de privacidad', en: 'Privacy notice' } as Bilingual, href: '#' },
+      { label: { es: 'Aviso de privacidad', en: 'Privacy notice' } as Bilingual, href: '/aviso-de-privacidad/' },
       { label: { es: 'Términos', en: 'Terms' } as Bilingual, href: '#' },
-      { label: { es: 'LFPDPPP', en: 'LFPDPPP' } as Bilingual, href: '#' },
+      { label: { es: 'LFPDPPP', en: 'LFPDPPP' } as Bilingual, href: '/aviso-de-privacidad/' },
     ],
   },
   company: {

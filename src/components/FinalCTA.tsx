@@ -1,6 +1,6 @@
 import { useLang } from '../context/LangContext';
 import { finalCta } from '../data/content';
-import { qualifierUrl, dpUrl } from '../utils/links';
+import { qualifierUrl, demoUrl } from '../utils/links';
 
 export default function FinalCTA() {
   const { lang, t } = useLang();
@@ -43,19 +43,19 @@ export default function FinalCTA() {
           {t(finalCta.sub)}
         </p>
 
-        {/* Dual CTA: DP application (primary, gold) + waitlist (secondary, outline) */}
+        {/* Dual CTA: waitlist (primary, gold) + live demo (secondary, outline) */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <a
-            href={dpUrl(lang)}
+            href={qualifierUrl(lang)}
             className="w-full sm:w-auto inline-flex items-center justify-center bg-gold text-white font-bold px-8 py-4 rounded-xl text-base hover:bg-gold-muted transition-colors shadow-2xl shadow-black/20"
           >
-            {t(finalCta.ctaDp)}
+            {t(finalCta.ctaWaitlist)}
           </a>
           <a
-            href={qualifierUrl(lang)}
+            href={demoUrl}
             className="w-full sm:w-auto inline-flex items-center justify-center bg-transparent text-white font-semibold px-8 py-4 rounded-xl text-base border-2 border-white/60 hover:bg-white/10 transition-colors"
           >
-            {t(finalCta.ctaWaitlist)}
+            {t(finalCta.ctaDemo)}
           </a>
         </div>
 

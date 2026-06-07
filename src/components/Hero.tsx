@@ -1,6 +1,6 @@
 import { useLang } from '../context/LangContext';
 import { hero } from '../data/content';
-import { dpUrl, demoUrl } from '../utils/links';
+import { qualifierUrl, demoUrl } from '../utils/links';
 import PhoneMockup from './PhoneMockup';
 
 export default function Hero() {
@@ -22,11 +22,24 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-10 max-w-6xl mx-auto">
           {/* Left — copy */}
           <div className="flex-1 max-w-2xl text-center lg:text-left">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-teal/10 text-teal text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
-              <span>Sofia está en línea ahora</span>
-            </div>
+            {/* Spots-filled callout */}
+            <a
+              href="#socias"
+              className="inline-flex items-center gap-2 bg-gold/15 text-gold-muted text-xs font-bold px-3.5 py-1.5 rounded-full mb-6 border border-gold/40 tracking-wide uppercase hover:bg-gold/25 transition-colors"
+            >
+              <span
+                className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-gold text-white shrink-0"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3">
+                  <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                </svg>
+              </span>
+              {t({
+                es: 'Las 3 plazas de socia: llenas · lista abierta',
+                en: 'All 3 design partner spots filled · waitlist open',
+              })}
+            </a>
 
             {/* H1 — Fraunces (serif moment) */}
             <h1 className="font-display text-4xl sm:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] font-bold leading-[1.05] tracking-tight text-charcoal mb-6 text-balance">
@@ -41,7 +54,7 @@ export default function Hero() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 mb-10">
               <a
-                href={dpUrl(lang)}
+                href={qualifierUrl(lang)}
                 className="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap bg-gold text-white font-semibold px-7 py-4 rounded-xl text-base hover:bg-gold-muted transition-colors shadow-lg shadow-gold/20"
               >
                 {t(hero.primaryCta)}
