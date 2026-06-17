@@ -13,7 +13,7 @@ import FAQ from './components/FAQ';
 import FounderNote from './components/FounderNote';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
-import FloatingWhatsApp from './components/FloatingWhatsApp';
+import SofiaAgent from './components/sofia/SofiaAgent';
 
 export default function App() {
   return (
@@ -22,6 +22,7 @@ export default function App() {
         <AnnouncementBar />
         <TopBar />
         <main>
+          <SofiaAgent />
           <Hero />
           <PainPoints />
           <HowItWorks />
@@ -35,7 +36,6 @@ export default function App() {
           <FinalCTA />
         </main>
         <Footer />
-        <FloatingWhatsApp />
       </div>
     </LangProvider>
   );

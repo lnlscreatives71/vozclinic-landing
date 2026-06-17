@@ -19,7 +19,7 @@ export default function TopBar() {
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
       }`}
     >
-      <div className="section-container flex items-center justify-between h-20 sm:h-24 gap-4">
+      <div className="section-container flex items-center justify-between h-24 sm:h-32 gap-4">
         {/* Logo */}
         <a
           href="/"
@@ -29,7 +29,7 @@ export default function TopBar() {
           <img
             src="/vozclinic-logo.png"
             alt="VozClinic"
-            className="h-16 sm:h-20 w-auto"
+            className="h-20 sm:h-28 w-auto"
             width="440"
             height="88"
           />

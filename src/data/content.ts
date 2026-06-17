@@ -43,7 +43,7 @@ export const pain = {
   } as Bilingual,
   cards: [
     {
-      title: { es: 'El 70% de tu mercado viene de EE.UU.', en: '70% of your market comes from the US' } as Bilingual,
+      title: { es: 'El 70% de tu mercado viene de Estados Unidos', en: '70% of your market comes from the United States' } as Bilingual,
       body: {
         es: 'Más del 70% de los pacientes de turismo médico en México provienen de Estados Unidos, según Baja Health Cluster. Si tu clínica atiende pacientes transfronterizos, ese flujo es tu negocio principal.',
         en: 'Over 70% of medical tourists in Mexico originate from the United States, according to Baja Health Cluster. If your clinic serves cross-border patients, that flow is your primary business.',
@@ -138,7 +138,7 @@ export const features = {
     },
     {
       icon: 'globe',
-      title: { es: 'Atiende pacientes de EE.UU.', en: 'Handles US patients' } as Bilingual,
+      title: { es: 'Atiende pacientes de Estados Unidos', en: 'Handles patients from the United States' } as Bilingual,
       body: { es: 'Instrucciones para cruzar la frontera, en inglés, incluidas automáticamente.', en: 'Border-crossing instructions in English, included automatically.' } as Bilingual,
       wide: true,
     },
@@ -283,8 +283,8 @@ export const faq = {
     {
       q: { es: '¿Cumple con la ley mexicana de protección de datos?', en: 'Does it comply with Mexican data protection law?' } as Bilingual,
       a: {
-        es: 'Sí. Cumplimos con la LFPDPPP. Los datos del paciente se guardan en servidores en México (o EE.UU. si lo prefieres) y nunca se comparten con terceros.',
-        en: 'Yes. We comply with LFPDPPP. Patient data is stored on servers in Mexico (or the US if you prefer) and never shared with third parties.',
+        es: 'Sí. Cumplimos con la LFPDPPP. Los datos del paciente se guardan en servidores en México (o Estados Unidos si lo prefieres) y nunca se comparten con terceros.',
+        en: 'Yes. We comply with LFPDPPP. Patient data is stored on servers in Mexico (or the United States if you prefer) and never shared with third parties.',
       } as Bilingual,
     },
     {

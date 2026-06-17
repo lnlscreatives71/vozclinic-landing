@@ -59,9 +59,12 @@ export default function Footer() {
             © 2026 VozClinic.{' '}
             {t({ es: 'Todos los derechos reservados.', en: 'All rights reserved.' })}
           </p>
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-teal animate-pulse" aria-label="Online" />
-            <span className="text-xs text-gray-600">
+          <div className="flex items-center gap-2.5">
+            <span className="relative flex h-3 w-3" aria-label="Online">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-teal opacity-70 animate-ping" />
+              <span className="relative inline-flex h-3 w-3 rounded-full bg-teal" />
+            </span>
+            <span className="text-base font-semibold text-teal-light">
               {t({ es: 'Sofía está en línea ahora', en: 'Sofía is online now' })}
             </span>
           </div>

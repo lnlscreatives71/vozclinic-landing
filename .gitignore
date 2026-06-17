@@ -28,3 +28,8 @@ dist-server
 .dolt/
 *.db
 .beads-credential-key
+
+# Local env files (LiveKit + other secrets) — never commit
+.env
+.env.local
+.env*.local
