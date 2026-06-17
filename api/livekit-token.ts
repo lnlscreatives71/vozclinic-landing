@@ -1,17 +1,23 @@
-// Vercel Edge function: mints a LiveKit access token so the in-page Sofía
+// Vercel Node.js function: mints a LiveKit access token so the in-page Sofía
 // voice agent can connect. Follows LiveKit's standard token-endpoint format
 // (POST { room_config, ... } -> 201 { server_url, participant_token }).
 //
 // The client SDK (useSession with { agentName: 'vozclinic' }) packages the
-// agent-dispatch info into room_config, so we just pass it through to the
-// token. API key/secret/url live in Vercel env vars only, never in the bundle.
+// agent-dispatch info into room_config, so we just pass it through.
+// API key/secret/url live in Vercel env vars only:
 //   LIVEKIT_URL, LIVEKIT_API_KEY, LIVEKIT_API_SECRET
-// (same project as the agent: lnl-ai-agency).
+//
+// Runtime notes:
+// - Node.js (NOT edge): livekit-server-sdk uses node:crypto, which edge rejects.
+// - Named method exports (POST/OPTIONS) so Vercel passes a Web Request on the
+//   Node runtime; a default export would receive legacy (req, res) instead.
+// - RoomConfiguration is imported from livekit-server-sdk (not @livekit/protocol
+//   directly) so it's the same protobuf instance the SDK serializes with — the
+//   app also pulls a newer @livekit/protocol, and mixing the two breaks toJwt.
 
-export const config = { runtime: "edge" };
+export const config = { runtime: "nodejs" };
 
-import { AccessToken } from "livekit-server-sdk";
-import { RoomConfiguration } from "@livekit/protocol";
+import { AccessToken, RoomConfiguration } from "livekit-server-sdk";
 
 const ORIGIN_ALLOWLIST = [
   /^https:\/\/vozclinic\.com$/,
@@ -43,28 +49,24 @@ interface TokenRequestBody {
   room_config?: Record<string, unknown>;
 }
 
-export default async function handler(req: Request): Promise<Response> {
-  const origin = req.headers.get("origin");
-  const cors = corsHeaders(origin);
+export async function OPTIONS(req: Request): Promise<Response> {
+  return new Response(null, {
+    status: 204,
+    headers: corsHeaders(req.headers.get("origin")),
+  });
+}
 
-  if (req.method === "OPTIONS") {
-    return new Response(null, { status: 204, headers: cors });
-  }
-  if (req.method !== "POST") {
-    return new Response(JSON.stringify({ error: "Method not allowed" }), {
-      status: 405,
-      headers: { "Content-Type": "application/json", ...cors },
-    });
-  }
+export async function POST(req: Request): Promise<Response> {
+  const cors = corsHeaders(req.headers.get("origin"));
 
   const apiKey = process.env.LIVEKIT_API_KEY;
   const apiSecret = process.env.LIVEKIT_API_SECRET;
   const serverUrl = process.env.LIVEKIT_URL;
   if (!apiKey || !apiSecret || !serverUrl) {
-    return new Response(
-      JSON.stringify({ error: "LiveKit is not configured" }),
-      { status: 503, headers: { "Content-Type": "application/json", ...cors } },
-    );
+    return new Response(JSON.stringify({ error: "LiveKit is not configured" }), {
+      status: 503,
+      headers: { "Content-Type": "application/json", ...cors },
+    });
   }
 
   let body: TokenRequestBody = {};
@@ -92,12 +94,12 @@ export default async function handler(req: Request): Promise<Response> {
     canSubscribe: true,
   });
 
-  // Pass agent dispatch (and any other room config) straight through.
   // Use fromJson (NOT the constructor) so snake_case proto fields like
-  // `agent_name` that the client sends are parsed correctly — the constructor
-  // expects camelCase and would silently drop the agent name.
+  // `agent_name` that the client sends are parsed correctly.
   if (body.room_config) {
-    at.roomConfig = RoomConfiguration.fromJson(body.room_config as Parameters<typeof RoomConfiguration.fromJson>[0]);
+    at.roomConfig = RoomConfiguration.fromJson(
+      body.room_config as Parameters<typeof RoomConfiguration.fromJson>[0],
+    );
   }
 
   const participantToken = await at.toJwt();

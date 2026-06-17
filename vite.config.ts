@@ -43,7 +43,7 @@ function localTokenApi(): PluginOption {
             headers: { 'content-type': 'application/json', origin: 'http://localhost:5173' },
             body: Buffer.concat(chunks).toString() || '{}',
           })
-          const webRes: Response = await mod.default(webReq)
+          const webRes: Response = await mod.POST(webReq)
           res.statusCode = webRes.status
           webRes.headers.forEach((v, k) => res.setHeader(k, v))
           res.end(await webRes.text())
