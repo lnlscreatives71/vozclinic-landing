@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { TokenSource } from 'livekit-client';
 import { useSession, useAgent } from '@livekit/components-react';
+import { useKrispNoiseFilter } from '@livekit/components-react/krisp';
 import { AgentSessionProvider } from '@/components/agents-ui/agent-session-provider';
 import { AgentAudioVisualizerAura } from '@/components/agents-ui/agent-audio-visualizer-aura';
 import { useLang } from '@/context/LangContext';
@@ -42,6 +43,23 @@ function LiveOrb({ onEnd }: { onEnd: () => void }) {
   );
 }
 
+/**
+ * Enables LiveKit Krisp background-voice cancellation on the local mic so the
+ * agent gets a clean signal on laptop speakers — it strips the agent's own
+ * echoed voice + background voices that the browser's echo cancellation leaves
+ * behind, which is what otherwise stops turn detection from ever firing.
+ * No-ops on unsupported browsers (e.g. Safari < 17.4). Must render inside the
+ * session/room context.
+ */
+function KrispNoiseFilter() {
+  const krisp = useKrispNoiseFilter();
+  useEffect(() => {
+    krisp.setNoiseFilterEnabled(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  return null;
+}
+
 /** Live session: connects on mount, cleans up on unmount. */
 function SofiaLive({ onEnd }: { onEnd: () => void }) {
   const { t } = useLang();
@@ -77,6 +95,7 @@ function SofiaLive({ onEnd }: { onEnd: () => void }) {
 
   return (
     <AgentSessionProvider session={session}>
+      <KrispNoiseFilter />
       <div className="flex flex-col items-center gap-6">
         <LiveOrb onEnd={onEnd} />
         <button
