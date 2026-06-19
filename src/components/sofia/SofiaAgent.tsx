@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import { TokenSource } from 'livekit-client';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { Room, TokenSource } from 'livekit-client';
 import { useSession, useAgent } from '@livekit/components-react';
 import { AgentSessionProvider } from '@/components/agents-ui/agent-session-provider';
 import { AgentAudioVisualizerAura } from '@/components/agents-ui/agent-audio-visualizer-aura';
@@ -53,7 +53,28 @@ function LiveOrb({ onEnd }: { onEnd: () => void }) {
 /** Live session: connects on mount, cleans up on unmount. */
 function SofiaLive({ onEnd }: { onEnd: () => void }) {
   const { t } = useLang();
-  const session = useSession(tokenSource, { agentName: 'vozclinic' });
+
+  // Own the Room so we can override the mic capture constraints. livekit-client's
+  // defaults turn on `voiceIsolation` AND `autoGainControl` — aggressive Chrome
+  // processing that, when laptop speakers couple back into the built-in mic,
+  // suppresses the caller's own voice to near-silence. The agent then receives
+  // no audio (STT never fires) and Sofía greets, then never responds. Verified:
+  // the same failure hit BOTH our site and LiveKit's playground on speakers,
+  // because both inherit these defaults. We keep echo cancellation + noise
+  // suppression (needed for speaker echo) but drop the two over-suppressors.
+  const room = useMemo(
+    () =>
+      new Room({
+        audioCaptureDefaults: {
+          echoCancellation: true,
+          noiseSuppression: true,
+          autoGainControl: false,
+          voiceIsolation: false,
+        },
+      }),
+    [],
+  );
+  const session = useSession(tokenSource, { agentName: 'vozclinic', room });
   const [error, setError] = useState(false);
 
   useEffect(() => {
