@@ -75,10 +75,23 @@ function SofiaLive({ onEnd }: { onEnd: () => void }) {
     [],
   );
   const session = useSession(tokenSource, { agentName: 'vozclinic', room });
-  const [error, setError] = useState(false);
+  // Distinguish WHY start() failed so the message isn't a misleading blanket
+  // "check your microphone" — a token/connect/network failure has nothing to do
+  // with the mic. We classify the rejection and always log the real error.
+  const [error, setError] = useState<'mic' | 'connection' | null>(null);
 
   useEffect(() => {
-    session.start().catch(() => setError(true));
+    session.start().catch((err: unknown) => {
+      console.error('[Sofía] session.start() failed:', err);
+      const name = (err as { name?: string })?.name ?? '';
+      const msg = String((err as { message?: string })?.message ?? err ?? '');
+      const isMic =
+        name === 'NotAllowedError' ||
+        name === 'NotFoundError' ||
+        name === 'NotReadableError' ||
+        /permission|microphone|getusermedia|audio.*track/i.test(msg);
+      setError(isMic ? 'mic' : 'connection');
+    });
     return () => {
       session.end();
     };
@@ -86,19 +99,30 @@ function SofiaLive({ onEnd }: { onEnd: () => void }) {
   }, []);
 
   if (error) {
+    const isMic = error === 'mic';
     return (
-      <div className="text-center">
-        <p className="text-charcoal font-medium mb-4">
-          {t({
-            es: 'No pudimos iniciar el micrófono. Revisa los permisos del navegador e inténtalo de nuevo.',
-            en: 'We could not start your microphone. Check your browser permissions and try again.',
-          })}
+      <div className="text-center max-w-md mx-auto">
+        <p className="text-charcoal font-semibold mb-2">
+          {isMic
+            ? t({ es: 'No pudimos acceder a tu micrófono.', en: 'We couldn’t access your microphone.' })
+            : t({ es: 'No pudimos conectar con Sofía.', en: 'We couldn’t connect to Sofía.' })}
+        </p>
+        <p className="text-charcoal/70 text-sm mb-5">
+          {isMic
+            ? t({
+                es: 'Revisa el permiso de micrófono del navegador (el ícono junto a la barra de dirección) y vuelve a intentarlo.',
+                en: 'Check your browser’s microphone permission (the icon next to the address bar) and try again.',
+              })
+            : t({
+                es: 'Puede ser tu red o una extensión que bloquea la llamada. Inténtalo de nuevo, o prueba en otro navegador.',
+                en: 'It may be your network or an extension blocking the call. Try again, or try another browser.',
+              })}
         </p>
         <button
           onClick={onEnd}
           className="inline-flex items-center justify-center bg-teal text-white font-semibold px-6 py-3 rounded-xl hover:bg-teal-dark transition-colors"
         >
-          {t({ es: 'Volver', en: 'Back' })}
+          {t({ es: 'Reintentar', en: 'Try again' })}
         </button>
       </div>
     );
