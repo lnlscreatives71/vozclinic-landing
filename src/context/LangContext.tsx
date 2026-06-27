@@ -46,4 +46,5 @@ export function LangProvider({
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components -- hook colocated with its provider (standard context pattern)
 export const useLang = () => useContext(LangContext);
