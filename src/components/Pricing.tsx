@@ -98,8 +98,16 @@ export default function Pricing() {
           ))}
         </div>
 
+        {/* Add-ons note */}
+        <div className="flex justify-center mt-10">
+          <p className="inline-flex items-center gap-2 bg-teal/5 border border-teal/20 rounded-full px-4 py-2 text-sm text-charcoal text-center">
+            <span className="text-teal font-bold" aria-hidden="true">+</span>
+            {t(pricing.addons)}
+          </p>
+        </div>
+
         {/* Footer note */}
-        <p className="text-center text-gray-400 text-sm mt-10 max-w-2xl mx-auto">
+        <p className="text-center text-gray-400 text-sm mt-6 max-w-2xl mx-auto">
           {t(pricing.footer)}
         </p>
       </div>

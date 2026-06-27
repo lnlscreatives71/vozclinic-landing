@@ -2,9 +2,14 @@ import { useLang } from '../context/LangContext';
 import { footerData } from '../data/content';
 
 export default function Footer() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   const linkGroups = [footerData.product, footerData.legal, footerData.company];
+
+  // The blog has per-locale routes (/blog/ es, /en/blog/ en); other footer
+  // links are shared across languages.
+  const localizeHref = (href: string) =>
+    href === '/blog/' && lang === 'en' ? '/en/blog/' : href;
 
   return (
     <footer className="bg-charcoal text-gray-400 py-16" role="contentinfo">
@@ -41,7 +46,7 @@ export default function Footer() {
                 {group.links.map((link, lIdx) => (
                   <li key={lIdx}>
                     <a
-                      href={link.href}
+                      href={localizeHref(link.href)}
                       className="text-sm hover:text-white transition-colors"
                     >
                       {t(link.label)}

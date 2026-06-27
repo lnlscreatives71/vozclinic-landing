@@ -1,4 +1,5 @@
 import { LangProvider } from './context/LangContext';
+import type { Lang } from './types/lang';
 import AnnouncementBar from './components/AnnouncementBar';
 import TopBar from './components/TopBar';
 import Hero from './components/Hero';
@@ -15,9 +16,9 @@ import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import SofiaAgent from './components/sofia/SofiaAgent';
 
-export default function App() {
+export default function App({ initialLang = 'es' }: { initialLang?: Lang }) {
   return (
-    <LangProvider>
+    <LangProvider initialLang={initialLang}>
       <div className="min-h-screen font-body">
         <AnnouncementBar />
         <TopBar />

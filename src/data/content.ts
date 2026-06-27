@@ -12,12 +12,12 @@ export const nav = {
 // ──────────────────────────────────────────────────────────────
 export const hero = {
   h1: {
-    es: 'La recepcionista de WhatsApp y llamadas que nunca duerme y habla inglés perfecto.',
-    en: 'The WhatsApp and call front desk that never sleeps and speaks perfect English.',
+    es: 'El agente de voz y WhatsApp que contesta, agenda y reactiva pacientes, 24/7.',
+    en: 'The voice and WhatsApp agent that answers, books, and brings patients back, 24/7.',
   } as Bilingual,
   sub: {
-    es: 'Sofía contesta a tus pacientes en menos de 2 minutos, recupera consultas perdidas y atiende sin error en inglés, las 24 horas.',
-    en: 'Sofía answers your patients in under 2 minutes, recovers lost inquiries, and handles English flawlessly, 24 hours a day.',
+    es: 'Sofía responde a tus pacientes en menos de 2 minutos, en español e inglés, recupera las consultas perdidas y trae de vuelta a tus pacientes para exámenes anuales y seguimientos.',
+    en: 'Sofía answers your patients in under 2 minutes, in Spanish and English, recovers lost inquiries, and brings patients back for annual exams and follow-ups.',
   } as Bilingual,
   primaryCta: {
     es: 'Únete a la lista de espera',
@@ -127,7 +127,7 @@ export const features = {
     {
       icon: 'calendar',
       title: { es: 'Agenda citas directamente en tu calendario', en: 'Books appointments in your calendar' } as Bilingual,
-      body: { es: 'Integra con Google Calendar, Outlook y Dentrix.', en: 'Integrates with Google Calendar, Outlook and Dentrix.' } as Bilingual,
+      body: { es: 'Integra con Google Calendar, Outlook y Open Dental.', en: 'Integrates with Google Calendar, Outlook and Open Dental.' } as Bilingual,
       wide: false,
     },
     {
@@ -143,6 +143,18 @@ export const features = {
       wide: true,
     },
     {
+      icon: 'badge',
+      title: { es: 'Verifica seguros antes de la cita', en: 'Verifies insurance before the visit' } as Bilingual,
+      body: { es: 'Confirma cobertura y elegibilidad con el paciente antes de que llegue, para que no haya sorpresas ni citas que se caen.', en: 'Confirms coverage and eligibility with the patient before they arrive, so there are no surprises or cancelled visits.' } as Bilingual,
+      wide: false,
+    },
+    {
+      icon: 'refresh',
+      title: { es: 'Reactiva a tus pacientes inactivos', en: 'Reactivates your inactive patients' } as Bilingual,
+      body: { es: 'Contacta a tu lista para exámenes anuales y seguimientos, y vuelve a llenar tu agenda con pacientes que ya confían en ti.', en: 'Reaches out to your list for annual exams and follow-ups, refilling your calendar with patients who already trust you.' } as Bilingual,
+      wide: false,
+    },
+    {
       icon: 'shield',
       title: { es: 'Escala solo cuando importa', en: 'Escalates only when it matters' } as Bilingual,
       body: { es: 'Emergencias, quejas y casos complejos van directo a tu equipo.', en: 'Emergencies, complaints, and complex cases go straight to your team.' } as Bilingual,
@@ -152,6 +164,12 @@ export const features = {
       icon: 'chart',
       title: { es: 'Reporte semanal por WhatsApp', en: 'Weekly WhatsApp report' } as Bilingual,
       body: { es: 'Citas agendadas, mensajes gestionados e ingresos potenciales, cada lunes.', en: 'Appointments booked, messages handled, and potential revenue, every Monday.' } as Bilingual,
+      wide: false,
+    },
+    {
+      icon: 'megaphone',
+      title: { es: 'Lanza promociones y campañas', en: 'Runs promotions and campaigns' } as Bilingual,
+      body: { es: 'Envía ofertas y mensajes de seguimiento por WhatsApp a los pacientes correctos, en el momento correcto.', en: 'Sends offers and follow-up messages over WhatsApp to the right patients, at the right time.' } as Bilingual,
       wide: false,
     },
     {
@@ -240,6 +258,10 @@ export const pricing = {
       highlight: false,
     },
   ],
+  addons: {
+    es: 'Las promociones y la verificación de seguros son complementos opcionales, disponibles en cualquier plan.',
+    en: 'Promotions and insurance verification are optional add-ons, available on any plan.',
+  } as Bilingual,
   footer: {
     es: 'Sin contratos a largo plazo. Cancela cuando quieras. Precios incluyen WhatsApp Business API oficial y soporte en español.',
     en: 'No long-term contracts. Cancel anytime. Prices include official WhatsApp Business API and Spanish-language support.',
@@ -295,7 +317,7 @@ export const faq = {
       } as Bilingual,
     },
     {
-      q: { es: '¿Pueden integrarse con mi sistema (Dentrix, Eaglesoft, etc.)?', en: 'Can it integrate with my system (Dentrix, Eaglesoft, etc.)?' } as Bilingual,
+      q: { es: '¿Pueden integrarse con mi sistema (Open Dental, Eaglesoft, etc.)?', en: 'Can it integrate with my system (Open Dental, Eaglesoft, etc.)?' } as Bilingual,
       a: {
         es: 'En el plan Profesional y arriba, sí. En Esencial, te damos un dashboard para ver todo. La mayoría de clínicas socias empiezan sin integración y agregan después.',
         en: 'On Professional and above, yes. On Essential, we give you a dashboard to see everything. Most partner clinics start without integration and add it later.',
@@ -374,7 +396,7 @@ export const footerData = {
     label: { es: 'Empresa', en: 'Company' } as Bilingual,
     links: [
       { label: { es: 'Sobre nosotros', en: 'About us' } as Bilingual, href: '#' },
-      { label: { es: 'Blog (próximamente)', en: 'Blog (coming soon)' } as Bilingual, href: '#' },
+      { label: { es: 'Blog', en: 'Blog' } as Bilingual, href: '/blog/' },
       { label: { es: 'Contacto', en: 'Contact' } as Bilingual, href: '#' },
     ],
   },

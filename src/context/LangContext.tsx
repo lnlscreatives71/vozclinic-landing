@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 import type { ReactNode } from 'react';
 import type { Lang, Bilingual } from '../types/lang';
 
@@ -14,17 +14,21 @@ const LangContext = createContext<LangContextType>({
   t: (c) => c.es,
 });
 
-// SSR/SSG: initial render is always ES so server HTML matches the first client
-// paint. A useEffect then upgrades to the visitor's saved preference (a brief
-// flicker for returning EN-saved visitors is acceptable; most traffic is ES).
-export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>('es');
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const stored = window.localStorage.getItem('vc-lang');
-    if (stored === 'es' || stored === 'en') setLangState(stored);
-  }, []);
+// Language is route-driven: `/` is prerendered in Spanish, `/en/` in English.
+// `initialLang` is supplied by the SSR/prerender step (per route) and by the
+// client from the URL path (see main.tsx), so the hydrated tree always matches
+// the prerendered HTML — no flicker, no hydration mismatch. We intentionally do
+// NOT auto-switch from localStorage: a JS-driven locale swap is invisible to
+// crawlers and would desync from the canonical URL. The toggle navigates
+// between `/` and `/en/` (see TopBar) so each language has a real, indexable URL.
+export function LangProvider({
+  children,
+  initialLang = 'es',
+}: {
+  children: ReactNode;
+  initialLang?: Lang;
+}) {
+  const [lang, setLangState] = useState<Lang>(initialLang);
 
   const setLang = (l: Lang) => {
     if (typeof window !== 'undefined') {

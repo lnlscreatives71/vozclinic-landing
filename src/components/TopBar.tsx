@@ -4,7 +4,7 @@ import { nav } from '../data/content';
 import { qualifierUrl } from '../utils/links';
 
 export default function TopBar() {
-  const { lang, setLang, t } = useLang();
+  const { lang, t } = useLang();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -37,35 +37,37 @@ export default function TopBar() {
 
         {/* Right side */}
         <div className="flex items-center gap-3 sm:gap-4">
-          {/* Language toggle */}
+          {/* Language toggle — real URLs so each language is indexable */}
           <div
             className="flex items-center gap-1 text-sm font-semibold"
             role="group"
             aria-label="Language selection"
           >
-            <button
-              onClick={() => setLang('es')}
+            <a
+              href="/"
+              hrefLang="es"
               className={`px-2 py-1 rounded transition-colors ${
                 lang === 'es'
                   ? 'text-teal bg-teal/10'
                   : 'text-gray-400 hover:text-charcoal'
               }`}
-              aria-pressed={lang === 'es'}
+              aria-current={lang === 'es' ? 'page' : undefined}
             >
               ES
-            </button>
+            </a>
             <span className="text-gray-300 select-none">|</span>
-            <button
-              onClick={() => setLang('en')}
+            <a
+              href="/en/"
+              hrefLang="en"
               className={`px-2 py-1 rounded transition-colors ${
                 lang === 'en'
                   ? 'text-teal bg-teal/10'
                   : 'text-gray-400 hover:text-charcoal'
               }`}
-              aria-pressed={lang === 'en'}
+              aria-current={lang === 'en' ? 'page' : undefined}
             >
               EN
-            </button>
+            </a>
           </div>
 
           {/* CTA */}
