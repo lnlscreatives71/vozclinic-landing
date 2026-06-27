@@ -8,6 +8,8 @@ slug: agente-de-voz-bilingue-turismo-medico-tijuana
 pair: tijuana-medical-tourism
 image: vozclinic-article-1.webp
 image_alt: "Agente de voz con IA bilingüe contestando una llamada de WhatsApp para una clínica de turismo médico en Tijuana"
+og_image: social-card-voice-agent-medical-tourism.webp
+og_image_alt: "VozClinic bilingual voice agent launch social card with space for headline and call to action."
 ---
 
 Cada llamada sin contestar en Tijuana es un paciente que cruzó desde San Diego, Phoenix o Los Ángeles y que acaba de escribirle a la clínica de la otra cuadra. El paciente transfronterizo no espera. Compara dos o tres clínicas en una sola tarde, y la que contesta primero casi siempre se queda con la cita.

@@ -160,15 +160,23 @@ const POST_STYLES = `    .post { padding-bottom: 2rem; }
     .blog-list .post-meta { color: #6B7280; font-size: 0.85rem; margin: 0 0 0.5rem; }
     .blog-list p { color: #374151; margin: 0; line-height: 1.6; }`;
 
-function pageShell({ lang, title, metaTitle, description, canonical, alternates, jsonLd, hero, main, toggleHref, ogImage }) {
+function pageShell({ lang, title, metaTitle, description, canonical, alternates, jsonLd, hero, main, toggleHref, ogImage, ogImageAlt }) {
   const { header, footer } = chrome(lang, toggleHref);
   const headTitle = metaTitle || `${title} · VozClinic`;
   const hreflang = alternates.map(a => `  <link rel="alternate" hreflang="${a.lang}" href="${a.href}" />`).join('\n');
+  const social = ogImage || OG_IMAGE;
+  const altMeta = ogImageAlt
+    ? `\n  <meta property="og:image:alt" content="${esc(ogImageAlt)}" />\n  <meta name="twitter:image:alt" content="${esc(ogImageAlt)}" />`
+    : '';
   const og = `  <meta property="og:type" content="article" />
   <meta property="og:title" content="${esc(metaTitle || title)}" />
   <meta property="og:description" content="${esc(description)}" />
   <meta property="og:url" content="${canonical}" />
-  <meta property="og:image" content="${ogImage || OG_IMAGE}" />`;
+  <meta property="og:image" content="${social}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${esc(metaTitle || title)}" />
+  <meta name="twitter:description" content="${esc(description)}" />
+  <meta name="twitter:image" content="${social}" />${altMeta}`;
   return `<!DOCTYPE html>
 <html lang="${lang}">
 <head>
@@ -221,9 +229,13 @@ async function loadPosts(locale) {
     const pair = data.pair ? slugify(data.pair) : '';
     const hero = resolveHero(data.image);
     const heroAlt = data.image_alt || '';
+    // Social-card image (og:image / twitter:image). Falls back to the hero,
+    // then the site default, when not set.
+    const ogImage = resolveHero(data.og_image);
+    const ogImageAlt = data.og_image_alt || '';
     // The page <h1> comes from `title`; drop a leading "# H1" so it isn't doubled.
     const cleanBody = body.replace(/^\s*#\s+.+\r?\n+/, '');
-    posts.push({ slug, title, metaTitle, description, author, date, body: cleanBody, locale, pair, hero, heroAlt });
+    posts.push({ slug, title, metaTitle, description, author, date, body: cleanBody, locale, pair, hero, heroAlt, ogImage, ogImageAlt });
   }
   // newest first; undated posts sink to the bottom
   posts.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
@@ -299,7 +311,10 @@ ${heroImg}${marked.parse(post.body)}
         <a class="back-link" href="${LOCALES[post.locale].urlBase}/">${u.back}</a>
       </article>
     </section>`;
-  return pageShell({ lang: post.locale, title: post.title, metaTitle: post.metaTitle, description: post.description, canonical, alternates, jsonLd: articleJsonLd(post), hero, main, toggleHref, ogImage: post.hero ? `${SITE}${post.hero}` : OG_IMAGE });
+  // Social card priority: explicit og_image > inline hero > site default.
+  const social = post.ogImage ? `${SITE}${post.ogImage}` : (post.hero ? `${SITE}${post.hero}` : OG_IMAGE);
+  const socialAlt = post.ogImageAlt || post.heroAlt || '';
+  return pageShell({ lang: post.locale, title: post.title, metaTitle: post.metaTitle, description: post.description, canonical, alternates, jsonLd: articleJsonLd(post), hero, main, toggleHref, ogImage: social, ogImageAlt: socialAlt });
 }
 
 function renderListing(locale, posts, bySlug) {
