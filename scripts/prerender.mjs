@@ -58,12 +58,12 @@ const EN_HEAD = [
     '<meta name="description" content="AI voice & WhatsApp agent for clinics: 24/7 appointment booking, reminders, insurance verification, patient reactivation, and promotions. Tijuana + San Diego." />',
   ],
   [
-    '<link rel="canonical" href="https://vozclinic.com/" />',
-    '<link rel="canonical" href="https://vozclinic.com/en/" />',
+    '<link rel="canonical" href="https://www.vozclinic.com/" />',
+    '<link rel="canonical" href="https://www.vozclinic.com/en/" />',
   ],
   [
-    '<meta property="og:url" content="https://vozclinic.com/" />',
-    '<meta property="og:url" content="https://vozclinic.com/en/" />',
+    '<meta property="og:url" content="https://www.vozclinic.com/" />',
+    '<meta property="og:url" content="https://www.vozclinic.com/en/" />',
   ],
   [
     '<meta property="og:title" content="VozClinic — Tu recepcionista de WhatsApp que nunca duerme" />',

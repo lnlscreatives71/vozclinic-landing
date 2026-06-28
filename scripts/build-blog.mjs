@@ -21,7 +21,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const contentRoot = path.join(root, 'content', 'blog');
 const dist = path.join(root, 'dist');
 const publicDir = path.join(root, 'public');
-const SITE = 'https://vozclinic.com';
+const SITE = 'https://www.vozclinic.com';
 const OG_IMAGE = `${SITE}/og-image.png`;
 const DEFAULT_AUTHOR = 'Lainie Mayfield';
 
