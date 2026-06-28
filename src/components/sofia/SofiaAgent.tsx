@@ -183,9 +183,9 @@ export default function SofiaAgent() {
           <span className="inline-flex items-center gap-2 bg-teal/20 text-teal-light text-sm font-bold px-4 py-1.5 rounded-full mb-6 border border-teal/40 tracking-wide uppercase">
             {t({ es: 'Demostración en vivo', en: 'Live demo' })}
           </span>
-          <h1 className="font-display text-4xl sm:text-5xl font-semibold leading-tight mb-5">
+          <h2 className="font-display text-4xl sm:text-5xl font-semibold leading-tight mb-5">
             {t({ es: 'Habla con Sofía ahora mismo', en: 'Talk to Sofía right now' })}
-          </h1>
+          </h2>
           <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
             {t({
               es: 'Tu recepcionista con IA, en vivo. Pulsa para hablar — responde en segundos, en español o inglés.',

@@ -21,11 +21,20 @@ const serverDist = path.join(root, 'dist-server');
 const template = await fs.readFile(path.join(clientDist, 'index.html'), 'utf-8');
 
 const serverEntry = path.join(serverDist, 'entry-server.js');
-const { render } = await import(serverEntry);
+const { render, faqJsonLd } = await import(serverEntry);
 
 const placeholder = '<div id="root"></div>';
 if (!template.includes(placeholder)) {
   throw new Error(`prerender: could not find "${placeholder}" in dist/index.html`);
+}
+
+// The FAQPage JSON-LD is generated per-locale from content.ts (never hardcoded
+// in index.html) so it cannot drift from the rendered FAQ. swap() asserts the
+// marker exists, so a template change fails loudly.
+const FAQ_MARKER =
+  '<!-- FAQPAGE_JSONLD: prerender injects a per-locale FAQPage here from content.ts (scripts/prerender.mjs) -->';
+if (!template.includes(FAQ_MARKER)) {
+  throw new Error(`prerender: could not find FAQ JSON-LD marker in dist/index.html`);
 }
 
 // Exact, asserted string swaps so a template change fails loudly instead of
@@ -86,7 +95,7 @@ const EN_HEAD = [
 const esBody = render('es');
 await fs.writeFile(
   path.join(clientDist, 'index.html'),
-  template.replace(placeholder, `<div id="root">${esBody}</div>`),
+  swap(template, FAQ_MARKER, faqJsonLd('es')).replace(placeholder, `<div id="root">${esBody}</div>`),
   'utf-8',
 );
 console.log(`✓ Prerendered / (es) — ${esBody.length} chars`);
@@ -94,6 +103,7 @@ console.log(`✓ Prerendered / (es) — ${esBody.length} chars`);
 // --- English: dist/en/index.html ---
 let enTemplate = template;
 for (const [from, to] of EN_HEAD) enTemplate = swap(enTemplate, from, to);
+enTemplate = swap(enTemplate, FAQ_MARKER, faqJsonLd('en'));
 const enBody = render('en');
 await fs.mkdir(path.join(clientDist, 'en'), { recursive: true });
 await fs.writeFile(
