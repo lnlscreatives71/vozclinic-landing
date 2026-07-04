@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VozClinic · Calculadora de ROI</title>
+<meta name="description" content="Calcula cuánto recupera tu clínica con VozClinic: ingresos recuperados, menos inasistencias y horas de personal ahorradas. Ajusta los valores y mira tu ROI anual.">
+<link rel="canonical" href="https://www.vozclinic.com/calculadora/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#008080;
+    --teal-dark:#006666;
+    --navy:#2B3748;
+    --gold:#C9A961;
+    --cream:#FAFAF7;
+    --ink:#1F2937;
+    --muted:#6B7280;
+    --line:#E7E6E0;
+    --card:#FFFFFF;
+    --green:#1A8F5E;
+    --red:#C0492B;
+    --radius:16px;
+    --shadow:0 1px 2px rgba(43,55,72,.04), 0 12px 30px -12px rgba(43,55,72,.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Manrope',system-ui,-apple-system,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* Top bar */
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+  .brand{display:flex;align-items:center}
+  .brand img{height:34px;width:auto;display:block}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(0,128,128,.14)}
+  .lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
+  .lang button{font-family:inherit;font-weight:700;font-size:13px;letter-spacing:.02em;padding:8px 16px;border:0;background:transparent;color:var(--muted);cursor:pointer;transition:.18s}
+  .lang button.on{background:var(--teal);color:#fff}
+
+  /* Hero */
+  .hero{text-align:center;padding:26px 0 8px}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);background:rgba(0,128,128,.08);padding:7px 14px;border-radius:999px;margin-bottom:18px}
+  h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(34px,5vw,56px);line-height:1.05;color:var(--navy);letter-spacing:-.01em}
+  h1 .accent{color:var(--teal)}
+  .sub{max-width:620px;margin:18px auto 0;color:var(--muted);font-size:18px}
+
+  /* Layout */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:36px 0 56px;align-items:start}
+  @media(max-width:880px){.grid{grid-template-columns:1fr}}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+  .card h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:21px;color:var(--navy);display:flex;align-items:center;gap:10px;margin-bottom:6px}
+  .card h2 .ic{width:30px;height:30px;display:grid;place-items:center;background:rgba(0,128,128,.1);border-radius:9px;font-size:16px}
+
+  /* Plan selector */
+  .planrow{margin:18px 0 6px}
+  .lbl{font-weight:700;font-size:14px;color:var(--navy);margin-bottom:10px;display:block}
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .plan{position:relative;border:1.5px solid var(--line);border-radius:12px;padding:12px 10px;cursor:pointer;text-align:center;transition:.16s;background:#fff}
+  .plan:hover{border-color:var(--teal)}
+  .plan.on{border-color:var(--teal);background:rgba(0,128,128,.06)}
+  .plan .pname{font-weight:700;font-size:13px;color:var(--navy)}
+  .plan .pprice{font-size:12px;color:var(--muted);margin-top:3px}
+  .plan.on .pprice{color:var(--teal-dark)}
+  .plan .tag{position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:9px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:999px;white-space:nowrap}
+
+  /* Sliders */
+  .field{margin-top:22px}
+  .field .row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+  .field .name{font-weight:700;font-size:14px;color:var(--navy)}
+  .field .val{font-weight:800;font-size:15px;color:var(--teal)}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:999px;background:var(--line);outline:none}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:20px;height:20px;border-radius:50%;background:var(--teal);border:3px solid #fff;box-shadow:0 2px 6px rgba(0,128,128,.4);cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--teal);border:3px solid #fff;cursor:pointer}
+  .ends{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:7px}
+
+  /* Results */
+  .roihead{background:linear-gradient(135deg,var(--teal),var(--teal-dark));color:#fff;border:none}
+  .roihead h2{color:#fff}
+  .roihead h2 .ic{background:rgba(255,255,255,.18)}
+  .roi-big{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:54px;line-height:1;margin:14px 0 4px}
+  .roi-cap{opacity:.85;font-size:14px;font-weight:600}
+
+  .line{display:flex;justify-content:space-between;align-items:center;padding:9px 0;font-size:14.5px}
+  .line + .line{border-top:1px solid var(--line)}
+  .line .k{color:var(--ink)}
+  .line .v{font-weight:700}
+  .v.pos{color:var(--green)}
+  .v.neg{color:var(--red)}
+  .v.navy{color:var(--navy)}
+
+  .totals{margin-top:6px}
+  .totals .line{font-size:15px}
+  .net{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:14px;border-top:2px solid var(--line)}
+  .net .k{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;color:var(--navy)}
+  .net .v{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:26px;color:var(--green)}
+
+  .cta{display:block;width:100%;text-align:center;margin-top:20px;background:var(--teal);color:#fff;font-family:inherit;font-weight:800;font-size:16px;padding:16px;border:none;border-radius:14px;cursor:pointer;text-decoration:none;transition:.16s}
+  .cta:hover{background:var(--teal-dark);transform:translateY(-1px)}
+  .cta.gold{background:var(--gold)}
+  .cta.gold:hover{background:#b8985293}
+
+  .stack{display:flex;flex-direction:column;gap:24px}
+  .note{font-size:12px;color:var(--muted);line-height:1.55;margin-top:18px;padding:0 2px}
+  .note b{color:var(--navy)}
+
+  footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;font-size:13px;color:var(--muted)}
+  footer a{color:var(--teal);text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand"><img src="/vozclinic-logo.png" alt="VozClinic"></div>
+    <div class="lang">
+      <button id="es" class="on" onclick="setLang('es')">ES</button>
+      <button id="en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+
+  <div class="hero">
+    <span class="eyebrow" data-i="eyebrow"></span>
+    <h1><span data-i="h1a"></span> <span class="accent" data-i="h1b"></span></h1>
+    <p class="sub" data-i="sub"></p>
+  </div>
+
+  <div class="grid">
+    <!-- INPUTS -->
+    <div class="card">
+      <h2><span class="ic">🏥</span><span data-i="inputsTitle"></span></h2>
+
+      <div class="planrow">
+        <span class="lbl" data-i="planLabel"></span>
+        <div class="plans" id="plans"></div>
+      </div>
+
+      <div class="field">
+        <div class="row"><span class="name" data-i="f1"></span><span class="val" id="v1"></span></div>
+        <input type="range" id="appts" min="50" max="1200" step="10" value="300">
+        <div class="ends"><span>50</span><span>1200</span></div>
+      </div>
+
+      <div class="field">
+        <div class="row"><span class="name" data-i="f2"></span><span class="val" id="v2"></span></div>
+        <input type="range" id="value" min="50" max="1500" step="10" value="250">
+        <div class="ends"><span>$50</span><span>$1,500</span></div>
+      </div>
+
+      <div class="field">
+        <div class="row"><span class="name" data-i="f3"></span><span class="val" id="v3"></span></div>
+        <input type="range" id="missed" min="5" max="50" step="1" value="30">
+        <div class="ends"><span>5%</span><span>50%</span></div>
+      </div>
+
+      <div class="field">
+        <div class="row"><span class="name" data-i="f4"></span><span class="val" id="v4"></span></div>
+        <input type="range" id="noshow" min="2" max="40" step="1" value="15">
+        <div class="ends"><span>2%</span><span>40%</span></div>
+      </div>
+
+      <div class="field">
+        <div class="row"><span class="name" data-i="f5"></span><span class="val" id="v5"></span></div>
+        <input type="range" id="hours" min="5" max="160" step="5" value="35">
+        <div class="ends"><span>5</span><span>160</span></div>
+      </div>
+
+      <div class="field">
+        <div class="row"><span class="name" data-i="f6"></span><span class="val" id="v6"></span></div>
+        <input type="range" id="rate" min="5" max="50" step="1" value="12">
+        <div class="ends"><span>$5</span><span>$50</span></div>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="stack">
+      <div class="card roihead">
+        <h2><span class="ic">📈</span><span data-i="roiTitle"></span></h2>
+        <div class="roi-big" id="roi">…</div>
+        <div class="roi-cap" data-i="roiCap"></div>
+      </div>
+
+      <div class="card">
+        <h2><span class="ic">💵</span><span data-i="revTitle"></span></h2>
+        <div style="margin-top:10px">
+          <div class="line"><span class="k" data-i="rev1"></span><span class="v neg" id="revLost"></span></div>
+          <div class="line"><span class="k" data-i="rev2"></span><span class="v pos" id="revMo"></span></div>
+          <div class="line"><span class="k" data-i="rev3"></span><span class="v pos" id="revYr"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2><span class="ic">📅</span><span data-i="nsTitle"></span></h2>
+        <div style="margin-top:10px">
+          <div class="line"><span class="k" data-i="ns1"></span><span class="v navy" id="nsNow"></span></div>
+          <div class="line"><span class="k" data-i="ns2"></span><span class="v pos" id="nsMo"></span></div>
+          <div class="line"><span class="k" data-i="ns3"></span><span class="v pos" id="nsYr"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2><span class="ic">⏱️</span><span data-i="staffTitle"></span></h2>
+        <div style="margin-top:10px">
+          <div class="line"><span class="k" data-i="st1"></span><span class="v navy" id="stMo"></span></div>
+          <div class="line"><span class="k" data-i="st2"></span><span class="v navy" id="stYr"></span></div>
+        </div>
+      </div>
+
+      <div class="card totals">
+        <div class="line"><span class="k" data-i="t1"></span><span class="v navy" id="tSave"></span></div>
+        <div class="line"><span class="k" data-i="t2"></span><span class="v neg" id="tCost"></span></div>
+        <div class="net"><span class="k" data-i="t3"></span><span class="v" id="tNet"></span></div>
+        <a class="cta gold" id="ctaBtn" href="https://www.vozclinic.com/lista-espera/" target="_blank" rel="noopener" data-i="cta"></a>
+        <p class="note" data-i="note"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span data-i="footer"></span> · <a href="https://www.vozclinic.com" target="_blank" rel="noopener">vozclinic.com</a>
+  </footer>
+</div>
+
+<script>
+/* ---------- Pricing (real VozClinic tiers, USD/mo) ---------- */
+const PLANS = [
+  {id:'esencial', price:299},
+  {id:'pro',      price:599},
+  {id:'claims',   price:1499}
+];
+
+/* ---------- Model assumptions ---------- */
+const CAPTURE   = 0.70;  // share of unanswered inquiries Sofía recovers
+const NS_REDUCE = 0.40;  // reduction in no-shows from automated reminders
+
+/* ---------- i18n ---------- */
+const T = {
+  es:{
+    eyebrow:"Calculadora de ROI",
+    h1a:"¿Cuánto recupera tu clínica", h1b:"con Sofía?",
+    sub:"Mira cuántos ingresos recuperas y cuántas horas ahorras cuando Sofía contesta, agenda y reactiva pacientes 24/7.",
+    inputsTitle:"Datos de tu clínica",
+    planLabel:"Plan de VozClinic",
+    f1:"Citas al mes", f2:"Valor promedio de cita (USD)",
+    f3:"Mensajes sin contestar (%)", f4:"Tasa de inasistencia actual (%)",
+    f5:"Horas de personal ahorradas al mes", f6:"Costo del personal por hora (USD)",
+    roiTitle:"ROI anual", roiCap:"Retorno sobre la inversión",
+    revTitle:"Ingresos recuperados",
+    rev1:"Ingreso perdido al mes", rev2:"Recuperación mensual", rev3:"Recuperación anual",
+    nsTitle:"Menos inasistencias",
+    ns1:"Inasistencias actuales al mes", ns2:"Citas recuperadas al mes", ns3:"Valor recuperado al año",
+    staffTitle:"Ahorro en personal",
+    st1:"Ahorro mensual", st2:"Ahorro anual",
+    t1:"Ahorro total anual", t2:"Costo anual de VozClinic", t3:"Beneficio neto anual",
+    cta:"Únete a la lista de espera →",
+    note:"Estimaciones ilustrativas. El modelo asume que Sofía recupera ~70% de los mensajes sin contestar y reduce las inasistencias ~40% con recordatorios automáticos. Ajusta los valores a tu clínica. Precios reales: Esencial $299, Profesional $599, Pro Claims $1,499 USD/mes.",
+    footer:"VozClinic · Hecho en Tijuana",
+    planNames:{esencial:"Esencial",pro:"Profesional",claims:"Pro Claims"},
+    planTag:"Más popular",
+    units:{appts:" citas", hrs:" hrs", apptsShort:" citas/año"}
+  },
+  en:{
+    eyebrow:"ROI Calculator",
+    h1a:"How much does your clinic", h1b:"recover with Sofía?",
+    sub:"See the revenue you recover and the hours you save when Sofía answers, books, and reactivates patients 24/7.",
+    inputsTitle:"Your clinic details",
+    planLabel:"VozClinic plan",
+    f1:"Appointments per month", f2:"Average appointment value (USD)",
+    f3:"Unanswered messages (%)", f4:"Current no-show rate (%)",
+    f5:"Staff hours saved per month", f6:"Staff hourly cost (USD)",
+    roiTitle:"Annual ROI", roiCap:"Return on investment",
+    revTitle:"Revenue recovery",
+    rev1:"Monthly revenue lost", rev2:"Monthly recovery", rev3:"Annual recovery",
+    nsTitle:"Fewer no-shows",
+    ns1:"Current no-shows per month", ns2:"Appointments recovered/mo", ns3:"Value recovered per year",
+    staffTitle:"Staff cost savings",
+    st1:"Monthly savings", st2:"Annual savings",
+    t1:"Total annual savings", t2:"VozClinic annual cost", t3:"Net annual benefit",
+    cta:"Join the waitlist →",
+    note:"Illustrative estimates. The model assumes Sofía recovers ~70% of unanswered messages and reduces no-shows ~40% with automated reminders. Adjust the inputs to fit your clinic. Real pricing: Essential $299, Professional $599, Pro Claims $1,499 USD/mo.",
+    footer:"VozClinic · Made in Tijuana",
+    planNames:{esencial:"Essential",pro:"Professional",claims:"Pro Claims"},
+    planTag:"Most popular",
+    units:{appts:" appts", hrs:" hrs", apptsShort:" appts/yr"}
+  }
+};
+
+let lang='es';
+let planId='pro';
+
+const $ = id => document.getElementById(id);
+const money = n => '$'+Math.round(n).toLocaleString('en-US');
+
+function buildPlans(){
+  const dict=T[lang];
+  $('plans').innerHTML = PLANS.map(p=>`
+    <div class="plan ${p.id===planId?'on':''}" data-id="${p.id}" onclick="pickPlan('${p.id}')">
+      ${p.id==='pro'?`<span class="tag">${dict.planTag}</span>`:''}
+      <div class="pname">${dict.planNames[p.id]}</div>
+      <div class="pprice">$${p.price}/mo</div>
+    </div>`).join('');
+}
+function pickPlan(id){planId=id;buildPlans();calc();}
+
+function setLang(l){
+  lang=l;
+  document.documentElement.lang=l;
+  $('es').classList.toggle('on',l==='es');
+  $('en').classList.toggle('on',l==='en');
+  document.querySelectorAll('[data-i]').forEach(el=>{
+    const v=T[l][el.getAttribute('data-i')];
+    if(typeof v==='string') el.textContent=v;
+  });
+  buildPlans();
+  calc();
+}
+
+function calc(){
+  const u=T[lang].units;
+  const appts =+$('appts').value;
+  const value =+$('value').value;
+  const missed=+$('missed').value/100;
+  const noshow=+$('noshow').value/100;
+  const hours =+$('hours').value;
+  const rate  =+$('rate').value;
+
+  // slider value labels
+  $('v1').textContent=appts.toLocaleString('en-US')+u.appts;
+  $('v2').textContent=money(value);
+  $('v3').textContent=$('missed').value+'%';
+  $('v4').textContent=$('noshow').value+'%';
+  $('v5').textContent=hours+u.hrs;
+  $('v6').textContent=money(rate);
+
+  // Revenue recovery from unanswered messages
+  const lostApptsMo = appts*missed;
+  const revLostMo   = lostApptsMo*value;
+  const revRecovMo  = revLostMo*CAPTURE;
+  const revRecovYr  = revRecovMo*12;
+
+  // No-show reduction
+  const nsNowMo   = appts*noshow;
+  const nsSavedMo = nsNowMo*NS_REDUCE;
+  const nsValueYr = nsSavedMo*value*12;
+
+  // Staff savings
+  const stMo = hours*rate;
+  const stYr = stMo*12;
+
+  // Totals
+  const totalSaveYr = revRecovYr + nsValueYr + stYr;
+  const cost = PLANS.find(p=>p.id===planId).price;
+  const costYr = cost*12;
+  const netYr = totalSaveYr - costYr;
+  const roi = costYr>0 ? (netYr/costYr)*100 : 0;
+
+  $('roi').textContent = Math.round(roi).toLocaleString('en-US')+'%';
+  $('revLost').textContent='-'+money(revLostMo);
+  $('revMo').textContent='+'+money(revRecovMo);
+  $('revYr').textContent='+'+money(revRecovYr);
+  $('nsNow').textContent=nsNowMo.toFixed(1);
+  $('nsMo').textContent='+'+nsSavedMo.toFixed(1);
+  $('nsYr').textContent='+'+money(nsValueYr);
+  $('stMo').textContent=money(stMo);
+  $('stYr').textContent=money(stYr);
+  $('tSave').textContent=money(totalSaveYr);
+  $('tCost').textContent='-'+money(costYr);
+  $('tNet').textContent=money(netYr);
+}
+
+['appts','value','missed','noshow','hours','rate'].forEach(id=>$(id).addEventListener('input',calc));
+setLang('es');
+</script>
+</body>
+</html>
