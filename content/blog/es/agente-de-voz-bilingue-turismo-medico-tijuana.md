@@ -6,9 +6,9 @@ date: 2026-06-27
 author: VozClinic
 slug: agente-de-voz-bilingue-turismo-medico-tijuana
 pair: tijuana-medical-tourism
-image: vozclinic-article-1.webp
+image: hero-image-blog-2.webp
 image_alt: "Agente de voz con IA bilingüe contestando una llamada de WhatsApp para una clínica de turismo médico en Tijuana"
-og_image: social-card-voice-agent-medical-tourism.webp
+og_image: social-card-blog-2.webp
 og_image_alt: "VozClinic bilingual voice agent launch social card with space for headline and call to action."
 ---
 
@@ -17,6 +17,8 @@ Cada llamada sin contestar en Tijuana es un paciente que cruzó desde San Diego,
 VozClinic es un agente de voz con IA bilingüe creado específicamente para clínicas dentales, med spas y de cirugía estética en Tijuana que atienden pacientes de turismo médico. Contesta en español e inglés, cambia de idioma a media conversación y nunca manda al buzón. Aquí está exactamente cómo cierra las fugas que te cuestan pacientes cada semana.
 
 ## Por qué ser bilingüe lo es todo en la atención transfronteriza
+
+![Burbuja de conversación dividida en español e inglés con una onda de voz, que representa al agente bilingüe de VozClinic cambiando de idioma.](/blog-assets/inline-image-1-blog-2.webp)
 
 Un paciente de turismo médico puede iniciar el mensaje en inglés, cambiar al español para preguntar un precio y volver al inglés. Un chatbot genérico o un servicio de un solo idioma se rompe en ese momento, y una mala primera impresión manda a un paciente de alto valor a buscar en otro lado.
 
@@ -29,6 +31,8 @@ Las recepciones pierden llamadas. Están con un paciente, en otra línea o cobra
 VozClinic contesta cada llamada entrante con su propio número telefónico dedicado, así nada se queda sonando. También puede recibir y hacer llamadas directamente, atender voz y texto por WhatsApp, y operar en Telegram o SMS según lo que prefiera tu clínica. El agente contesta, califica al paciente y agenda la cita mientras tu equipo se concentra en quienes ya están en el sillón.
 
 ## Funciona fuera de horario, cuando los pacientes de EE. UU. realmente escriben
+
+![Recepción de clínica fuera de horario: el teléfono muestra una llamada perdida mientras el asistente de IA de VozClinic agenda y confirma la cita.](/blog-assets/Inline-image-2-blog-2.webp)
 
 Tu recepción cierra. La investigación de tus pacientes no. Un paciente de San Diego que compara cotizaciones de carillas suele escribir a las 9 de la noche o un domingo, justo cuando no hay nadie en el mostrador.
 
@@ -59,6 +63,8 @@ Rangos de precio, tiempo de recuperación, dónde estacionarse, si en la clínic
 VozClinic responde estas preguntas frecuentes al instante, en español o inglés, en el canal que el paciente usó. El equipo recupera su día. Los pacientes reciben una respuesta inmediata y consistente en lugar de esperar un callback que quizá nunca llegue.
 
 ## Un solo agente, en todos los canales que tus pacientes ya usan
+
+![Un solo agente de VozClinic conectado a WhatsApp, teléfono, SMS, Telegram y el sitio web para atender a los pacientes en cualquier canal.](/blog-assets/Inline-image-3-blog-2.webp)
 
 VozClinic encuentra a los pacientes donde están. Funciona como agente nativo de WhatsApp, la app que la mayoría de los pacientes en México y en la frontera ya usan todos los días. También opera en Telegram, puede tener su propio número telefónico directo para llamadas entrantes y salientes, envía SMS cuando la clínica lo prefiere y se integra directamente en tu sitio web para que los visitantes agenden una cita por voz sin salir de la página.
 

@@ -6,9 +6,9 @@ date: 2026-06-27
 author: VozClinic
 slug: bilingual-voice-agent-tijuana-medical-tourism
 pair: tijuana-medical-tourism
-image: vozclinic-article-1.webp
+image: hero-image-blog-2.webp
 image_alt: "Bilingual AI voice agent answering a WhatsApp call for a Tijuana medical tourism clinic"
-og_image: social-card-voice-agent-medical-tourism.webp
+og_image: social-card-blog-2.webp
 og_image_alt: "VozClinic bilingual voice agent launch social card with space for headline and call to action."
 ---
 
@@ -17,6 +17,8 @@ Every unanswered call in Tijuana is a patient who flew in from San Diego, Phoeni
 VozClinic is a bilingual AI voice agent built specifically for dental, med spa, and cosmetic surgery clinics in Tijuana that serve medical tourism patients. It answers in English and Spanish, switches languages mid-conversation, and never goes to voicemail. Below is exactly how it closes the gaps that cost your clinic patients every week.
 
 ## Why bilingual is the whole game in cross-border care
+
+![Speech bubble split into Spanish and English with a voice waveform, representing VozClinic's bilingual agent switching languages.](/blog-assets/inline-image-1-blog-2.webp)
 
 A medical tourism patient might start a message in English, slip into Spanish for a price question, then switch back. A generic chatbot or a single-language answering service breaks the moment that happens, and a broken first impression sends a high-value patient looking elsewhere.
 
@@ -29,6 +31,8 @@ Front desks miss calls. They are with a patient, on another line, or processing 
 VozClinic answers every inbound call on its own dedicated phone number, so nothing rings out. It can also receive and place calls directly, handle WhatsApp voice and text, and run on Telegram or SMS depending on what your clinic prefers. The agent answers, qualifies the patient, and books the appointment while your staff stays focused on the people in the chair.
 
 ## It works after hours, when U.S. patients actually reach out
+
+![After-hours clinic front desk: the phone shows a missed call while VozClinic's AI assistant books and confirms the appointment.](/blog-assets/Inline-image-2-blog-2.webp)
 
 Your front desk closes. Your patients' research does not. A San Diego patient comparing veneer quotes is often messaging clinics at 9 p.m. or on a Sunday, exactly when no one is at the desk.
 
@@ -59,6 +63,8 @@ Price ranges, recovery time, where to park, whether the clinic speaks English, w
 VozClinic answers these FAQs instantly, in English or Spanish, on whichever channel the patient used. Staff get their day back. Patients get an immediate, consistent answer instead of waiting on a callback that may never come.
 
 ## One agent, every channel your patients already use
+
+![A single VozClinic agent connected to WhatsApp, phone, SMS, Telegram, and the website to reach patients on any channel.](/blog-assets/Inline-image-3-blog-2.webp)
 
 VozClinic meets patients where they are. It runs as a native WhatsApp agent, the app most patients in Mexico and along the border already use every day. It also works on Telegram, can carry its own direct phone number for inbound and outbound voice calls, sends SMS when a clinic prefers it, and embeds directly on your website so visitors can book an appointment by voice without leaving the page.
 
