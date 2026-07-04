@@ -11,7 +11,7 @@ export default function AnnouncementBar() {
     >
       <span aria-hidden="true">✨</span>{' '}
       {t({
-        es: 'Las 3 plazas de socia de diseño: llenas · Lista abierta — las primeras 25 clínicas reciben su primer mes gratis →',
+        es: 'Las 3 plazas de socia de diseño: llenas · Lista de espera abierta — las primeras 25 clínicas reciben su primer mes gratis →',
         en: 'All 3 design partner spots filled · Waitlist open — first 25 clinics get their first month free →',
       })}
     </a>
