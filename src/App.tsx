@@ -9,6 +9,7 @@ import Features from './components/Features';
 import Demo from './components/Demo';
 import TrustBand from './components/TrustBand';
 import DesignPartner from './components/DesignPartner';
+import Calculator from './components/Calculator';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import FounderNote from './components/FounderNote';
@@ -31,6 +32,7 @@ export default function App({ initialLang = 'es' }: { initialLang?: Lang }) {
           <Demo />
           <TrustBand />
           <DesignPartner />
+          <Calculator />
           <Pricing />
           <FAQ />
           <FounderNote />
