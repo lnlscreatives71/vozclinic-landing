@@ -109,6 +109,15 @@ export default function Solutions({ initialLang = 'es' }: { initialLang?: Lang }
   return (
     <FeaturePageShell initialLang={initialLang}>
       <FeatureHero
+        image={{
+          src: '/feature-soluciones.webp',
+          width: 1536,
+          height: 1024,
+          alt: {
+            es: 'Sofía, el agente de voz con IA de VozClinic, conectada a una clínica dental, un medspa y un quirófano de cirugía cosmética',
+            en: 'Sofía, VozClinic’s AI voice agent, connected to a dental clinic, a med spa, and a cosmetic surgery suite',
+          },
+        }}
         kicker={{ es: 'Soluciones', en: 'Solutions' }}
         title={{
           es: 'Sofía habla el idioma',

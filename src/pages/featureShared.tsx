@@ -36,27 +36,46 @@ export interface HeroFact {
   l: B;
 }
 
-// Text-first hero: same layout language as the flagship receptionist page
-// (teal kicker, display h1 with teal accent, CTA pair, facts row) minus the
-// orb art, which stays unique to that page.
+export interface HeroImage {
+  src: string;
+  width: number;
+  height: number;
+  alt: B;
+}
+
+// Hero shared by the feature pages: same layout language as the flagship
+// receptionist page (teal kicker, display h1 with teal accent, CTA pair, facts
+// row). Pass `image` to show a transparent orb illustration above the copy (as
+// on the receptionist page); omit it for a text-only hero.
 export function FeatureHero({
   kicker,
   title,
   accent,
   sub,
   facts,
+  image,
 }: {
   kicker: B;
   title: B;
   accent: B;
   sub: B;
   facts: HeroFact[];
+  image?: HeroImage;
 }) {
   const { lang, t } = useLang();
   return (
     <section className="relative bg-offwhite overflow-hidden pt-36 sm:pt-44 pb-20">
       <div className="section-container relative">
-        <div className="text-center max-w-3xl mx-auto">
+        {image && (
+          <img
+            src={image.src}
+            alt={t(image.alt)}
+            width={image.width}
+            height={image.height}
+            className="mx-auto w-full max-w-2xl lg:max-w-3xl h-auto select-none"
+          />
+        )}
+        <div className={`text-center max-w-3xl mx-auto${image ? ' mt-5' : ''}`}>
           <p className="text-base sm:text-lg font-semibold text-teal mb-4">{t(kicker)}</p>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal leading-tight">
             {t(title)} <span className="text-teal">{t(accent)}</span>

@@ -16,6 +16,15 @@ export default function FeatureCommunication({ initialLang = 'es' }: { initialLa
   return (
     <FeaturePageShell initialLang={initialLang}>
       <FeatureHero
+        image={{
+          src: '/feature-comunicacion.webp',
+          width: 1200,
+          height: 896,
+          alt: {
+            es: 'Sofía, el agente de voz con IA de VozClinic, conectada a la reactivación de listas, el recall, los seguimientos, las promociones y el reporte semanal, en español e inglés',
+            en: 'Sofía, VozClinic’s AI voice agent, connected to list reactivation, recall, follow-ups, promotions, and the weekly report, in Spanish and English',
+          },
+        }}
         kicker={{ es: 'Comunicación y reactivación', en: 'Communication & reactivation' }}
         title={{
           es: 'Cada paciente escucha de ti',

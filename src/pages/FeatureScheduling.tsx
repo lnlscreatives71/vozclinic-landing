@@ -16,6 +16,15 @@ export default function FeatureScheduling({ initialLang = 'es' }: { initialLang?
   return (
     <FeaturePageShell initialLang={initialLang}>
       <FeatureHero
+        image={{
+          src: '/feature-agenda.webp',
+          width: 1264,
+          height: 848,
+          alt: {
+            es: 'Sofía, el agente de voz con IA de VozClinic, conectada a la agenda de citas, los recordatorios, el reagendado, las confirmaciones y las cancelaciones',
+            en: 'Sofía, VozClinic’s AI voice agent, connected to appointment booking, reminders, reschedules, confirmations, and cancellations',
+          },
+        }}
         kicker={{ es: 'Agenda y recordatorios', en: 'Scheduling & reminders' }}
         title={{
           es: 'Citas agendadas, confirmadas y recuperadas,',
