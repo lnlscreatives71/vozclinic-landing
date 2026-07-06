@@ -259,8 +259,8 @@ export const pricing = {
     },
   ],
   addons: {
-    es: 'Las promociones y la verificación de seguros son complementos opcionales, disponibles en cualquier plan.',
-    en: 'Promotions and insurance verification are optional add-ons, available on any plan.',
+    es: 'Las promociones, la verificación de seguros y la reactivación de listas son complementos opcionales, disponibles en cualquier plan.',
+    en: 'Promotions, insurance verification, and list reactivation are optional add-ons, available on any plan.',
   } as Bilingual,
   footer: {
     es: 'Sin contratos a largo plazo. Cancela cuando quieras. Precios incluyen WhatsApp Business API oficial y soporte en español.',
