@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLang } from '../context/LangContext';
 import { nav } from '../data/content';
 import { qualifierUrl } from '../utils/links';
+import { featurePages } from '../pages/manifest';
 
 export default function TopBar() {
   const { lang, t } = useLang();
@@ -34,6 +35,19 @@ export default function TopBar() {
             height="88"
           />
         </a>
+
+        {/* Primary nav */}
+        <nav className="hidden md:flex items-center gap-7 text-sm font-semibold text-charcoal">
+          <a href={featurePages[0].path[lang]} className="hover:text-teal transition-colors">
+            {t({ es: 'Funciones', en: 'Features' })}
+          </a>
+          <a href="/calculadora/" className="hover:text-teal transition-colors">
+            {t({ es: 'Calculadora', en: 'Calculator' })}
+          </a>
+          <a href={lang === 'en' ? '/en/blog/' : '/blog/'} className="hover:text-teal transition-colors">
+            Blog
+          </a>
+        </nav>
 
         {/* Right side */}
         <div className="flex items-center gap-3 sm:gap-4">

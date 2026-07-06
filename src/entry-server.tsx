@@ -3,6 +3,8 @@ import { renderToString } from 'react-dom/server';
 import App from './App';
 import { faq } from './data/content';
 import type { Lang } from './types/lang';
+import { renderRoute, type RouteId } from './routes';
+export { featurePages } from './pages/manifest';
 
 export function render(lang: Lang = 'es'): string {
   return renderToString(
@@ -10,6 +12,12 @@ export function render(lang: Lang = 'es'): string {
       <App initialLang={lang} />
     </StrictMode>,
   );
+}
+
+// Render any registered route (landing or a feature page) to a string, for the
+// per-route prerender step in scripts/prerender.mjs.
+export function renderById(id: RouteId, lang: Lang): string {
+  return renderToString(<StrictMode>{renderRoute(id, lang)}</StrictMode>);
 }
 
 // Build the FAQPage JSON-LD for a locale straight from content.ts so the
