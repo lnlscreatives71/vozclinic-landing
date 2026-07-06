@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLang } from '../context/LangContext';
 import { nav } from '../data/content';
 import { qualifierUrl } from '../utils/links';
-import { featurePages } from '../pages/manifest';
+import { featureNavPages, solutionsPage } from '../pages/manifest';
 
 export default function TopBar() {
   const { lang, t } = useLang();
@@ -38,8 +38,35 @@ export default function TopBar() {
 
         {/* Primary nav */}
         <nav className="hidden md:flex items-center gap-7 text-sm font-semibold text-charcoal">
-          <a href={featurePages[0].path[lang]} className="hover:text-teal transition-colors">
-            {t({ es: 'Funciones', en: 'Features' })}
+          {/* CSS-only dropdown (hover + focus-within) so it works prerendered, no JS */}
+          <div className="relative group">
+            <a
+              href={featureNavPages[0].path[lang]}
+              className="inline-flex items-center gap-1 hover:text-teal transition-colors"
+              aria-haspopup="true"
+            >
+              {t({ es: 'Funciones', en: 'Features' })}
+              <span aria-hidden="true" className="text-[10px] translate-y-px">▾</span>
+            </a>
+            <div className="absolute left-0 top-full pt-2 hidden group-hover:block group-focus-within:block">
+              <div className="bg-white border border-gray-100 rounded-2xl shadow-lg p-2 w-64">
+                {featureNavPages.map((p) => (
+                  <a
+                    key={p.id}
+                    href={p.path[lang]}
+                    className="block rounded-xl px-3.5 py-2.5 hover:bg-teal/5 transition-colors"
+                  >
+                    <span className="block text-charcoal">{p.label[lang]}</span>
+                    <span className="block text-gray-400 text-xs font-normal mt-0.5">
+                      {p.blurb[lang]}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+          <a href={solutionsPage.path[lang]} className="hover:text-teal transition-colors">
+            {t({ es: 'Soluciones', en: 'Solutions' })}
           </a>
           <a href="/calculadora/" className="hover:text-teal transition-colors">
             {t({ es: 'Calculadora', en: 'Calculator' })}

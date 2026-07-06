@@ -4,19 +4,11 @@ import AnnouncementBar from '../components/AnnouncementBar';
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
 import { qualifierUrl } from '../utils/links';
+import { MoreFeatures } from './featureShared';
 
 // Flagship feature page: the AI voice & WhatsApp receptionist. Rendered as an
 // integrated, prerendered route (see routes.tsx + manifest.ts). Pre-launch, so
 // copy stays capability-focused — no results/outcome claims.
-
-function OrbChip({ icon, name }: { icon: string; name: string }) {
-  return (
-    <span className="inline-flex items-center gap-2 bg-white/90 border border-gray-200 rounded-full px-3.5 py-1.5 text-sm font-semibold text-charcoal shadow-sm backdrop-blur">
-      <span aria-hidden="true">{icon}</span>
-      {name}
-    </span>
-  );
-}
 
 function Hero() {
   const { lang, t } = useLang();
@@ -202,6 +194,7 @@ export default function FeatureReceptionist({ initialLang = 'es' }: { initialLan
           <Hero />
           <Capabilities />
           <Channels />
+          <MoreFeatures currentId="feature-receptionist" />
           <CTA />
         </main>
         <Footer />

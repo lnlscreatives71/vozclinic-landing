@@ -37,4 +37,76 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/en/features/receptionist/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/funciones/recepcionista/"/>
   </url>
+  <url>
+    <loc>https://www.vozclinic.com/funciones/agenda/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/funciones/agenda/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/en/features/scheduling/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/funciones/agenda/"/>
+  </url>
+  <url>
+    <loc>https://www.vozclinic.com/en/features/scheduling/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/funciones/agenda/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/en/features/scheduling/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/funciones/agenda/"/>
+  </url>
+  <url>
+    <loc>https://www.vozclinic.com/funciones/comunicacion/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/funciones/comunicacion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/en/features/communication/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/funciones/comunicacion/"/>
+  </url>
+  <url>
+    <loc>https://www.vozclinic.com/en/features/communication/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/funciones/comunicacion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/en/features/communication/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/funciones/comunicacion/"/>
+  </url>
+  <url>
+    <loc>https://www.vozclinic.com/funciones/seguros/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/funciones/seguros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/en/features/insurance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/funciones/seguros/"/>
+  </url>
+  <url>
+    <loc>https://www.vozclinic.com/en/features/insurance/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/funciones/seguros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/en/features/insurance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/funciones/seguros/"/>
+  </url>
+  <url>
+    <loc>https://www.vozclinic.com/soluciones/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/soluciones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/en/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/soluciones/"/>
+  </url>
+  <url>
+    <loc>https://www.vozclinic.com/en/solutions/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/soluciones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/en/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/soluciones/"/>
+  </url>
 </urlset>
