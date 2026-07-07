@@ -8,8 +8,8 @@ slug: llamadas-perdidas-fuera-de-horario-turismo-medico-tijuana
 pair: missed-after-hours-calls
 image: vozclinic-hero-missed-after-hours-calls-ES.webp
 image_alt: "Un agente de voz con IA contestando una llamada de WhatsApp fuera de horario para una clínica de turismo médico en Tijuana"
-og_image: social-card-missed-after-hours-calls.webp
-og_image_alt: "Tarjeta social de VozClinic sobre contestar llamadas perdidas y fuera de horario, con espacio para el titular y la llamada a la acción."
+og_image: social-card-missed-after-hours-calls-es.webp
+og_image_alt: "Tarjeta social de VozClinic con un orbe dorado: La clínica que contesta primero gana. Únete a la lista de espera."
 ---
 
 Imagina a una paciente en San Diego, un domingo a las 9 de la noche. Tiene tres cotizaciones de implantes abiertas en su navegador, ya decidió que va a cruzar la frontera para hacerse el tratamiento y está lista para agendar una consulta esta misma noche. Llama a la primera clínica de Tijuana. No contestan. Llama a la segunda. No contestan. La tercera responde, la agenda para el martes y acaba de ganar varios miles de dólares que las dos primeras clínicas nunca supieron que estaban en juego.

@@ -8,8 +8,8 @@ slug: missed-after-hours-calls-tijuana-medical-tourism
 pair: missed-after-hours-calls
 image: vozclinic-hero-missed-after-hours-calls-EN.webp
 image_alt: "A glowing AI voice agent answering an after-hours WhatsApp call for a Tijuana medical tourism clinic"
-og_image: social-card-missed-after-hours-calls.webp
-og_image_alt: "VozClinic social card about answering missed and after-hours calls, with space for headline and call to action."
+og_image: social-card-missed-after-hours-calls-en.webp
+og_image_alt: "VozClinic social card with a gold orb: The clinic that answers first wins. Join the waitlist."
 ---
 
 Picture a patient in San Diego at 9 p.m. on a Sunday. She has three implant quotes open in browser tabs, she has decided she is crossing the border to get the work done, and she is ready to book a consultation tonight. She calls the first Tijuana clinic. No answer. She calls the second. No answer. The third picks up, books her for Tuesday, and just earned several thousand dollars that the first two clinics never knew was on the table.

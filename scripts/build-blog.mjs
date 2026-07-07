@@ -153,12 +153,18 @@ const POST_STYLES = `    .post { padding-bottom: 2rem; }
     .post img { max-width: 100%; height: auto; border-radius: 10px; margin: 1.25rem 0; }
     .post .back-link { display: inline-block; margin-top: 2.5rem; color: #008080; font-weight: 600; }
     .blog-list { list-style: none; margin: 0; padding: 0; }
-    .blog-list li { border-top: 1px solid #E5E7EB; padding: 1.5rem 0; }
+    .blog-list li { border-top: 1px solid #E5E7EB; padding: 1.5rem 0; display: flex; gap: 1.25rem; align-items: flex-start; }
+    .blog-list .post-thumb { flex: 0 0 auto; display: block; line-height: 0; }
+    .blog-list .post-thumb img { width: 140px; height: 140px; object-fit: cover; border-radius: 12px; display: block; }
+    .blog-list .post-card-body { flex: 1 1 auto; min-width: 0; }
     .blog-list h2 { font-size: 1.25rem; margin: 0 0 0.35rem; }
     .blog-list h2 a { color: #1F2937; text-decoration: none; }
     .blog-list h2 a:hover { color: #008080; }
     .blog-list .post-meta { color: #6B7280; font-size: 0.85rem; margin: 0 0 0.5rem; }
-    .blog-list p { color: #374151; margin: 0; line-height: 1.6; }`;
+    .blog-list p { color: #374151; margin: 0; line-height: 1.6; }
+    @media (max-width: 480px) {
+      .blog-list .post-thumb img { width: 96px; height: 96px; }
+    }`;
 
 function pageShell({ lang, title, metaTitle, description, canonical, alternates, jsonLd, hero, main, toggleHref, ogImage, ogImageAlt }) {
   const { header, footer } = chrome(lang, toggleHref);
@@ -327,11 +333,22 @@ function renderListing(locale, posts, bySlug) {
     { lang: 'en', href: `${SITE}/en/blog/` },
     { lang: 'x-default', href: `${SITE}/blog/` },
   ];
-  const items = posts.map(p => `        <li>
-          <h2><a href="${postUrl(locale, p.slug)}">${esc(p.title)}</a></h2>
-          <p class="post-meta">${fmtDate(p.date, locale)}</p>
-          <p>${esc(p.description)}</p>
-        </li>`).join('\n');
+  const items = posts.map(p => {
+    // Thumbnail: the post's social-card orb (falls back to its inline hero).
+    // Decorative + duplicate of the title link, so alt="" and kept out of the
+    // tab order.
+    const thumb = p.ogImage || p.hero;
+    const thumbHtml = thumb
+      ? `          <a class="post-thumb" href="${postUrl(locale, p.slug)}" tabindex="-1" aria-hidden="true"><img src="${thumb}" alt="" loading="lazy" width="140" height="140" /></a>\n`
+      : '';
+    return `        <li>
+${thumbHtml}          <div class="post-card-body">
+            <h2><a href="${postUrl(locale, p.slug)}">${esc(p.title)}</a></h2>
+            <p class="post-meta">${fmtDate(p.date, locale)}</p>
+            <p>${esc(p.description)}</p>
+          </div>
+        </li>`;
+  }).join('\n');
   const hero = `    <section class="hero-grid" id="hero">
       <div class="hero-text">
         <span class="eyebrow">${u.eyebrow}</span>
