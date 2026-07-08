@@ -121,7 +121,7 @@
 <body>
 <div class="wrap">
   <div class="topbar">
-    <a class="brand" href="/" aria-label="VozClinic — inicio"><img src="/vozclinic-logo.png" alt="VozClinic"></a>
+    <a class="brand" id="homeLink" href="/" aria-label="VozClinic — inicio"><img src="/vozclinic-logo.png" alt="VozClinic"></a>
     <div class="lang">
       <button id="es" class="on" onclick="setLang('es')">ES</button>
       <button id="en" onclick="setLang('en')">EN</button>
@@ -316,6 +316,9 @@ function setLang(l){
   document.documentElement.lang=l;
   $('es').classList.toggle('on',l==='es');
   $('en').classList.toggle('on',l==='en');
+  // Logo links back to the landing page in the active language.
+  $('homeLink').setAttribute('href', l==='en' ? '/en/' : '/');
+  $('homeLink').setAttribute('aria-label', l==='en' ? 'VozClinic — home' : 'VozClinic — inicio');
   document.querySelectorAll('[data-i]').forEach(el=>{
     const v=T[l][el.getAttribute('data-i')];
     if(typeof v==='string') el.textContent=v;
