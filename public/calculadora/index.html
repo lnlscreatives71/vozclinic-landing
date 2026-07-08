@@ -39,8 +39,9 @@
 
   /* Top bar */
   .topbar{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
-  .brand{display:flex;align-items:center}
-  .brand img{height:34px;width:auto;display:block}
+  .brand{display:inline-flex;align-items:center;transition:opacity .16s}
+  .brand:hover{opacity:.82}
+  .brand img{height:52px;width:auto;display:block}
   .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(0,128,128,.14)}
   .lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
   .lang button{font-family:inherit;font-weight:700;font-size:13px;letter-spacing:.02em;padding:8px 16px;border:0;background:transparent;color:var(--muted);cursor:pointer;transition:.18s}
@@ -120,7 +121,7 @@
 <body>
 <div class="wrap">
   <div class="topbar">
-    <div class="brand"><img src="/vozclinic-logo.png" alt="VozClinic"></div>
+    <a class="brand" href="/" aria-label="VozClinic — inicio"><img src="/vozclinic-logo.png" alt="VozClinic"></a>
     <div class="lang">
       <button id="es" class="on" onclick="setLang('es')">ES</button>
       <button id="en" onclick="setLang('en')">EN</button>
