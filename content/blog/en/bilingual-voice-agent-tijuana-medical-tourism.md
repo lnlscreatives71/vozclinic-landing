@@ -8,8 +8,8 @@ slug: bilingual-voice-agent-tijuana-medical-tourism
 pair: tijuana-medical-tourism
 image: hero-image-blog-2.webp
 image_alt: "Bilingual AI voice agent answering a WhatsApp call for a Tijuana medical tourism clinic"
-og_image: social-card-blog-2.webp
-og_image_alt: "VozClinic bilingual voice agent launch social card with space for headline and call to action."
+og_image: social-card-blog-2-en.webp
+og_image_alt: "VozClinic social card with a blue orb: Stop losing cross-border patients. Join the waitlist."
 ---
 
 Every unanswered call in Tijuana is a patient who flew in from San Diego, Phoenix, or Los Angeles and just messaged the clinic three blocks over instead. Cross-border patients do not wait. They compare two or three clinics in a single afternoon, and the one that answers first usually wins the booking.
