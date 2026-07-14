@@ -366,7 +366,7 @@ export const finalCta = {
     es: 'Las 3 plazas de socia de diseño están llenas y esas clínicas ya están arrancando. Únete a la lista de espera — las primeras 25 clínicas reciben su primer mes gratis.',
     en: 'All 3 design partner spots are filled and those clinics are going live. Join the waitlist — the first 25 clinics get their first month free.',
   } as Bilingual,
-  ctaDemo: { es: 'Ver la demo en vivo', en: 'See the live demo' } as Bilingual,
+  ctaDemo: { es: 'Agenda una llamada de demo', en: 'Book a demo call' } as Bilingual,
   ctaWaitlist: { es: 'Unirme a la lista de espera', en: 'Join the waitlist' } as Bilingual,
 };
 

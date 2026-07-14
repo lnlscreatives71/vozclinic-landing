@@ -1,6 +1,6 @@
 import { useLang } from '../context/LangContext';
 import { finalCta } from '../data/content';
-import { qualifierUrl, demoUrl } from '../utils/links';
+import { qualifierUrl, bookingUrl } from '../utils/links';
 
 export default function FinalCTA() {
   const { lang, t } = useLang();
@@ -43,7 +43,7 @@ export default function FinalCTA() {
           {t(finalCta.sub)}
         </p>
 
-        {/* Dual CTA: waitlist (primary, gold) + live demo (secondary, outline) */}
+        {/* Dual CTA: waitlist (primary, gold) + demo-call booking (secondary, outline) */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <a
             href={qualifierUrl(lang)}
@@ -52,7 +52,7 @@ export default function FinalCTA() {
             {t(finalCta.ctaWaitlist)}
           </a>
           <a
-            href={demoUrl}
+            href={bookingUrl}
             className="w-full sm:w-auto inline-flex items-center justify-center bg-transparent text-white font-semibold px-8 py-4 rounded-xl text-base border-2 border-white/60 hover:bg-white/10 transition-colors"
           >
             {t(finalCta.ctaDemo)}

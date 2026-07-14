@@ -1,9 +1,9 @@
 import { useLang } from '../context/LangContext';
 import { demo } from '../data/content';
-import { qualifierUrl } from '../utils/links';
+import { bookingUrl } from '../utils/links';
 
 export default function Demo() {
-  const { lang, t } = useLang();
+  const { t } = useLang();
 
   return (
     <section className="bg-offwhite py-24" id="demo" aria-label="Demo">
@@ -46,10 +46,10 @@ export default function Demo() {
 
           {/* CTA link */}
           <a
-            href={qualifierUrl(lang)}
+            href={bookingUrl}
             className="inline-flex items-center gap-2 text-gold font-semibold hover:underline underline-offset-2"
           >
-            {t({ es: 'Únete a la lista de espera →', en: 'Join the waitlist →' })}
+            {t({ es: 'Agenda una llamada de demo →', en: 'Book a demo call →' })}
           </a>
         </div>
       </div>

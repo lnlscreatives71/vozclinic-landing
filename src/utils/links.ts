@@ -17,3 +17,6 @@ export const waUrl =
   `https://wa.me/526633154686?text=${encodeURIComponent('Hola Lainie, vi VozClinic y quiero unirme a la lista de espera.')}`;
 
 export const demoUrl = '#demo';
+
+// Direct demo-call booking page hosted on the LNL CRM.
+export const bookingUrl = 'https://lnlcrm.com/booking/vozclinic';
