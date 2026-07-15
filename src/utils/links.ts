@@ -16,7 +16,9 @@ export const dpUrl = (lang: Lang): string =>
 export const waUrl =
   `https://wa.me/526633154686?text=${encodeURIComponent('Hola Lainie, vi VozClinic y quiero unirme a la lista de espera.')}`;
 
-export const demoUrl = '#demo';
+// The interactive Sofía section at the top of the page — the actual live
+// demo. The #demo anchor further down is the recorded video tour.
+export const demoUrl = '#sofia';
 
 // Direct demo-call booking page hosted on the LNL CRM.
 export const bookingUrl = 'https://lnlcrm.com/book/vozclinic';

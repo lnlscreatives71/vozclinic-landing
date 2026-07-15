@@ -380,7 +380,7 @@ export const footerData = {
     links: [
       { label: { es: 'Cómo funciona', en: 'How it works' } as Bilingual, href: '/#como-funciona' },
       { label: { es: 'Precios', en: 'Pricing' } as Bilingual, href: '/#precios' },
-      { label: { es: 'Demo', en: 'Demo' } as Bilingual, href: '/#demo' },
+      { label: { es: 'Demo', en: 'Demo' } as Bilingual, href: '/#sofia' },
       { label: { es: 'FAQ', en: 'FAQ' } as Bilingual, href: '/#faq' },
     ],
   },
