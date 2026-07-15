@@ -3,6 +3,7 @@ import { LangProvider, useLang } from '../context/LangContext';
 import type { Lang } from '../types/lang';
 import AnnouncementBar from '../components/AnnouncementBar';
 import TopBar from '../components/TopBar';
+import FloatingWhatsApp from '../components/FloatingWhatsApp';
 import Footer from '../components/Footer';
 import { qualifierUrl } from '../utils/links';
 import { featurePages } from './manifest';
@@ -25,6 +26,7 @@ export function FeaturePageShell({
         <AnnouncementBar />
         <TopBar />
         <main>{children}</main>
+        <FloatingWhatsApp />
         <Footer />
       </div>
     </LangProvider>

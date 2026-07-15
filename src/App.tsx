@@ -14,6 +14,7 @@ import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import FounderNote from './components/FounderNote';
 import FinalCTA from './components/FinalCTA';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Footer from './components/Footer';
 import SofiaAgent from './components/sofia/SofiaAgent';
 
@@ -38,6 +39,7 @@ export default function App({ initialLang = 'es' }: { initialLang?: Lang }) {
           <FounderNote />
           <FinalCTA />
         </main>
+        <FloatingWhatsApp />
         <Footer />
       </div>
     </LangProvider>

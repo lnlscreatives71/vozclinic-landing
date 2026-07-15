@@ -2,6 +2,7 @@ import { LangProvider, useLang } from '../context/LangContext';
 import type { Lang } from '../types/lang';
 import AnnouncementBar from '../components/AnnouncementBar';
 import TopBar from '../components/TopBar';
+import FloatingWhatsApp from '../components/FloatingWhatsApp';
 import Footer from '../components/Footer';
 import { qualifierUrl } from '../utils/links';
 import { MoreFeatures } from './featureShared';
@@ -197,6 +198,7 @@ export default function FeatureReceptionist({ initialLang = 'es' }: { initialLan
           <MoreFeatures currentId="feature-receptionist" />
           <CTA />
         </main>
+        <FloatingWhatsApp />
         <Footer />
       </div>
     </LangProvider>
