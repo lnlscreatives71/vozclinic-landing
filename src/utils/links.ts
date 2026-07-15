@@ -19,4 +19,4 @@ export const waUrl =
 export const demoUrl = '#demo';
 
 // Direct demo-call booking page hosted on the LNL CRM.
-export const bookingUrl = 'https://lnlcrm.com/booking/vozclinic';
+export const bookingUrl = 'https://lnlcrm.com/book/vozclinic';

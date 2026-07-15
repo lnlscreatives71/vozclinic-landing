@@ -25,10 +25,9 @@
       width: 100%;
       box-sizing: border-box;
     }
-    /* Appointy embed auto-resizes via postMessage (see inline script
-       below). scrolling="no" + width:100% lets the iframe behave like
-       a normal block element. */
-    #appointy-iframe { display: block; width: 100%; border: 0; }
+    /* The LNL CRM booking page scrolls inside its own iframe, so give it
+       a viewport-sized height instead of auto-resizing. */
+    #booking-iframe { display: block; width: 100%; border: 0; height: 85vh; min-height: 640px; }
     .no-border { border: 0; }
     .booking-fallback {
       text-align: center;
@@ -66,30 +65,16 @@
     </div>
 
     <div class="booking-frame-wrap">
-      <iframe id="appointy-iframe" class="no-border"
-        src="https://booking.appointy.com/vozclinic?isgadget=1&autoheight=1&sr=1261825&st=798259&cat=579270"
-        scrolling="no" width="100%" frameBorder="0"
+      <iframe id="booking-iframe" class="no-border"
+        src="https://lnlcrm.com/book/vozclinic"
+        width="100%" frameBorder="0"
         title="Agendar demo con VozClinic"
         allow="payment; geolocation; microphone; camera"></iframe>
       <p class="booking-fallback">
-        ¿El calendario no carga? <a href="https://booking.appointy.com/vozclinic?sr=1261825&st=798259&cat=579270" target="_blank" rel="noopener">Abrir directamente en una nueva pestaña →</a>
+        ¿El calendario no carga? <a href="https://lnlcrm.com/book/vozclinic" target="_blank" rel="noopener">Abrir directamente en una nueva pestaña →</a>
       </p>
     </div>
   </div>
-
-  <script>
-    // Appointy posts {type:"height", data:<px>} on content change so the
-    // iframe matches its internal layout, and {type:"scroll"} to pull the
-    // booking view back into focus after step transitions.
-    (function () {
-      const ifrm = document.getElementById("appointy-iframe");
-      window.addEventListener("message", function (e) {
-        const d = e.data || {};
-        if (d.type === "height") ifrm.style.height = d.data + "px";
-        if (d.type === "scroll") ifrm.scrollIntoView();
-      });
-    })();
-  </script>
 
   <footer>
     <div class="footer-content" style="padding: 1.5rem 0;">
