@@ -11,7 +11,7 @@ export default function Demo() {
         <div className="max-w-3xl mx-auto text-center">
           {/* Label */}
           <span className="text-teal text-xs font-bold tracking-widest uppercase">
-            {t({ es: 'Demo en vivo', en: 'Live demo' })}
+            {t({ es: 'Recorrido en video', en: 'Video tour' })}
           </span>
 
           {/* Title */}
