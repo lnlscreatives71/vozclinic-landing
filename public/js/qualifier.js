@@ -4,9 +4,8 @@
  *
  * Posts to the same-origin Vercel signing proxy (api/sign-qualifier.ts),
  * which HMAC-signs the body and forwards to the LNL CRM webhook. The
- * CRM responds with { contact_id, pms_phase1_fit, redirect_url, ... };
- * we honor the redirect_url so Phase 1 fit visitors go straight to the
- * demo-booking page and waitlist visitors go to the thank-you page.
+ * CRM responds with { contact_id, created, redirect_url }; we honor the
+ * redirect_url to land the visitor on the thank-you page.
  */
 
 // Absolute URL on the canonical www host so visitors who land on the
@@ -26,8 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const submitSpinner = document.getElementById('submit-spinner');
   const formErrorAlert = document.getElementById('form-error-alert');
   // Capture the page-defined button label so the loading->idle transition
-  // restores the right text on each page (e.g. "Enviar aplicación" vs
-  // "Enviar mi aplicación" on the DP page).
+  // restores the right text on each page.
   const submitDefaultText = submitText ? submitText.textContent : '';
 
   if (!form) return;
@@ -95,30 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
       lead_source_text: String(fd.get('lead_source_text') || '').trim() || undefined,
     };
 
-    // Intent is carried on the inbound URL: ?intent=dp from the homepage's
-    // gold "Apply as design partner" CTAs marks this as a DP application
-    // so the CRM tags the contact dp-applicant. Waitlist CTAs omit the
-    // param, leaving source undefined.
-    const intent = new URLSearchParams(window.location.search).get('intent');
-    if (intent === 'dp') {
-      payload.source = 'design_partner_intent';
-    }
-
-    // Preserve ?intent=dp when redirecting to one of our same-origin thank-you
-    // pages so the destination can reframe its copy for DP applicants. Skips
-    // third-party redirects (e.g. Appointy demo booking) untouched.
-    function preserveIntent(url) {
-      if (intent !== 'dp') return url;
-      try {
-        const u = new URL(url, window.location.origin);
-        if (u.hostname !== window.location.hostname) return url;
-        u.searchParams.set('intent', 'dp');
-        return u.toString();
-      } catch (e) {
-        return url;
-      }
-    }
-
     setLoadingState(true);
 
     try {
@@ -131,15 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const json = await response.json().catch(() => ({}));
 
       if (response.ok && json && json.data && json.data.redirect_url) {
-        // CRM tells us where to go (demo booking for Phase 1 fit,
-        // waitlist thank-you otherwise).
-        window.location.href = preserveIntent(json.data.redirect_url);
+        // CRM tells us which thank-you page to land on.
+        window.location.href = json.data.redirect_url;
         return;
       }
 
       // Fallback redirect if response shape is unexpected but status OK.
       if (response.ok) {
-        window.location.href = preserveIntent(isSpanish ? '/lista-gracias/' : '/waitlist-thanks/');
+        window.location.href = isSpanish ? '/lista-gracias/' : '/waitlist-thanks/';
         return;
       }
 
