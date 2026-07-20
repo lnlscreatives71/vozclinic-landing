@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Application received! · VozClinic</title>
+  <title>You're on the list! · VozClinic</title>
   <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23008080%22/><path d=%22M25,25 L45,75 Q50,85 55,75 L75,25 L60,25 L50,55 L40,25 Z%22 fill=%22%23FFFFFF%22/></svg>">
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -35,40 +35,28 @@
         </svg>
       </div>
 
-      <h1 id="thanks-h1" style="font-size: 2rem; margin-bottom: 0.5rem;">Application received!</h1>
+      <h1 id="thanks-h1" style="font-size: 2rem; margin-bottom: 0.5rem;">You're on the list!</h1>
       <p id="thanks-sub" style="color: #4B5563; font-size: 1.05rem; margin-bottom: 0.5rem;">
-        Thank you for taking the time to apply.
+        Thanks for joining the waitlist.
       </p>
 
       <p id="thanks-body" style="font-size: 0.95rem; color: #6B7280; line-height: 1.5;">
-        Your clinic is on our waitlist. Right now we're onboarding a small group of Phase 1 fits (PMS with API + high WhatsApp volume). When a spot opens that matches your situation, I'll reach out personally by WhatsApp or email. In the meantime, if your PMS changes or you want to chat sooner, just message me directly.
+        Your clinic is signed up. I'll reach out personally by WhatsApp or email as soon as we open the next group of clinics. In the meantime, if you want to chat sooner, just message me directly.
       </p>
 
       <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem; width: 100%;">
-        <a href="https://wa.me/526633154686?text=Hi%20Lainie,%20I%20just%20applied%20and%20want%20to%20chat" target="_blank" rel="noopener" class="btn-submit" style="text-decoration: none;">Message me on WhatsApp</a>
+        <a href="https://wa.me/526633154686?text=Hi%20Lainie,%20I%20just%20joined%20the%20waitlist%20and%20want%20to%20chat" target="_blank" rel="noopener" class="btn-submit" style="text-decoration: none;">Message me on WhatsApp</a>
         <a href="https://www.vozclinic.com" class="btn-secondary">Back to the site</a>
       </div>
     </div>
   </main>
 
   <script>
-    // Preserve query string on the ES language toggle so ?intent=dp survives
-    // the switch to /lista-gracias/.
+    // Preserve query string on the ES language toggle so UTM/campaign params
+    // survive the switch to /lista-gracias/.
     (function () {
       var t = document.getElementById('lang-toggle');
       if (t && window.location.search) t.href = '/lista-gracias/' + window.location.search;
-    })();
-
-    // Reframe page copy for design-partner applicants (?intent=dp).
-    (function () {
-      if (new URLSearchParams(window.location.search).get('intent') !== 'dp') return;
-      document.title = 'Design partner application received! · VozClinic';
-      var set = function (id, txt) {
-        var el = document.getElementById(id);
-        if (el) el.textContent = txt;
-      };
-      set('thanks-sub', 'Thanks for applying to the Design Partner program.');
-      set('thanks-body', "I'm reviewing every application by hand. There are only 3 spots and we're prioritizing clinics with an open PMS (Open Dental, Eaglesoft, etc.) and high WhatsApp volume. I'll get back to you with a decision by June 20. If you want to chat sooner, message me directly.");
     })();
   </script>
 

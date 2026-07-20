@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¡Aplicación recibida! · VozClinic</title>
+  <title>¡Estás en la lista! · VozClinic</title>
   <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23008080%22/><path d=%22M25,25 L45,75 Q50,85 55,75 L75,25 L60,25 L50,55 L40,25 Z%22 fill=%22%23FFFFFF%22/></svg>">
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -35,40 +35,28 @@
         </svg>
       </div>
 
-      <h1 id="thanks-h1" style="font-size: 2rem; margin-bottom: 0.5rem;">¡Aplicación recibida!</h1>
+      <h1 id="thanks-h1" style="font-size: 2rem; margin-bottom: 0.5rem;">¡Estás en la lista!</h1>
       <p id="thanks-sub" style="color: #4B5563; font-size: 1.05rem; margin-bottom: 0.5rem;">
-        Gracias por tomarte el tiempo de aplicar.
+        Gracias por unirte a la lista de espera.
       </p>
 
       <p id="thanks-body" style="font-size: 0.95rem; color: #6B7280; line-height: 1.5;">
-        Tu clínica está en nuestra lista de espera. En este momento estamos arrancando con un grupo pequeño de Phase 1 fits (PMS con API + alto volumen de WhatsApp). Cuando se libere un cupo que encaje con tu situación, te aviso personalmente por WhatsApp o correo. Mientras tanto, si tu PMS cambia o si quieres conversar antes, escríbeme directo.
+        Tu clínica ya está registrada. Te aviso personalmente por WhatsApp o correo en cuanto abramos el siguiente grupo de clínicas. Mientras tanto, si quieres conversar antes, escríbeme directo.
       </p>
 
       <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem; width: 100%;">
-        <a href="https://wa.me/526633154686?text=Hola%20Lainie,%20acabo%20de%20aplicar%20y%20quiero%20conversar" target="_blank" rel="noopener" class="btn-submit" style="text-decoration: none;">Escribirme por WhatsApp</a>
+        <a href="https://wa.me/526633154686?text=Hola%20Lainie,%20acabo%20de%20unirme%20a%20la%20lista%20de%20espera%20y%20quiero%20conversar" target="_blank" rel="noopener" class="btn-submit" style="text-decoration: none;">Escribirme por WhatsApp</a>
         <a href="https://www.vozclinic.com" class="btn-secondary">Volver al sitio</a>
       </div>
     </div>
   </main>
 
   <script>
-    // Preserve query string on the EN language toggle so ?intent=dp survives
-    // the switch to /waitlist-thanks/.
+    // Preserve query string on the EN language toggle so UTM/campaign params
+    // survive the switch to /waitlist-thanks/.
     (function () {
       var t = document.getElementById('lang-toggle');
       if (t && window.location.search) t.href = '/waitlist-thanks/' + window.location.search;
-    })();
-
-    // Reframe page copy for design-partner applicants (?intent=dp).
-    (function () {
-      if (new URLSearchParams(window.location.search).get('intent') !== 'dp') return;
-      document.title = '¡Aplicación de socia de diseño recibida! · VozClinic';
-      var set = function (id, txt) {
-        var el = document.getElementById(id);
-        if (el) el.textContent = txt;
-      };
-      set('thanks-sub', 'Gracias por aplicar al programa de Socias de Diseño.');
-      set('thanks-body', 'Estamos revisando cada aplicación a mano. Solo hay 3 plazas y priorizamos clínicas con PMS abierta (Open Dental, Eaglesoft, etc.) y volumen alto de WhatsApp. Te contesto antes del 20 de junio con la decisión. Si quieres conversar antes, escríbeme directo.');
     })();
   </script>
 

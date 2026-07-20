@@ -43,32 +43,17 @@
     </section>
 
     <script>
-      // Preserve query string on the EN language toggle so ?intent=dp survives
-      // a mid-application language switch to /waitlist/.
+      // Preserve query string on the EN language toggle so UTM/campaign params
+      // survive a mid-form language switch to /waitlist/.
       (function () {
         var t = document.getElementById('lang-toggle');
         if (t && window.location.search) t.href = '/waitlist/' + window.location.search;
-      })();
-
-      // Reframe page copy for design-partner applicants (?intent=dp). Runs
-      // synchronously during HTML parse, after the hero elements declare but
-      // before the browser paints — no FOUC.
-      (function () {
-        if (new URLSearchParams(window.location.search).get('intent') !== 'dp') return;
-        document.title = 'Aplica como socia de diseño · VozClinic';
-        var set = function (id, txt) {
-          var el = document.getElementById(id);
-          if (el) el.textContent = txt;
-        };
-        set('page-eyebrow', 'Programa de Socias de Diseño');
-        set('page-h1', 'Aplica para una de las 3 plazas de socia de diseño.');
-        set('page-subhead', '90 días gratis (sin tarjeta, sin compromiso). 50% de descuento de por vida después. Solo 3 plazas. Aplicaciones cierran el 15 de junio.');
       })();
     </script>
 
     <section id="formulario">
       <div class="form-max-wrap">
-        <h2 id="page-form-h2">Aplica en 2 minutos</h2>
+        <h2 id="page-form-h2">Regístrate en 2 minutos</h2>
 
         <form id="qualifier-form" class="referral-form" novalidate>
 
@@ -226,7 +211,7 @@
 
           <button type="submit" id="submit-btn" class="btn-submit">
             <span class="spinner" id="submit-spinner"></span>
-            <span id="submit-btn-text">Enviar aplicación</span>
+            <span id="submit-btn-text">Unirme a la lista</span>
           </button>
 
         </form>
@@ -238,7 +223,7 @@
   <footer>
     <div class="footer-content">
       <p class="footer-text">
-        ¿Dudas antes de aplicar? Escríbeme directamente a
+        ¿Dudas antes de registrarte? Escríbeme directamente a
         <a href="mailto:lainiem@vozclinic.com">lainiem@vozclinic.com</a> o por <a href="https://wa.me/526633154686?text=Hola%20Lainie,%20tengo%20una%20duda%20sobre%20VozClinic" target="_blank" rel="noopener">WhatsApp</a>.
       </p>
       <div class="footer-signature">— Lainie Mayfield, Fundadora de VozClinic</div>

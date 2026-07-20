@@ -146,16 +146,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const errorMsg =
         (json && (json.error || (json.error && json.error.message))) ||
         (isSpanish
-          ? 'Hubo un problema al enviar tu aplicación. Por favor inténtalo de nuevo.'
-          : 'There was a problem sending your application. Please try again.');
+          ? 'Hubo un problema al agregarte a la lista. Por favor inténtalo de nuevo.'
+          : 'There was a problem adding you to the waitlist. Please try again.');
       throw new Error(typeof errorMsg === 'string' ? errorMsg : 'Submission failed');
     } catch (err) {
       console.error('Qualifier submission error:', err);
       setLoadingState(false);
       showGeneralError(
         isSpanish
-          ? 'No pudimos enviar tu aplicación. Por favor inténtalo de nuevo en unos minutos, o escríbeme directo a lainiem@vozclinic.com.'
-          : "We couldn't send your application. Please try again in a few minutes, or email me directly at lainiem@vozclinic.com."
+          ? 'No pudimos agregarte a la lista. Por favor inténtalo de nuevo en unos minutos, o escríbeme directo a lainiem@vozclinic.com.'
+          : "We couldn't add you to the waitlist. Please try again in a few minutes, or email me directly at lainiem@vozclinic.com."
       );
     }
   });
