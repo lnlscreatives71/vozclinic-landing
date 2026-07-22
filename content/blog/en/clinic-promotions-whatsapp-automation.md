@@ -6,8 +6,10 @@ date: 2026-07-18
 author: VozClinic
 slug: clinic-promotions-whatsapp-automation
 pair: clinic-promotions
-image: vozclinic-hero-clinic-promotions-EN.webp
+image: vozclinic-clinic-promotions-hero.webp
 image_alt: "Bilingual AI voice agent sending a WhatsApp clinic promotion and booking a cross-border patient"
+og_image: vozclinic-hero-clinic-promotions-EN.webp
+og_image_alt: "Bilingual AI voice agent sending a WhatsApp clinic promotion and booking a cross-border patient"
 ---
 
 Most clinic promotions do not fail because the offer was wrong. They fail because a busy front desk never had time to send them, and the handful that did go out landed in a WhatsApp thread nobody was watching to answer. A summer whitening special or a new-patient consult package is only worth running if it turns into booked chairs, and that only happens when someone sends the right message and then works every reply until the appointment is set.
@@ -22,11 +24,15 @@ The gap is not creativity, it is follow-through. Every unanswered reply to a pro
 
 ## What "on autopilot" actually means
 
+![Three-step promotion funnel: send the offer on WhatsApp, answer the replies in English and Spanish, book the patient.](/blog-assets/vozclinic-promotions-funnel.webp)
+
 Autopilot here does not mean a blast-and-pray text campaign. It means the full loop runs without a person babysitting it.
 
 VozClinic sends the offer on WhatsApp, the channel patients on both sides of the border already use, to the segment you choose. When replies come in, the agent answers them in the patient's language, in seconds, at any hour. It handles the price question, the coverage question, the where-do-I-park question, and the can-you-do-Friday question, then books the appointment directly on your calendar and confirms the details back to the patient. What lands on your team's plate is a booked chair, not a full inbox.
 
 ## Send to the right patients, not everyone at once
+
+![A patient list with only the targeted segment selected for a WhatsApp send: send to the right patients, not everyone.](/blog-assets/vozclinic-promotions-segmentation.webp)
 
 A promotion works better when it reaches the patients it actually fits. VozClinic can target the send instead of spraying your whole list: past patients due for a follow-up, patients who asked about a specific service, new inquiries from a given city, or cross-border patients who travel for care. A whitening offer goes to the people most likely to want whitening. A cosmetic surgery consult package goes to the ones who were already asking.
 
