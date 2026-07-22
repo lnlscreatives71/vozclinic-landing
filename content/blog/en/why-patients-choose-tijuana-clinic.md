@@ -6,13 +6,17 @@ date: 2026-07-18
 author: VozClinic
 slug: why-patients-choose-tijuana-clinic
 pair: why-patients-choose-listicle
-image: vozclinic-why-patients-choose-hero-EN.webp
+image: vozclinic-why-patients-hero.webp
 image_alt: "Cross-border patient comparing Tijuana clinics on WhatsApp and choosing the one that answered first"
+og_image: vozclinic-why-patients-choose-hero-EN.webp
+og_image_alt: "Cross-border patient comparing Tijuana clinics on WhatsApp and choosing the one that answered first"
 ---
 
 A cross-border patient rarely picks the first clinic they find. They message two or three the same afternoon, compare what comes back, and book the one that makes the decision easy. Same city, similar prices, comparable work, and yet one clinic gets the patient and the others never hear back. The difference is almost never the dentistry. It is everything around it.
 
 Here are the eight things that actually decide which Tijuana medical tourism clinic wins the booking, and how a bilingual AI voice agent on WhatsApp tilts each one your way.
+
+![Three clinic cards side by side with the middle one highlighted and marked as chosen, representing how patients compare clinics.](/blog-assets/vozclinic-why-patients-comparison.webp)
 
 ## 1. The clinic that answers first
 
@@ -47,6 +51,8 @@ Insurance and payment uncertainty makes patients stall. When a clinic can addres
 Plenty of patients go quiet, not because they lost interest but because the clinic never followed up. The clinic that checks back in, in the patient's language, on the channel they already use, is the one that turns a maybe into a booking. VozClinic follows up automatically and even reactivates patients later for their annual recall, so interested patients do not slip through simply because everyone got busy.
 
 ## The pattern behind all eight
+
+![Icon row of the eight decision factors: fast, bilingual, after-hours, clear pricing, logistics, trust, coverage, and follow-up.](/blog-assets/vozclinic-why-patients-factors.webp)
 
 Every reason on this list comes down to the same thing: the clinic that responds fast, clearly, and bilingually, on the channel the patient already uses, is the one that gets chosen. That is exactly what a bilingual AI voice agent does, across WhatsApp, voice, SMS, and Telegram. It is the same agent that catches your [missed and after-hours calls](/en/blog/missed-after-hours-calls-tijuana-medical-tourism/) and [runs your promotions from message to booked appointment](/en/blog/clinic-promotions-whatsapp-automation/). For the full picture, see the [pillar overview of the bilingual voice agent for Tijuana medical tourism clinics](/en/blog/bilingual-voice-agent-tijuana-medical-tourism/).
 
