@@ -34,3 +34,8 @@ dist-server
 .env.local
 .env*.local
 .vercel
+
+# Agent tool scratch. Only .kombai/canvas is ignored — .kombai/resources holds
+# committed image assets.
+.codex/
+.kombai/canvas/
