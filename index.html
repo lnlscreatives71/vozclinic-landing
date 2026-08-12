@@ -8,6 +8,47 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1409168094439507');
+      fbq('track', 'PageView');
+
+      // ViewContent: feature pages, /solutions/ and blog posts — the content
+      // pages worth tracking. Not the landing page (/ and /en/), where
+      // PageView already says everything ViewContent would.
+      (function () {
+        var p = window.location.pathname.replace(/\/+$/, '') || '/';
+        if (p !== '/' && p !== '/en') fbq('track', 'ViewContent');
+      })();
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1409168094439507&ev=PageView&noscript=1" />
+    </noscript>
+
+    <!-- Contact: WhatsApp, phone and email are the contact channels here, and
+         they are all plain links, so one delegated listener covers every CTA
+         on every route (React and prerendered alike). -->
+    <script>
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href]');
+        if (!a) return;
+        var href = a.getAttribute('href') || '';
+        if (/^(mailto:|tel:)/i.test(href) || /^https:\/\/(wa\.me|api\.whatsapp\.com)\//i.test(href)) {
+          if (window.fbq) fbq('track', 'Contact');
+        }
+      });
+    </script>
+    <!-- End Meta Pixel Code -->
+
     <!-- Primary SEO -->
     <title>VozClinic: agente de voz y WhatsApp con IA para clínicas</title>
     <meta name="description" content="Agente de voz y WhatsApp con IA para clínicas: agenda citas 24/7, recordatorios, verifica seguros, reactiva pacientes y lanza promociones. Hecho en Tijuana." />
