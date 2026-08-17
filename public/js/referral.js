@@ -11,6 +11,29 @@
 // LNL CRM webhook.
 const CRM_ENDPOINT = 'https://www.vozclinic.com/api/sign-referral';
 
+// Fire CompleteRegistration at the moment the submit succeeds, then navigate,
+// so the conversion is recorded before the visitor leaves this site. The short
+// delay gives the pixel beacon time to leave before the page unloads; the
+// guard means a missing or blocked fbq never stops the redirect.
+function completeRegistrationThen(url) {
+  let done = false;
+  const go = () => {
+    if (done) return;
+    done = true;
+    window.location.href = url;
+  };
+  try {
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'CompleteRegistration');
+      setTimeout(go, 300);
+      return;
+    }
+  } catch (err) {
+    console.error('CompleteRegistration tracking failed:', err);
+  }
+  go();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Identify Page Language
   const isSpanish = window.location.pathname.includes('/recomienda') || document.documentElement.lang === 'es';
@@ -168,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (response.ok || response.status === 201 || response.status === 200) {
           // Success redirection
           const successRoute = isSpanish ? '/gracias-referido/' : '/thanks-referral/';
-          window.location.href = successRoute;
+          completeRegistrationThen(successRoute);
         } else {
           // Attempt parsing details, otherwise throw standard error
           const errorDetails = await response.json().catch(() => ({}));

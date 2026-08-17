@@ -14,6 +14,31 @@
 // redirects.
 const CRM_ENDPOINT = 'https://www.vozclinic.com/api/sign-qualifier';
 
+// Fire CompleteRegistration at the moment the submit succeeds, then navigate.
+// The event lives here rather than on the thank-you pages because the CRM
+// chooses the landing URL (json.data.redirect_url) and can send the visitor
+// somewhere without the pixel, which would lose the conversion. The short
+// delay gives the pixel beacon time to leave before the page unloads; the
+// guard means a missing or blocked fbq never stops the redirect.
+function completeRegistrationThen(url) {
+  let done = false;
+  const go = () => {
+    if (done) return;
+    done = true;
+    window.location.href = url;
+  };
+  try {
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'CompleteRegistration');
+      setTimeout(go, 300);
+      return;
+    }
+  } catch (err) {
+    console.error('CompleteRegistration tracking failed:', err);
+  }
+  go();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const isSpanish =
     window.location.pathname.includes('/lista-espera') ||
@@ -105,14 +130,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const json = await response.json().catch(() => ({}));
 
       if (response.ok && json && json.data && json.data.redirect_url) {
-        // CRM tells us which thank-you page to land on.
-        window.location.href = json.data.redirect_url;
+        // CRM tells us which thank-you page to land on. It hosts its own,
+        // so the pixel has to fire here, before we leave the site.
+        completeRegistrationThen(json.data.redirect_url);
         return;
       }
 
       // Fallback redirect if response shape is unexpected but status OK.
       if (response.ok) {
-        window.location.href = isSpanish ? '/lista-gracias/' : '/waitlist-thanks/';
+        completeRegistrationThen(isSpanish ? '/lista-gracias/' : '/waitlist-thanks/');
         return;
       }
 
