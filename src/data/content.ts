@@ -12,12 +12,12 @@ export const nav = {
 // ──────────────────────────────────────────────────────────────
 export const hero = {
   h1: {
-    es: 'El agente de voz y WhatsApp que contesta, agenda y reactiva pacientes, 24/7.',
-    en: 'The voice and WhatsApp agent that answers, books, and brings patients back, 24/7.',
+    es: 'El cuidado comienza cuando alguien responde.',
+    en: 'Care begins when someone answers.',
   } as Bilingual,
   sub: {
-    es: 'Sofía responde a tus pacientes en menos de 2 minutos, en español e inglés, recupera las consultas perdidas y trae de vuelta a tus pacientes para exámenes anuales y seguimientos.',
-    en: 'Sofía answers your patients in under 2 minutes, in Spanish and English, recovers lost inquiries, and brings patients back for annual exams and follow-ups.',
+    es: 'La primera experiencia de un paciente con tu clínica no sucede en la sala de espera. Sucede cuando llama o escribe por WhatsApp. Sofía responde en español e inglés, agenda la cita y reactiva a tus pacientes, incluso fuera del horario de atención.',
+    en: "A patient's first experience with your clinic doesn't happen in the waiting room. It happens when they call or message on WhatsApp. Sofía answers in Spanish and English, books the appointment, and brings patients back, even after hours.",
   } as Bilingual,
   primaryCta: {
     es: 'Únete a la lista de espera',
@@ -97,8 +97,8 @@ export const howItWorks = {
       num: '02',
       title: { es: 'Aprende tu clínica en una sesión de 90 minutos', en: 'Learns your clinic in one 90-minute session' } as Bilingual,
       body: {
-        es: 'Te entrevistamos sobre precios, servicios, doctores, horarios, preguntas frecuentes. Sofía habla con la voz de tu clínica, no como un robot genérico.',
-        en: 'We interview you about pricing, services, doctors, hours, FAQs. Sofía speaks in your clinic\'s voice, not like a generic robot.',
+        es: 'Te entrevistamos sobre precios, servicios, doctores, horarios y preguntas frecuentes. Sofía contesta con la voz de tu clínica: tus palabras, tus precios, tus reglas.',
+        en: "We interview you about pricing, services, doctors, hours, and FAQs. Sofía answers in your clinic's voice: your words, your prices, your rules.",
       } as Bilingual,
     },
     {
@@ -188,7 +188,7 @@ export const features = {
 // Section 5 — Demo
 // ──────────────────────────────────────────────────────────────
 export const demo = {
-  title: { es: 'Vea a Sofía en acción', en: 'See Sofía in action' } as Bilingual,
+  title: { es: 'Mira a Sofía en acción', en: 'See Sofía in action' } as Bilingual,
   body: {
     es: 'Un recorrido de menos de dos minutos: el cambio de idioma a media conversación, precios al instante, un horario ya ocupado que Sofía corrige sola, y dos citas resueltas en una sola visita. Momentos reales de WhatsApp.',
     en: 'An under-two-minute tour: the mid-conversation language switch, instant pricing, an already-booked time Sofía catches on her own, and two appointments handled in a single visit. Real WhatsApp moments.',
@@ -339,8 +339,8 @@ export const faq = {
 export const founder = {
   greeting: { es: 'Hola, soy Lainie.', en: 'Hi, I\'m Lainie.' } as Bilingual,
   body: {
-    es: 'Vivo en Tijuana. Construí VozClinic porque mi propia dentista perdía citas todas las semanas: pacientes que escribían a las 9pm y nadie contestaba hasta el día siguiente.\n\nNo soy una empresa de software con call center en India. Soy una persona, en tu ciudad, que sabe cómo trabajan las clínicas de aquí. Si me escribes, te contesto yo.',
-    en: 'I live in Tijuana. I built VozClinic because my own dentist was losing appointments every week: patients who messaged at 9pm and got no reply until the next day.\n\nI\'m not a software company with a call center in India. I\'m one person, in your city, who understands how clinics here actually work. If you message me, I reply.',
+    es: 'Vivo en Tijuana. Construí VozClinic porque mi propia dentista perdía citas todas las semanas: pacientes que escribían a las 9pm y nadie contestaba hasta el día siguiente.\n\nSoy una persona, en tu ciudad, que sabe cómo trabajan las clínicas de aquí. Si me escribes, te contesto yo.',
+    en: "I live in Tijuana. I built VozClinic because my own dentist was losing appointments every week: patients who messaged at 9pm and got no reply until the next day.\n\nI'm one person, in your city, who understands how clinics here actually work. If you message me, I reply.",
   } as Bilingual,
   credentials: [
     'PMP',
@@ -361,7 +361,7 @@ export const founder = {
 // Section 10 — Final CTA
 // ──────────────────────────────────────────────────────────────
 export const finalCta = {
-  title: { es: '¿Lista para Sofía?', en: 'Ready for Sofía?' } as Bilingual,
+  title: { es: 'Cada paciente merece una respuesta.', en: 'Every patient deserves an answer.' } as Bilingual,
   sub: {
     es: 'Las 3 plazas de socia de diseño están llenas y esas clínicas ya están arrancando. Únete a la lista de espera — las primeras 25 clínicas reciben su primer mes gratis.',
     en: 'All 3 design partner spots are filled and those clinics are going live. Join the waitlist — the first 25 clinics get their first month free.',

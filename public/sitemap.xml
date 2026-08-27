@@ -109,4 +109,40 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/en/solutions/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/soluciones/"/>
   </url>
+  <url>
+    <loc>https://www.vozclinic.com/afiliados/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/afiliados/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/affiliates/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/afiliados/"/>
+  </url>
+  <url>
+    <loc>https://www.vozclinic.com/affiliates/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/afiliados/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/affiliates/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/afiliados/"/>
+  </url>
+  <url>
+    <loc>https://www.vozclinic.com/terminos-afiliados/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/terminos-afiliados/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/affiliate-terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/terminos-afiliados/"/>
+  </url>
+  <url>
+    <loc>https://www.vozclinic.com/affiliate-terms/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/terminos-afiliados/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/affiliate-terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/terminos-afiliados/"/>
+  </url>
 </urlset>
