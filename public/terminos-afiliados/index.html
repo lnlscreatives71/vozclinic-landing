@@ -1,247 +1,148 @@
 <!DOCTYPE html>
-<!--
-  BORRADOR — Términos del Programa de Afiliados. Redactado siguiendo la
-  estructura y el branding de /aviso-de-privacidad y /terms. La redacción legal
-  NO ha sido revisada por un abogado. Revísala (idealmente con asesoría legal)
-  antes de apoyarte en ella contractualmente.
-
-  Parámetros confirmados por la fundadora: comisión 20% recurrente, vigente
-  mientras la suscripción siga activa; cada comisión se libera 60 días después
-  del cobro de la factura correspondiente.
-
-  Parámetros asumidos por defecto y pendientes de confirmar: ventana de
-  atribución de 90 días, mínimo de pago de $100 USD, ciclo de pago mensual,
-  medios de pago (transferencia bancaria o PayPal).
--->
 <html lang="es">
 <head>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1409168094439507');
-fbq('track', 'PageView');
-</script>
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1409168094439507&ev=PageView&noscript=1" />
-</noscript>
-
-<script>
-document.addEventListener('click', function (e) {
-  var a = e.target.closest && e.target.closest('a[href]');
-  if (!a) return;
-  var href = a.getAttribute('href') || '';
-  if (/^(mailto:|tel:)/i.test(href) || /^https:\/\/(wa\.me|api\.whatsapp\.com)\//i.test(href)) {
-    if (window.fbq) fbq('track', 'Contact');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Términos del Programa de Afiliados · VozClinic</title>
+<meta name="description" content="Términos del Programa de Afiliados de VozClinic: comisión, registro de referencias, maduración, pagos y conducta.">
+<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.vozclinic.com/terminos-afiliados/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #008080; --teal-deep: #006666; --charcoal: #1F2937;
+    --offwhite: #FAFAF7; --muted: #E1E1DC;
+    --heading: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   }
-});
-</script>
-<!-- End Meta Pixel Code -->
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Términos del Programa de Afiliados · VozClinic</title>
-  <meta name="description" content="Términos del Programa de Afiliados de VozClinic (LNL AI Agency): comisión, atribución, pagos, conducta prohibida y terminación.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.vozclinic.com/terminos-afiliados/">
-  <link rel="alternate" hreflang="es" href="https://www.vozclinic.com/terminos-afiliados/">
-  <link rel="alternate" hreflang="en" href="https://www.vozclinic.com/affiliate-terms/">
-  <link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/terminos-afiliados/">
-
-  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23008080%22/><path d=%22M25,25 L45,75 Q50,85 55,75 L75,25 L60,25 L50,55 L40,25 Z%22 fill=%22%23FFFFFF%22/></svg>">
-
-  <link rel="stylesheet" href="../css/style.css">
-
-  <style>
-    .legal { padding-bottom: 2rem; }
-    .legal .legal-meta { color: #6B7280; font-size: 0.9rem; margin-bottom: 2rem; }
-    .legal h2 { color: #006666; font-size: 1.25rem; margin: 2rem 0 0.75rem; }
-    .legal h3 { color: #1F2937; font-size: 1.05rem; margin: 1.25rem 0 0.5rem; }
-    .legal p, .legal li { color: #374151; line-height: 1.65; font-size: 1rem; }
-    .legal ul { margin: 0.5rem 0 1rem 1.25rem; }
-    .legal li { margin-bottom: 0.4rem; }
-    .legal a { color: #008080; }
-    .legal .data-card { background: #FAFAF7; border: 1px solid #E5E7EB; border-radius: 10px; padding: 1rem 1.25rem; margin: 1rem 0; }
-    .legal .data-card p { margin: 0.25rem 0; }
-  </style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--body); background: var(--offwhite); color: var(--charcoal); font-size: 16.5px; line-height: 1.65; }
+  .lang-toggle { position: absolute; top: 18px; right: 20px; display: flex; gap: 6px; }
+  .lang-toggle button { font-family: var(--heading); font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 100px; border: 1px solid rgba(250,250,247,0.45); background: transparent; color: var(--offwhite); cursor: pointer; }
+  .lang-toggle button.active { background: var(--offwhite); color: var(--teal-deep); border-color: var(--offwhite); }
+  header { position: relative; background: linear-gradient(135deg, var(--teal) 0%, var(--teal-deep) 100%); color: var(--offwhite); padding: 64px 24px 48px; text-align: center; }
+  header h1 { font-family: var(--heading); font-weight: 700; font-size: clamp(28px, 4.5vw, 42px); line-height: 1.15; letter-spacing: -0.015em; }
+  header .meta { margin-top: 12px; font-size: 14px; color: rgba(250,250,247,0.85); }
+  main { max-width: 820px; margin: 0 auto; padding: 12px 24px 72px; }
+  h2 { font-family: var(--heading); font-weight: 700; font-size: 22px; margin: 44px 0 12px; padding-bottom: 8px; border-bottom: 3px solid var(--teal); }
+  p { margin-bottom: 12px; }
+  ul { margin: 8px 0 14px 22px; }
+  li { margin-bottom: 8px; }
+  strong { font-weight: 600; }
+  .callout { background: #fff; border-left: 4px solid var(--teal); border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 14px 0; box-shadow: 0 1px 3px rgba(31,41,55,0.06); }
+  .note { font-size: 13.5px; color: #6B7280; }
+  footer { text-align: center; padding: 28px 24px 44px; font-size: 13.5px; color: #6B7280; border-top: 1px solid var(--muted); }
+  footer a { color: var(--teal-deep); }
+</style>
 </head>
 <body>
 
-  <header>
-    <div class="nav-container">
-      <a href="/" class="logo-link" aria-label="VozClinic Inicio">
-        <svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="100" height="100" rx="20" fill="#008080"/>
-          <path d="M 20 25 L 46 80 Q 50 88 54 80 L 80 25 L 64 25 L 50 56 L 36 25 Z" fill="#FFFFFF"/>
-          <rect x="48.5" y="24" width="3" height="24" rx="1.5" fill="#008080"/>
-          <rect x="42.5" y="28" width="3" height="16" rx="1.5" fill="#008080"/>
-          <rect x="54.5" y="28" width="3" height="16" rx="1.5" fill="#008080"/>
-          <rect x="36.5" y="32" width="3" height="8" rx="1.5" fill="#008080"/>
-          <rect x="60.5" y="32" width="3" height="8" rx="1.5" fill="#008080"/>
-        </svg>
-        <span class="logo-text">VozClinic</span>
-      </a>
-      <a href="/affiliate-terms/" class="lang-toggle" aria-label="Switch to English">EN</a>
-    </div>
-  </header>
+<header>
+  <div class="lang-toggle">
+    <a href="/affiliate-terms/" aria-label="Switch to English">EN</a>
+  </div>
+  <div data-lang="es">
+    <h1>Términos del Programa de Afiliados de VozClinic</h1>
+    <p class="meta">Versión 1.0 · Vigente a partir de: [FECHA] · VozClinic · vozclinic.com</p>
+  </div>
+  
+</header>
 
-  <main>
+<main>
 
-    <section class="hero-grid" id="hero">
-      <div class="hero-text">
-        <span class="eyebrow">Legal</span>
-        <h1>Términos del Programa de Afiliados</h1>
-        <p class="hero-subhead">
-          Las condiciones que rigen tu participación en el Programa de Afiliados de VozClinic: cómo se atribuye una referencia, cómo se calcula la comisión y cuándo se paga.
-        </p>
-      </div>
-    </section>
+<div data-lang="es">
 
-    <section>
-      <div class="form-max-wrap legal">
+  <h2>1. Descripción del Programa</h2>
+  <p>El Programa de Afiliados de VozClinic te paga el <strong>20% de los ingresos netos mensuales</strong> de cada clínica que refieras, durante todo el tiempo que esa clínica permanezca como cliente activo de VozClinic. No hay límite en el número de clínicas que puedes referir ni en el total de tus ganancias. No necesitas ser clínica, cliente de VozClinic ni pertenecer al sector salud para participar.</p>
 
-        <p class="legal-meta">Última actualización: 27 de agosto de 2026 · Lee estos Términos antes de participar. Al solicitar o usar un enlace de afiliado, los aceptas.</p>
+  <h2>2. Definiciones</h2>
+  <ul>
+    <li><strong>Afiliado:</strong> persona física o moral aceptada en el Programa que refiere clínicas prospecto a VozClinic.</li>
+    <li><strong>Clínica Referida:</strong> una clínica que (a) fue registrada por el Afiliado conforme a la Sección 4 antes de convertirse en cliente de VozClinic, y (b) contrata un plan de pago de VozClinic dentro de los 90 días posteriores al registro.</li>
+    <li><strong>Ingresos Netos:</strong> las cuotas de suscripción efectivamente cobradas por VozClinic a una Clínica Referida, menos descuentos, créditos, reembolsos, contracargos, ajustes de procesamiento de pagos y cualquier impuesto (IVA u otros). Se excluyen cargos únicos, hardware y costos de terceros.</li>
+    <li><strong>Periodo de Maduración:</strong> los primeros 60 días de servicio pagado de una Clínica Referida, contados desde su primer día de servicio pagado. Los meses gratuitos o promocionales no inician ni cuentan para el Periodo de Maduración.</li>
+    <li><strong>Comisión:</strong> el 20% de los Ingresos Netos atribuibles a una Clínica Referida en un mes calendario.</li>
+  </ul>
 
-        <h2>1. Quiénes somos</h2>
-        <p><strong>LNL AI Agency</strong> (&ldquo;VozClinic&rdquo;, &ldquo;nosotros&rdquo;) opera VozClinic, una recepcionista de IA bilingüe que contesta mensajes y llamadas, agenda citas y da seguimiento a pacientes por cuenta de clínicas. Estos Términos del Programa de Afiliados (&ldquo;Términos&rdquo;) forman un acuerdo vinculante entre VozClinic y la persona o empresa que participa en el programa (&ldquo;tú&rdquo;, &ldquo;Afiliado&rdquo;).</p>
-        <div class="data-card">
-          <p><strong>Operador:</strong> LNL AI Agency</p>
-          <p><strong>Domicilio:</strong> 7425 Caminito Allegre, Tijuana, Baja California, C.P. 22194, México</p>
-          <p><strong>Correo:</strong> <a href="mailto:hola@vozclinic.com">hola@vozclinic.com</a></p>
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/526633154686">+52 663 315 4686</a></p>
-        </div>
+  <h2>3. Elegibilidad</h2>
+  <p>El Programa está abierto a personas mayores de 18 años y a personas morales, en Estados Unidos, México u otros países, sujeto a la ley aplicable. No necesitas usar los servicios de VozClinic para participar. No son elegibles para Comisión:</p>
+  <ul>
+    <li>Empleados y contratistas de VozClinic, y sus familiares directos.</li>
+    <li>Autorreferencias: una clínica (o sus propietarios) no puede actuar como Afiliado de su propia suscripción.</li>
+    <li>Referencias de clínicas que ya están en conversaciones activas con VozClinic, o que ya fueron registradas por otro Afiliado (gana el primer registro válido).</li>
+  </ul>
+  <p>Si trabajas en o con una clínica que planeas referir, debes informar a esa clínica de tu relación como afiliado antes de hacer la referencia.</p>
 
-        <h2>2. Definiciones</h2>
-        <ul>
-          <li><strong>Afiliado:</strong> la persona física o moral aprobada por VozClinic para participar en el programa.</li>
-          <li><strong>Enlace de Afiliado:</strong> la URL única que VozClinic te asigna para atribuir referencias.</li>
-          <li><strong>Clínica Referida:</strong> la clínica que llega a VozClinic a través de tu Enlace de Afiliado y contrata una suscripción de pago.</li>
-          <li><strong>Referencia Calificada:</strong> una Clínica Referida que cumple los requisitos de la sección 5 y no está excluida por la sección 6.</li>
-          <li><strong>Comisión:</strong> el monto que te corresponde conforme a la sección 7.</li>
-          <li><strong>Monto Neto Cobrado:</strong> lo que VozClinic efectivamente cobra de la suscripción mensual de la Clínica Referida, descontando impuestos, descuentos, reembolsos, contracargos, comisiones de procesamiento de pago y conceptos facturados aparte.</li>
-        </ul>
+  <h2>4. Cómo se registran las referencias</h2>
+  <p><strong>Registra antes de presentar.</strong> Envía el nombre de la clínica, su ciudad y un contacto (o una presentación con copia a affiliate@vozclinic.com) antes de la presentación o en el momento de hacerla. VozClinic confirmará o declinará el registro por escrito dentro de 5 días hábiles.</p>
+  <ul>
+    <li>Un registro es válido por 90 días. Si la clínica contrata dentro de ese plazo, se convierte en tu Clínica Referida.</li>
+    <li>Si dos Afiliados reclaman la misma clínica, prevalece el primer registro válido.</li>
+    <li>VozClinic puede declinar un registro cuando ya exista una relación previa con la clínica; los registros declinados se comunican con su motivo.</li>
+  </ul>
 
-        <h2>3. Inscripción y elegibilidad</h2>
-        <p>Para participar debes ser mayor de 18 años y tener capacidad para obligarte. La participación requiere nuestra aprobación previa y expresa: solicitar un enlace no crea por sí solo un acuerdo. Podemos aceptar o rechazar cualquier solicitud a nuestra discreción, sin obligación de explicar el motivo.</p>
-        <p>No pueden participar como Afiliados: empleados, contratistas y familiares directos de LNL AI Agency; ni quien busque referir a una clínica que él mismo posee, dirige o controla. Cada Afiliado puede mantener una sola cuenta. Eres responsable de la exactitud de tus datos fiscales y de pago.</p>
+  <h2>5. Comisión</h2>
+  <p><strong>Tasa y duración.</strong> Ganas el 20% de los Ingresos Netos de cada Clínica Referida cada mes, durante toda la vida de su servicio continuo y activo — incluyendo cambios de plan hacia arriba o hacia abajo. Si una clínica cancela y regresa más de 90 días después de la cancelación, la nueva suscripción se considera una venta nueva y no se reatribuye automáticamente.</p>
+  <p><strong>Planes aplicables.</strong> Todos los planes publicados de VozClinic generan Comisión. Los acuerdos personalizados y White-label generan Comisión del 20% sobre la cuota recurrente negociada, salvo acuerdo distinto por escrito antes del cierre.</p>
+  <p><strong>Meses gratuitos.</strong> Los meses en que la clínica no paga (por ejemplo, meses promocionales gratuitos) no generan Comisión, porque la Comisión es una participación sobre ingresos efectivamente cobrados.</p>
 
-        <h2>4. Enlaces de afiliado y atribución</h2>
-        <p>Te asignamos un Enlace de Afiliado único. La atribución funciona así:</p>
-        <ul>
-          <li>La ventana de atribución es de <strong>90 días naturales</strong> a partir del primer clic registrado en tu Enlace de Afiliado.</li>
-          <li>Cuando concurren varios enlaces, la atribución se otorga al <strong>último Enlace de Afiliado registrado</strong> antes de la contratación.</li>
-          <li>La atribución depende de nuestros registros. Si el visitante bloquea cookies, cambia de dispositivo o navegador, o llega por un canal que no conserva la referencia, es posible que la referencia no quede registrada.</li>
-          <li>Si una clínica llega por otra vía y te menciona, avísanos por escrito <strong>antes</strong> de que contrate. Revisaremos el caso de buena fe; la resolución queda a nuestro criterio.</li>
-        </ul>
-        <p>No puedes manipular la atribución. Quedan prohibidos el <em>cookie stuffing</em>, los redireccionamientos forzados, los marcos ocultos, los clics automatizados y cualquier técnica que registre una referencia sin la intención real del visitante.</p>
+  <h2>6. Maduración, calendario y método de pago</h2>
+  <ul>
+    <li><strong>Maduración.</strong> Las Comisiones se acumulan desde el primer mes pagado de la clínica, pero se vuelven pagaderas solo cuando la clínica completa el Periodo de Maduración de 60 días. Si la clínica cancela o recibe reembolso durante el Periodo de Maduración, las Comisiones acumuladas se anulan.</li>
+    <li><strong>Calendario.</strong> Las Comisiones pagaderas se pagan mensualmente, dentro de los 15 días siguientes al cierre de cada mes calendario.</li>
+    <li><strong>Monto mínimo.</strong> Los saldos menores a $50 USD se acumulan al mes siguiente.</li>
+    <li><strong>Método.</strong> PayPal o transferencia bancaria (ACH en EE.UU., SPEI en México, o transferencia internacional). Las comisiones de PayPal y de transferencia internacional se descuentan del pago; ACH y SPEI no tienen costo para el Afiliado.</li>
+    <li><strong>Moneda.</strong> Las Comisiones se calculan en USD. Cuando la clínica paga en MXN, los Ingresos Netos se convierten a USD al tipo de cambio aplicado por el procesador de pagos de VozClinic en la fecha de cobro. Los pagos en MXN se convierten al mismo tipo del procesador en la fecha del pago.</li>
+  </ul>
 
-        <h2>5. Qué cuenta como Referencia Calificada</h2>
-        <p>Una referencia califica cuando la Clínica Referida: (a) llega dentro de la ventana de atribución; (b) contrata una suscripción de pago de VozClinic; (c) completa su onboarding; y (d) paga efectivamente su primera factura. No generan Comisión las pruebas, demos, cotizaciones ni suscripciones que nunca se cobran.</p>
+  <h2>7. Ajustes y reversiones</h2>
+  <p>Si un pago de una Clínica Referida es reembolsado, disputado o revertido después de haberse pagado la Comisión correspondiente, esa Comisión se descuenta de tus siguientes pagos. La Comisión solo se debe sobre ingresos que VozClinic efectivamente conserva.</p>
 
-        <h2>6. Exclusiones</h2>
-        <p>No generan Comisión, aunque exista un clic atribuido:</p>
-        <ul>
-          <li>Clínicas que ya son clientes de VozClinic, o que ya lo fueron en los 12 meses previos.</li>
-          <li>Clínicas que ya están en un proceso de venta abierto, o con las que ya sosteníamos una conversación documentada antes de tu referencia.</li>
-          <li>Clínicas que tú posees, diriges, controlas o representas, y referencias hechas a ti mismo o a través de terceros para tu propio beneficio.</li>
-          <li>Suscripciones obtenidas mediante conducta prohibida conforme a la sección 9.</li>
-          <li>Suscripciones canceladas, reembolsadas o con contracargo antes de que la Comisión se libere.</li>
-        </ul>
+  <h2>8. Conducta del Afiliado</h2>
+  <p>Para permanecer en el Programa te comprometes a:</p>
+  <ul>
+    <li>Representar a VozClinic con exactitud — sin inventar funciones, precios, garantías de resultados ni afirmaciones médicas.</li>
+    <li>No enviar spam. Toda comunicación debe cumplir la ley aplicable (CAN-SPAM, LFPDPPP y reglas de telemarketing).</li>
+    <li>Divulgar tu relación de afiliado cuando sea requerido (por ejemplo, reglas de la FTC para contenido público).</li>
+    <li>No pujar por "VozClinic" ni términos confundibles en búsqueda pagada, ni registrar dominios o cuentas sociales con el nombre VozClinic.</li>
+    <li>Mantener confidencial la información no pública de VozClinic y de las Clínicas Referidas.</li>
+  </ul>
 
-        <h2>7. Comisión</h2>
-        <p>Por cada Referencia Calificada, ganas el <strong>20% del Monto Neto Cobrado</strong> de la suscripción mensual de esa Clínica Referida.</p>
-        <ul>
-          <li>La Comisión es <strong>recurrente</strong>: se genera cada mes en que la Clínica Referida pague su suscripción.</li>
-          <li>La Comisión continúa <strong>mientras la suscripción siga activa</strong>. No hay límite de meses ni tope de monto.</li>
-          <li>La Comisión <strong>termina</strong> con la última factura cobrada cuando la Clínica Referida cancela, suspende o deja de pagar. Si esa clínica regresa después, no se reactiva automáticamente.</li>
-          <li>Se calcula sobre la suscripción mensual. Los complementos, integraciones, servicios de implementación y conceptos facturados aparte no generan Comisión, salvo acuerdo escrito distinto.</li>
-          <li>Si cambian los precios de los planes, tu 20% se aplica al precio vigente en cada periodo.</li>
-        </ul>
+  <h2>9. Vigencia, terminación y cambios al Programa</h2>
+  <ul>
+    <li><strong>Cualquiera de las partes puede terminar su participación en cualquier momento</strong> mediante aviso por escrito.</li>
+    <li><strong>Si te retiras o eres dado de baja sin causa,</strong> continúas recibiendo Comisión sobre tus Clínicas Referidas existentes durante la vida de su servicio. La promesa de por vida sobrevive a la terminación ordinaria.</li>
+    <li><strong>La terminación con causa</strong> (fraude, incumplimiento material de la Sección 8, esquemas de autorreferencia) cancela las Comisiones pendientes y futuras.</li>
+    <li><strong>Los cambios al Programa</strong> (tasas, reglas) aplican de forma prospectiva a clínicas referidas después del cambio. Las clínicas ya referidas conservan los términos vigentes al momento de su referencia.</li>
+  </ul>
 
-        <h2>8. Pagos</h2>
-        <ul>
-          <li><strong>Liberación:</strong> cada Comisión mensual se libera <strong>60 días naturales</strong> después de que cobramos la factura correspondiente. Ese periodo cubre reembolsos y contracargos.</li>
-          <li><strong>Ciclo:</strong> las Comisiones liberadas se pagan en el ciclo mensual siguiente.</li>
-          <li><strong>Mínimo:</strong> el saldo debe alcanzar <strong>$100 USD</strong> para generar un pago. Por debajo de ese monto, el saldo se acumula al siguiente ciclo.</li>
-          <li><strong>Medio de pago:</strong> transferencia bancaria o PayPal, según lo que acordemos contigo. Las comisiones del medio de pago corren por tu cuenta.</li>
-          <li><strong>Moneda:</strong> las Comisiones se calculan y pagan en dólares estadounidenses (USD), salvo acuerdo distinto.</li>
-          <li><strong>Impuestos:</strong> actúas como contratista independiente. Eres responsable de tus propios impuestos, retenciones y obligaciones fiscales en tu jurisdicción, y de entregarnos la documentación fiscal que la ley requiera. Podemos retener pagos si falta esa documentación.</li>
-          <li><strong>Ajustes:</strong> si una Comisión ya pagada corresponde a un cobro posteriormente reembolsado o con contracargo, podemos descontar ese monto de pagos futuros.</li>
-        </ul>
+  <h2>10. Impuestos</h2>
+  <p>Los Afiliados son contratistas independientes, responsables de sus propios impuestos. Antes del primer pago: personas de EE.UU. entregan un formato W-9 (VozClinic emite el formato 1099-NEC cuando los pagos alcanzan $600 USD en un año calendario); personas fuera de EE.UU. entregan un W-8BEN o W-8BEN-E. A los afiliados residentes en México que facturen a una entidad mexicana se les puede solicitar CFDI, según la entidad pagadora.</p>
 
-        <h2>9. Conducta prohibida</h2>
-        <p>Al participar, te obligas a no realizar ninguna de las siguientes conductas. Cualquiera de ellas es causa de terminación inmediata y de pérdida de las Comisiones pendientes asociadas:</p>
-        <ul>
-          <li><strong>Pujar por la marca.</strong> No pujes por &ldquo;VozClinic&rdquo;, &ldquo;Sofía VozClinic&rdquo; ni variantes, errores ortográficos o combinaciones que las incluyan, en Google Ads ni en ningún buscador o plataforma publicitaria. Tampoco uses nuestra marca en el dominio visible ni en la URL de destino de tus anuncios.</li>
-          <li><strong>Spam.</strong> Nada de correo masivo no solicitado, difusiones o listas de WhatsApp, SMS masivos, mensajes automatizados ni publicaciones repetitivas en foros, grupos o comentarios.</li>
-          <li><strong>Suplantación.</strong> No te presentes como VozClinic, como Sofía, como empleado, como representante autorizado ni como parte del equipo. No uses nuestro logotipo, nombre o identidad de forma que sugiera que hablas por nosotros.</li>
-          <li><strong>Sitios de cupones y descuentos.</strong> No promociones VozClinic en sitios de cupones, ofertas, <em>cashback</em>, códigos de descuento o directorios de rebajas.</li>
-          <li><strong>Declaraciones falsas.</strong> No inventes precios, funciones, cifras de resultados, clientes ni casos de éxito. No prometas resultados médicos, clínicos ni de facturación. Describe únicamente lo que VozClinic publica en su propio sitio.</li>
-          <li><strong>Dominios y perfiles confusos.</strong> No registres dominios, subdominios, cuentas de redes sociales, aplicaciones ni perfiles que incluyan nuestra marca o se presten a confusión con ella.</li>
-          <li><strong>Contacto con pacientes.</strong> No contactes pacientes, no recolectes ni proceses sus datos personales, ni intervengas en la comunicación entre una clínica y sus pacientes. Ese tratamiento corresponde a la clínica, conforme a la LFPDPPP.</li>
-          <li><strong>Contenido ilícito.</strong> No promociones VozClinic junto a contenido ilegal, engañoso, discriminatorio, sexual, violento o que infrinja derechos de terceros.</li>
-        </ul>
+  <h2>11. Disposiciones generales</h2>
+  <p>La participación no crea relación laboral, sociedad ni representación. El Programa no es exclusivo para ninguna de las partes. Estos Términos se rigen por el Contrato de Afiliado que firmes, el cual prevalece en caso de conflicto.</p>
+  <div class="callout">
+    <p><strong>Idioma.</strong> Estos Términos se publican en español e inglés. En caso de discrepancia, prevalece la versión en [inglés / español — definir con asesoría legal].</p>
+  </div>
 
-        <h2>10. Uso de marca</h2>
-        <p>Mientras participes y cumplas estos Términos, te otorgamos una licencia limitada, revocable, no exclusiva e intransferible para usar el nombre y el logotipo de VozClinic con el único fin de promover el servicio conforme a estos Términos. No puedes modificar el logotipo, recrearlo con otra tipografía, ni alterar sus colores. Esta licencia termina automáticamente al terminar tu participación. Todos los derechos sobre nuestras marcas nos pertenecen.</p>
+  <h2>Contacto</h2>
+  <p>VozClinic es un servicio de <strong>The LNL AI Agency LLC, d/b/a LNL Automations</strong> · Programa de Afiliados · <a href="mailto:affiliate@vozclinic.com">affiliate@vozclinic.com</a> · <a href="https://wa.me/526633154686">WhatsApp +52 663 315 4686</a></p>
+  <p class="note">Borrador para revisión — no publicar sin revisión legal (idioma prevaleciente y fecha de vigencia pendientes de confirmar).</p>
 
-        <h2>11. Relación entre las partes</h2>
-        <p>Eres un contratista independiente. Estos Términos no crean una relación laboral, de sociedad, de <em>joint venture</em>, de agencia ni de representación. No tienes facultades para obligar a VozClinic, negociar precios, ofrecer descuentos, celebrar acuerdos ni hacer declaraciones en nuestro nombre.</p>
+</div>
 
-        <h2>12. Protección de datos</h2>
-        <p>El tratamiento de datos personales por parte de VozClinic se rige por nuestro <a href="https://www.vozclinic.com/aviso-de-privacidad/">Aviso de Privacidad</a> y por la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP). Si en el marco del programa nos compartes datos de contacto de terceros, declaras que cuentas con la base legal para hacerlo. No debes recolectar, almacenar ni transferir datos personales de pacientes bajo ninguna circunstancia.</p>
 
-        <h2>13. Vigencia y terminación</h2>
-        <p>Tu participación inicia con nuestra aprobación y continúa hasta que cualquiera de las partes la termine. Puedes terminar en cualquier momento avisándonos por escrito. Nosotros podemos terminar tu participación en cualquier momento y a nuestra discreción, con aviso.</p>
-        <p>Si terminamos <strong>sin causa</strong>, las Comisiones ya generadas y no liberadas se pagan conforme a la sección 8, y dejan de generarse Comisiones nuevas a partir de la fecha de terminación. Si terminamos <strong>por incumplimiento</strong> de la sección 9 o por fraude, se pierden todas las Comisiones pendientes y podemos reclamar la devolución de las ya pagadas que deriven de esa conducta.</p>
 
-        <h2>14. Cambios al programa</h2>
-        <p>Podemos modificar estos Términos, la tasa de Comisión, las condiciones de pago o la estructura del programa. Los cambios que reduzcan la tasa de Comisión o las condiciones de pago se te avisarán con <strong>30 días naturales</strong> de anticipación y aplicarán únicamente hacia adelante. Podemos suspender o cerrar el programa completo con el mismo aviso. Continuar participando después de la entrada en vigor implica aceptación.</p>
+</main>
 
-        <h2>15. Confidencialidad</h2>
-        <p>La información no pública que te compartamos en el marco del programa (precios especiales, hoja de ruta del producto, datos de clínicas, reportes de desempeño) es confidencial. No la divulgues ni la uses para otro fin que participar en el programa.</p>
+<footer>
+  <span data-lang="es">VozClinic · Hecho en Tijuana · <a href="https://vozclinic.com/privacy">Aviso de Privacidad</a> · <a href="https://vozclinic.com/afiliados">Programa de Afiliados</a></span>
+  
+</footer>
 
-        <h2>16. Garantías y límite de responsabilidad</h2>
-        <p>El programa se ofrece &ldquo;tal cual&rdquo;. No garantizamos volumen de referencias, tasas de conversión, ingresos, disponibilidad continua del rastreo ni permanencia de ninguna Clínica Referida. En la medida que la ley lo permita, nuestra responsabilidad total frente a ti, por cualquier concepto relacionado con el programa, se limita al monto total de Comisiones que te hayamos pagado en los 6 meses anteriores al hecho que dé origen a la reclamación. No respondemos por daños indirectos, lucro cesante ni pérdida de oportunidad.</p>
-
-        <h2>17. Indemnización</h2>
-        <p>Nos mantendrás en paz y a salvo frente a reclamaciones, daños y gastos (incluidos honorarios legales razonables) que deriven de tu incumplimiento de estos Términos, de tu conducta promocional, o de declaraciones que hagas sobre VozClinic y que no estén publicadas por nosotros.</p>
-
-        <h2>18. Ley aplicable y jurisdicción</h2>
-        <p>Estos Términos se rigen por las leyes de los Estados Unidos Mexicanos. Para cualquier controversia, las partes se someten a la jurisdicción de los tribunales competentes de Tijuana, Baja California, renunciando a cualquier otro fuero que pudiera corresponderles.</p>
-
-        <h2>19. Contacto</h2>
-        <p>Dudas sobre el programa, tus comisiones o estos Términos:</p>
-        <div class="data-card">
-          <p><strong>Correo:</strong> <a href="mailto:hola@vozclinic.com">hola@vozclinic.com</a></p>
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/526633154686">+52 663 315 4686</a></p>
-        </div>
-
-        <p class="legal-meta" style="margin-top:2rem;">
-          ¿Buscas el resumen del programa? Está en la página del <a href="/afiliados/">Programa de Afiliados</a>.
-        </p>
-
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <div class="footer-signature">VozClinic · LNL AI Agency</div>
-      <p class="footer-legal">
-        LNL AI Agency · Hecho en Tijuana, B.C. · Conforme a la LFPDPPP · <a href="/aviso-de-privacidad/">Aviso de Privacidad</a>
-      </p>
-    </div>
-  </footer>
 
 </body>
 </html>

@@ -2,11 +2,9 @@ import { useState } from 'react';
 import { useLang } from '../context/LangContext';
 import { faq } from '../data/content';
 
-function FAQItem({ question, answer, href, linkLabel, isOpen, onToggle, index }: {
+function FAQItem({ question, answer, isOpen, onToggle, index }: {
   question: string;
   answer: string;
-  href?: string;
-  linkLabel?: string;
   isOpen: boolean;
   onToggle: () => void;
   index: number;
@@ -41,17 +39,9 @@ function FAQItem({ question, answer, href, linkLabel, isOpen, onToggle, index }:
         className="overflow-hidden transition-all duration-300 ease-in-out"
         style={{ maxHeight: isOpen ? '420px' : '0px', opacity: isOpen ? 1 : 0 }}
       >
-        <p className="text-gray-500 text-sm leading-relaxed pb-3 pr-10">
+        <p className="text-gray-500 text-sm leading-relaxed pb-5 pr-10">
           {answer}
         </p>
-        {href && linkLabel && (
-          <a
-            href={href}
-            className="inline-block text-teal text-sm font-semibold hover:text-teal-deep transition-colors pb-5"
-          >
-            {linkLabel}
-          </a>
-        )}
       </div>
     </div>
   );
@@ -88,8 +78,6 @@ export default function FAQ() {
                 index={idx}
                 question={t(item.q)}
                 answer={t(item.a)}
-                href={item.href ? t(item.href) : undefined}
-                linkLabel={item.linkLabel ? t(item.linkLabel) : undefined}
                 isOpen={openIdx === idx}
                 onToggle={() => toggle(idx)}
               />
@@ -104,8 +92,6 @@ export default function FAQ() {
                 index={idx + half}
                 question={t(item.q)}
                 answer={t(item.a)}
-                href={item.href ? t(item.href) : undefined}
-                linkLabel={item.linkLabel ? t(item.linkLabel) : undefined}
                 isOpen={openIdx === idx + half}
                 onToggle={() => toggle(idx + half)}
               />

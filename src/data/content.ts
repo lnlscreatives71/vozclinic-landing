@@ -309,15 +309,6 @@ export const faq = {
       } as Bilingual,
     },
     {
-      q: { es: '¿Puedo ganar comisión por recomendar VozClinic?', en: 'Can I earn commission for referring VozClinic?' } as Bilingual,
-      a: {
-        es: 'Sí. El programa de afiliados paga 20% de la suscripción de cada clínica que llegue por tu enlace, cada mes, mientras esa clínica siga activa. Está abierto a cualquiera, no solo a clínicas. Los detalles están en la página del programa de afiliados.',
-        en: 'Yes. The affiliate program pays 20% of the subscription of every clinic that arrives through your link, every month, for as long as that clinic stays active. It is open to anyone, not just clinics. The details are on the affiliate program page.',
-      } as Bilingual,
-      href: { es: '/afiliados/', en: '/affiliates/' } as Bilingual,
-      linkLabel: { es: 'Ver el programa de afiliados →', en: 'See the affiliate program →' } as Bilingual,
-    },
-    {
       q: { es: '¿Cómo empiezo?', en: 'How do I get started?' } as Bilingual,
       a: {
         es: 'Agenda una demo de 20 minutos. Te enseño a Sofía trabajando con los casos reales de tu clínica, revisamos qué plan te queda y, si te convence, arrancamos el onboarding esa misma semana.',

@@ -1,309 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1409168094439507');
-fbq('track', 'PageView');
-fbq('track', 'ViewContent');
-</script>
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1409168094439507&ev=PageView&noscript=1" />
-</noscript>
-
-<script>
-document.addEventListener('click', function (e) {
-  var a = e.target.closest && e.target.closest('a[href]');
-  if (!a) return;
-  var href = a.getAttribute('href') || '';
-  if (/^(mailto:|tel:)/i.test(href) || /^https:\/\/(wa\.me|api\.whatsapp\.com)\//i.test(href)) {
-    if (window.fbq) fbq('track', 'Contact');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Affiliate Program · VozClinic</title>
+<meta name="description" content="Refer a clinic to VozClinic and earn 20% of its monthly subscription, for life. Invitation-only program.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.vozclinic.com/affiliates/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #008080;
+    --teal-deep: #006666;
+    --charcoal: #1F2937;
+    --offwhite: #FAFAF7;
+    --muted: #E1E1DC;
+    --gold: #C9A961;
+    --heading: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   }
-});
-</script>
-<!-- End Meta Pixel Code -->
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); background: var(--offwhite); color: var(--charcoal); font-size: 17px; line-height: 1.6; }
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  .lang-toggle { position: absolute; top: 18px; right: 20px; z-index: 10; display: flex; gap: 6px; }
+  .lang-toggle button {
+    font-family: var(--heading); font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
+    padding: 7px 14px; border-radius: 100px; border: 1px solid rgba(250,250,247,0.45);
+    background: transparent; color: var(--offwhite); cursor: pointer;
+  }
+  .lang-toggle button.active { background: var(--offwhite); color: var(--teal-deep); border-color: var(--offwhite); }
 
-  <title>Affiliate Program · Earn 20% every month · VozClinic</title>
-  <meta name="description" content="Refer VozClinic to dental clinics and med spas. Earn 20% of their subscription every month, for as long as the clinic stays active. Made in Tijuana.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.vozclinic.com/affiliates/">
-  <link rel="alternate" hreflang="es" href="https://www.vozclinic.com/afiliados/">
-  <link rel="alternate" hreflang="en" href="https://www.vozclinic.com/affiliates/">
-  <link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/afiliados/">
+  header.hero { position: relative; background: linear-gradient(135deg, var(--teal) 0%, var(--teal-deep) 100%); color: var(--offwhite); padding: 84px 24px 72px; text-align: center; }
+  .hero .kicker { font-family: var(--heading); font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,250,247,0.8); margin-bottom: 14px; }
+  .hero h1 { font-family: var(--heading); font-weight: 700; font-size: clamp(34px, 5.5vw, 56px); line-height: 1.12; letter-spacing: -0.02em; max-width: 820px; margin: 0 auto; }
+  .hero .sub { font-size: clamp(16px, 2.2vw, 20px); max-width: 680px; margin: 20px auto 0; color: rgba(250,250,247,0.92); }
+  .hero .cta-row { margin-top: 32px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn { font-family: var(--heading); font-weight: 700; font-size: 16px; padding: 14px 30px; border-radius: 100px; text-decoration: none; display: inline-block; }
+  .btn.light { background: var(--offwhite); color: var(--teal-deep); }
+  .btn.ghost { border: 2px solid rgba(250,250,247,0.6); color: var(--offwhite); }
+  .btn.primary { background: var(--teal); color: #fff; }
 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.vozclinic.com/affiliates/">
-  <meta property="og:title" content="Affiliate Program · Earn 20% every month · VozClinic">
-  <meta property="og:description" content="Refer VozClinic to dental clinics and med spas. Earn 20% of their subscription every month, for as long as the clinic stays active.">
-  <meta property="og:image" content="https://www.vozclinic.com/og-image.png">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:site_name" content="VozClinic">
+  main { max-width: 980px; margin: 0 auto; padding: 8px 24px 72px; }
+  section { padding-top: 56px; }
+  h2 { font-family: var(--heading); font-weight: 700; font-size: clamp(24px, 3.6vw, 32px); line-height: 1.2; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 3px solid var(--teal); }
+  p { margin-bottom: 14px; max-width: 76ch; }
+  .lede { font-size: 18px; }
 
-  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23008080%22/><path d=%22M25,25 L45,75 Q50,85 55,75 L75,25 L60,25 L50,55 L40,25 Z%22 fill=%22%23FFFFFF%22/></svg>">
+  .tablewrap { overflow-x: auto; margin: 16px 0 6px; border-radius: 12px; box-shadow: 0 1px 4px rgba(31,41,55,0.09); }
+  table { border-collapse: collapse; width: 100%; background: #fff; font-size: 16px; }
+  th { font-family: var(--heading); text-align: left; background: var(--charcoal); color: var(--offwhite); font-weight: 700; padding: 13px 18px; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; }
+  td { padding: 13px 18px; border-top: 1px solid var(--muted); }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  th.num { text-align: right; }
+  tr:nth-child(even) td { background: #FCFCFA; }
+  .note { font-size: 13.5px; color: #6B7280; margin-top: 8px; }
 
-  <link rel="stylesheet" href="../css/style.css">
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 18px 0 4px; }
+  .step { background: #fff; border-radius: 14px; padding: 24px; box-shadow: 0 1px 4px rgba(31,41,55,0.08); border-top: 4px solid var(--teal); }
+  .step .n { font-family: var(--heading); font-weight: 700; font-size: 15px; color: var(--teal); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+  .step h3 { font-family: var(--heading); font-weight: 700; font-size: 19px; margin-bottom: 8px; }
+  .step p { font-size: 15.5px; margin: 0; }
 
-  <style>
-    .payout-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 1rem; }
-    .payout-table th, .payout-table td { text-align: left; padding: 0.85rem 1rem; border-bottom: 1px solid #E5E7EB; color: #374151; }
-    .payout-table th { background: #1F2937; color: #FAFAF7; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; }
-    .payout-table td strong { color: #1F2937; }
-    .payout-table .payout-amount { color: #006666; font-weight: 700; white-space: nowrap; }
-    .payout-wrap { overflow-x: auto; }
-    .rules-list { margin: 1rem 0 1.5rem 1.25rem; }
-    .rules-list li { color: #374151; line-height: 1.65; margin-bottom: 0.55rem; }
-    .note { color: #6B7280; font-size: 0.9rem; line-height: 1.6; }
-    .section-intro { color: #374151; line-height: 1.65; max-width: 60ch; }
-  </style>
+  .highlight { background: var(--charcoal); color: var(--offwhite); border-radius: 16px; padding: 30px 34px; margin: 22px 0 4px; }
+  .highlight strong { color: #fff; }
+  .highlight p { margin: 0; font-size: 18px; max-width: none; }
+
+  ul.terms { list-style: none; margin: 14px 0 4px; }
+  ul.terms li { padding: 12px 16px 12px 42px; position: relative; background: #fff; border: 1px solid var(--muted); border-radius: 10px; margin-bottom: 10px; font-size: 15.5px; }
+  ul.terms li::before { content: ""; position: absolute; left: 16px; top: 20px; width: 9px; height: 9px; border-radius: 50%; background: var(--teal); }
+
+  details { background: #fff; border: 1px solid var(--muted); border-radius: 10px; margin-bottom: 10px; padding: 0 18px; }
+  details summary { font-family: var(--heading); font-weight: 700; font-size: 16px; padding: 15px 0; cursor: pointer; }
+  details p { font-size: 15.5px; padding-bottom: 14px; }
+
+  .final-cta { text-align: center; background: linear-gradient(135deg, var(--teal) 0%, var(--teal-deep) 100%); border-radius: 18px; color: var(--offwhite); padding: 48px 28px; margin-top: 60px; }
+  .final-cta h2 { border: none; color: #fff; margin-bottom: 8px; padding-bottom: 0; }
+  .final-cta p { margin: 0 auto 24px; max-width: 560px; color: rgba(250,250,247,0.92); }
+
+  footer { text-align: center; padding: 30px 24px 46px; font-size: 13.5px; color: #6B7280; }
+  footer a { color: var(--teal-deep); }
+</style>
 </head>
 <body>
 
-  <header>
-    <div class="nav-container">
-      <a href="/en/" class="logo-link" aria-label="VozClinic Home">
-        <svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="100" height="100" rx="20" fill="#008080"/>
-          <path d="M 20 25 L 46 80 Q 50 88 54 80 L 80 25 L 64 25 L 50 56 L 36 25 Z" fill="#FFFFFF"/>
-          <rect x="48.5" y="24" width="3" height="24" rx="1.5" fill="#008080"/>
-          <rect x="42.5" y="28" width="3" height="16" rx="1.5" fill="#008080"/>
-          <rect x="54.5" y="28" width="3" height="16" rx="1.5" fill="#008080"/>
-          <rect x="36.5" y="32" width="3" height="8" rx="1.5" fill="#008080"/>
-          <rect x="60.5" y="32" width="3" height="8" rx="1.5" fill="#008080"/>
-        </svg>
-        <span class="logo-text">VozClinic</span>
-      </a>
-      <a href="/afiliados/" class="lang-toggle" aria-label="Cambiar a Español">ES</a>
+<header class="hero">
+  <div class="lang-toggle">
+    <a href="/afiliados/" aria-label="Cambiar a Español">ES</a>
+  </div>
+
+  
+  <div data-lang="en">
+    <p class="kicker">VozClinic Affiliate Program</p>
+    <h1>Refer a clinic. Get paid every month, for life.</h1>
+    <p class="sub">Earn 20% of the monthly subscription of every clinic you refer, for as long as they stay with VozClinic. You don't need to be a clinic or a customer to participate.</p>
+    <div class="cta-row">
+      <a class="btn light" href="mailto:affiliate@vozclinic.com?subject=VozClinic%20affiliate%20application">Become an affiliate</a>
+      <a class="btn ghost" href="#como-funciona">How it works</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main>
+<main>
 
-    <section class="hero-grid" id="hero">
-      <div class="hero-text">
-        <span class="eyebrow">Affiliate Program</span>
-        <h1>Earn 20% every month, for as long as the clinic stays.</h1>
-        <p class="hero-subhead">
-          Care begins when someone answers. If you know a dental clinic or med spa losing patients because nobody replies in time, introduce them. You earn 20% of their subscription every month, for as long as they stay active.
-        </p>
-        <a href="https://wa.me/526633154686?text=Hi%20Lainie%2C%20I%27d%20like%20my%20VozClinic%20affiliate%20link" target="_blank" rel="noopener" class="hero-cta">
-          Request your link
-          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </a>
-      </div>
-    </section>
+<section>
+  
+  <div data-lang="en">
+    <p class="lede">A patient messages a clinic at 11:42 p.m. asking about an appointment. By morning, they may have already contacted two other clinics. VozClinic is the bilingual front desk that answers — WhatsApp messages and phone calls, in Spanish and English, 24/7, even when the clinic is closed.</p>
+    <p class="lede">Clinics pay a monthly subscription for that. When you refer one, <strong>20% of what that clinic pays is yours, every month, for as long as they stay.</strong></p>
+  </div>
+</section>
 
-    <section id="how-it-works">
-      <h2>How it works</h2>
-      <div class="steps-grid">
+<section>
+  
+  <div data-lang="en"><h2>What a referral is worth</h2></div>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th data-lang="en">Plan</th>
+          <th class="num" data-lang="en">Clinic pays / month</th>
+          <th class="num" data-lang="en">You earn / month</th>
+          <th class="num" data-lang="en">You earn / year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Esencial</td><td class="num">$299</td><td class="num">$59.80</td><td class="num">$717.60</td></tr>
+        <tr><td>Profesional</td><td class="num">$599</td><td class="num">$119.80</td><td class="num">$1,437.60</td></tr>
+        <tr><td>Pro Claims</td><td class="num">$1,499</td><td class="num">$299.80</td><td class="num">$3,597.60</td></tr>
+        <tr><td>White-label</td><td class="num">$4,999</td><td class="num">$999.80</td><td class="num">$11,997.60</td></tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <p class="note" data-lang="en">USD. Commission = 20% of net revenue actually collected (after any discounts or refunds). No cap on referrals or earnings.</p>
 
-        <article class="step-card">
-          <div class="step-num">01</div>
-          <h3 class="step-title">You request a link</h3>
-          <p class="step-description">
-            Message us on WhatsApp or by email and we approve you. You get your own affiliate link. You don't need to be a clinic or have any healthcare background.
-          </p>
-        </article>
+  <div class="highlight">
+    
+    <p data-lang="en">Refer five Profesional-plan clinics and you collect <strong>$599 USD every month</strong> — income that renews itself, from work you did once.</p>
+  </div>
+</section>
 
-        <article class="step-card">
-          <div class="step-num">02</div>
-          <h3 class="step-title">You share it</h3>
-          <p class="step-description">
-            Pass it to dental clinics, med spas, or any practice handling patients over WhatsApp. Your link attributes them to you for 90 days from the first click.
-          </p>
-        </article>
-
-        <article class="step-card">
-          <div class="step-num">03</div>
-          <h3 class="step-title">You get paid monthly</h3>
-          <p class="step-description">
-            Once that clinic subscribes, you earn 20% of what they pay each month. Each commission clears 60 days after we collect the invoice, and keeps coming until the clinic cancels.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <section id="what-you-earn">
-      <h2>What you earn</h2>
-      <p class="section-intro">
-        Your commission is 20% of what the clinic actually pays each month. Here are VozClinic's current plans and what each active clinic is worth to you:
-      </p>
-
-      <div class="payout-wrap">
-        <table class="payout-table">
-          <thead>
-            <tr>
-              <th>Plan</th>
-              <th>Monthly price</th>
-              <th>Your monthly commission</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Esencial</strong></td>
-              <td>$299 USD</td>
-              <td class="payout-amount">$59.80 USD</td>
-            </tr>
-            <tr>
-              <td><strong>Profesional</strong></td>
-              <td>$599 USD</td>
-              <td class="payout-amount">$119.80 USD</td>
-            </tr>
-            <tr>
-              <td><strong>Pro Claims</strong></td>
-              <td>$1,499 USD</td>
-              <td class="payout-amount">$299.80 USD</td>
-            </tr>
-            <tr>
-              <td><strong>White-label</strong></td>
-              <td>$4,999 USD</td>
-              <td class="payout-amount">$999.80 USD</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p class="note">
-        Figures are before tax. Commission is calculated on the net amount collected, excluding taxes, discounts, refunds, and separately billed add-ons. Plan prices may change; your 20% applies to the price in effect.
-      </p>
-    </section>
-
-    <section id="who-its-for">
-      <h2>Who it's for</h2>
-      <p class="section-intro">
-        The program is open. You don't need to be a clinic or a VozClinic customer:
-      </p>
-      <ul class="rules-list">
-        <li>Consultants and marketing agencies already working with dental clinics and med spas.</li>
-        <li>Suppliers, distributors, and reps who walk into practices every week.</li>
-        <li>Creators and healthcare communities in Mexico and the United States.</li>
-        <li>Anyone with a genuine recommendation and a real relationship with the clinic.</li>
-      </ul>
-    </section>
-
-    <section id="rules">
-      <h2>The rules, short version</h2>
-      <p class="section-intro">
-        The program is open, so the rules are firm. These are the ones that matter most:
-      </p>
-      <ul class="rules-list">
-        <li>Don't bid on the VozClinic brand or variations of it on Google Ads or any search engine.</li>
-        <li>No spam: no bulk email, no WhatsApp broadcasts, no unsolicited SMS.</li>
-        <li>Don't refer yourself, clinics you control, or clinics already in an open conversation with us.</li>
-        <li>Don't promise medical outcomes or invent prices, features, or product numbers.</li>
-        <li>You are not VozClinic and you are not Sofía. Don't present yourself as part of the team.</li>
-        <li>Never contact patients or collect their data. That belongs to the clinic, under the LFPDPPP.</li>
-      </ul>
-      <p class="note">
-        This is the short version. The full conditions live in the <a href="/affiliate-terms/">Affiliate Program Terms</a>, and those are the ones that govern.
-      </p>
-    </section>
-
-    <section id="questions">
-      <h2>Frequently asked questions</h2>
-
-      <div class="faq-wrap">
-
-          <details class="faq-item" name="faq-group" open>
-            <summary class="faq-summary">Do I need to be a clinic to join?
-              <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </summary>
-            <div class="faq-content">
-              No. The program is open to any person or company that can introduce clinics legitimately. If you're also a clinic customer you can still take part, as long as you don't refer yourself.
-            </div>
-          </details>
-
-          <details class="faq-item" name="faq-group">
-            <summary class="faq-summary">How long does the commission last?
-              <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </summary>
-            <div class="faq-content">
-              For as long as the clinic stays subscribed and paying. If they cancel, your commission ends with their last collected invoice. There's no month cap and no earnings cap.
-            </div>
-          </details>
-
-          <details class="faq-item" name="faq-group">
-            <summary class="faq-summary">When do I get paid?
-              <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </summary>
-            <div class="faq-content">
-              Each commission clears 60 days after we collect the matching invoice. That window covers refunds and chargebacks. Once cleared, it's paid out in the next monthly cycle.
-            </div>
-          </details>
-
-          <details class="faq-item" name="faq-group">
-            <summary class="faq-summary">How is my referral tracked?
-              <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </summary>
-            <div class="faq-content">
-              Through your unique link. Attribution lasts 90 days from the first click and goes to the last affiliate link recorded. If a clinic arrives another way and names you, tell us before they subscribe and we'll review it.
-            </div>
-          </details>
-
-          <details class="faq-item" name="faq-group">
-            <summary class="faq-summary">What if the clinic was already talking to you?
-              <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </summary>
-            <div class="faq-content">
-              It doesn't earn a commission. Clinics already in an open conversation with us are excluded from the program. We'll tell you as soon as we spot it.
-            </div>
-          </details>
-
-      </div>
-    </section>
-
-    <section id="get-started">
-      <h2>Get started</h2>
-      <p class="section-intro">
-        Message me directly. I approve you, send your link, and walk you through how reporting works. No long forms, no tickets.
-      </p>
-      <a href="https://wa.me/526633154686?text=Hi%20Lainie%2C%20I%27d%20like%20my%20VozClinic%20affiliate%20link" target="_blank" rel="noopener" class="hero-cta">
-        Request your link on WhatsApp
-        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-        </svg>
-      </a>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <p class="footer-text">
-        Questions not covered here? Email me at
-        <a href="mailto:lainiem@vozclinic.com">lainiem@vozclinic.com</a> or on <a href="https://wa.me/526633154686?text=Hi%20Lainie%2C%20I%20have%20a%20question%20about%20the%20affiliate%20program" target="_blank" rel="noopener">WhatsApp</a>.
-      </p>
-      <div class="footer-signature">— Lainie Mayfield, Founder of VozClinic</div>
-
-      <p class="footer-legal">
-        20% commission on the net amount collected from each referred clinic's monthly subscription, for as long as that subscription stays active. Each commission clears 60 days after the matching invoice is collected. Attribution by unique link, 90 days. Subject to the <a href="/affiliate-terms/">Affiliate Program Terms</a>. VozClinic · LNL AI Agency · Made in Tijuana, B.C. · LFPDPPP-compliant.
-      </p>
+<section id="como-funciona">
+  
+  <div data-lang="en"><h2>How it works</h2></div>
+  <div class="steps">
+    <div class="step">
+      <div class="n" data-lang="en">Step 1</div>
+      <h3 data-lang="en">Register the clinic</h3>
+      
+      <p data-lang="en">Send us the clinic's name and a contact before you introduce them (or copy us on the intro). We confirm it's yours within 5 business days; your claim holds for 90 days.</p>
     </div>
-  </footer>
+    <div class="step">
+      <div class="n" data-lang="en">Step 2</div>
+      <h3 data-lang="en">We take it from there</h3>
+      
+      <p data-lang="en">VozClinic runs the demo, the sales conversation, and the 48-hour setup. You don't sell — you introduce.</p>
+    </div>
+    <div class="step">
+      <div class="n" data-lang="en">Step 3</div>
+      <h3 data-lang="en">You get paid</h3>
+      
+      <p data-lang="en">Commissions start with the clinic's first paid month and unlock once the clinic completes 60 days of service. After that, payouts land monthly by PayPal or bank transfer (US or Mexico).</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  
+  <div data-lang="en"><h2>Who can join</h2>
+  <p>Anyone. Consultants, agencies, dental labs, suppliers, patient coordinators — or someone who simply knows clinic owners in Baja California and beyond. You don't need to be a clinic or use VozClinic.</p></div>
+</section>
+
+<section>
+  
+  <div data-lang="en"><h2>The terms, in short</h2></div>
+  <ul class="terms">
+    
+    <li data-lang="en"><strong>20% of monthly net revenue</strong> from each referred clinic, for life — for as long as its service stays active, including plan changes.</li>
+    
+    <li data-lang="en"><strong>60-day maturation.</strong> Commissions accrue from the first paid month and become payable once the clinic completes 60 days of paid service.</li>
+    
+    <li data-lang="en"><strong>Monthly payouts</strong> within 15 days after month end, with a $50 USD minimum (smaller balances roll over).</li>
+    
+    <li data-lang="en"><strong>Tax requirement:</strong> Form W-9 (US), W-8BEN (non-US), or CFDI invoicing details before the first payout.</li>
+  </ul>
+  
+  <p class="note" data-lang="en">The full program terms live at <a href="https://vozclinic.com/affiliate-terms">vozclinic.com/affiliate-terms</a> and control over this summary.</p>
+</section>
+
+<section>
+  
+  <div data-lang="en"><h2>FAQ</h2></div>
+
+  <details>
+    <summary data-lang="en">What if the clinic cancels?</summary>
+    
+    <p data-lang="en">Commission is paid on what the clinic actually pays. If it cancels, commissions end with its service. If it cancels or is refunded within the first 60 days, accrued commissions are void.</p>
+  </details>
+  <details>
+    <summary data-lang="en">What if two people refer the same clinic?</summary>
+    
+    <p data-lang="en">The first valid registration wins. That's why you register the clinic before you introduce it.</p>
+  </details>
+  <details>
+    <summary data-lang="en">Do I have to sell or run demos?</summary>
+    
+    <p data-lang="en">No. You make the introduction; VozClinic handles the demo, the proposal, and the setup.</p>
+  </details>
+  <details>
+    <summary data-lang="en">Can I refer clinics outside Baja California?</summary>
+    
+    <p data-lang="en">Yes. The program is open to clinics in Mexico and the United States, subject to the program terms.</p>
+  </details>
+
+  <div class="final-cta">
+    
+    <div data-lang="en">
+      <h2>Care begins with someone answering.</h2>
+      <p>Every clinic you refer gives its patients an answer — and gives you an income that renews itself every month.</p>
+      <a class="btn light" href="mailto:affiliate@vozclinic.com?subject=VozClinic%20affiliate%20application">Register your first clinic</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  
+  <span data-lang="en">VozClinic · Hecho en Tijuana · <a href="https://vozclinic.com/privacy">Aviso de Privacidad</a> · affiliate@vozclinic.com · <a href="https://wa.me/526633154686">WhatsApp +52 663 315 4686</a></span>
+</footer>
+
 
 </body>
 </html>
