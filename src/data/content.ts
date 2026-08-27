@@ -202,8 +202,8 @@ export const demo = {
 export const pricing = {
   title: { es: 'Precios mensuales', en: 'Monthly pricing' } as Bilingual,
   subtitle: {
-    es: 'Precios estándar, sin contratos a largo plazo. Cambia de plan cuando tu volumen cambie.',
-    en: 'Standard pricing, no long-term contracts. Change plans when your volume changes.',
+    es: 'Precios con IVA incluido, sin contratos a largo plazo. Cambia de plan cuando tu volumen cambie.',
+    en: 'Prices include VAT, no long-term contracts. Change plans when your volume changes.',
   } as Bilingual,
   plans: [
     {
@@ -240,8 +240,8 @@ export const pricing = {
     en: 'Promotions, insurance verification, and list reactivation are optional add-ons, available on any plan.',
   } as Bilingual,
   footer: {
-    es: 'Sin contratos a largo plazo. Cancela cuando quieras. Precios incluyen WhatsApp Business API oficial y soporte en español.',
-    en: 'No long-term contracts. Cancel anytime. Prices include official WhatsApp Business API and Spanish-language support.',
+    es: 'Los precios ya incluyen el IVA: lo que ves es lo que pagas. Cobramos en USD; el monto en pesos es aproximado y varía según el tipo de cambio del día. Emitimos CFDI con tus datos fiscales. Sin contratos a largo plazo, cancela cuando quieras. Incluye WhatsApp Business API oficial y soporte en español.',
+    en: 'Prices include VAT: what you see is what you pay. We bill in USD; the peso amount is approximate and moves with the daily exchange rate. CFDI invoicing available on request. No long-term contracts, cancel anytime. Includes official WhatsApp Business API and Spanish-language support.',
   } as Bilingual,
 };
 
@@ -373,8 +373,8 @@ export const footerData = {
   legal: {
     label: { es: 'Legal', en: 'Legal' } as Bilingual,
     links: [
-      { label: { es: 'Aviso de privacidad', en: 'Privacy notice' } as Bilingual, href: '/aviso-de-privacidad/' },
-      { label: { es: 'Términos', en: 'Terms' } as Bilingual, href: '#' },
+      { label: { es: 'Aviso de privacidad', en: 'Privacy notice' } as Bilingual, href: { es: '/aviso-de-privacidad/', en: '/privacy/' } as Bilingual },
+      { label: { es: 'Términos', en: 'Terms' } as Bilingual, href: { es: '/terminos/', en: '/terms/' } as Bilingual },
       { label: { es: 'LFPDPPP', en: 'LFPDPPP' } as Bilingual, href: '/aviso-de-privacidad/' },
     ],
   },

@@ -1,5 +1,6 @@
 import { useLang } from '../context/LangContext';
 import { footerData } from '../data/content';
+import type { Bilingual } from '../types/lang';
 
 export default function Footer() {
   const { t, lang } = useLang();
@@ -8,8 +9,12 @@ export default function Footer() {
 
   // The blog has per-locale routes (/blog/ es, /en/blog/ en); other footer
   // links are shared across languages.
-  const localizeHref = (href: string) =>
-    href === '/blog/' && lang === 'en' ? '/en/blog/' : href;
+  // Some legal links have a per-locale destination (Spanish and English each
+  // have their own terms and privacy pages); the rest are plain strings.
+  const localizeHref = (href: string | Bilingual) => {
+    if (typeof href !== 'string') return t(href);
+    return href === '/blog/' && lang === 'en' ? '/en/blog/' : href;
+  };
 
   return (
     <footer className="bg-charcoal text-gray-400 py-16" role="contentinfo">

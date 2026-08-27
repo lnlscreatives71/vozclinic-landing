@@ -61,11 +61,11 @@ export default function Pricing() {
                   {plan.usd}
                 </span>
                 <span className={`text-sm ml-1 ${plan.highlight ? 'text-white/70' : 'text-gray-400'}`}>
-                  USD/mes
+                  {t({ es: 'USD/mes · IVA incluido', en: 'USD/mo · VAT included' })}
                 </span>
               </div>
               <p className={`text-sm mb-5 ${plan.highlight ? 'text-white/70' : 'text-gray-400'}`}>
-                {plan.mxn} / mes
+                {t({ es: `aprox. ${plan.mxn} / mes`, en: `approx. ${plan.mxn} / mo` })}
               </p>
 
               {/* Description */}
