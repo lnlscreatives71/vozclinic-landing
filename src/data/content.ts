@@ -305,8 +305,8 @@ export const faq = {
     {
       q: { es: '¿Cumple con la ley mexicana de protección de datos?', en: 'Does it comply with Mexican data protection law?' } as Bilingual,
       a: {
-        es: 'Sí. Cumplimos con la LFPDPPP. Los datos del paciente se guardan en servidores en México (o Estados Unidos si lo prefieres) y nunca se comparten con terceros.',
-        en: 'Yes. We comply with LFPDPPP. Patient data is stored on servers in Mexico (or the United States if you prefer) and never shared with third parties.',
+        es: 'Sí. Cumplimos con la LFPDPPP, la ley mexicana de protección de datos: consentimiento del paciente capturado en la conversación, Aviso de Privacidad publicado, registros auditables, y nunca compartimos datos con terceros.',
+        en: "Yes. We comply with the LFPDPPP, Mexico's data protection law: patient consent captured in the conversation, a published Aviso de Privacidad, auditable logs, and we never share data with third parties.",
       } as Bilingual,
     },
     {
