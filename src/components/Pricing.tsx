@@ -110,6 +110,12 @@ export default function Pricing() {
         <p className="text-center text-gray-400 text-sm mt-6 max-w-2xl mx-auto">
           {t(pricing.footer)}
         </p>
+
+        {/* Exchange rate the peso figures were derived from, dated so a stale
+            number reads as out of date rather than as a second price. */}
+        <p className="text-center text-gray-400 text-xs mt-3 max-w-2xl mx-auto">
+          {t(pricing.fxNote)}
+        </p>
       </div>
     </section>
   );

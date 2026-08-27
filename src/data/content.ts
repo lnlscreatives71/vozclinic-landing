@@ -199,6 +199,10 @@ export const demo = {
 // ──────────────────────────────────────────────────────────────
 // Section 7 — Pricing
 // ──────────────────────────────────────────────────────────────
+// Peso figures are INDICATIVE ONLY — USD is the billing currency and the price
+// of record. Derived from 16.97 MXN/USD (27 August 2026), rounded to the
+// nearest 10 pesos. The rate shown in `fxNote` below must be updated in the
+// same edit as these figures, or the page will contradict itself.
 export const pricing = {
   title: { es: 'Precios mensuales', en: 'Monthly pricing' } as Bilingual,
   subtitle: {
@@ -209,32 +213,36 @@ export const pricing = {
     {
       name: 'Esencial',
       usd: '$299',
-      mxn: '$5,980 MXN',
+      mxn: '$5,070 MXN',
       desc: { es: '1 doctor, 1 ubicación, hasta 600 conversaciones/mes', en: '1 doctor, 1 location, up to 600 conversations/mo' } as Bilingual,
       highlight: false,
     },
     {
       name: 'Profesional',
       usd: '$599',
-      mxn: '$11,980 MXN',
+      mxn: '$10,170 MXN',
       desc: { es: '2–4 doctores, 1 ubicación, hasta 1,500 conversaciones/mes', en: '2–4 doctors, 1 location, up to 1,500 conversations/mo' } as Bilingual,
       highlight: true,
     },
     {
       name: 'Pro Claims',
       usd: '$1,499',
-      mxn: '$29,980 MXN',
+      mxn: '$25,440 MXN',
       desc: { es: 'Multi-doctor con seguros y reclamaciones automáticas', en: 'Multi-doctor with insurance and automatic claims' } as Bilingual,
       highlight: false,
     },
     {
       name: 'White-label',
       usd: '$4,999',
-      mxn: '$99,980 MXN',
+      mxn: '$84,830 MXN',
       desc: { es: 'Tu agencia o grupo de clínicas, marca propia', en: 'Your agency or clinic group, your brand' } as Bilingual,
       highlight: false,
     },
   ],
+  fxNote: {
+    es: 'Montos en pesos calculados a 16.97 MXN por dólar (27 de agosto de 2026). Son solo de referencia y cambian con el tipo de cambio.',
+    en: 'Peso amounts calculated at 16.97 MXN per dollar (27 August 2026). Reference only, and they move with the exchange rate.',
+  } as Bilingual,
   addons: {
     es: 'Las promociones, la verificación de seguros y la reactivación de listas son complementos opcionales, disponibles en cualquier plan.',
     en: 'Promotions, insurance verification, and list reactivation are optional add-ons, available on any plan.',
