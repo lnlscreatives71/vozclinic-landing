@@ -244,8 +244,8 @@ export const pricing = {
     en: 'Peso amounts calculated at 16.97 MXN per dollar (27 August 2026). Reference only, and they move with the exchange rate.',
   } as Bilingual,
   addons: {
-    es: 'Las promociones, la verificación de seguros y la reactivación de listas son complementos opcionales, disponibles en cualquier plan.',
-    en: 'Promotions, insurance verification, and list reactivation are optional add-ons, available on any plan.',
+    es: 'Las promociones, la verificación de seguros y la reactivación de listas son complementos opcionales, disponibles en cualquier plan. Las campañas salientes (promociones y reactivación) se activan una vez que Meta aprueba tu cuenta de WhatsApp Business; contestar a tus pacientes funciona desde el primer día.',
+    en: 'Promotions, insurance verification, and list reactivation are optional add-ons, available on any plan. Outbound campaigns (promotions and reactivation) switch on once Meta approves your WhatsApp Business account; answering your patients works from day one.',
   } as Bilingual,
   footer: {
     es: 'Los precios no incluyen impuestos. Cobramos en USD; el monto en pesos es aproximado y varía según el tipo de cambio del día. El tratamiento fiscal y la facturación que corresponden a tu clínica se establecen en tu acuerdo de servicio. Sin contratos a largo plazo, cancela cuando quieras. Incluye WhatsApp Business API oficial y soporte en español.',
