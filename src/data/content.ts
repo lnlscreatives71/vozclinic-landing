@@ -202,8 +202,8 @@ export const demo = {
 export const pricing = {
   title: { es: 'Precios mensuales', en: 'Monthly pricing' } as Bilingual,
   subtitle: {
-    es: 'Precios más IVA, sin contratos a largo plazo. Cambia de plan cuando tu volumen cambie.',
-    en: 'Prices plus VAT, no long-term contracts. Change plans when your volume changes.',
+    es: 'Precios más impuestos aplicables, sin contratos a largo plazo. Cambia de plan cuando tu volumen cambie.',
+    en: 'Prices plus applicable tax, no long-term contracts. Change plans when your volume changes.',
   } as Bilingual,
   plans: [
     {
@@ -240,8 +240,8 @@ export const pricing = {
     en: 'Promotions, insurance verification, and list reactivation are optional add-ons, available on any plan.',
   } as Bilingual,
   footer: {
-    es: 'Los precios no incluyen IVA. Se agrega el 16% de IVA al facturar, cuando aplica. Cobramos en USD; el monto en pesos es aproximado y varía según el tipo de cambio del día. Emitimos CFDI con tus datos fiscales. Sin contratos a largo plazo, cancela cuando quieras. Incluye WhatsApp Business API oficial y soporte en español.',
-    en: 'Prices do not include VAT. Mexican VAT of 16% is added at invoicing where it applies. We bill in USD; the peso amount is approximate and moves with the daily exchange rate. CFDI invoicing available on request. No long-term contracts, cancel anytime. Includes official WhatsApp Business API and Spanish-language support.',
+    es: 'Los precios no incluyen impuestos. Cobramos en USD; el monto en pesos es aproximado y varía según el tipo de cambio del día. El tratamiento fiscal y la facturación que corresponden a tu clínica se establecen en tu acuerdo de servicio. Sin contratos a largo plazo, cancela cuando quieras. Incluye WhatsApp Business API oficial y soporte en español.',
+    en: 'Prices do not include tax. We bill in USD; the peso amount is approximate and moves with the daily exchange rate. The tax treatment and invoicing that apply to your clinic are set out in your service agreement. No long-term contracts, cancel anytime. Includes official WhatsApp Business API and Spanish-language support.',
   } as Bilingual,
 };
 

@@ -61,7 +61,7 @@ export default function Pricing() {
                   {plan.usd}
                 </span>
                 <span className={`text-sm ml-1 ${plan.highlight ? 'text-white/70' : 'text-gray-400'}`}>
-                  {t({ es: 'USD/mes + IVA', en: 'USD/mo + VAT' })}
+                  {t({ es: 'USD/mes + impuestos', en: 'USD/mo + tax' })}
                 </span>
               </div>
               <p className={`text-sm mb-5 ${plan.highlight ? 'text-white/70' : 'text-gray-400'}`}>
