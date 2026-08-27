@@ -23,8 +23,8 @@ export default function FeatureInsurance({ initialLang = 'es' }: { initialLang?:
           width: 1264,
           height: 848,
           alt: {
-            es: 'Sofía, el agente de voz con IA de VozClinic, conectada a la verificación de seguros, el intake, el expediente del paciente y pacientes de Estados Unidos',
-            en: 'Sofía, VozClinic’s AI voice agent, connected to insurance verification, intake, the patient file, and US patients',
+            es: 'Sofía, la recepcionista de IA de VozClinic, conectada a la verificación de seguros, el intake, el expediente del paciente y pacientes de Estados Unidos',
+            en: 'Sofía, VozClinic’s AI receptionist, connected to insurance verification, intake, the patient file, and US patients',
           },
         }}
         kicker={{ es: 'Seguros e intake', en: 'Insurance & intake' }}

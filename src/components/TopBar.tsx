@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLang } from '../context/LangContext';
 import { nav } from '../data/content';
-import { qualifierUrl } from '../utils/links';
+import { bookDemoUrl } from '../utils/links';
 import { featureNavPages, solutionsPage } from '../pages/manifest';
 
 export default function TopBar() {
@@ -113,7 +113,7 @@ export default function TopBar() {
 
           {/* CTA */}
           <a
-            href={qualifierUrl(lang)}
+            href={bookDemoUrl(lang)}
             className="inline-flex items-center bg-teal text-white text-sm font-semibold px-3 py-2 sm:px-4 rounded-xl hover:bg-teal-dark transition-colors"
           >
             {t(nav.cta)}

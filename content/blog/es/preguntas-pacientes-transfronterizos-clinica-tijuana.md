@@ -1,7 +1,7 @@
 ---
 title: "9 preguntas que todo paciente transfronterizo le hace a tu clínica de Tijuana (respondidas al instante)"
 meta_title: "9 preguntas que hacen los pacientes de turismo médico en Tijuana | VozClinic"
-description: "Las 9 preguntas que hacen los pacientes transfronterizos antes de agendar en una clínica de Tijuana, y cómo un agente de voz con IA bilingüe en WhatsApp responde cada una al instante en español o inglés. Únete a la lista de espera de VozClinic."
+description: "Las 9 preguntas que hacen los pacientes transfronterizos antes de agendar en una clínica de Tijuana, y cómo un agente de voz con IA bilingüe en WhatsApp responde cada una al instante en español o inglés. Agenda una demo con VozClinic."
 date: 2026-07-04
 author: VozClinic
 slug: preguntas-pacientes-transfronterizos-clinica-tijuana
@@ -62,10 +62,10 @@ No todos los pacientes agendan en el primer contacto, y la mayoría de las clín
 
 Cada respuesta de arriba llega igual sin importar si el paciente te contacta por WhatsApp, por teléfono, por SMS, por Telegram o a través de un widget de voz integrado en tu sitio web. Es un solo agente bilingüe, despierto 24/7, consistente en todas partes, para que ninguna pregunta se quede sin responder y ninguna cita se pierda porque tu recepción estaba cerrada u ocupada.
 
-## Únete a la lista de espera antes del lanzamiento de septiembre
+## Agenda una demo
 
-VozClinic abre para clínicas a principios de septiembre. Únete a la lista de espera ahora para asegurar el acceso anticipado, y las primeras 25 clínicas en registrarse reciben un mes completo de servicio gratis.
+Agenda una llamada de 20 minutos y te enseñamos a Sofía contestando los casos reales de tu clínica, en español e inglés.
 
-Agrega tu clínica a la lista de espera en [www.vozclinic.com](https://www.vozclinic.com).
+[Agenda una demo →](/agendar-demo/)
 
-¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com) y te explicamos cómo VozClinic responde las preguntas de tus pacientes en el instante en que las hacen.
+¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com).

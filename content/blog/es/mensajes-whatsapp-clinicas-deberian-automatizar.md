@@ -50,12 +50,10 @@ Fíjate en lo que tienen en común estos siete mensajes: son los predecibles. Se
 
 Para ver de cerca dos de estos, mira cómo [las promociones de la clínica corren en automático](/blog/promociones-clinica-whatsapp-automatizadas/) y cómo [la reactivación de pacientes y el recordatorio anual funcionan de principio a fin](/blog/reactivacion-pacientes-recordatorio-anual-clinica-tijuana/). Para el panorama completo, empieza con la [guía del agente de voz bilingüe para clínicas de turismo médico en Tijuana](/blog/agente-de-voz-bilingue-turismo-medico-tijuana/).
 
-## Únete a la lista de espera antes del lanzamiento de septiembre
+## Agenda una demo
 
-VozClinic abre para las clínicas a principios de septiembre. Únete a la lista de espera ahora para asegurar acceso anticipado y onboarding prioritario, y las primeras 25 clínicas en registrarse reciben un mes completo de servicio gratis.
+Agenda una llamada de 20 minutos y te enseñamos a Sofía contestando los casos reales de tu clínica, en español e inglés.
 
-Agrega tu clínica a la lista de espera en [www.vozclinic.com](https://www.vozclinic.com).
+[Agenda una demo →](/agendar-demo/)
 
-¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com) y te mostramos cuáles de estos siete todavía escribe tu clínica a mano.
-
-Deja de reescribir los mismos mensajes. Únete a la lista.
+¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com).

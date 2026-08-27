@@ -50,12 +50,10 @@ Muchos pacientes se quedan callados, no porque perdieran el interés sino porque
 
 Cada razón de esta lista se reduce a lo mismo: la clínica que responde rápido, claro y en dos idiomas, por el canal que el paciente ya usa, es la que eligen. Eso es exactamente lo que hace un agente de voz con IA bilingüe, en WhatsApp, voz, SMS y Telegram. Es el mismo agente que atrapa tus [llamadas perdidas y fuera de horario](/blog/llamadas-perdidas-fuera-de-horario-turismo-medico-tijuana/) y [corre tus promociones del mensaje a la cita agendada](/blog/promociones-clinica-whatsapp-automatizadas/). Para el panorama completo, mira la [guía del agente de voz bilingüe para clínicas de turismo médico en Tijuana](/blog/agente-de-voz-bilingue-turismo-medico-tijuana/).
 
-## Únete a la lista de espera antes del lanzamiento de septiembre
+## Agenda una demo
 
-VozClinic abre para las clínicas a principios de septiembre. Únete a la lista de espera ahora para asegurar acceso anticipado, y las primeras 25 clínicas en registrarse reciben un mes completo de servicio gratis.
+Agenda una llamada de 20 minutos y te enseñamos a Sofía contestando los casos reales de tu clínica, en español e inglés.
 
-Agrega tu clínica a la lista de espera en [www.vozclinic.com](/lista-espera/).
+[Agenda una demo →](/agendar-demo/)
 
-¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com) y te mostramos cómo ser la clínica que eligen.
-
-Sé la que contesta primero. Únete a la lista.
+¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com).

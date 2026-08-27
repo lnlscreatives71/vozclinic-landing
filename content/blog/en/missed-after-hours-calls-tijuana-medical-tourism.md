@@ -1,7 +1,7 @@
 ---
 title: "The Cross-Border Revenue Leak: What Missed and After-Hours Calls Cost Your Tijuana Clinic"
 meta_title: "Missed Calls Cost Tijuana Medical Tourism Clinics Patients | VozClinic"
-description: "Every missed or after-hours call at a Tijuana medical tourism clinic is a cross-border patient who booked elsewhere. See how a bilingual AI voice agent on WhatsApp answers 24/7 and stops the leak. Join the waitlist."
+description: "Every missed or after-hours call at a Tijuana medical tourism clinic is a cross-border patient who booked elsewhere. See how a bilingual AI voice agent on WhatsApp answers 24/7 and stops the leak. Book a demo."
 date: 2026-07-04
 author: VozClinic
 slug: missed-after-hours-calls-tijuana-medical-tourism
@@ -9,7 +9,7 @@ pair: missed-after-hours-calls
 image: vozclinic-hero-missed-after-hours-calls-EN.webp
 image_alt: "A glowing AI voice agent answering an after-hours WhatsApp call for a Tijuana medical tourism clinic"
 og_image: social-card-missed-after-hours-calls-en.webp
-og_image_alt: "VozClinic social card with a gold orb: The clinic that answers first wins. Join the waitlist."
+og_image_alt: "VozClinic social card with a gold orb: The clinic that answers first wins. Book a demo."
 ---
 
 Picture a patient in San Diego at 9 p.m. on a Sunday. She has three implant quotes open in browser tabs, she has decided she is crossing the border to get the work done, and she is ready to book a consultation tonight. She calls the first Tijuana clinic. No answer. She calls the second. No answer. The third picks up, books her for Tuesday, and just earned several thousand dollars that the first two clinics never knew was on the table.
@@ -56,12 +56,10 @@ One agent covers all of it, and it stays consistent everywhere. The patient who 
 
 Answering first only wins the patient if the answer sounds right. A cross-border patient might open in English, switch to Spanish to ask about price, then switch back. VozClinic was built bilingual from the start, detects the patient's language, matches it, and switches mid-conversation without missing a beat. Catching the call is step one. Sounding local and handling both languages cleanly is what turns the catch into a booking.
 
-## Stop the leak before the September launch
+## Book a demo
 
-VozClinic opens to clinics at the beginning of September. Join the waitlist now to lock in early access, and the first 25 clinics to sign up get one full month of service free.
+Book a 20-minute call and we'll show you Sofía handling your clinic's real cases, in Spanish and English.
 
-Add your clinic to the waitlist at [www.vozclinic.com](https://www.vozclinic.com).
+[Book a demo →](/book-demo/)
 
-Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com) and we will show you exactly where your calls are leaking and how VozClinic plugs the gap.
-
-The clinic that answers first usually wins. Make sure that clinic is yours.
+Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com).

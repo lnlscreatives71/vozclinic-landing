@@ -1,7 +1,7 @@
 ---
 title: "Por qué WhatsApp es el canal para las clínicas de México y la frontera"
 meta_title: "Recepcionista con IA en WhatsApp para clínicas de México | VozClinic"
-description: "En México y en la frontera, los pacientes viven en WhatsApp. Por qué una recepcionista con IA bilingüe en WhatsApp le gana a una línea telefónica o a un formulario para clínicas de turismo médico en Tijuana. Únete a la lista de espera."
+description: "En México y en la frontera, los pacientes viven en WhatsApp. Por qué una recepcionista con IA bilingüe en WhatsApp le gana a una línea telefónica o a un formulario para clínicas de turismo médico en Tijuana. Agenda una demo."
 date: 2026-08-01
 author: Lainie Mayfield
 slug: recepcionista-ia-whatsapp-clinicas-mexico
@@ -48,12 +48,10 @@ El punto honesto de apostarle a WhatsApp es que algunos pacientes todavía prefi
 
 El canal es la base, y el trabajo se apoya encima. La misma recepcionista que hace que WhatsApp conteste al instante es la que atrapa tus [llamadas perdidas y fuera de horario](/blog/llamadas-perdidas-fuera-de-horario-turismo-medico-tijuana/) y hace la [verificación de seguros e ingreso antes de la cita](/funciones/seguros/), todo en el mismo hilo, sobre el mismo número. Para el panorama completo de cómo encaja todo, mira la [guía del agente de voz bilingüe para clínicas de turismo médico en Tijuana](/blog/agente-de-voz-bilingue-turismo-medico-tijuana/).
 
-## Únete a la lista de espera antes del lanzamiento de septiembre
+## Agenda una demo
 
-VozClinic abre para las clínicas a principios de septiembre. Únete a la lista de espera ahora para asegurar acceso anticipado y onboarding prioritario, y las primeras 25 clínicas en registrarse reciben un mes completo de servicio gratis.
+Agenda una llamada de 20 minutos y te enseñamos a Sofía contestando los casos reales de tu clínica, en español e inglés.
 
-Agrega tu clínica a la lista de espera en [www.vozclinic.com](https://www.vozclinic.com).
+[Agenda una demo →](/agendar-demo/)
 
-¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com) y te mostramos cómo se ve el WhatsApp de tu clínica cuando siempre contesta.
-
-Tus pacientes ya están en WhatsApp. Únete a nuestra lista.
+¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com).

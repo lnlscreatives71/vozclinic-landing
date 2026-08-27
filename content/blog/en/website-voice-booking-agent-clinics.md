@@ -1,7 +1,7 @@
 ---
 title: "Website Voice Booking: Let Patients Book by Talking, No Form"
 meta_title: "Website Voice Booking Agent for Clinics | VozClinic"
-description: "Your clinic website has a contact form nobody answers fast. A website voice booking agent lets patients book by talking, in English or Spanish, right on the page. Join the waitlist."
+description: "Your clinic website has a contact form nobody answers fast. A website voice booking agent lets patients book by talking, in English or Spanish, right on the page. Book a demo."
 date: 2026-08-08
 author: Lainie Mayfield
 slug: website-voice-booking-agent-clinics
@@ -52,12 +52,10 @@ That is what keeps the booking clean. The patient who starts a conversation on y
 
 The website is one more door into the same front desk, and the point is that every door answers the same way. For the channel patients reach for most, see why [WhatsApp is the channel for Mexican and border clinics](/en/blog/whatsapp-ai-receptionist-mexico-clinics/), and for the day-to-day work this frees up, see the [front-desk tasks a bilingual receptionist takes off your staff's plate](/en/blog/ai-voice-agent-front-desk-tasks-clinic/). For the full picture of what the receptionist does across your clinic, start with the guide to [AI for medical clinics](/en/blog/bilingual-voice-agent-tijuana-medical-tourism/).
 
-## Join the waitlist before the September launch
+## Book a demo
 
-VozClinic opens to clinics at the beginning of September. Join the waitlist now to lock in early access and priority onboarding, and the first 25 clinics to sign up get one full month of service free.
+Book a 20-minute call and we'll show you Sofía handling your clinic's real cases, in Spanish and English.
 
-Add your clinic to the waitlist at [www.vozclinic.com](https://www.vozclinic.com).
+[Book a demo →](/book-demo/)
 
-Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com) and we will show you what your website looks like when patients can book by talking.
-
-Stop collecting messages. Start taking bookings. Get on the list.
+Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com).

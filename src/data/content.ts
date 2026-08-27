@@ -4,7 +4,7 @@ import type { Bilingual } from '../types/lang';
 // Navigation
 // ──────────────────────────────────────────────────────────────
 export const nav = {
-  cta: { es: 'Únete a la lista →', en: 'Join the waitlist →' } as Bilingual,
+  cta: { es: 'Agenda una demo →', en: 'Book a demo →' } as Bilingual,
 };
 
 // ──────────────────────────────────────────────────────────────
@@ -20,8 +20,8 @@ export const hero = {
     en: "A patient's first experience with your clinic doesn't happen in the waiting room. It happens when they call or message on WhatsApp. Sofía answers in Spanish and English, books the appointment, and brings patients back, even after hours.",
   } as Bilingual,
   primaryCta: {
-    es: 'Únete a la lista de espera',
-    en: 'Join the waitlist',
+    es: 'Agenda una demo',
+    en: 'Book a demo',
   } as Bilingual,
   secondaryCta: {
     es: 'Conoce a Sofía en 2 minutos',
@@ -197,36 +197,13 @@ export const demo = {
 };
 
 // ──────────────────────────────────────────────────────────────
-// Section 6 — Design Partner
-// ──────────────────────────────────────────────────────────────
-export const designPartner = {
-  title: { es: 'Los 3 lugares de socia de diseño están llenos.', en: 'All 3 design partner spots are filled.' } as Bilingual,
-  intro: {
-    es: 'Gracias — la respuesta superó lo que esperábamos. Las 3 clínicas socias ya están a bordo y arrancando. Pero esto apenas empieza:',
-    en: 'Thank you — the response beat what we expected. All 3 partner clinics are on board and going live. But this is just the start:',
-  } as Bilingual,
-  benefits: [
-    { es: 'Lista de espera abierta para la próxima cohorte', en: 'Waitlist open for the next cohort' } as Bilingual,
-    { es: 'Las primeras 25 clínicas reciben su primer mes gratis', en: 'First 25 clinics get their first month free' } as Bilingual,
-    { es: 'Sé de las primeras en vivo con VozClinic', en: 'Be one of the first live on VozClinic' } as Bilingual,
-    { es: 'Acceso directo a la fundadora, sin tickets, sin call center', en: 'Direct access to the founder, no tickets, no call center' } as Bilingual,
-  ],
-  urgency: { es: 'Cupo de socias: lleno.', en: 'Design partner cohort: full.' } as Bilingual,
-  urgencyBody: {
-    es: 'La lista de espera ya está abierta — las primeras 25 clínicas arrancan con su primer mes gratis.',
-    en: 'The waitlist is now open — the first 25 clinics start with their first month free.',
-  } as Bilingual,
-  cta: { es: 'Únete a la lista de espera →', en: 'Join the waitlist →' } as Bilingual,
-};
-
-// ──────────────────────────────────────────────────────────────
 // Section 7 — Pricing
 // ──────────────────────────────────────────────────────────────
 export const pricing = {
   title: { es: 'Precios mensuales', en: 'Monthly pricing' } as Bilingual,
   subtitle: {
-    es: 'Únete a la lista de espera: las primeras 25 clínicas reciben su primer mes gratis.',
-    en: 'Join the waitlist: the first 25 clinics get their first month free.',
+    es: 'Precios estándar, sin contratos a largo plazo. Cambia de plan cuando tu volumen cambie.',
+    en: 'Standard pricing, no long-term contracts. Change plans when your volume changes.',
   } as Bilingual,
   plans: [
     {
@@ -319,15 +296,24 @@ export const faq = {
     {
       q: { es: '¿Pueden integrarse con mi sistema (Open Dental, Eaglesoft, etc.)?', en: 'Can it integrate with my system (Open Dental, Eaglesoft, etc.)?' } as Bilingual,
       a: {
-        es: 'En el plan Profesional y arriba, sí. En Esencial, te damos un dashboard para ver todo. La mayoría de clínicas socias empiezan sin integración y agregan después.',
-        en: 'On Professional and above, yes. On Essential, we give you a dashboard to see everything. Most partner clinics start without integration and add it later.',
+        es: 'En el plan Profesional y arriba, sí. En Esencial, te damos un dashboard para ver todo. La mayoría de las clínicas empiezan sin integración y la agregan después.',
+        en: 'On Professional and above, yes. On Essential, we give you a dashboard to see everything. Most clinics start without integration and add it later.',
       } as Bilingual,
     },
     {
-      q: { es: '¿Todavía puedo ser socia de diseño?', en: 'Can I still become a design partner?' } as Bilingual,
+      q: { es: '¿Puedo ganar comisión por recomendar VozClinic?', en: 'Can I earn commission for referring VozClinic?' } as Bilingual,
       a: {
-        es: 'Los 3 lugares ya están llenos y esas clínicas están arrancando — limitamos el grupo a 3 para dar acceso directo a la fundadora y construir el producto con cada una. Lo siguiente es la lista de espera: las primeras 25 clínicas arrancan con su primer mes gratis.',
-        en: 'All 3 spots are filled and those clinics are going live — we capped the group at 3 to give direct founder access and build the product with each one. Next up is the waitlist: the first 25 clinics start with their first month free.',
+        es: 'Sí. El programa de afiliados paga 20% de la suscripción de cada clínica que llegue por tu enlace, cada mes, mientras esa clínica siga activa. Está abierto a cualquiera, no solo a clínicas. Los detalles están en la página del programa de afiliados.',
+        en: 'Yes. The affiliate program pays 20% of the subscription of every clinic that arrives through your link, every month, for as long as that clinic stays active. It is open to anyone, not just clinics. The details are on the affiliate program page.',
+      } as Bilingual,
+      href: { es: '/afiliados/', en: '/affiliates/' } as Bilingual,
+      linkLabel: { es: 'Ver el programa de afiliados →', en: 'See the affiliate program →' } as Bilingual,
+    },
+    {
+      q: { es: '¿Cómo empiezo?', en: 'How do I get started?' } as Bilingual,
+      a: {
+        es: 'Agenda una demo de 20 minutos. Te enseño a Sofía trabajando con los casos reales de tu clínica, revisamos qué plan te queda y, si te convence, arrancamos el onboarding esa misma semana.',
+        en: "Book a 20-minute demo. I'll show you Sofía working through your clinic's real cases, we'll figure out which plan fits, and if it convinces you we start onboarding that same week.",
       } as Bilingual,
     },
   ],
@@ -349,8 +335,8 @@ export const founder = {
     { es: '20+ años PM empresarial', en: '20+ yrs enterprise PM' } as Bilingual,
   ],
   highlight: {
-    es: 'Si quieres unirte a la próxima cohorte, te dedico el tiempo que sea necesario para que esto funcione para tu clínica.',
-    en: 'If you want to join the next cohort, I\'ll spend whatever time it takes to make this work for your clinic.',
+    es: 'Si decides trabajar conmigo, te dedico el tiempo que sea necesario para que esto funcione para tu clínica.',
+    en: "If you decide to work with me, I'll spend whatever time it takes to make this work for your clinic.",
   } as Bilingual,
   signature: '— Lainie Mayfield, fundadora / founder',
   cta: { es: 'Escríbeme a WhatsApp →', en: 'Message me on WhatsApp →' } as Bilingual,
@@ -363,11 +349,11 @@ export const founder = {
 export const finalCta = {
   title: { es: 'Cada paciente merece una respuesta.', en: 'Every patient deserves an answer.' } as Bilingual,
   sub: {
-    es: 'Las 3 plazas de socia de diseño están llenas y esas clínicas ya están arrancando. Únete a la lista de espera — las primeras 25 clínicas reciben su primer mes gratis.',
-    en: 'All 3 design partner spots are filled and those clinics are going live. Join the waitlist — the first 25 clinics get their first month free.',
+    es: 'Agenda una llamada de 20 minutos. Te enseño a Sofía contestando los casos reales de tu clínica, en español e inglés, y decides desde ahí.',
+    en: "Book a 20-minute call. I'll show you Sofía handling your clinic's real cases, in Spanish and English, and you decide from there.",
   } as Bilingual,
   ctaDemo: { es: 'Agenda una llamada de demo', en: 'Book a demo call' } as Bilingual,
-  ctaWaitlist: { es: 'Unirme a la lista de espera', en: 'Join the waitlist' } as Bilingual,
+  ctaWhatsapp: { es: 'Escríbeme por WhatsApp', en: 'Message me on WhatsApp' } as Bilingual,
 };
 
 // ──────────────────────────────────────────────────────────────

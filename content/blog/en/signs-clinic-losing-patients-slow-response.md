@@ -1,7 +1,7 @@
 ---
 title: "5 Signs Your Clinic Is Losing Patients to Slow Response Times"
 meta_title: "5 Signs Slow Response Time Is Costing Your Clinic Patients | VozClinic"
-description: "Clinic response time is the quiet leak in your bookings. Here are 5 signs your Tijuana medical tourism clinic is losing patients to slow replies, and how a bilingual AI receptionist fixes each one. Join the waitlist."
+description: "Clinic response time is the quiet leak in your bookings. Here are 5 signs your Tijuana medical tourism clinic is losing patients to slow replies, and how a bilingual AI receptionist fixes each one. Book a demo."
 date: 2026-08-08
 author: Lainie Mayfield
 slug: signs-clinic-losing-patients-slow-response
@@ -44,12 +44,10 @@ Every one of these signs points at the same gap: the distance between when a pat
 
 For a closer look at where this leak starts, see how [missed and after-hours calls become a cross-border revenue leak](/en/blog/missed-after-hours-calls-tijuana-medical-tourism/), and for the messages worth automating first, see the [7 WhatsApp messages every medical tourism clinic should automate](/en/blog/whatsapp-messages-clinics-should-automate/). For the full picture of what the receptionist does, start with the guide to [AI for medical clinics](/en/blog/bilingual-voice-agent-tijuana-medical-tourism/).
 
-## Join the waitlist before the September launch
+## Book a demo
 
-VozClinic opens to clinics at the beginning of September. Join the waitlist now to lock in early access and priority onboarding, and the first 25 clinics to sign up get one full month of service free.
+Book a 20-minute call and we'll show you Sofía handling your clinic's real cases, in Spanish and English.
 
-Add your clinic to the waitlist at [www.vozclinic.com](https://www.vozclinic.com).
+[Book a demo →](/book-demo/)
 
-Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com) and we will show you what your clinic's response time looks like when every message gets answered in seconds.
-
-Stop losing patients to the wait. Get on the list.
+Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com).

@@ -1,7 +1,7 @@
 ---
 title: "5 señales de que tu clínica está perdiendo pacientes por responder lento"
 meta_title: "5 señales de que responder lento le cuesta pacientes a tu clínica | VozClinic"
-description: "El tiempo de respuesta de tu clínica es la fuga silenciosa de tus citas. Aquí hay 5 señales de que tu clínica de turismo médico en Tijuana pierde pacientes por responder lento, y cómo una recepcionista con IA bilingüe arregla cada una. Únete a la lista de espera."
+description: "El tiempo de respuesta de tu clínica es la fuga silenciosa de tus citas. Aquí hay 5 señales de que tu clínica de turismo médico en Tijuana pierde pacientes por responder lento, y cómo una recepcionista con IA bilingüe arregla cada una. Agenda una demo."
 date: 2026-08-08
 author: Lainie Mayfield
 slug: senales-clinica-pierde-pacientes-respuesta-lenta
@@ -44,12 +44,10 @@ Cada una de estas señales apunta a la misma brecha: la distancia entre cuándo 
 
 Para ver de cerca dónde empieza esta fuga, mira cómo [las llamadas perdidas y fuera de horario se vuelven una fuga de ingresos transfronteriza](/blog/llamadas-perdidas-fuera-de-horario-turismo-medico-tijuana/), y para los mensajes que vale la pena automatizar primero, mira los [7 mensajes de WhatsApp que toda clínica de turismo médico debería automatizar](/blog/mensajes-whatsapp-clinicas-deberian-automatizar/). Para el panorama completo de lo que hace la recepcionista, empieza con la guía de [IA para clínicas médicas](/blog/agente-de-voz-bilingue-turismo-medico-tijuana/).
 
-## Únete a la lista de espera antes del lanzamiento de septiembre
+## Agenda una demo
 
-VozClinic abre para las clínicas a principios de septiembre. Únete a la lista de espera ahora para asegurar acceso anticipado y onboarding prioritario, y las primeras 25 clínicas en registrarse reciben un mes completo de servicio gratis.
+Agenda una llamada de 20 minutos y te enseñamos a Sofía contestando los casos reales de tu clínica, en español e inglés.
 
-Agrega tu clínica a la lista de espera en [www.vozclinic.com](https://www.vozclinic.com).
+[Agenda una demo →](/agendar-demo/)
 
-¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com) y te mostramos cómo se ve el tiempo de respuesta de tu clínica cuando cada mensaje se contesta en segundos.
-
-Deja de perder pacientes por la espera. Únete a la lista.
+¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com).

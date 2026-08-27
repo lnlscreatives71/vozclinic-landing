@@ -223,51 +223,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!calcBtns || !badge || !reward || !explainer) return;
 
-    // Spanish translation datasets
+    // One free month of your own subscription per referred clinic that
+    // subscribes and stays active 60 days. Months, not dollar figures: the
+    // credit is worth whatever the referrer's own plan costs.
     const esData = {
       1: {
-        badge: 'Regalo Garantizado · +3 Meses',
-        reward: 'Ahorra $450 USD',
-        explainer: 'Cuando tu clínica recomendada firme su acuerdo de Design Partner y complete su onboarding, te sumamos automáticamente 3 meses gratis a tu suscripción de cuando integremos tu PMS.'
+        badge: 'Recompensa · +1 mes gratis',
+        reward: '1 mes de tu plan, gratis',
+        explainer: 'Cuando la clínica que recomiendas se suscribe y cumple 60 días activa, te abonamos un mes gratis de tu propia suscripción, al precio de tu plan.'
       },
       2: {
-        badge: 'Doble Recompensa · +6 Meses',
-        reward: 'Ahorra $900 USD',
-        explainer: '¡Dos recomendaciones exitosas! Suma 6 meses completos gratis a tu cuenta. El valor total de esta recompensa equivale a $900 USD de suscripción de VozClinic totalmente bonificados.'
+        badge: 'Recompensa · +2 meses gratis',
+        reward: '2 meses de tu plan, gratis',
+        explainer: 'Dos recomendaciones que se vuelven clientes: dos meses gratis de tu suscripción. Se abonan uno por clínica, conforme cada una cumple sus 60 días.'
       },
       3: {
-        badge: 'Triple Beneficio · +9 Meses',
-        reward: 'Ahorra $1,350 USD',
-        explainer: '¡Excelente! Con tres presentaciones exitosas acumulas 9 meses gratis. Prácticamente tres trimestres de VozClinic completamente libres de costo una vez integremos tu PMS.'
+        badge: 'Recompensa · +3 meses gratis',
+        reward: '3 meses de tu plan, gratis',
+        explainer: 'Tres clínicas activas recomendadas por ti son un trimestre completo sin pagar tu suscripción.'
       },
       4: {
-        badge: 'Super Socio · +12 Meses (1 AÑO)',
-        reward: 'Ahorra $1,800 USD!',
-        explainer: '¡Increíble! Recomendar 4 o más clínicas te regala un año completo de servicio gratis valorado en $1,800 USD. No hay límites en la cantidad de meses que puedes sumar.'
+        badge: 'Recompensa · +4 meses gratis o más',
+        reward: '4 meses o más, gratis',
+        explainer: 'No hay tope. Cada clínica que llegue por ti y cumpla 60 días activa suma un mes gratis más a tu cuenta.'
       }
     };
 
-    // English translation datasets
     const enData = {
       1: {
-        badge: 'Guaranteed Reward · +3 Free Months',
-        reward: 'Save $450 USD',
-        explainer: 'When your referred clinic signs their Design Partner agreement and completes onboarding, we automatically add 3 free months to your subscription for when we integrate your PMS.'
+        badge: 'Reward · +1 free month',
+        reward: '1 free month of your plan',
+        explainer: 'When the clinic you refer subscribes and stays active for 60 days, we credit one free month of your own subscription, at your plan\'s price.'
       },
       2: {
-        badge: 'Double Reward · +6 Free Months',
-        reward: 'Save $900 USD',
-        explainer: 'Two successful introductions! Add a full 6 free months to your account. This reward is worth a substantial $900 USD in subscription credit.'
+        badge: 'Reward · +2 free months',
+        reward: '2 free months of your plan',
+        explainer: 'Two introductions that become customers: two free months of your subscription. They are credited one per clinic, as each one clears its 60 days.'
       },
       3: {
-        badge: 'Triple Benefit · +9 Free Months',
-        reward: 'Save $1,350 USD',
-        explainer: 'Incredible! With three successful referrals, you accumulate 9 free months—giving you close to a full year of VozClinic at zero cost.'
+        badge: 'Reward · +3 free months',
+        reward: '3 free months of your plan',
+        explainer: 'Three active clinics referred by you is a full quarter without paying your subscription.'
       },
       4: {
-        badge: 'Super Partner · +12 Months (1 YEAR)',
-        reward: 'Save $1,800 USD!',
-        explainer: 'Amazing! Refer 4 or more active clinics to earn a full year of VozClinic completely free (valued at $1,800 USD). There is no limit on your pending subscription credit!'
+        badge: 'Reward · +4 free months or more',
+        reward: '4 free months or more',
+        explainer: 'There is no cap. Every clinic that arrives through you and stays active 60 days adds another free month to your account.'
       }
     };
 

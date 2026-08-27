@@ -9,7 +9,7 @@ pair: tijuana-medical-tourism
 image: vozclinic-whatsapp-voice-agent-hero.webp
 image_alt: "Bilingual WhatsApp voice agent for a Tijuana medical tourism clinic answering a cross-border patient."
 og_image: social-card-blog-2-en.webp
-og_image_alt: "VozClinic social card with a blue orb: Stop losing cross-border patients. Join the waitlist."
+og_image_alt: "VozClinic social card with a blue orb: Stop losing cross-border patients. Book a demo."
 ---
 
 If you run a dental, cosmetic surgery or med spa clinic in Tijuana, your best patients are often asleep in another country when they message you. Someone in San Diego finishes work, opens WhatsApp at 9:47 PM, and asks about a crown, a price, or how to cross the border for a morning appointment. If nobody answers, they message the next clinic on their list. By the time your front desk opens, that patient is booked somewhere else.
@@ -66,12 +66,10 @@ VozClinic wasn't built in a distant software office. It was built in Tijuana, by
 
 Onboarding is simple. VozClinic connects to your WhatsApp in about 48 hours, learns your clinic in a single 90-minute session covering your prices, services, doctors, hours and FAQs, and then works around the clock, escalating to your team only when it matters. It integrates with Google Calendar, Outlook and Open Dental, and sends you a weekly WhatsApp report of appointments booked, messages handled and revenue recovered.
 
-## Join the waitlist: first 25 clinics get one free month
+## Book a demo
 
-VozClinic launches at the beginning of September. The three design-partner spots are already full, so the next step is the waitlist, and the first 25 clinics to join receive their first month free.
+Book a 20-minute call and we'll show you Sofía handling your clinic's real cases, in Spanish and English.
 
-If your clinic loses patients to unanswered messages, missed English calls, or a front desk stretched too thin, a bilingual voice agent is the fix. Add your clinic to the waitlist at [www.vozclinic.com](/waitlist/) to lock in your free month before the September launch.
+[Book a demo →](/book-demo/)
 
-Questions? Email hola@vozclinic.com and you'll hear back from Lainie directly.
-
-**[Join the waitlist at vozclinic.com →](/waitlist/)**
+Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com).

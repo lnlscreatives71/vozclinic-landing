@@ -1,7 +1,7 @@
 ---
 title: "Why WhatsApp Is the Channel for Mexican and Border Clinics"
 meta_title: "WhatsApp AI Receptionist for Mexico and Border Clinics | VozClinic"
-description: "In Mexico and along the border, patients live on WhatsApp. Here is why a bilingual AI receptionist on WhatsApp beats a phone line or a web form for Tijuana medical tourism clinics. Join the waitlist."
+description: "In Mexico and along the border, patients live on WhatsApp. Here is why a bilingual AI receptionist on WhatsApp beats a phone line or a web form for Tijuana medical tourism clinics. Book a demo."
 date: 2026-08-01
 author: Lainie Mayfield
 slug: whatsapp-ai-receptionist-mexico-clinics
@@ -48,12 +48,10 @@ The honest catch with betting on WhatsApp is that some patients still prefer to 
 
 The channel is the foundation, and the work sits on top of it. The same receptionist that makes WhatsApp answer instantly is the one that catches your [missed and after-hours calls](/en/blog/missed-after-hours-calls-tijuana-medical-tourism/) and runs [insurance verification and intake before the appointment](/en/features/insurance/), all in the same thread, on the same number. For the full picture of how it fits together, see the [pillar overview of the bilingual voice agent for Tijuana medical tourism clinics](/en/blog/bilingual-voice-agent-tijuana-medical-tourism/).
 
-## Join the waitlist before the September launch
+## Book a demo
 
-VozClinic opens to clinics at the beginning of September. Join the waitlist now to lock in early access and priority onboarding, and the first 25 clinics to sign up get one full month of service free.
+Book a 20-minute call and we'll show you Sofía handling your clinic's real cases, in Spanish and English.
 
-Add your clinic to the waitlist at [www.vozclinic.com](https://www.vozclinic.com).
+[Book a demo →](/book-demo/)
 
-Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com) and we will show you what your clinic's WhatsApp looks like when it always answers.
-
-Your patients are already on WhatsApp. Get on our list.
+Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com).

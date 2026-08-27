@@ -72,14 +72,10 @@ La reactivación es lo tercero que hace Sofía, no lo primero. Primero contesta 
 
 Si no los has leído, el [post pilar](/blog/agente-de-voz-bilingue-turismo-medico-tijuana/) cubre el sistema completo, y el de [llamadas perdidas y fuera de horario](/blog/llamadas-perdidas-fuera-de-horario-turismo-medico-tijuana/) cubre el lado entrante de la fuga.
 
-## Únete a la lista de espera
+## Agenda una demo
 
-VozClinic se lanza a principios de septiembre. Las tres plazas de socia de diseño están llenas. La lista de espera está abierta, y las primeras 25 clínicas reciben su primer mes gratis.
+Agenda una llamada de 20 minutos y te enseñamos a Sofía contestando los casos reales de tu clínica, en español e inglés.
 
-**[Únete a la lista de espera](https://www.vozclinic.com/lista-espera/)**
+[Agenda una demo →](/agendar-demo/)
 
-Las dudas van a **hola@vozclinic.com**. Te contesto yo, desde Tijuana. No un call center.
-
----
-
-*VozClinic — el agente de voz y WhatsApp con IA bilingüe para clínicas. Hecho en Tijuana. [www.vozclinic.com](https://www.vozclinic.com)*
+¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com).

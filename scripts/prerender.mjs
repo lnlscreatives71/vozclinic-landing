@@ -50,12 +50,12 @@ function swap(html, from, to) {
 const EN_HEAD = [
   ['<html lang="es">', '<html lang="en">'],
   [
-    '<title>VozClinic: agente de voz y WhatsApp con IA para clínicas</title>',
-    '<title>VozClinic: AI voice agent for dental & medical clinics</title>',
+    '<title>VozClinic: recepcionista de IA en WhatsApp y llamadas</title>',
+    '<title>VozClinic: AI receptionist for dental & medical clinics</title>',
   ],
   [
-    '<meta name="description" content="Agente de voz y WhatsApp con IA para clínicas: agenda citas 24/7, recordatorios, verifica seguros, reactiva pacientes y lanza promociones. Hecho en Tijuana." />',
-    '<meta name="description" content="AI voice & WhatsApp agent for clinics: 24/7 appointment booking, reminders, insurance verification, patient reactivation, and promotions. Tijuana + San Diego." />',
+    '<meta name="description" content="Recepcionista de IA para WhatsApp y llamadas en clínicas: agenda citas 24/7, recordatorios, verifica seguros, reactiva pacientes y lanza promociones. Hecho en Tijuana." />',
+    '<meta name="description" content="AI receptionist for WhatsApp and calls in clinics: 24/7 appointment booking, reminders, insurance verification, patient reactivation, and promotions. Tijuana + San Diego." />',
   ],
   [
     '<link rel="canonical" href="https://www.vozclinic.com/" />',
@@ -67,7 +67,7 @@ const EN_HEAD = [
   ],
   [
     '<meta property="og:title" content="VozClinic — Tu recepcionista de WhatsApp que nunca duerme" />',
-    '<meta property="og:title" content="VozClinic: AI voice agent for dental & medical clinics" />',
+    '<meta property="og:title" content="VozClinic: AI receptionist for dental & medical clinics" />',
   ],
   [
     '<meta property="og:description" content="Sofía contesta a tus pacientes en segundos, agenda citas y envía recordatorios — en español e inglés, 24/7. Hecho en Tijuana para clínicas en Baja California." />',
@@ -83,7 +83,7 @@ const EN_HEAD = [
   ],
   [
     '<meta name="twitter:title" content="VozClinic — Tu recepcionista de WhatsApp que nunca duerme" />',
-    '<meta name="twitter:title" content="VozClinic: AI voice agent for dental & medical clinics" />',
+    '<meta name="twitter:title" content="VozClinic: AI receptionist for dental & medical clinics" />',
   ],
   [
     '<meta name="twitter:description" content="Sofía contesta a tus pacientes en segundos, agenda citas y envía recordatorios — en español e inglés, 24/7." />',
@@ -129,8 +129,8 @@ function featureHtml(page, lang) {
   const h = page.head[lang];
 
   if (lang === 'en') html = swap(html, '<html lang="es">', '<html lang="en">');
-  html = swap(html, '<title>VozClinic: agente de voz y WhatsApp con IA para clínicas</title>', `<title>${escAttr(h.title)}</title>`);
-  html = swap(html, '<meta name="description" content="Agente de voz y WhatsApp con IA para clínicas: agenda citas 24/7, recordatorios, verifica seguros, reactiva pacientes y lanza promociones. Hecho en Tijuana." />', `<meta name="description" content="${escAttr(h.description)}" />`);
+  html = swap(html, '<title>VozClinic: recepcionista de IA en WhatsApp y llamadas</title>', `<title>${escAttr(h.title)}</title>`);
+  html = swap(html, '<meta name="description" content="Recepcionista de IA para WhatsApp y llamadas en clínicas: agenda citas 24/7, recordatorios, verifica seguros, reactiva pacientes y lanza promociones. Hecho en Tijuana." />', `<meta name="description" content="${escAttr(h.description)}" />`);
   html = swap(html, '<link rel="canonical" href="https://www.vozclinic.com/" />', `<link rel="canonical" href="${selfUrl}" />`);
   html = swap(html, '<link rel="alternate" hreflang="es" href="https://www.vozclinic.com/" />', `<link rel="alternate" hreflang="es" href="${esUrl}" />`);
   html = swap(html, '<link rel="alternate" hreflang="en" href="https://www.vozclinic.com/en/" />', `<link rel="alternate" hreflang="en" href="${enUrl}" />`);

@@ -56,12 +56,10 @@ Plenty of patients go quiet, not because they lost interest but because the clin
 
 Every reason on this list comes down to the same thing: the clinic that responds fast, clearly, and bilingually, on the channel the patient already uses, is the one that gets chosen. That is exactly what a bilingual AI voice agent does, across WhatsApp, voice, SMS, and Telegram. It is the same agent that catches your [missed and after-hours calls](/en/blog/missed-after-hours-calls-tijuana-medical-tourism/) and [runs your promotions from message to booked appointment](/en/blog/clinic-promotions-whatsapp-automation/). For the full picture, see the [pillar overview of the bilingual voice agent for Tijuana medical tourism clinics](/en/blog/bilingual-voice-agent-tijuana-medical-tourism/).
 
-## Join the waitlist before the September launch
+## Book a demo
 
-VozClinic opens to clinics at the beginning of September. Join the waitlist now to lock in early access, and the first 25 clinics to sign up get one full month of service free.
+Book a 20-minute call and we'll show you Sofía handling your clinic's real cases, in Spanish and English.
 
-Add your clinic to the waitlist at [www.vozclinic.com](/waitlist/).
+[Book a demo →](/book-demo/)
 
-Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com) and we will show you how to be the clinic that gets chosen.
-
-Be the one that answers first. Get on the list.
+Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com).

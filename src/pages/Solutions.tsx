@@ -114,8 +114,8 @@ export default function Solutions({ initialLang = 'es' }: { initialLang?: Lang }
           width: 1536,
           height: 1024,
           alt: {
-            es: 'Sofía, el agente de voz con IA de VozClinic, conectada a una clínica dental, un medspa y un quirófano de cirugía cosmética',
-            en: 'Sofía, VozClinic’s AI voice agent, connected to a dental clinic, a med spa, and a cosmetic surgery suite',
+            es: 'Sofía, la recepcionista de IA de VozClinic, conectada a una clínica dental, un medspa y un quirófano de cirugía cosmética',
+            en: 'Sofía, VozClinic’s AI receptionist, connected to a dental clinic, a med spa, and a cosmetic surgery suite',
           },
         }}
         kicker={{ es: 'Soluciones', en: 'Solutions' }}
@@ -125,8 +125,8 @@ export default function Solutions({ initialLang = 'es' }: { initialLang?: Lang }
         }}
         accent={{ es: 'de tu práctica', en: 'of your practice' }}
         sub={{
-          es: 'La misma agente, entrenada en lo que tu clínica hace todos los días: dental, medspa o cirugía cosmética. Aprende tus tratamientos, precios y políticas en una sesión de 90 minutos.',
-          en: 'The same agent, trained on what your clinic does every day: dental, med spa, or cosmetic surgery. She learns your treatments, pricing, and policies in one 90-minute session.',
+          es: 'La misma recepcionista, entrenada en lo que tu clínica hace todos los días: dental, medspa o cirugía cosmética. Aprende tus tratamientos, precios y políticas en una sesión de 90 minutos.',
+          en: 'The same receptionist, trained on what your clinic does every day: dental, med spa, or cosmetic surgery. She learns your treatments, pricing, and policies in one 90-minute session.',
         }}
         facts={[
           { v: '3', l: { es: 'Tipos de práctica atendidos hoy', en: 'Practice types served today' } },
@@ -144,8 +144,8 @@ export default function Solutions({ initialLang = 'es' }: { initialLang?: Lang }
           en: 'Sofía trains for your clinic, not the other way around',
         }}
         sub={{
-          es: '¿Otro tipo de práctica? Escríbenos igual. Las primeras 25 clínicas en la lista de espera reciben su primer mes gratis.',
-          en: 'A different kind of practice? Reach out anyway. The first 25 clinics on the waitlist get their first month free.',
+          es: '¿Otro tipo de práctica? Escríbenos igual. Si tus pacientes te escriben o te llaman, Sofía puede contestar.',
+          en: 'A different kind of practice? Reach out anyway. If your patients message or call you, Sofía can answer.',
         }}
       />
     </FeaturePageShell>

@@ -85,14 +85,10 @@ Emergencias. Quejas. Casos complejos. El paciente nervioso que necesita escuchar
 
 El agente escala todo eso, de inmediato. Nunca inventa un precio, un diagnóstico ni una promesa médica. Es una recepción que nunca duerme, no un reemplazo de las personas que hacen que tu clínica valga la pena.
 
-## Únete a la lista de espera
+## Agenda una demo
 
-VozClinic se lanza a principios de septiembre. Las tres plazas de socia de diseño están llenas. La lista de espera está abierta, y las primeras 25 clínicas reciben su primer mes gratis.
+Agenda una llamada de 20 minutos y te enseñamos a Sofía contestando los casos reales de tu clínica, en español e inglés.
 
-**[Únete a la lista de espera](https://www.vozclinic.com/lista-espera/)**
+[Agenda una demo →](/agendar-demo/)
 
-Dudas a **hola@vozclinic.com** — te contesto yo, desde Tijuana.
-
----
-
-*VozClinic — el agente de voz y WhatsApp con IA bilingüe para clínicas. Hecho en Tijuana. [www.vozclinic.com](https://www.vozclinic.com)*
+¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com).

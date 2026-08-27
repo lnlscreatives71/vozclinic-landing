@@ -3,5 +3,32 @@
     "deploymentEnabled": {
       "__dolt_remote_info__": false
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/waitlist",
+      "destination": "/book-demo/",
+      "permanent": true
+    },
+    {
+      "source": "/lista-espera",
+      "destination": "/agendar-demo/",
+      "permanent": true
+    },
+    {
+      "source": "/waitlist-thanks",
+      "destination": "/book-demo/",
+      "permanent": true
+    },
+    {
+      "source": "/lista-gracias",
+      "destination": "/agendar-demo/",
+      "permanent": true
+    },
+    {
+      "source": "/design-partner-enroll",
+      "destination": "/agendar-demo/",
+      "permanent": true
+    }
+  ]
 }

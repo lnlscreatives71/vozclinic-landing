@@ -9,7 +9,7 @@ pair: tijuana-medical-tourism
 image: vozclinic-whatsapp-voice-agent-hero.webp
 image_alt: "Agente de voz de WhatsApp bilingüe para una clínica de turismo médico en Tijuana contestando a un paciente transfronterizo."
 og_image: social-card-blog-2-es.webp
-og_image_alt: "Tarjeta social de VozClinic con un orbe azul: Deja de perder pacientes transfronterizos. Únete a la lista de espera."
+og_image_alt: "Tarjeta social de VozClinic con un orbe azul: Deja de perder pacientes transfronterizos. Agenda una demo."
 ---
 
 Si tienes una clínica dental, de cirugía estética o un med spa en Tijuana, tus mejores pacientes muchas veces te escriben cuando ya están dormidos en otro país. Alguien en San Diego sale del trabajo, abre WhatsApp a las 9:47 PM y pregunta por una corona, un precio, o cómo cruzar la frontera para una cita en la mañana. Si nadie contesta, le escribe a la siguiente clínica de su lista. Para cuando abre tu recepción, ese paciente ya agendó en otro lado.
@@ -66,12 +66,10 @@ VozClinic no se construyó en una oficina de software lejana. Se construyó en T
 
 El onboarding es sencillo. VozClinic conecta tu WhatsApp en unas 48 horas, aprende tu clínica en una sola sesión de 90 minutos que cubre tus precios, servicios, doctores, horarios y preguntas frecuentes, y luego trabaja las 24 horas, escalando a tu equipo solo cuando importa. Se integra con Google Calendar, Outlook y Open Dental, y te envía un reporte semanal por WhatsApp de citas agendadas, mensajes gestionados e ingresos recuperados.
 
-## Únete a la lista de espera: las primeras 25 clínicas reciben su primer mes gratis
+## Agenda una demo
 
-VozClinic se lanza a principios de septiembre. Los tres lugares de socia de diseño ya están llenos, así que el siguiente paso es la lista de espera, y las primeras 25 clínicas en unirse reciben su primer mes gratis.
+Agenda una llamada de 20 minutos y te enseñamos a Sofía contestando los casos reales de tu clínica, en español e inglés.
 
-Si tu clínica pierde pacientes por mensajes sin contestar, llamadas en inglés que no alcanzas a tomar, o una recepción demasiado saturada, un agente de voz bilingüe es la solución. Agrega tu clínica a la lista de espera en [www.vozclinic.com](/lista-espera/) para asegurar tu mes gratis antes del lanzamiento de septiembre.
+[Agenda una demo →](/agendar-demo/)
 
-¿Preguntas? Escribe a hola@vozclinic.com y te contesta Lainie directamente.
-
-**[Únete a la lista de espera en vozclinic.com →](/lista-espera/)**
+¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com).

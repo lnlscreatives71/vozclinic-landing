@@ -1,7 +1,7 @@
 ---
 title: "Run Clinic Promotions on Autopilot: From WhatsApp Message to Booked Appointment"
 meta_title: "WhatsApp Clinic Promotions on Autopilot for Tijuana Clinics | VozClinic"
-description: "A bilingual AI voice agent that runs your clinic promotions end to end on WhatsApp: sends the offer, answers the questions, and books the patient. Built for Tijuana medical tourism. Join the waitlist."
+description: "A bilingual AI voice agent that runs your clinic promotions end to end on WhatsApp: sends the offer, answers the questions, and books the patient. Built for Tijuana medical tourism. Book a demo."
 date: 2026-07-18
 author: VozClinic
 slug: clinic-promotions-whatsapp-automation
@@ -58,12 +58,10 @@ Autopilot does not mean flying blind. VozClinic sends a weekly WhatsApp report s
 
 Promotions are one piece of a bigger pattern: the same VozClinic agent that runs your campaigns also catches your [missed and after-hours calls](/en/blog/missed-after-hours-calls-tijuana-medical-tourism/) and quietly [reactivates past patients for annual recall](/en/blog/patient-reactivation-recall-tijuana-clinic/). Reactivation refills your calendar from patients you already won, promotions bring new and lapsed patients in around a specific offer, and both run on the same bilingual agent across WhatsApp, voice, SMS, or Telegram. For the full picture, see the [pillar overview of the bilingual voice agent for Tijuana medical tourism clinics](/en/blog/bilingual-voice-agent-tijuana-medical-tourism/).
 
-## Join the waitlist before the September launch
+## Book a demo
 
-VozClinic opens to clinics at the beginning of September. Join the waitlist now to lock in early access, and the first 25 clinics to sign up get one full month of service free.
+Book a 20-minute call and we'll show you Sofía handling your clinic's real cases, in Spanish and English.
 
-Add your clinic to the waitlist at [www.vozclinic.com](/waitlist/).
+[Book a demo →](/book-demo/)
 
-Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com) and we will show you how your next promotion could book itself.
-
-Stop letting good offers die in a draft. Get on the list.
+Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com).

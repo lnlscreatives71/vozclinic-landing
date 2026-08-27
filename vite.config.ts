@@ -57,9 +57,8 @@ function localTokenApi(): PluginOption {
 }
 
 // Single Vite entry: the marketing landing page (index.html). The retired
-// /design-partner-enroll/ URL is now a static meta-refresh redirect to
-// /lista-espera/ (see design-partner-enroll/index.html) so it no longer
-// needs to be a Vite build target.
+// /design-partner-enroll/ and waitlist URLs are handled by redirects in
+// vercel.json, so they are not Vite build targets.
 export default defineConfig({
   plugins: [react(), tailwindcss(), localTokenApi()],
   resolve: {

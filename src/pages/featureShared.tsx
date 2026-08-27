@@ -1,11 +1,10 @@
 import type { ReactNode } from 'react';
 import { LangProvider, useLang } from '../context/LangContext';
 import type { Lang } from '../types/lang';
-import AnnouncementBar from '../components/AnnouncementBar';
 import TopBar from '../components/TopBar';
 import FloatingWhatsApp from '../components/FloatingWhatsApp';
 import Footer from '../components/Footer';
-import { qualifierUrl } from '../utils/links';
+import { bookDemoUrl } from '../utils/links';
 import { featurePages } from './manifest';
 
 // Shared building blocks for the feature pages (see manifest.ts). Pre-launch:
@@ -23,7 +22,6 @@ export function FeaturePageShell({
   return (
     <LangProvider initialLang={initialLang}>
       <div className="min-h-screen font-body">
-        <AnnouncementBar />
         <TopBar />
         <main>{children}</main>
         <FloatingWhatsApp />
@@ -85,10 +83,10 @@ export function FeatureHero({
           <p className="text-gray-500 text-lg sm:text-xl mt-6 leading-relaxed">{t(sub)}</p>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
             <a
-              href={qualifierUrl(lang)}
+              href={bookDemoUrl(lang)}
               className="inline-flex items-center bg-teal text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-teal-dark transition-colors"
             >
-              {t({ es: 'Únete a la lista de espera →', en: 'Join the waitlist →' })}
+              {t({ es: 'Agenda una demo →', en: 'Book a demo →' })}
             </a>
             <a
               href="/calculadora/"
@@ -289,16 +287,16 @@ export function FeatureCTA({ title, sub }: { title: B; sub?: B }) {
         <p className="text-white/75 text-lg max-w-xl mx-auto mb-8">
           {t(
             sub ?? {
-              es: 'Las primeras 25 clínicas en unirse a la lista de espera reciben su primer mes gratis.',
-              en: 'The first 25 clinics to join the waitlist get their first month free.',
+              es: 'Una llamada de 20 minutos. Te enseñamos a Sofía trabajando con los casos de tu clínica.',
+              en: 'A 20-minute call. We show you Sofía working through your clinic\'s own cases.',
             },
           )}
         </p>
         <a
-          href={qualifierUrl(lang)}
+          href={bookDemoUrl(lang)}
           className="inline-flex items-center bg-white text-teal font-bold px-8 py-4 rounded-xl hover:bg-white/90 transition-colors"
         >
-          {t({ es: 'Únete a la lista de espera →', en: 'Join the waitlist →' })}
+          {t({ es: 'Agenda una demo →', en: 'Book a demo →' })}
         </a>
       </div>
     </section>

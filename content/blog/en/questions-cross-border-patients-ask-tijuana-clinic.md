@@ -1,7 +1,7 @@
 ---
 title: "9 Questions Every Cross-Border Patient Asks Your Tijuana Clinic (Answered Instantly)"
 meta_title: "9 Questions Medical Tourism Patients Ask a Tijuana Clinic | VozClinic"
-description: "The 9 questions cross-border patients ask before booking a Tijuana clinic, and how a bilingual AI voice agent on WhatsApp answers each one instantly in English or Spanish. Join the VozClinic waitlist."
+description: "The 9 questions cross-border patients ask before booking a Tijuana clinic, and how a bilingual AI voice agent on WhatsApp answers each one instantly in English or Spanish. Book a VozClinic demo."
 date: 2026-07-04
 author: VozClinic
 slug: questions-cross-border-patients-ask-tijuana-clinic
@@ -62,10 +62,10 @@ Not every patient books on the first contact, and most clinics never follow up. 
 
 Every answer above lands the same way whether the patient reaches you on WhatsApp, by phone, over SMS, on Telegram, or through a voice widget embedded on your website. It is one bilingual agent, awake 24/7, consistent everywhere, so no patient question goes unanswered and no booking slips away because your desk was closed or busy.
 
-## Join the waitlist before the September launch
+## Book a demo
 
-VozClinic opens to clinics at the beginning of September. Join the waitlist now to lock in early access, and the first 25 clinics to sign up get one full month of service free.
+Book a 20-minute call and we'll show you Sofía handling your clinic's real cases, in Spanish and English.
 
-Add your clinic to the waitlist at [www.vozclinic.com](https://www.vozclinic.com).
+[Book a demo →](/book-demo/)
 
-Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com) and we will walk you through how VozClinic answers your patients' questions the instant they ask.
+Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com).

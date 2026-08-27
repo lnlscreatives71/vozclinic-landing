@@ -1,7 +1,7 @@
 ---
 title: "Reserva por voz en tu sitio web: que el paciente agende hablando, sin formulario"
 meta_title: "Agente de voz para reservar en el sitio web de tu clínica | VozClinic"
-description: "El sitio de tu clínica tiene un formulario que nadie contesta rápido. Un agente de voz para reservar deja que el paciente agende hablando, en español o inglés, en la misma página. Únete a la lista de espera."
+description: "El sitio de tu clínica tiene un formulario que nadie contesta rápido. Un agente de voz para reservar deja que el paciente agende hablando, en español o inglés, en la misma página. Agenda una demo."
 date: 2026-08-08
 author: Lainie Mayfield
 slug: agente-voz-reservar-sitio-web-clinicas
@@ -52,12 +52,10 @@ Eso es lo que mantiene la reserva limpia. El paciente que empieza una conversaci
 
 El sitio web es una puerta más hacia la misma recepción, y el punto es que cada puerta conteste igual. Para el canal que los pacientes buscan más, mira por qué [WhatsApp es el canal para las clínicas de México y la frontera](/blog/recepcionista-ia-whatsapp-clinicas-mexico/), y para el trabajo diario que esto libera, mira las [tareas de recepción que una recepcionista bilingüe le quita a tu equipo](/blog/tareas-recepcion-agente-voz-ia-clinica/). Para el panorama completo de lo que hace la recepcionista en toda tu clínica, empieza con la guía de [IA para clínicas médicas](/blog/agente-de-voz-bilingue-turismo-medico-tijuana/).
 
-## Únete a la lista de espera antes del lanzamiento de septiembre
+## Agenda una demo
 
-VozClinic abre para las clínicas a principios de septiembre. Únete a la lista de espera ahora para asegurar acceso anticipado y onboarding prioritario, y las primeras 25 clínicas en registrarse reciben un mes completo de servicio gratis.
+Agenda una llamada de 20 minutos y te enseñamos a Sofía contestando los casos reales de tu clínica, en español e inglés.
 
-Agrega tu clínica a la lista de espera en [www.vozclinic.com](https://www.vozclinic.com).
+[Agenda una demo →](/agendar-demo/)
 
-¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com) y te mostramos cómo se ve tu sitio web cuando los pacientes pueden agendar hablando.
-
-Deja de juntar recados. Empieza a tomar citas. Únete a la lista.
+¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com).

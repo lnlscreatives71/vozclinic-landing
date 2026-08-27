@@ -1,10 +1,9 @@
 import { LangProvider, useLang } from '../context/LangContext';
 import type { Lang } from '../types/lang';
-import AnnouncementBar from '../components/AnnouncementBar';
 import TopBar from '../components/TopBar';
 import FloatingWhatsApp from '../components/FloatingWhatsApp';
 import Footer from '../components/Footer';
-import { qualifierUrl } from '../utils/links';
+import { bookDemoUrl } from '../utils/links';
 import { MoreFeatures } from './featureShared';
 
 // Flagship feature page: the AI voice & WhatsApp receptionist. Rendered as an
@@ -20,8 +19,8 @@ function Hero() {
         <img
           src="/sofia-hub.webp"
           alt={t({
-            es: 'Sofía, el agente de voz con IA de VozClinic, conectada a WhatsApp, teléfono, Telegram, SMS y tu sitio web',
-            en: 'Sofía, VozClinic’s AI voice agent, connected to WhatsApp, phone, Telegram, SMS, and your website',
+            es: 'Sofía, la recepcionista de IA de VozClinic, conectada a WhatsApp, teléfono, Telegram, SMS y tu sitio web',
+            en: 'Sofía, VozClinic’s AI receptionist, connected to WhatsApp, phone, Telegram, SMS, and your website',
           })}
           width="1264"
           height="848"
@@ -32,8 +31,8 @@ function Hero() {
           {/* Intro line: the copy around the orb */}
           <p className="text-base sm:text-lg font-semibold text-teal mb-4">
             {t({
-              es: 'Un solo agente, todos tus canales, los dos idiomas.',
-              en: 'One agent, every channel, both languages.',
+              es: 'Una sola recepcionista, todos tus canales, los dos idiomas.',
+              en: 'One receptionist, every channel, both languages.',
             })}
           </p>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal leading-tight">
@@ -53,10 +52,10 @@ function Hero() {
         </p>
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <a
-            href={qualifierUrl(lang)}
+            href={bookDemoUrl(lang)}
             className="inline-flex items-center bg-teal text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-teal-dark transition-colors"
           >
-            {t({ es: 'Únete a la lista de espera →', en: 'Join the waitlist →' })}
+            {t({ es: 'Agenda una demo →', en: 'Book a demo →' })}
           </a>
           <a
             href="/calculadora/"
@@ -127,7 +126,7 @@ function Channels() {
   const { t } = useLang();
   const channels = [
     { icon: '🟢', name: 'WhatsApp', d: { es: 'Voz y texto, el canal que tus pacientes ya usan.', en: 'Voice and text, the channel your patients already use.' } },
-    { icon: '✈️', name: 'Telegram', d: { es: 'Mismo agente, misma consistencia.', en: 'Same agent, same consistency.' } },
+    { icon: '✈️', name: 'Telegram', d: { es: 'Misma recepcionista, misma consistencia.', en: 'Same receptionist, same consistency.' } },
     { icon: '💼', name: 'Slack', d: { es: 'Para equipos que coordinan por Slack.', en: 'For teams that coordinate over Slack.' } },
     { icon: '💬', name: 'SMS', d: { es: 'Cuando tu clínica prefiere mensaje de texto.', en: 'When your clinic prefers a text message.' } },
     { icon: '📱', name: { es: 'Línea de voz', en: 'Voice line' }, d: { es: 'Número dedicado para llamadas entrantes y salientes.', en: 'A dedicated number for inbound and outbound calls.' } },
@@ -141,7 +140,7 @@ function Channels() {
             {t({ es: 'Dónde contesta', en: 'Where she answers' })}
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-charcoal mt-3 leading-tight">
-            {t({ es: 'Un solo agente, en todos tus canales', en: 'One agent, across every channel' })}
+            {t({ es: 'Una sola recepcionista, en todos tus canales', en: 'One receptionist, across every channel' })}
           </h2>
           <p className="text-gray-500 mt-4">
             {t({ es: 'Tú eliges los canales. Sofía se mantiene consistente en todos, en los dos idiomas.', en: 'You pick the channels. Sofía stays consistent across all of them, in both languages.' })}
@@ -172,13 +171,13 @@ function CTA() {
           {t({ es: 'Prepárate para dejar de perder llamadas en septiembre', en: 'Get ready to stop losing calls in September' })}
         </h2>
         <p className="text-white/75 text-lg max-w-xl mx-auto mb-8">
-          {t({ es: 'Las primeras 25 clínicas en unirse a la lista de espera reciben su primer mes gratis.', en: 'The first 25 clinics to join the waitlist get their first month free.' })}
+          {t({ es: 'Una llamada de 20 minutos. Te enseñamos a Sofía trabajando con los casos de tu clínica.', en: 'A 20-minute call. We show you Sofía working through your clinic\'s own cases.' })}
         </p>
         <a
-          href={qualifierUrl(lang)}
+          href={bookDemoUrl(lang)}
           className="inline-flex items-center bg-white text-teal font-bold px-8 py-4 rounded-xl hover:bg-white/90 transition-colors"
         >
-          {t({ es: 'Únete a la lista de espera →', en: 'Join the waitlist →' })}
+          {t({ es: 'Agenda una demo →', en: 'Book a demo →' })}
         </a>
       </div>
     </section>
@@ -189,7 +188,6 @@ export default function FeatureReceptionist({ initialLang = 'es' }: { initialLan
   return (
     <LangProvider initialLang={initialLang}>
       <div className="min-h-screen font-body">
-        <AnnouncementBar />
         <TopBar />
         <main>
           <Hero />

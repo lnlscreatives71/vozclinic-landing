@@ -50,12 +50,10 @@ Notice what these seven messages have in common: they are the predictable ones. 
 
 For a deeper look at two of these, see how [clinic promotions run on autopilot](/en/blog/clinic-promotions-whatsapp-automation/) and how [patient reactivation and annual recall work end to end](/en/blog/patient-reactivation-recall-tijuana-clinic/). For the full picture, start with the [pillar overview of the bilingual voice agent for Tijuana medical tourism clinics](/en/blog/bilingual-voice-agent-tijuana-medical-tourism/).
 
-## Join the waitlist before the September launch
+## Book a demo
 
-VozClinic opens to clinics at the beginning of September. Join the waitlist now to lock in early access and priority onboarding, and the first 25 clinics to sign up get one full month of service free.
+Book a 20-minute call and we'll show you Sofía handling your clinic's real cases, in Spanish and English.
 
-Add your clinic to the waitlist at [www.vozclinic.com](https://www.vozclinic.com).
+[Book a demo →](/book-demo/)
 
-Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com) and we will show you which of these seven your clinic is still typing by hand.
-
-Stop retyping the same messages. Get on the list.
+Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com).

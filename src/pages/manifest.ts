@@ -29,12 +29,12 @@ export const featurePages: FeaturePageDef[] = [
       es: {
         title: 'Recepcionista de voz y WhatsApp con IA, 24/7 | VozClinic',
         description:
-          'Sofía contesta cada llamada y mensaje 24/7 en español e inglés, en WhatsApp, Telegram, Slack, SMS, línea de voz y tu sitio web. Agenda, reactiva, da seguimiento y reagenda pacientes. Únete a la lista de espera.',
+          'Sofía contesta cada llamada y mensaje 24/7 en español e inglés, en WhatsApp, Telegram, Slack, SMS, línea de voz y tu sitio web. Agenda, reactiva, da seguimiento y reagenda pacientes. Agenda una demo.',
       },
       en: {
         title: 'AI Voice & WhatsApp Receptionist, 24/7 | VozClinic',
         description:
-          'Sofía answers every call and message 24/7 in English and Spanish, on WhatsApp, Telegram, Slack, SMS, a voice line, and your website. She books, reactivates, follows up, and reschedules patients. Join the waitlist.',
+          'Sofía answers every call and message 24/7 in English and Spanish, on WhatsApp, Telegram, Slack, SMS, a voice line, and your website. She books, reactivates, follows up, and reschedules patients. Book a demo.',
       },
     },
     label: { es: 'Recepcionista 24/7', en: '24/7 receptionist' },
@@ -53,12 +53,12 @@ export const featurePages: FeaturePageDef[] = [
       es: {
         title: 'Agenda con IA: citas, recordatorios y reagendado 24/7 | VozClinic',
         description:
-          'Sofía agenda citas directo en tu calendario, envía recordatorios que el paciente puede responder, reagenda cancelaciones y llena huecos, 24/7 en español e inglés. Únete a la lista de espera.',
+          'Sofía agenda citas directo en tu calendario, envía recordatorios que el paciente puede responder, reagenda cancelaciones y llena huecos, 24/7 en español e inglés. Agenda una demo.',
       },
       en: {
         title: 'AI Scheduling: Booking, Reminders & Reschedules 24/7 | VozClinic',
         description:
-          'Sofía books appointments straight into your calendar, sends reminders patients can reply to, reschedules cancellations, and fills gaps, 24/7 in English and Spanish. Join the waitlist.',
+          'Sofía books appointments straight into your calendar, sends reminders patients can reply to, reschedules cancellations, and fills gaps, 24/7 in English and Spanish. Book a demo.',
       },
     },
     label: { es: 'Agenda y recordatorios', en: 'Scheduling & reminders' },
@@ -77,12 +77,12 @@ export const featurePages: FeaturePageDef[] = [
       es: {
         title: 'Comunicación y reactivación de pacientes con IA | VozClinic',
         description:
-          'Sofía reactiva tu lista de pacientes dormidos, envía recall y seguimientos post-cita, y lanza promociones que agendan solas, en español e inglés. Únete a la lista de espera.',
+          'Sofía reactiva tu lista de pacientes dormidos, envía recall y seguimientos post-cita, y lanza promociones que agendan solas, en español e inglés. Agenda una demo.',
       },
       en: {
         title: 'AI Patient Communication & Reactivation | VozClinic',
         description:
-          'Sofía reactivates your dormant patient list, sends recall and post-visit follow-ups, and runs promotions that book themselves, in English and Spanish. Join the waitlist.',
+          'Sofía reactivates your dormant patient list, sends recall and post-visit follow-ups, and runs promotions that book themselves, in English and Spanish. Book a demo.',
       },
     },
     label: { es: 'Comunicación y reactivación', en: 'Communication & reactivation' },
@@ -101,12 +101,12 @@ export const featurePages: FeaturePageDef[] = [
       es: {
         title: 'Verificación de seguros e intake con IA para clínicas | VozClinic',
         description:
-          'Sofía recopila los datos del seguro, resuelve dudas de cobertura y completa el intake antes de la cita, ideal para clínicas con pacientes de Estados Unidos. Únete a la lista de espera.',
+          'Sofía recopila los datos del seguro, resuelve dudas de cobertura y completa el intake antes de la cita, ideal para clínicas con pacientes de Estados Unidos. Agenda una demo.',
       },
       en: {
         title: 'AI Insurance Verification & Patient Intake | VozClinic',
         description:
-          'Sofía collects insurance details, clears coverage questions, and completes intake before the visit, built for clinics with patients from the United States. Join the waitlist.',
+          'Sofía collects insurance details, clears coverage questions, and completes intake before the visit, built for clinics with patients from the United States. Book a demo.',
       },
     },
     label: { es: 'Seguros e intake', en: 'Insurance & intake' },

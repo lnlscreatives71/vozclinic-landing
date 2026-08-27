@@ -1,6 +1,6 @@
 import { useLang } from '../context/LangContext';
 import { pricing } from '../data/content';
-import { qualifierUrl } from '../utils/links';
+import { bookDemoUrl } from '../utils/links';
 
 export default function Pricing() {
   const { lang, t } = useLang();
@@ -75,7 +75,7 @@ export default function Pricing() {
 
               {/* CTA */}
               <a
-                href={qualifierUrl(lang)}
+                href={bookDemoUrl(lang)}
                 className={`
                   w-full text-center font-semibold text-sm px-4 py-3 rounded-xl transition-colors
                   ${plan.highlight
@@ -84,10 +84,10 @@ export default function Pricing() {
                   }
                 `}
               >
-                {t({ es: 'Unirme a la lista de espera →', en: 'Join waitlist →' })}
+                {t({ es: 'Agendar una demo →', en: 'Book a demo →' })}
               </a>
 
-              {/* Waitlist release note */}
+              {/* Add-ons note */}
               <p className={`text-xs text-center mt-3 ${plan.highlight ? 'text-white/70' : 'text-gray-400'}`}>
                 {t({
                   es: 'Lanzamiento previsto: septiembre 2026',

@@ -2,9 +2,11 @@ import { useState } from 'react';
 import { useLang } from '../context/LangContext';
 import { faq } from '../data/content';
 
-function FAQItem({ question, answer, isOpen, onToggle, index }: {
+function FAQItem({ question, answer, href, linkLabel, isOpen, onToggle, index }: {
   question: string;
   answer: string;
+  href?: string;
+  linkLabel?: string;
   isOpen: boolean;
   onToggle: () => void;
   index: number;
@@ -37,11 +39,19 @@ function FAQItem({ question, answer, isOpen, onToggle, index }: {
         role="region"
         aria-labelledby={`faq-question-${index}`}
         className="overflow-hidden transition-all duration-300 ease-in-out"
-        style={{ maxHeight: isOpen ? '300px' : '0px', opacity: isOpen ? 1 : 0 }}
+        style={{ maxHeight: isOpen ? '420px' : '0px', opacity: isOpen ? 1 : 0 }}
       >
-        <p className="text-gray-500 text-sm leading-relaxed pb-5 pr-10">
+        <p className="text-gray-500 text-sm leading-relaxed pb-3 pr-10">
           {answer}
         </p>
+        {href && linkLabel && (
+          <a
+            href={href}
+            className="inline-block text-teal text-sm font-semibold hover:text-teal-deep transition-colors pb-5"
+          >
+            {linkLabel}
+          </a>
+        )}
       </div>
     </div>
   );
@@ -53,8 +63,9 @@ export default function FAQ() {
 
   const toggle = (idx: number) => setOpenIdx(openIdx === idx ? null : idx);
 
-  const col1 = faq.items.slice(0, 4);
-  const col2 = faq.items.slice(4, 8);
+  const half = Math.ceil(faq.items.length / 2);
+  const col1 = faq.items.slice(0, half);
+  const col2 = faq.items.slice(half);
 
   return (
     <section className="bg-offwhite py-24" id="faq" aria-label="FAQ">
@@ -77,6 +88,8 @@ export default function FAQ() {
                 index={idx}
                 question={t(item.q)}
                 answer={t(item.a)}
+                href={item.href ? t(item.href) : undefined}
+                linkLabel={item.linkLabel ? t(item.linkLabel) : undefined}
                 isOpen={openIdx === idx}
                 onToggle={() => toggle(idx)}
               />
@@ -87,12 +100,14 @@ export default function FAQ() {
           <div className="bg-white rounded-2xl px-6 py-2 border border-gray-100 mt-4 lg:mt-0">
             {col2.map((item, idx) => (
               <FAQItem
-                key={idx + 4}
-                index={idx + 4}
+                key={idx + half}
+                index={idx + half}
                 question={t(item.q)}
                 answer={t(item.a)}
-                isOpen={openIdx === idx + 4}
-                onToggle={() => toggle(idx + 4)}
+                href={item.href ? t(item.href) : undefined}
+                linkLabel={item.linkLabel ? t(item.linkLabel) : undefined}
+                isOpen={openIdx === idx + half}
+                onToggle={() => toggle(idx + half)}
               />
             ))}
           </div>

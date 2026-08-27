@@ -1,7 +1,7 @@
 ---
 title: "La fuga de ingresos transfronteriza: lo que te cuestan las llamadas perdidas y fuera de horario en tu clínica de Tijuana"
 meta_title: "Las llamadas perdidas cuestan pacientes a las clínicas de turismo médico en Tijuana | VozClinic"
-description: "Cada llamada perdida o fuera de horario en una clínica de turismo médico en Tijuana es un paciente transfronterizo que agendó en otro lado. Descubre cómo un agente de voz con IA bilingüe en WhatsApp contesta 24/7 y frena la fuga. Únete a la lista de espera."
+description: "Cada llamada perdida o fuera de horario en una clínica de turismo médico en Tijuana es un paciente transfronterizo que agendó en otro lado. Descubre cómo un agente de voz con IA bilingüe en WhatsApp contesta 24/7 y frena la fuga. Agenda una demo."
 date: 2026-07-04
 author: VozClinic
 slug: llamadas-perdidas-fuera-de-horario-turismo-medico-tijuana
@@ -9,7 +9,7 @@ pair: missed-after-hours-calls
 image: vozclinic-hero-missed-after-hours-calls-ES.webp
 image_alt: "Un agente de voz con IA contestando una llamada de WhatsApp fuera de horario para una clínica de turismo médico en Tijuana"
 og_image: social-card-missed-after-hours-calls-es.webp
-og_image_alt: "Tarjeta social de VozClinic con un orbe dorado: La clínica que contesta primero gana. Únete a la lista de espera."
+og_image_alt: "Tarjeta social de VozClinic con un orbe dorado: La clínica que contesta primero gana. Agenda una demo."
 ---
 
 Imagina a una paciente en San Diego, un domingo a las 9 de la noche. Tiene tres cotizaciones de implantes abiertas en su navegador, ya decidió que va a cruzar la frontera para hacerse el tratamiento y está lista para agendar una consulta esta misma noche. Llama a la primera clínica de Tijuana. No contestan. Llama a la segunda. No contestan. La tercera responde, la agenda para el martes y acaba de ganar varios miles de dólares que las dos primeras clínicas nunca supieron que estaban en juego.
@@ -56,12 +56,10 @@ Un solo agente cubre todo, y se mantiene consistente en todas partes. El pacient
 
 Contestar primero solo gana al paciente si la respuesta suena bien. Un paciente transfronterizo puede empezar en inglés, cambiar al español para preguntar el precio y regresar al inglés. VozClinic se construyó bilingüe desde el inicio, detecta el idioma del paciente, lo iguala y cambia a media conversación sin perder el ritmo. Atrapar la llamada es el primer paso. Sonar local y manejar los dos idiomas con naturalidad es lo que convierte esa llamada en una cita.
 
-## Frena la fuga antes del lanzamiento de septiembre
+## Agenda una demo
 
-VozClinic abre para clínicas a principios de septiembre. Únete a la lista de espera ahora para asegurar el acceso anticipado, y las primeras 25 clínicas en registrarse reciben un mes completo de servicio gratis.
+Agenda una llamada de 20 minutos y te enseñamos a Sofía contestando los casos reales de tu clínica, en español e inglés.
 
-Agrega tu clínica a la lista de espera en [www.vozclinic.com](https://www.vozclinic.com).
+[Agenda una demo →](/agendar-demo/)
 
-¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com) y te mostramos exactamente por dónde se están fugando tus llamadas y cómo VozClinic tapa la fuga.
-
-La clínica que contesta primero casi siempre gana. Asegúrate de que esa clínica sea la tuya.
+¿Preguntas? Escríbenos a [hola@vozclinic.com](mailto:hola@vozclinic.com).

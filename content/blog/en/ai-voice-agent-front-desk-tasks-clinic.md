@@ -85,14 +85,10 @@ Emergencies. Complaints. Complex cases. The nervous patient who needs to hear a 
 
 The agent escalates all of it, immediately. It never invents a price, a diagnosis, or a medical promise. It is a front desk that never sleeps, not a replacement for the people who make your clinic worth choosing.
 
-## Get on the waitlist
+## Book a demo
 
-VozClinic launches in early September. The three design-partner slots are full. The waitlist is open, and the first 25 clinics to join get their first month free.
+Book a 20-minute call and we'll show you Sofía handling your clinic's real cases, in Spanish and English.
 
-**[Join the waitlist](https://www.vozclinic.com/lista-espera/)**
+[Book a demo →](/book-demo/)
 
-Questions to **hola@vozclinic.com** — answered by me, in Tijuana.
-
----
-
-*VozClinic — the bilingual AI voice and WhatsApp agent for clinics. Made in Tijuana. [www.vozclinic.com](https://www.vozclinic.com)*
+Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com).

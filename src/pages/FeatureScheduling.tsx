@@ -21,8 +21,8 @@ export default function FeatureScheduling({ initialLang = 'es' }: { initialLang?
           width: 1264,
           height: 848,
           alt: {
-            es: 'Sofía, el agente de voz con IA de VozClinic, conectada a la agenda de citas, los recordatorios, el reagendado, las confirmaciones y las cancelaciones',
-            en: 'Sofía, VozClinic’s AI voice agent, connected to appointment booking, reminders, reschedules, confirmations, and cancellations',
+            es: 'Sofía, la recepcionista de IA de VozClinic, conectada a la agenda de citas, los recordatorios, el reagendado, las confirmaciones y las cancelaciones',
+            en: 'Sofía, VozClinic’s AI receptionist, connected to appointment booking, reminders, reschedules, confirmations, and cancellations',
           },
         }}
         kicker={{ es: 'Agenda y recordatorios', en: 'Scheduling & reminders' }}

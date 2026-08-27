@@ -72,14 +72,10 @@ Reactivation is the third thing Sofía does, not the first. She answers the mess
 
 If you have not read them yet, the [pillar post](/en/blog/bilingual-voice-agent-tijuana-medical-tourism/) covers the whole system, and the piece on [missed and after-hours calls](/en/blog/missed-after-hours-calls-tijuana-medical-tourism/) covers the inbound side of the leak.
 
-## Get on the waitlist
+## Book a demo
 
-VozClinic launches in early September. The three design-partner slots are full. The waitlist is open, and the first 25 clinics to join get their first month free.
+Book a 20-minute call and we'll show you Sofía handling your clinic's real cases, in Spanish and English.
 
-**[Join the waitlist](https://www.vozclinic.com/lista-espera/)**
+[Book a demo →](/book-demo/)
 
-Questions go to **hola@vozclinic.com**. You will get an answer from me, in Tijuana, not a call center.
-
----
-
-*VozClinic — the bilingual AI voice and WhatsApp agent for clinics. Made in Tijuana. [www.vozclinic.com](https://www.vozclinic.com)*
+Questions? Email us at [hola@vozclinic.com](mailto:hola@vozclinic.com).
