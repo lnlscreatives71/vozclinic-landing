@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { LangProvider } from './context/LangContext';
 import type { Lang } from './types/lang';
 import TopBar from './components/TopBar';
@@ -37,6 +38,7 @@ export default function App({ initialLang = 'es' }: { initialLang?: Lang }) {
         </main>
         <FloatingWhatsApp />
         <Footer />
+        <SpeedInsights />
       </div>
     </LangProvider>
   );
