@@ -1,4 +1,6 @@
 import type { ReactNode } from 'react';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { LangProvider, useLang } from '../context/LangContext';
 import type { Lang } from '../types/lang';
 import TopBar from '../components/TopBar';
@@ -26,7 +28,9 @@ export function FeaturePageShell({
         <main>{children}</main>
         <FloatingWhatsApp />
         <Footer />
+        <SpeedInsights />
       </div>
+      <Analytics />
     </LangProvider>
   );
 }
