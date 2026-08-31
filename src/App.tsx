@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { LangProvider } from './context/LangContext';
 import type { Lang } from './types/lang';
@@ -40,6 +41,7 @@ export default function App({ initialLang = 'es' }: { initialLang?: Lang }) {
         <Footer />
         <SpeedInsights />
       </div>
+      <Analytics />
     </LangProvider>
   );
 }
