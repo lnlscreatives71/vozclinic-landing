@@ -27,6 +27,8 @@ Así que las preguntas esperan. Esperan hasta que el paciente ya está en el edi
 
 ## Qué significa "resuelto antes de la cita"
 
+![Línea de tiempo de ingreso y verificación de seguros: Reservar, verificar y admisión, llegar listo](/blog-assets/vozclinic-insurance-intake-timeline-ES.webp)
+
 Resolverlo temprano no significa enterrar al paciente en formularios en cuanto saluda. Significa que el agente reúne lo que la visita necesita, en una conversación normal, durante los días entre que agenda y que llega.
 
 Cuando un paciente agenda, VozClinic recolecta lo básico del ingreso por WhatsApp: nombre, contacto, motivo de la visita, los datos que tu clínica necesita en el expediente. Hace las preguntas de cobertura que haría tu recepción, en el idioma del paciente, y confirma la elegibilidad con el paciente antes de que viaje, para que no haya sorpresas ni citas que se caigan al llegar. Si falta algo, un documento, un número de póliza, una referencia, el agente lo pide cuando todavía hay tiempo de arreglarlo, no cuando el paciente ya está parado en el mostrador.

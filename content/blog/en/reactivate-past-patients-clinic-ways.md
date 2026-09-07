@@ -45,6 +45,8 @@ Some of your best reactivations are barely a month old: patients who asked about
 
 ## The thread through all six
 
+![Automated patient reactivation loop that runs itself](/blog-assets/vozclinic-reactivate-loop-EN.webp)
+
 Notice what none of these six require: a staff member sitting down to work a list. That is the whole point. Reactivation loses to urgency every time it depends on someone finding a free afternoon, so the only version that actually happens is the version that runs itself. A bilingual AI voice agent remembers the dates, sends the messages, answers the replies, and books the chairs, across WhatsApp, voice, SMS, and Telegram, while your team stays focused on the patients in front of them.
 
 For the deeper story on how recall runs end to end, see [reactivation and annual recall on autopilot](/en/blog/patient-reactivation-recall-tijuana-clinic/), and for why these returning patients convert so easily, see [why cross-border patients choose one clinic over another](/en/blog/why-patients-choose-tijuana-clinic/). For the full picture, start with the [pillar overview of the bilingual voice agent for Tijuana medical tourism clinics](/en/blog/bilingual-voice-agent-tijuana-medical-tourism/).

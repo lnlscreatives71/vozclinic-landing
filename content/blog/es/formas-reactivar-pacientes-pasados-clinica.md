@@ -45,6 +45,8 @@ Algunas de tus mejores reactivaciones tienen apenas un mes: pacientes que pregun
 
 ## El hilo detrás de las seis
 
+![Ciclo automatizado de reactivación de pacientes que se ejecuta por sí mismo](/blog-assets/vozclinic-reactivate-loop-ES.webp)
+
 Fíjate en lo que ninguna de estas seis necesita: una persona del equipo sentándose a trabajar una lista. Ese es todo el punto. La reactivación siempre pierde contra la urgencia cuando depende de que alguien encuentre una tarde libre, así que la única versión que de verdad sucede es la que se corre sola. Un agente de voz con IA bilingüe recuerda las fechas, manda los mensajes, contesta las respuestas y llena los sillones, en WhatsApp, voz, SMS y Telegram, mientras tu equipo se queda enfocado en los pacientes que tiene enfrente.
 
 Para la historia más a fondo de cómo corre el recordatorio de principio a fin, mira [reactivación y recordatorio anual en piloto automático](/blog/reactivacion-pacientes-recordatorio-anual-clinica-tijuana/), y para por qué estos pacientes que regresan convierten tan fácil, mira [por qué los pacientes transfronterizos eligen una clínica sobre otra](/blog/por-que-pacientes-eligen-clinica-tijuana/). Para el panorama completo, empieza con la [guía del agente de voz bilingüe para clínicas de turismo médico en Tijuana](/blog/agente-de-voz-bilingue-turismo-medico-tijuana/).

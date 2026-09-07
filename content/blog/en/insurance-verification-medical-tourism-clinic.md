@@ -27,6 +27,8 @@ So the questions wait. They wait until the patient is already in the building, a
 
 ## What "handled before the appointment" actually means
 
+![Intake and insurance verification timeline: Book, verify and intake, arrive ready](/blog-assets/vozclinic-insurance-intake-timeline-EN.webp)
+
 Handling it early does not mean burying the patient in forms the moment they say hello. It means the agent gathers what the visit needs, in a normal conversation, over the days between booking and arrival.
 
 When a patient books, VozClinic collects the intake basics on WhatsApp: name, contact, reason for the visit, the details your clinic needs on file. It asks the coverage questions your front desk would ask, in the patient's language, and confirms eligibility with the patient before they travel, so there are no surprises and no appointments that collapse on arrival. If something is missing, a document, a policy number, a referral, the agent asks for it while there is still time to fix it, not when the patient is standing at the counter.
