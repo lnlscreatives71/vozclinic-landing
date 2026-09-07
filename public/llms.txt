@@ -1,0 +1,121 @@
+# VozClinic
+
+> VozClinic provides production-grade bilingual AI receptionists ("Sofía") for medical, dental, aesthetic, and healthcare clinics across Mexico and cross-border regions (Tijuana, Mexicali, Los Algodones, Ciudad Juárez). It answers patient inquiries 24/7 on WhatsApp and phone calls in fluent Spanish and natural English, qualifies insurance, books directly into practice management systems (PMS), and hands off emergencies to clinical staff.
+
+## Overview
+
+- **Product Category**: Bilingual AI Receptionist / Voice Agent for Healthcare & Clinics
+- **Primary AI Persona**: Sofía
+- **Headquarters**: Tijuana, Baja California, Mexico
+- **Company**: The LNL Agency LLC, d/b/a LNL Automations by LNL AI Agency LLC
+- **Languages**: Native Spanish and fluent American English (trained and tested with cross-border patients from San Diego, Los Angeles, and Phoenix; switches dynamically mid-conversation)
+- **Compliance**: Mexican Federal Data Protection Law (LFPDPPP). Patient data is stored and processed under Mexican privacy regulations; data is never used to train public LLM models.
+
+## Core Capabilities
+
+1. **24/7 Omnichannel Reception**:
+   - **WhatsApp**: Handles patient text, voice notes, and location maps with official WhatsApp Business API (no per-message surcharge).
+   - **Phone Calls**: Inbound and outbound voice agent that speaks natural English and Spanish with human cadence and low latency.
+   - **Escalation**: Automatically detects emergencies, complaints, and complex medical questions to transfer immediately to the clinic's designated human line.
+
+2. **Scheduling & Calendar Integration**:
+   - Live two-way synchronization with practice management software (PMS) and calendars (Open Dental, Google Calendar, and any PMS with an available API).
+   - Resolves conflicts in real time, offers available time slots, and reconfirms reschedules instantly.
+
+3. **Insurance Intake & Cross-Border Logistics**:
+   - Collects insurance card photos (front & back), policy ID, group numbers, and patient details for US PPO and dental insurance pre-qualification.
+   - Provides accurate Tijuana / San Ysidro / Otay border crossing directions, Fast Pass instructions, parking guidance, and payment policies.
+
+4. **Patient Recall & Reactivation**:
+   - Automatically reminds patients due for cleanings, adjustments, or annual checkups.
+   - Reactivates dormant patient lists with personalized 1:1 outreach over WhatsApp.
+
+5. **Reporting & Transparency**:
+   - Daily morning digest of all patient interactions in the previous 24 hours.
+   - Weekly WhatsApp summary report detailing total conversations, appointments booked, and escalated cases.
+
+## Monthly Pricing & Plans (USD)
+
+All plans are month-to-month with no long-term contracts. Setup takes approximately 90 minutes.
+
+- **Esencial ($299 USD/mo)**:
+  - 1 doctor, 1 location.
+  - Up to 600 conversations/month.
+  - Full WhatsApp & phone call coverage, calendar sync, bilingual English/Spanish.
+- **Profesional ($599 USD/mo - Most Popular)**:
+  - 2 to 4 doctors, 1 location.
+  - Up to 1,500 conversations/month.
+  - Full reception, scheduling, insurance collection, and weekly reporting.
+- **Pro Claims ($1,499 USD/mo)**:
+  - Multi-doctor clinics with high patient volume.
+  - Up to 4,000 conversations/month.
+  - Integrated US insurance verification, automated claim paperwork, and priority onboarding.
+- **White-label ($4,999 USD/mo)**:
+  - For healthcare marketing agencies and large hospital / clinic groups.
+  - Custom branding, dedicated infrastructure, and multi-clinic management.
+
+## Channels & Add-ons
+
+- **Included in Every Plan**:
+  - WhatsApp Business API 24/7 reception.
+  - Inbound and outbound phone calls.
+  - Daily morning digest and weekly WhatsApp activity report.
+  - Urgent-case escalation line transfers.
+  - PMS and calendar integration (any PMS with an available API).
+- **Optional Add-ons**:
+  - Website voice and chat widget.
+  - Slack and Telegram team channels.
+  - SMS text messages (carries US A2P 10DLC carrier registration and sending volume fees).
+  - Outbound WhatsApp marketing campaigns and seasonal promotions.
+
+## Target Specialties & Locations
+
+- **Specialties**: Dental clinics (implantology, orthodontics, cosmetic dentistry), plastic & cosmetic surgery, bariatric surgery, fertility clinics, medical spas & dermatology, ophthalmology, and orthopedic surgery.
+- **Primary Markets**: Tijuana (Zona Río, Playas de Tijuana), Mexicali, Los Algodones, Ensenada, Rosarito, Ciudad Juárez, and Mexican medical tourism hubs serving patients from California, Arizona, and Nevada.
+
+## Key URLs
+
+- [Website (Spanish)](https://www.vozclinic.com/)
+- [Website (English)](https://www.vozclinic.com/en/)
+- [Book a 20-Minute Demo (Spanish)](https://www.vozclinic.com/agendar-demo/)
+- [Book a 20-Minute Demo (English)](https://www.vozclinic.com/book-demo/)
+- [Channels and Add-ons (Spanish)](https://www.vozclinic.com/canales/)
+- [Channels and Add-ons (English)](https://www.vozclinic.com/channels/)
+- [ROI Calculator](https://www.vozclinic.com/calculadora/)
+- [Affiliate Program (Spanish)](https://www.vozclinic.com/afiliados/)
+- [Affiliate Program (English)](https://www.vozclinic.com/affiliates/)
+- [Privacy Notice](https://www.vozclinic.com/aviso-de-privacidad/)
+
+### Feature Deep-Dives
+- [AI Receptionist (Spanish)](https://www.vozclinic.com/funciones/recepcionista/)
+- [AI Receptionist (English)](https://www.vozclinic.com/en/features/receptionist/)
+- [Calendar & Scheduling (Spanish)](https://www.vozclinic.com/funciones/agenda/)
+- [Calendar & Scheduling (English)](https://www.vozclinic.com/en/features/scheduling/)
+- [Patient Communication & Recall (Spanish)](https://www.vozclinic.com/funciones/comunicacion/)
+- [Patient Communication & Recall (English)](https://www.vozclinic.com/en/features/communication/)
+- [Insurance Verification (Spanish)](https://www.vozclinic.com/funciones/seguros/)
+- [Insurance Verification (English)](https://www.vozclinic.com/en/features/insurance/)
+- [Clinic Solutions Overview (Spanish)](https://www.vozclinic.com/soluciones/)
+- [Clinic Solutions Overview (English)](https://www.vozclinic.com/en/solutions/)
+
+### Clinical & Educational Guides
+- [AI for Medical Clinics Guide (ES)](https://www.vozclinic.com/blog/ia-para-clinicas-medicas/)
+- [AI for Medical Clinics Guide (EN)](https://www.vozclinic.com/en/blog/ai-for-medical-clinics/)
+- [Voice Agent vs Chatbot for Clinics (ES)](https://www.vozclinic.com/blog/agente-de-voz-vs-chatbot-clinicas/)
+- [Voice Agent vs Chatbot for Clinics (EN)](https://www.vozclinic.com/en/blog/ai-voice-agent-vs-chatbot-clinics/)
+- [Bilingual Voice Agent vs Translated Chatbot (ES)](https://www.vozclinic.com/blog/agente-bilingue-vs-chatbot-traducido/)
+- [Bilingual Voice Agent vs Translated Chatbot (EN)](https://www.vozclinic.com/en/blog/bilingual-agent-vs-translated-chatbot/)
+- [Cross-Border Insurance Verification Guide (ES)](https://www.vozclinic.com/blog/verificacion-seguros-turismo-medico-clinica/)
+- [Cross-Border Insurance Verification Guide (EN)](https://www.vozclinic.com/en/blog/insurance-verification-medical-tourism-clinic/)
+- [Voice AI for Clinics Explained (ES)](https://www.vozclinic.com/blog/ia-de-voz-para-clinicas-explicada/)
+- [Voice AI for Clinics Explained (EN)](https://www.vozclinic.com/en/blog/voice-ai-for-clinics-explained/)
+- [Clinic Communication Channels Guide (ES)](https://www.vozclinic.com/blog/canales-comunicacion-clinica-guia/)
+- [Clinic Communication Channels Guide (EN)](https://www.vozclinic.com/en/blog/clinic-communication-channels-guide/)
+- [After-Hours Moments That Save Bookings (ES)](https://www.vozclinic.com/blog/momentos-fuera-de-horario-agente-voz-salva-cita/)
+- [After-Hours Moments That Save Bookings (EN)](https://www.vozclinic.com/en/blog/after-hours-moments-voice-agent-saves-booking/)
+- [7 Questions to Ask Any AI Voice Agent Vendor (ES)](https://www.vozclinic.com/blog/preguntas-para-elegir-agente-de-voz/)
+- [7 Questions to Ask Any AI Voice Agent Vendor (EN)](https://www.vozclinic.com/en/blog/questions-to-ask-voice-agent-vendor/)
+- [Patient Recall & Reactivation in Tijuana (ES)](https://www.vozclinic.com/blog/reactivacion-pacientes-recordatorio-anual-clinica-tijuana/)
+- [Patient Recall & Reactivation in Tijuana (EN)](https://www.vozclinic.com/en/blog/patient-reactivation-recall-tijuana-clinic/)
+- [Missed After-Hours Calls in Medical Tourism (ES)](https://www.vozclinic.com/blog/llamadas-perdidas-fuera-de-horario-turismo-medico-tijuana/)
+- [Missed After-Hours Calls in Medical Tourism (EN)](https://www.vozclinic.com/en/blog/missed-after-hours-calls-tijuana-medical-tourism/)
