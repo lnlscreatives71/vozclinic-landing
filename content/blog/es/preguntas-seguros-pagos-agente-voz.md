@@ -61,6 +61,8 @@ Un paciente que compara tres clínicas quiere algo concreto que pesar, y la que 
 
 ## El patrón detrás de las diez
 
+![El número correcto, rápido, en ambos idiomas](/blog-assets/vozclinic-money-questions-hub-ES.webp)
+
 Ninguna de estas respuestas requiere un criterio clínico. Requieren el número correcto, entregado rápido, en el idioma correcto, desde una fuente en la que el paciente confía. Ese es justo el trabajo para el que está hecho un agente de voz con IA bilingüe: responde las preguntas de dinero al instante a partir de lo que tu clínica fijó, verifica la cobertura donde tú lo actives, y escala a tu equipo cualquier cosa de verdad compleja. Tu recepción deja de repetirse todo el día, y tus pacientes dejan de irse con la clínica que contestó primero.
 
 Para la vista del lado de la clínica de dejar el seguro resuelto antes de la visita, mira [verificación de seguros e intake, resueltos antes de la cita](/blog/verificacion-seguros-turismo-medico-clinica/), y para la lista más amplia de lo que preguntan los pacientes, mira las [9 preguntas que todo paciente transfronterizo le hace a tu clínica en Tijuana](/blog/preguntas-pacientes-transfronterizos-clinica-tijuana/). Para el panorama completo del agente hecho para este mercado, empieza con [el agente de voz bilingüe creado para las clínicas de turismo médico en Tijuana](/blog/agente-de-voz-bilingue-turismo-medico-tijuana).

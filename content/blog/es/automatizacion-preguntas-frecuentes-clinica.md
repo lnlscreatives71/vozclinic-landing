@@ -39,6 +39,8 @@ Como el agente es bilingüe por diseño, hace esto igual de bien para el pacient
 
 ## La línea que mantiene segura la desviación: sí devuelve
 
+![Un agente de voz con IA bilingüe desviando preguntas frecuentes repetidas en WhatsApp para que la recepción de una clínica en Tijuana se enfoque en el paciente que tiene enfrente.](/blog-assets/vozclinic-faq-automation-inline-ES.webp)
+
 Desviar solo funciona si la herramienta conoce la diferencia entre una pregunta rutinaria y una de verdad, y entrega las de verdad a un humano de inmediato. Aquí es donde mucha automatización se equivoca, y vale la pena ser claros. Sofía contesta las preguntas estables y factuales, y escala todo lo demás a tu equipo en segundos: una emergencia, una queja, un caso realmente complejo, o cualquier cosa fuera del libreto. Nunca inventa un precio, un diagnóstico ni una promesa médica para llenar un hueco, que es justo la falla que con razón pone nerviosos a los dueños de clínica con la automatización.
 
 Ese límite es todo el punto. Desviar preguntas frecuentes no es un muro entre tus pacientes y tu personal. Es un filtro que deja que las cincuenta preguntas fáciles se resuelvan solas para que las dos preguntas que de verdad necesitan un humano lleguen a tu equipo más rápido y con el contexto ya reunido. Tu recepcionista pasa menos del día en piloto automático y más en los pacientes y casos que necesitan criterio, y los datos del paciente se quedan en México bajo la LFPDPPP todo el tiempo.

@@ -49,6 +49,8 @@ Por último, lee el trato, no solo el número mensual. Pregunta qué incluye el 
 
 ## El hilo que conecta las siete
 
+![Una lista de verificación del dueño de una clínica con siete preguntas para hacerle a cualquier proveedor de agente de voz con IA antes de firmar, del inglés real a la ley de datos y los precios.](/blog-assets/vozclinic-questions-vendor-inline-ES.webp)
+
 Fíjate en el patrón. Cada una de estas preguntas en realidad pregunta lo mismo: ¿este proveedor te va a decir la verdad plana, y aguanta el producto cuando un paciente bilingüe de verdad contacta tu clínica a las once de la noche? Los proveedores con los que vale la pena firmar contestan las siete sin adornos, y los que esquivan te están diciendo algo. Házselas a todos, incluidos nosotros, y ponle a cada proveedor la misma vara.
 
 Para la comparación a fondo detrás de la pregunta uno y la pregunta cinco, lee [agente de voz con IA vs chatbot para clínicas](/blog/agente-de-voz-vs-chatbot-clinicas/), y para ver exactamente cómo el cimiento bilingüe cambia lo que puede hacer la herramienta, mira las [6 cosas que un agente bilingüe hace y un chatbot traducido no puede](/blog/agente-bilingue-vs-chatbot-traducido/). Para el panorama completo de todo lo que hace un agente de clínica, empieza con la guía de [IA para clínicas médicas](/blog/ia-para-clinicas-medicas).

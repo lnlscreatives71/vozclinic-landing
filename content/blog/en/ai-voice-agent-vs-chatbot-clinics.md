@@ -39,6 +39,8 @@ Voice also clears the barriers that quietly cost you bookings. A nervous patient
 
 ## The bilingual line is where it gets decisive
 
+![A side-by-side comparison of an AI voice agent and a text chatbot for a bilingual Tijuana clinic, showing the voice agent handling English and Spanish and booking an appointment.](/blog-assets/vozclinic-voice-agent-vs-chatbot-inline-EN.webp)
+
 Here is the part that matters most for a Tijuana clinic, and it is not really about voice versus text at all. It is about how the two languages are handled underneath. More than 70 percent of medical tourism patients in Mexico come from the United States, so a large share of the people contacting you will open in English or slide between English and Spanish mid-conversation. The real question to ask any vendor is whether the tool holds a genuine conversation in each language, or whether it is quietly running your Spanish through machine translation to fake English.
 
 This is the exact objection clinic owners raise, and it is the right one. A translated chatbot produces the stiff, slightly-off English that a San Diego or Phoenix patient notices in one line, and it does not know the border-crossing details they actually ask about. VozClinic's answer to "does it speak real English or is it Google Translate" is that Sofía speaks natural English, tested with real patients from San Diego, Los Angeles, and Phoenix, because bilingual is built into the foundation rather than bolted on with a translation layer. In this market, an agent that only works smoothly in one language is doing half the job, whichever format it comes in.

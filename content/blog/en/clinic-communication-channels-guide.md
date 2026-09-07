@@ -45,6 +45,8 @@ The principle here is the same one that runs through all four channels: you do n
 
 ## The real answer: cover them all with one agent
 
+![A bilingual AI voice agent covering WhatsApp, phone calls, a website widget, Telegram, and SMS at once for a Tijuana medical tourism clinic.](/blog-assets/vozclinic-communication-channels-inline-EN.webp)
+
 Look at the four channels together and the pattern is obvious. WhatsApp carries the volume, voice carries the high-intent callers, SMS backs up reminders, and Telegram catches the patients the others miss. No single channel covers your patients, and running four channels with human staff means four times the coverage problem, in two languages, around the clock. That math does not work for a clinic front desk.
 
 This is the case for a bilingual AI voice agent, and it is where the channel question actually gets solved. Sofía answers on WhatsApp, picks up phone calls in English or Spanish, books through a widget embedded on your website, and can run on Telegram and SMS when your clinic wants them, all from your existing clinic number and all trained on your real prices, services, and hours during a 90-minute session. A patient gets the same fast, correct, bilingual answer whether they called, messaged, or clicked, and the routine questions resolve themselves while anything real, an emergency, a complaint, a complex case, escalates to your team in seconds. Patient data stays in Mexico under the LFPDPPP the whole time, and every Monday you get a WhatsApp report of what came in across every channel and what it booked.

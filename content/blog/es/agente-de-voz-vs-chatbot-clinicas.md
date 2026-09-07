@@ -39,6 +39,8 @@ La voz también quita las barreras que en silencio te cuestan citas. Un paciente
 
 ## La línea bilingüe es donde se vuelve decisivo
 
+![Una comparación lado a lado de un agente de voz con IA y un chatbot de texto para una clínica bilingüe en Tijuana, mostrando al agente de voz manejando español e inglés y agendando una cita.](/blog-assets/vozclinic-voice-agent-vs-chatbot-inline-ES.webp)
+
 Aquí está la parte que más importa para una clínica de Tijuana, y en realidad no se trata tanto de voz contra texto. Se trata de cómo se manejan los dos idiomas por debajo. Más del 70 por ciento de los pacientes de turismo médico en México vienen de Estados Unidos, así que buena parte de la gente que te contacta abrirá en inglés o brincará entre inglés y español a media conversación. La verdadera pregunta para cualquier proveedor es si la herramienta sostiene una conversación de verdad en cada idioma, o si en silencio corre tu español por una traducción automática para fingir inglés.
 
 Esta es justo la objeción que levantan los dueños de clínica, y es la correcta. Un chatbot traducido produce ese inglés tieso y medio raro que un paciente de San Diego o Phoenix nota en una sola línea, y no conoce los detalles de cruce de frontera que de verdad pregunta. La respuesta de VozClinic a "¿habla inglés de verdad o es traducción de Google?" es que Sofía habla inglés natural, probado con pacientes reales de San Diego, Los Ángeles y Phoenix, porque lo bilingüe está integrado en el cimiento y no pegado encima con una capa de traducción. En este mercado, un agente que solo fluye en un idioma hace la mitad del trabajo, venga en el formato que venga.

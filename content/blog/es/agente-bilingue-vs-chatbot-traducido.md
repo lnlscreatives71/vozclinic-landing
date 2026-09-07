@@ -45,6 +45,8 @@ Cuando una pregunta se sale del libreto, una emergencia, una queja, un caso de v
 
 ## El hilo que atraviesa las seis
 
+![Seis cosas que un agente de voz con IA de verdad bilingüe hace para una clínica en Tijuana y un chatbot traducido no puede, mostradas como comparación de inglés y español nativos frente a traducción automática.](/blog-assets/vozclinic-bilingual-vs-translated-inline-ES.webp)
+
 Cada una de estas regresa a la misma raíz: lo bilingüe tiene que ser el cimiento, no una capa de traducción pegada sobre un bot en español. La traducción puede fingirlo en una demo, pero un paciente real en dos idiomas, preguntando por su cobertura a las 11 de la noche desde el lado de Estados Unidos, es donde se ve la diferencia. Esa es justo la objeción que levantan los dueños de clínica inteligentes, "¿habla inglés de verdad o es traducción de Google?", y es la pregunta correcta para cualquier proveedor antes de firmar.
 
 Para la comparación más grande de formatos, lee [agente de voz con IA vs chatbot para clínicas](/blog/agente-de-voz-vs-chatbot-clinicas/), y para la versión en lenguaje claro de cómo funciona el lado de la voz, mira [IA de voz para clínicas, explicada](/blog/ia-de-voz-para-clinicas-explicada/). Para el panorama completo de todo lo que hace el agente, empieza con la guía de [IA para clínicas médicas](/blog/ia-para-clinicas-medicas).

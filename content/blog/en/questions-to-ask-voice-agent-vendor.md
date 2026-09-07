@@ -49,6 +49,8 @@ Finally, read the deal, not just the monthly number. Ask what the price includes
 
 ## The thread through all seven
 
+![A clinic owner's vetting checklist of seven questions to ask any AI voice agent vendor before signing, from bilingual proof to data law to pricing.](/blog-assets/vozclinic-questions-vendor-inline-EN.webp)
+
 Notice the pattern. Every one of these questions is really asking the same thing: will this vendor tell you the plain truth, and does the product hold up when a real bilingual patient contacts your clinic at eleven at night. The vendors worth signing with answer all seven without spin, and the ones that dodge are telling you something. Ask them of everyone, including us, and hold every vendor to the same bar.
 
 For the deeper comparison behind question one and question five, read [AI voice agent vs chatbot for clinics](/en/blog/ai-voice-agent-vs-chatbot-clinics/), and for exactly how the bilingual foundation changes what the tool can do, see [6 things a bilingual agent does that a translated chatbot cannot](/en/blog/bilingual-agent-vs-translated-chatbot/). For the full picture of everything a clinic agent handles, start with the guide to [AI for medical clinics](/blog/ai-for-medical-clinics).

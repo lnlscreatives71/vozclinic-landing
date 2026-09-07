@@ -45,6 +45,8 @@ El principio aquí es el mismo que recorre los cuatro canales: no quieres forzar
 
 ## La verdadera respuesta: cúbrelos todos con un solo agente
 
+![Un agente de voz con IA bilingüe cubriendo WhatsApp, llamadas, un widget de sitio web, Telegram y SMS a la vez para una clínica de turismo médico en Tijuana.](/blog-assets/vozclinic-communication-channels-inline-ES.webp)
+
 Mira los cuatro canales juntos y el patrón es obvio. WhatsApp lleva el volumen, la voz lleva a los que llaman con más intención, el SMS respalda los recordatorios, y Telegram atrapa a los pacientes que los demás no alcanzan. Ningún canal por sí solo cubre a tus pacientes, y correr cuatro canales con personal humano significa cuadruplicar el problema de cobertura, en dos idiomas, las veinticuatro horas. Esa cuenta no le sale a una recepción de clínica.
 
 Este es el argumento a favor de un agente de voz con IA bilingüe, y es donde de verdad se resuelve la pregunta de los canales. Sofía contesta en WhatsApp, toma las llamadas en inglés o español, agenda desde un widget integrado en tu sitio web, y puede correr en Telegram y SMS cuando tu clínica los quiera, todo desde tu número de clínica actual y todo entrenado con tus precios, servicios y horarios reales durante una sesión de 90 minutos. Un paciente recibe la misma respuesta rápida, correcta y bilingüe ya sea que haya llamado, escrito o dado clic, y las preguntas rutinarias se resuelven solas mientras cualquier cosa de verdad, una emergencia, una queja, un caso complejo, escala a tu equipo en segundos. Los datos del paciente se quedan en México bajo la LFPDPPP todo el tiempo, y cada lunes recibes un reporte por WhatsApp de lo que llegó por cada canal y lo que agendó.

@@ -61,6 +61,8 @@ A patient comparing three clinics wants something concrete to weigh, and the one
 
 ## The pattern behind all ten
 
+![The right number, fast, in both languages](/blog-assets/vozclinic-money-questions-hub-EN.webp)
+
 None of these answers require a clinical judgment. They require the right number, delivered fast, in the right language, from a source the patient trusts. That is exactly the work a bilingual AI voice agent is built to carry: it answers the money questions instantly from what your clinic set, verifies coverage where you enable it, and escalates anything genuinely complex to your team. Your front desk stops repeating itself all day, and your patients stop leaving for the clinic that answered first.
 
 For the clinic-side view of getting insurance handled ahead of the visit, see [insurance verification and intake, handled before the appointment](/en/blog/insurance-verification-medical-tourism-clinic/), and for the broader list of what patients ask, see the [9 questions every cross-border patient asks your Tijuana clinic](/en/blog/questions-cross-border-patients-ask-tijuana-clinic/). For the full picture of the agent built for this market, start with [the bilingual voice agent built for Tijuana medical tourism clinics](/blog/bilingual-voice-agent-tijuana-medical-tourism).

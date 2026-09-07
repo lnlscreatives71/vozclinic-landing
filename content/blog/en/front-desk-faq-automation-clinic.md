@@ -39,6 +39,8 @@ Because the agent is bilingual by design, it does this equally well for the Engl
 
 ## The line that keeps deflection safe: it hands back
 
+![A bilingual AI voice agent deflecting repeat FAQ questions on WhatsApp so a Tijuana clinic front desk can focus on the patient in front of them.](/blog-assets/vozclinic-faq-automation-inline-EN.webp)
+
 Deflection only works if the tool knows the difference between a routine question and a real one, and hands the real ones to a human immediately. This is where a lot of automation goes wrong, and it is worth being clear about. Sofía answers the stable, factual questions and escalates everything else to your team in seconds: an emergency, a complaint, a genuinely complex case, or anything outside the script. It never invents a price, a diagnosis, or a medical promise to fill a gap, which is the failure mode that makes clinic owners rightly nervous about automation.
 
 That boundary is the whole point. FAQ deflection is not a wall between your patients and your staff. It is a filter that lets the fifty easy questions resolve themselves so the two questions that actually need a human reach your team faster and with the context already gathered. Your receptionist spends less of the day on autopilot and more of it on the patients and cases that need judgment, and patient data stays in Mexico under the LFPDPPP the entire time.

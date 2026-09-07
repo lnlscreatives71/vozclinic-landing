@@ -45,6 +45,8 @@ When a question goes beyond the script, an emergency, a complaint, a genuinely c
 
 ## The thread through all six
 
+![Six things a truly bilingual AI voice agent does for a Tijuana clinic that a translated chatbot cannot, shown as a side-by-side of native English and Spanish versus machine translation.](/blog-assets/vozclinic-bilingual-vs-translated-inline-EN.webp)
+
 Every one of these comes back to the same root: bilingual has to be the foundation, not a translation layer bolted onto a Spanish bot. Translation can fake it in a demo, but a real patient in two languages, asking about their coverage at 11 p.m. from the U.S. side of the border, is where the difference shows. That is the exact objection smart clinic owners raise, "does it speak real English or is it Google Translate," and it is the right question to ask any vendor before you sign.
 
 For the bigger comparison of formats, read [AI voice agent vs chatbot for clinics](/en/blog/ai-voice-agent-vs-chatbot-clinics/), and for the plain-language version of how the voice side works, see [voice AI for clinics, explained](/en/blog/voice-ai-for-clinics-explained/). For the full picture of everything the agent handles, start with the guide to [AI for medical clinics](/blog/ai-for-medical-clinics).

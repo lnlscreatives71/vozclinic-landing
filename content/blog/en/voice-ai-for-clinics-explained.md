@@ -27,6 +27,8 @@ The important word is conversation. An old phone tree makes the patient bend to 
 
 ## How it works, in three steps
 
+![How voice AI works in three steps: Listen, Understand, Respond](/blog-assets/vozclinic-voice-ai-steps-EN.webp)
+
 Under the hood there are three simple moves, and you do not need the technical names to understand them. First, the system listens and turns the patient's speech into text, the same way the dictation on your phone does, just more accurately across accents and both languages. Second, it reads that text and decides what the patient needs, checking it against what your clinic taught it: your prices, your services, your hours, your real calendar. Third, it speaks the answer back in a natural voice, and if the patient keeps talking, it keeps up.
 
 That loop, listen, understand, respond, repeats for the length of the conversation, fast enough that it feels like talking to a person rather than waiting on a computer. The part that matters for your clinic is the middle step. A good voice agent is not making things up. It is answering from the facts you gave it during setup, which is why it can quote your actual prices and book into your actual calendar instead of guessing. When a question falls outside what it knows, it does not invent an answer. It hands the conversation to your team.

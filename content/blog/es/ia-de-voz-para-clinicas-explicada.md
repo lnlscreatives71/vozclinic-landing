@@ -27,6 +27,8 @@ La palabra importante es conversación. Un árbol telefónico viejo obliga al pa
 
 ## Cómo funciona, en tres pasos
 
+![Cómo funciona la IA de voz en tres pasos: Escucha, Comprende, Responde](/blog-assets/vozclinic-voice-ai-steps-ES.webp)
+
 Por dentro hay tres movimientos simples, y no necesitas los nombres técnicos para entenderlos. Primero, el sistema escucha y convierte el habla del paciente en texto, igual que el dictado de tu teléfono, solo que más preciso entre acentos y en los dos idiomas. Segundo, lee ese texto y decide qué necesita el paciente, cotejándolo con lo que tu clínica le enseñó: tus precios, tus servicios, tus horarios, tu calendario real. Tercero, dice la respuesta de vuelta en una voz natural, y si el paciente sigue hablando, ella le sigue el paso.
 
 Ese ciclo, escuchar, entender, responder, se repite durante toda la conversación, lo bastante rápido para que se sienta como hablar con una persona y no como esperar a una computadora. La parte que importa para tu clínica es el paso de en medio. Un buen agente de voz no está inventando cosas. Responde a partir de los datos que le diste durante la instalación, y por eso puede cotizar tus precios reales y agendar en tu calendario real en lugar de adivinar. Cuando una pregunta se sale de lo que sabe, no inventa una respuesta. Le pasa la conversación a tu equipo.
