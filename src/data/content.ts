@@ -228,7 +228,7 @@ export const pricing = {
       name: 'Pro Claims',
       usd: '$1,499',
       mxn: '$25,440 MXN',
-      desc: { es: 'Multi-doctor con seguros y reclamaciones automáticas', en: 'Multi-doctor with insurance and automatic claims' } as Bilingual,
+      desc: { es: 'Multi-doctor con seguros y reclamaciones automáticas, hasta 4,000 conversaciones/mes', en: 'Multi-doctor with insurance and automatic claims, up to 4,000 conversations/mo' } as Bilingual,
       highlight: false,
     },
     {
@@ -365,6 +365,7 @@ export const footerData = {
     links: [
       { label: { es: 'Cómo funciona', en: 'How it works' } as Bilingual, href: '/#como-funciona' },
       { label: { es: 'Precios', en: 'Pricing' } as Bilingual, href: '/#precios' },
+      { label: { es: 'Canales y complementos', en: 'Channels & add-ons' } as Bilingual, href: { es: '/canales/', en: '/channels/' } as Bilingual },
       { label: { es: 'Demo', en: 'Demo' } as Bilingual, href: '/#sofia' },
       { label: { es: 'FAQ', en: 'FAQ' } as Bilingual, href: '/#faq' },
     ],
@@ -381,6 +382,7 @@ export const footerData = {
     label: { es: 'Empresa', en: 'Company' } as Bilingual,
     links: [
       { label: { es: 'Sobre nosotros', en: 'About us' } as Bilingual, href: '#' },
+      { label: { es: 'Afiliados', en: 'Affiliates' } as Bilingual, href: { es: '/afiliados/', en: '/affiliates/' } as Bilingual },
       { label: { es: 'Blog', en: 'Blog' } as Bilingual, href: '/blog/' },
       { label: { es: 'Contacto', en: 'Contact' } as Bilingual, href: '#' },
     ],

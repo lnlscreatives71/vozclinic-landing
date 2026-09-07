@@ -11,6 +11,7 @@ import Demo from './components/Demo';
 import TrustBand from './components/TrustBand';
 import Calculator from './components/Calculator';
 import Pricing from './components/Pricing';
+import ChannelsAndAddons from './components/ChannelsAndAddons';
 import FAQ from './components/FAQ';
 import FounderNote from './components/FounderNote';
 import FinalCTA from './components/FinalCTA';
@@ -33,6 +34,7 @@ export default function App({ initialLang = 'es' }: { initialLang?: Lang }) {
           <TrustBand />
           <Calculator />
           <Pricing />
+          <ChannelsAndAddons />
           <FAQ />
           <FounderNote />
           <FinalCTA />

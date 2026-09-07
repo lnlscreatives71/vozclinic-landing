@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canales y complementos — VozClinic</title>
+<meta name="description" content="WhatsApp y llamadas incluidos en todos los planes. Widget web, Slack, Telegram, SMS y promociones disponibles como complementos.">
+<link rel="canonical" href="https://www.vozclinic.com/canales/">
+<meta property="og:title" content="Canales y complementos — VozClinic">
+<meta property="og:description" content="WhatsApp y llamadas incluidos en todos los planes. Widget web, Slack, Telegram, SMS y promociones disponibles como complementos.">
+<meta property="og:url" content="https://www.vozclinic.com/canales/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.vozclinic.com/blog-assets/vozclinic-communication-channels-hero-ES.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #008080;
+    --teal-deep: #006666;
+    --charcoal: #1F2937;
+    --offwhite: #FAFAF7;
+    --muted: #E1E1DC;
+    --gold: #C9A961;
+    --heading: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--body); background: var(--offwhite); color: var(--charcoal); font-size: 17px; line-height: 1.6; }
+
+  .top-nav {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 24px 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand-logo {
+    text-decoration: none;
+    font-family: var(--heading);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--charcoal);
+    letter-spacing: -0.02em;
+  }
+  .brand-logo span { color: var(--teal); }
+
+  .lang-toggle { display: flex; gap: 6px; }
+  .lang-toggle button {
+    font-family: var(--heading); font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
+    padding: 7px 14px; border-radius: 100px; border: 1px solid var(--teal);
+    background: transparent; color: var(--teal-deep); cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .lang-toggle button.active { background: var(--teal); color: var(--offwhite); }
+
+  main { max-width: 980px; margin: 0 auto; padding: 48px 24px 72px; }
+  .kicker { font-family: var(--heading); font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-deep); margin-bottom: 10px; }
+  h1 { font-family: var(--heading); font-weight: 700; font-size: clamp(30px, 4.5vw, 44px); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--charcoal); }
+  h2 { font-family: var(--heading); font-weight: 700; font-size: clamp(22px, 3.2vw, 28px); line-height: 1.2; margin: 48px 0 14px; padding-bottom: 10px; border-bottom: 3px solid var(--teal); }
+  p { margin-bottom: 14px; max-width: 76ch; }
+  .lede { font-size: 18px; color: #374151; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 18px 0 4px; }
+  .card { background: #fff; border-radius: 14px; padding: 24px; box-shadow: 0 1px 4px rgba(31,41,55,0.08); border-top: 4px solid var(--teal); }
+  .card.addon { border-top-color: var(--gold); }
+  .card .tag { font-family: var(--heading); font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; color: var(--teal); }
+  .card.addon .tag { color: var(--gold); }
+  .card h3 { font-family: var(--heading); font-weight: 700; font-size: 19px; margin-bottom: 8px; }
+  .card p { font-size: 15.5px; margin: 0; color: #4B5563; }
+  .note { font-size: 13.5px; color: #6B7280; margin-top: 10px; }
+
+  ul.inc { list-style: none; margin: 14px 0 4px; }
+  ul.inc li { padding: 12px 16px 12px 42px; position: relative; background: #fff; border: 1px solid var(--muted); border-radius: 10px; margin-bottom: 10px; font-size: 15.5px; color: #374151; }
+  ul.inc li::before { content: ""; position: absolute; left: 16px; top: 20px; width: 9px; height: 9px; border-radius: 50%; background: var(--teal); }
+
+  .final-cta {
+    margin-top: 56px;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-deep) 100%);
+    border-radius: 18px;
+    color: var(--offwhite);
+    padding: 44px 32px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 128, 128, 0.2);
+  }
+  .final-cta h3 { font-family: var(--heading); font-size: 26px; font-weight: 700; margin-bottom: 10px; color: #fff; }
+  .final-cta p { margin: 0 auto 24px; font-size: 16.5px; color: rgba(250,250,247,0.92); max-width: 580px; }
+  .final-cta a.btn {
+    display: inline-block;
+    background: var(--offwhite);
+    color: var(--teal-deep);
+    font-family: var(--heading);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 13px 30px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .final-cta a.btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+
+  footer { text-align: center; padding: 48px 24px 60px; font-size: 13.5px; color: #6B7280; border-top: 1px solid var(--muted); margin-top: 32px; }
+  footer a { color: var(--teal-deep); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  [data-lang="en"] { display: none; }
+  html.en [data-lang="es"] { display: none; }
+  html.en [data-lang="en"] { display: revert; }
+</style>
+</head>
+<body>
+
+<header class="top-nav">
+  <a href="/" class="brand-logo">Voz<span>Clinic</span></a>
+  <div class="lang-toggle">
+    <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+    <button id="btn-en" onclick="setLang('en')">EN</button>
+  </div>
+</header>
+
+<main>
+
+<div data-lang="es">
+  <p class="kicker">Canales y complementos</p>
+  <h1>Donde sus pacientes ya escriben, ahí responde su recepción.</h1>
+  <p class="lede">Cada clínica recibe los canales donde llega la mayoría de sus pacientes, incluidos en todos los planes. Y cuando su operación necesita más, se agregan complementos sin cambiar de plan.</p>
+
+  <h2>Incluido en todos los planes</h2>
+  <div class="cards">
+    <div class="card">
+      <p class="tag">Incluido</p>
+      <h3>WhatsApp</h3>
+      <p>El canal donde llegan la mayoría de los mensajes de pacientes en la región. Respuestas en español e inglés, 24/7, sin costo por mensaje.</p>
+    </div>
+    <div class="card">
+      <p class="tag">Incluido</p>
+      <h3>Llamadas telefónicas</h3>
+      <p>Su recepcionista contesta las llamadas de la clínica, agenda citas y, cuando un caso lo requiere, transfiere la llamada a la línea de escalación que su clínica designa.</p>
+    </div>
+  </div>
+
+  <p style="margin-top:18px;">Además, todos los planes incluyen:</p>
+  <ul class="inc">
+    <li><strong>Resumen diario:</strong> cada mañana, un informe de lo que pasó en las últimas 24 horas.</li>
+    <li><strong>Reporte semanal por WhatsApp:</strong> conversaciones, citas agendadas y casos escalados.</li>
+    <li><strong>Transferencia de casos urgentes</strong> a la línea de escalación de su clínica, separada de la línea del agente.</li>
+    <li><strong>Integración con su calendario y su sistema de gestión:</strong> trabajamos con cualquier PMS que cuente con una API disponible, como Open Dental entre otros.</li>
+  </ul>
+
+  <h2>Complementos opcionales</h2>
+  <p>Se agregan a cualquier plan, solo cuando su clínica los necesita.</p>
+  <div class="cards">
+    <div class="card addon">
+      <p class="tag">Complemento</p>
+      <h3>Widget en su sitio web</h3>
+      <p>El mismo asistente que contesta WhatsApp y llamadas, disponible como chat en su página, para que un visitante agende sin salir de su sitio.</p>
+    </div>
+    <div class="card addon">
+      <p class="tag">Complemento</p>
+      <h3>Slack y Telegram</h3>
+      <p>Canales adicionales para clínicas que coordinan a su equipo o atienden pacientes por estas plataformas.</p>
+    </div>
+    <div class="card addon">
+      <p class="tag">Complemento</p>
+      <h3>Mensajes SMS</h3>
+      <p>Confirmaciones y recordatorios por mensaje de texto. Tiene un costo adicional por el registro de campaña de cumplimiento A2P que exigen las operadoras en EE.UU. y por el volumen de envío.</p>
+    </div>
+    <div class="card addon">
+      <p class="tag">Complemento</p>
+      <h3>Promociones por WhatsApp</h3>
+      <p>Campañas a su base de pacientes: reactivación, temporadas y anuncios de la clínica, con plantillas aprobadas.</p>
+    </div>
+  </div>
+  <p class="note">Los complementos se cotizan por separado y pueden agregarse o retirarse en cualquier momento.</p>
+
+  <div class="final-cta">
+    <h3>Vea cómo funciona en su clínica</h3>
+    <p>Una demostración de 20 minutos con los canales y casos reales de su consulta, en español e inglés.</p>
+    <a class="btn" href="/agendar-demo/">Agendar una demo →</a>
+  </div>
+</div>
+
+<div data-lang="en">
+  <p class="kicker">Channels and add-ons</p>
+  <h1>Wherever your patients already write, that's where your front desk answers.</h1>
+  <p class="lede">Every clinic gets the channels where most of its patients arrive, included in every plan. And when your operation needs more, add-ons attach without changing plans.</p>
+
+  <h2>Included in every plan</h2>
+  <div class="cards">
+    <div class="card">
+      <p class="tag">Included</p>
+      <h3>WhatsApp</h3>
+      <p>The channel where most patient messages in the region arrive. Replies in Spanish and English, 24/7, with no per-message cost.</p>
+    </div>
+    <div class="card">
+      <p class="tag">Included</p>
+      <h3>Phone calls</h3>
+      <p>Your receptionist answers the clinic's calls, books appointments and, when a case requires it, transfers the call to the escalation line your clinic designates.</p>
+    </div>
+  </div>
+
+  <p style="margin-top:18px;">Every plan also includes:</p>
+  <ul class="inc">
+    <li><strong>Daily digest:</strong> each morning, a summary of what happened over the last 24 hours.</li>
+    <li><strong>Weekly WhatsApp report:</strong> conversations, booked appointments, and escalated cases.</li>
+    <li><strong>Urgent-case transfers</strong> to your clinic's escalation line, separate from the agent's own line.</li>
+    <li><strong>Integration with your calendar and practice management system:</strong> we work with any PMS that has an available API, Open Dental among others.</li>
+  </ul>
+
+  <h2>Optional add-ons</h2>
+  <p>They attach to any plan, only when your clinic needs them.</p>
+  <div class="cards">
+    <div class="card addon">
+      <p class="tag">Add-on</p>
+      <h3>Website widget</h3>
+      <p>The same assistant that answers WhatsApp and calls, available as chat on your page, so a visitor can book without leaving your site.</p>
+    </div>
+    <div class="card addon">
+      <p class="tag">Add-on</p>
+      <h3>Slack and Telegram</h3>
+      <p>Additional channels for clinics that coordinate their team or serve patients on these platforms.</p>
+    </div>
+    <div class="card addon">
+      <p class="tag">Add-on</p>
+      <h3>SMS text messages</h3>
+      <p>Confirmations and reminders by text. Carries an additional cost for the A2P compliance campaign registration US carriers require, plus sending volume.</p>
+    </div>
+    <div class="card addon">
+      <p class="tag">Add-on</p>
+      <h3>WhatsApp promotions</h3>
+      <p>Campaigns to your patient base: reactivation, seasonal offers, and clinic announcements, using approved templates.</p>
+    </div>
+  </div>
+  <p class="note">Add-ons are quoted separately and can be added or removed at any time.</p>
+
+  <div class="final-cta">
+    <h3>See how it works for your clinic</h3>
+    <p>A 20-minute walk-through using the real channels and cases of your practice, in Spanish and English.</p>
+    <a class="btn" href="/book-demo/">Book a demo →</a>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <span data-lang="es">VozClinic · Hecho en Tijuana · <a href="/">Inicio</a> · <a href="/#precios">Precios</a> · <a href="/aviso-de-privacidad/">Aviso de Privacidad</a> · <a href="https://wa.me/526633154686">WhatsApp +52 663 315 4686</a></span>
+  <span data-lang="en">VozClinic · Made in Tijuana · <a href="/en/">Home</a> · <a href="/en/#precios">Pricing</a> · <a href="/privacy/">Privacy Notice</a> · <a href="https://wa.me/526633154686">WhatsApp +52 663 315 4686</a></span>
+</footer>
+
+<script>
+  function setLang(l) {
+    document.documentElement.classList.toggle('en', l === 'en');
+    document.getElementById('btn-es').classList.toggle('active', l === 'es');
+    document.getElementById('btn-en').classList.toggle('active', l === 'en');
+    try {
+      const url = new URL(window.location);
+      if (l === 'en') {
+        url.searchParams.set('lang', 'en');
+      } else {
+        url.searchParams.delete('lang');
+      }
+      history.replaceState(null, '', url);
+    } catch(e) {}
+  }
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('lang') === 'en' || window.location.pathname.startsWith('/channels')) {
+    setLang('en');
+  }
+</script>
+
+</body>
+</html>
