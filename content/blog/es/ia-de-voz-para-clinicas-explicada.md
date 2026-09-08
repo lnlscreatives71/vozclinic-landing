@@ -43,7 +43,7 @@ La IA de voz quita ese cuello de botella porque el idioma viene integrado, no pe
 
 Aquí está la versión concreta. Un paciente en Los Ángeles encuentra tu clínica a las 10 de la noche, pulsa el botón, y dice, en inglés, que quiere una consulta la próxima semana y necesita saber si aceptan su seguro. El agente de VozClinic, Sofía, contesta en segundos. Confirma los servicios, da el precio que tu clínica fijó, revisa la disponibilidad real, ofrece dos horarios, y agenda el que el paciente elige directo en tu calendario. Programa los recordatorios, agrega los detalles de cruce y estacionamiento para un paciente transfronterizo, y el paciente se va a dormir con una cita confirmada. Nadie de tu equipo estaba despierto.
 
-La misma Sofía hace esto por WhatsApp, en una llamada telefónica, e integrada en tu sitio web, así que no importa por cuál puerta entre el paciente. Y ella conoce sus límites. Una emergencia, una queja, o una pregunta fuera del libreto va directo a tu equipo en segundos en lugar de recibir una respuesta adivinada. Todo cumple con la ley mexicana de protección de datos, la LFPDPPP, con los datos del paciente guardados en México y logs auditables por detrás.
+La misma Sofía hace esto por WhatsApp, en una llamada telefónica, e integrada en tu sitio web, así que no importa por cuál puerta entre el paciente. Y ella conoce sus límites. Una emergencia, una queja, o una pregunta fuera del libreto va directo a tu equipo en segundos en lugar de recibir una respuesta adivinada. Todo cumple con la ley mexicana de protección de datos, la LFPDPPP, con logs auditables por detrás.
 
 ## Lo que la IA de voz no es
 

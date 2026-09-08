@@ -41,7 +41,7 @@ Un chatbot traducido está atrapado en una caja de texto, y la traducción agreg
 
 ## 6. Escalar limpio en el idioma del paciente, sin ensuciar el pase
 
-Cuando una pregunta se sale del libreto, una emergencia, una queja, un caso de verdad complejo, el pase a tu equipo tiene que ser limpio. Un chatbot traducido puede arruinar justo ese momento, pasando un resumen enredado o perdiendo el hilo entre idiomas. Un agente bilingüe conoce sus límites y escala a tu equipo en segundos con el contexto intacto y en el idioma correcto, y nunca inventa un precio, un diagnóstico, ni una promesa para tapar el hueco. Los datos del paciente se quedan en México bajo la LFPDPPP durante todo el proceso.
+Cuando una pregunta se sale del libreto, una emergencia, una queja, un caso de verdad complejo, el pase a tu equipo tiene que ser limpio. Un chatbot traducido puede arruinar justo ese momento, pasando un resumen enredado o perdiendo el hilo entre idiomas. Un agente bilingüe conoce sus límites y escala a tu equipo en segundos con el contexto intacto y en el idioma correcto, y nunca inventa un precio, un diagnóstico, ni una promesa para tapar el hueco. El manejo de datos cumple con la LFPDPPP durante todo el proceso.
 
 ## El hilo que atraviesa las seis
 

@@ -43,7 +43,7 @@ Voice AI removes that bottleneck because the language is built in, not bolted on
 
 Here is the concrete version. A patient in Los Angeles finds your clinic at 10 p.m., taps the button, and says, in English, that they want a consultation next week and need to know if you take their insurance. VozClinic's agent, Sofía, answers in seconds. She confirms the services, gives the price your clinic set, checks real availability, offers two times, and books the one the patient picks straight into your calendar. She schedules the reminders, adds the border-crossing and parking details for a cross-border patient, and the patient goes to bed with a confirmed appointment. Nobody on your team was awake.
 
-The same Sofía does this on WhatsApp, on a phone call, and embedded on your website, so it does not matter which door the patient walks through. And she knows her limits. An emergency, a complaint, or a question outside the script goes straight to your team in seconds instead of getting a guessed answer. Everything stays compliant with Mexico's data protection law, the LFPDPPP, with patient data stored in Mexico and auditable logs behind it.
+The same Sofía does this on WhatsApp, on a phone call, and embedded on your website, so it does not matter which door the patient walks through. And she knows her limits. An emergency, a complaint, or a question outside the script goes straight to your team in seconds instead of getting a guessed answer. Everything stays compliant with Mexico's data protection law, the LFPDPPP, with auditable logs behind it.
 
 ## What voice AI is not
 

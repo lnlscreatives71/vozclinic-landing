@@ -41,7 +41,7 @@ A translated chatbot is stuck in a text box, and translation adds even more lag 
 
 ## 6. Escalate cleanly in the patient's language, without garbling the handoff
 
-When a question goes beyond the script, an emergency, a complaint, a genuinely complex case, the handoff to your team has to be clean. A translated chatbot can mangle that exact moment, passing along a garbled summary or dropping the thread between languages. A bilingual agent knows its limits and escalates to your staff in seconds with the context intact and in the right language, and it never invents a price, a diagnosis, or a promise to cover the gap. Patient data stays in Mexico under the LFPDPPP the whole way through.
+When a question goes beyond the script, an emergency, a complaint, a genuinely complex case, the handoff to your team has to be clean. A translated chatbot can mangle that exact moment, passing along a garbled summary or dropping the thread between languages. A bilingual agent knows its limits and escalates to your staff in seconds with the context intact and in the right language, and it never invents a price, a diagnosis, or a promise to cover the gap. Data handling complies with the LFPDPPP the whole way through.
 
 ## The thread through all six
 
