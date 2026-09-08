@@ -80,6 +80,47 @@ export const trustBand = {
 };
 
 // ──────────────────────────────────────────────────────────────
+// Testimonial — Fertilité · Centro de Medicina Reproductiva (Dr. Walters)
+// ──────────────────────────────────────────────────────────────
+export const testimonial = {
+  kicker: {
+    es: 'La experiencia de una clínica',
+    en: "One clinic's experience",
+  } as Bilingual,
+  quote: {
+    es: '“Nos ayuda a no perder pacientes potenciales simplemente porque nuestro personal está ocupado o el consultorio está cerrado. El objetivo no es reemplazar a nuestro equipo, sino hacerlo más eficiente.”',
+    en: '“[It] helps us avoid losing potential patients simply because our staff is busy or the office is closed. The goal is not to replace our staff, but to make our team more efficient.”',
+  } as Bilingual,
+  author: {
+    name: 'Dr. Fabián Walters Arballo',
+    role: {
+      es: 'Director Médico, Fertilité · Centro de Medicina Reproductiva, Tijuana',
+      en: 'Medical Director, Fertilité · Center for Reproductive Medicine, Tijuana',
+    } as Bilingual,
+    source: {
+      es: 'Traducción de su reseña pública en Google (original en inglés).',
+      en: 'From his public Google review.',
+    } as Bilingual,
+  },
+  reviewUrl: 'https://maps.google.com/?q=VozClinic+Tijuana',
+  fullReview: {
+    summary: {
+      es: 'Leer la reseña completa (en inglés)',
+      en: 'Read the full review',
+    } as Bilingual,
+    paragraphs: [
+      '“At Fertilité, we work with patients from Mexico, the United States, Canada, and other countries, so timely, bilingual communication is an essential part of the patient experience. Our experience with VozClinic has been very positive. What impressed us most is its ability to support our team by responding to patients quickly, in both English and Spanish, including outside regular office hours.”',
+      '“In fertility care, patients often have questions before they are ready to schedule a consultation. Being able to provide an immediate response, collect information, assist with scheduling, and guide the patient to the appropriate next step helps us avoid losing potential patients simply because our staff is busy or the office is closed. We also appreciate that the goal is not to replace our staff, but to make our team more efficient.”',
+      '“For a medical practice with a significant number of international patients, this is particularly valuable. Patients expect fast, professional communication, and many contact us from different time zones or after business hours. We believe this type of technology will become increasingly important for modern healthcare practices, especially those serving international patients.”',
+    ],
+    date: {
+      es: 'Reseña pública en Google, septiembre de 2026.',
+      en: 'Public Google review, September 2026.',
+    } as Bilingual,
+  },
+};
+
+// ──────────────────────────────────────────────────────────────
 // Section 3 — How Sofía Works
 // ──────────────────────────────────────────────────────────────
 export const howItWorks = {

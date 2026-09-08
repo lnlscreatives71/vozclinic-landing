@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonio Fertilité — VozClinic</title>
+<meta name="description" content="Lo que dice el Dr. Fabián Walters Arballo, Director Médico de Fertilité, sobre VozClinic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #008080;
+    --teal-deep: #006666;
+    --charcoal: #1F2937;
+    --offwhite: #FAFAF7;
+    --muted: #E1E1DC;
+    --gold: #C9A961;
+    --heading: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--body); background: var(--offwhite); color: var(--charcoal); font-size: 17px; line-height: 1.6; }
+
+  .lang-toggle { position: fixed; top: 18px; right: 20px; z-index: 10; display: flex; gap: 6px; }
+  .lang-toggle button {
+    font-family: var(--heading); font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
+    padding: 7px 14px; border-radius: 100px; border: 1px solid var(--teal);
+    background: transparent; color: var(--teal-deep); cursor: pointer;
+  }
+  .lang-toggle button.active { background: var(--teal); color: var(--offwhite); }
+
+  main { max-width: 860px; margin: 0 auto; padding: 72px 24px; }
+  .quote-card {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-deep) 100%);
+    color: var(--offwhite); border-radius: 18px; padding: 48px 44px; position: relative;
+  }
+  .quote-card .kicker { font-family: var(--heading); font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,250,247,0.75); margin-bottom: 20px; }
+  blockquote { font-family: var(--heading); font-size: clamp(20px, 3vw, 26px); font-weight: 500; line-height: 1.4; font-style: italic; }
+  .attr { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(250,250,247,0.3); }
+  .attr .name { font-family: var(--heading); font-weight: 700; font-size: 17px; }
+  .attr .role { font-size: 14.5px; color: rgba(250,250,247,0.85); }
+  .attr .src { font-size: 12.5px; color: rgba(250,250,247,0.6); margin-top: 6px; font-style: italic; }
+
+  details { margin-top: 22px; background: #fff; border: 1px solid var(--muted); border-radius: 12px; padding: 0 22px; }
+  details summary { font-family: var(--heading); font-weight: 700; font-size: 15.5px; padding: 16px 0; cursor: pointer; color: var(--teal-deep); }
+  details p { font-size: 15.5px; margin-bottom: 12px; }
+  details .fine { font-size: 13px; color: #6B7280; font-style: italic; padding-bottom: 16px; }
+
+  [data-lang="en"] { display: none; }
+  html.en [data-lang="es"] { display: none; }
+  html.en [data-lang="en"] { display: revert; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+  <button id="btn-en" onclick="setLang('en')">EN</button>
+</div>
+
+<main>
+
+<div data-lang="es">
+  <div class="quote-card">
+    <p class="kicker">La experiencia de una clínica</p>
+    <blockquote>"Nos ayuda a no perder pacientes potenciales simplemente porque nuestro personal está ocupado o el consultorio está cerrado. El objetivo no es reemplazar a nuestro equipo, sino hacerlo más eficiente."</blockquote>
+    <div class="attr">
+      <p class="name">Dr. Fabián Walters Arballo</p>
+      <p class="role">Director Médico, Fertilité · Centro de Medicina Reproductiva, Tijuana</p>
+      <p class="src"><a href="https://maps.google.com/?q=VozClinic+Tijuana" target="_blank" rel="noopener noreferrer" style="color: rgba(250,250,247,0.8); text-decoration: underline;">Traducción de su reseña pública en Google (original en inglés) ↗</a></p>
+    </div>
+  </div>
+
+  <details>
+    <summary>Leer la reseña completa (en inglés)</summary>
+    <p>"At Fertilité, we work with patients from Mexico, the United States, Canada, and other countries, so timely, bilingual communication is an essential part of the patient experience. Our experience with VozClinic has been very positive. What impressed us most is its ability to support our team by responding to patients quickly, in both English and Spanish, including outside regular office hours."</p>
+    <p>"In fertility care, patients often have questions before they are ready to schedule a consultation. Being able to provide an immediate response, collect information, assist with scheduling, and guide the patient to the appropriate next step helps us avoid losing potential patients simply because our staff is busy or the office is closed. We also appreciate that the goal is not to replace our staff, but to make our team more efficient."</p>
+    <p>"For a medical practice with a significant number of international patients, this is particularly valuable. Patients expect fast, professional communication, and many contact us from different time zones or after business hours. We believe this type of technology will become increasingly important for modern healthcare practices, especially those serving international patients."</p>
+    <p class="fine"><a href="https://maps.google.com/?q=VozClinic+Tijuana" target="_blank" rel="noopener noreferrer" style="color: #6B7280; text-decoration: underline;">Reseña pública en Google, septiembre de 2026 ↗</a></p>
+  </details>
+</div>
+
+<div data-lang="en">
+  <div class="quote-card">
+    <p class="kicker">One clinic's experience</p>
+    <blockquote>"[It] helps us avoid losing potential patients simply because our staff is busy or the office is closed. The goal is not to replace our staff, but to make our team more efficient."</blockquote>
+    <div class="attr">
+      <p class="name">Dr. Fabián Walters Arballo</p>
+      <p class="role">Medical Director, Fertilité · Center for Reproductive Medicine, Tijuana</p>
+      <p class="src"><a href="https://maps.google.com/?q=VozClinic+Tijuana" target="_blank" rel="noopener noreferrer" style="color: rgba(250,250,247,0.8); text-decoration: underline;">From his public Google review ↗</a></p>
+    </div>
+  </div>
+
+  <details>
+    <summary>Read the full review</summary>
+    <p>"At Fertilité, we work with patients from Mexico, the United States, Canada, and other countries, so timely, bilingual communication is an essential part of the patient experience. Our experience with VozClinic has been very positive. What impressed us most is its ability to support our team by responding to patients quickly, in both English and Spanish, including outside regular office hours."</p>
+    <p>"In fertility care, patients often have questions before they are ready to schedule a consultation. Being able to provide an immediate response, collect information, assist with scheduling, and guide the patient to the appropriate next step helps us avoid losing potential patients simply because our staff is busy or the office is closed. We also appreciate that the goal is not to replace our staff, but to make our team more efficient."</p>
+    <p>"For a medical practice with a significant number of international patients, this is particularly valuable. Patients expect fast, professional communication, and many contact us from different time zones or after business hours. We believe this type of technology will become increasingly important for modern healthcare practices, especially those serving international patients."</p>
+    <p class="fine"><a href="https://maps.google.com/?q=VozClinic+Tijuana" target="_blank" rel="noopener noreferrer" style="color: #6B7280; text-decoration: underline;">Public Google review, September 2026 ↗</a></p>
+  </details>
+</div>
+
+</main>
+
+<script>
+  function setLang(l) {
+    document.documentElement.classList.toggle('en', l === 'en');
+    document.getElementById('btn-es').classList.toggle('active', l === 'es');
+    document.getElementById('btn-en').classList.toggle('active', l === 'en');
+  }
+  if (window.location.search.includes('lang=en') || window.location.hash === '#en') {
+    setLang('en');
+  }
+</script>
+
+</body>
+</html>

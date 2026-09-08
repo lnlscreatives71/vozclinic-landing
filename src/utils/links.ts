@@ -14,4 +14,7 @@ export const waUrl =
 export const demoUrl = '#sofia';
 
 // The booking calendar the /agendar-demo/ and /book-demo/ pages embed.
-export const bookingUrl = 'https://lnlcrm.com/book/vozclinic';
+// The ?src tag names the entry point on the booking record in the CRM. The two
+// demo pages carry their own tags, so this one marks a click straight from the
+// site itself. Bookings with no tag and no referrer came from a pasted link.
+export const bookingUrl = 'https://lnlcrm.com/book/vozclinic?src=vozclinic-site';

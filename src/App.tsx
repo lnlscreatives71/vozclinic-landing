@@ -8,6 +8,7 @@ import PainPoints from './components/PainPoints';
 import HowItWorks from './components/HowItWorks';
 import Features from './components/Features';
 import Demo from './components/Demo';
+import Testimonial from './components/Testimonial';
 import TrustBand from './components/TrustBand';
 import Calculator from './components/Calculator';
 import Pricing from './components/Pricing';
@@ -31,6 +32,7 @@ export default function App({ initialLang = 'es' }: { initialLang?: Lang }) {
           <HowItWorks />
           <Features />
           <Demo />
+          <Testimonial />
           <TrustBand />
           <Calculator />
           <Pricing />
