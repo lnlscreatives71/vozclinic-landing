@@ -1,7 +1,7 @@
 ---
 title: "IA para clínicas médicas: qué hace realmente un agente de voz bilingüe"
 meta_title: "IA para clínicas médicas: qué hace un agente de voz bilingüe | VozClinic"
-description: "Una guía en lenguaje claro sobre la IA para clínicas médicas. Descubre qué hace exactamente un agente de voz con IA bilingüe en la recepción: contesta llamadas, agenda citas, verifica seguros y reactiva pacientes en español e inglés. Agenda una demo. de VozClinic."
+description: "Una guía en lenguaje claro sobre la IA para clínicas médicas. Descubre qué hace exactamente un agente de voz con IA bilingüe en la recepción: contesta llamadas, agenda citas, verifica seguros y reactiva pacientes en español e inglés. Agenda una demo."
 date: 2026-07-04
 author: Lainie Mayfield
 slug: ia-para-clinicas-medicas

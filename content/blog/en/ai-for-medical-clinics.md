@@ -1,7 +1,7 @@
 ---
 title: "AI for Medical Clinics: What a Bilingual Voice Agent Actually Does"
 meta_title: "AI for Medical Clinics: What a Bilingual Voice Agent Does | VozClinic"
-description: "A plain-English guide to AI for medical clinics. See exactly what a bilingual AI voice agent does at the front desk, answering calls, booking appointments, verifying insurance, and reactivating patients in English and Spanish. Join the VozClinic waitlist. Book a demo."
+description: "A plain-English guide to AI for medical clinics. See exactly what a bilingual AI voice agent does at the front desk, answering calls, booking appointments, verifying insurance, and reactivating patients in English and Spanish. Book a demo."
 date: 2026-07-04
 author: Lainie Mayfield
 slug: ai-for-medical-clinics
