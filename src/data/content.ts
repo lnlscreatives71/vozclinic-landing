@@ -16,8 +16,8 @@ export const hero = {
     en: 'Care begins when someone answers.',
   } as Bilingual,
   sub: {
-    es: 'La primera experiencia de un paciente con tu clínica no sucede en la sala de espera. Sucede cuando llama o escribe por WhatsApp. Sofía responde en español e inglés, agenda la cita y reactiva a tus pacientes, incluso fuera del horario de atención.',
-    en: "A patient's first experience with your clinic doesn't happen in the waiting room. It happens when they call or message on WhatsApp. Sofía answers in Spanish and English, books the appointment, and brings patients back, even after hours.",
+    es: 'La primera experiencia de un paciente con tu clínica no sucede en la sala de espera. Sucede cuando llama o escribe por WhatsApp. Sofía, tu recepcionista virtual con IA, responde en español e inglés, agenda la cita y reactiva a tus pacientes, incluso fuera del horario de atención.',
+    en: "A patient's first experience with your clinic doesn't happen in the waiting room. It happens when they call or message on WhatsApp. Sofía, your AI receptionist, answers in Spanish and English, books the appointment, and brings patients back, even after hours.",
   } as Bilingual,
   primaryCta: {
     es: 'Agenda una demo',
@@ -130,8 +130,8 @@ export const howItWorks = {
       num: '01',
       title: { es: 'Conecta tu WhatsApp en 48 horas', en: 'Connect your WhatsApp in 48 hours' } as Bilingual,
       body: {
-        es: 'Usamos tu número de clínica con el WhatsApp Business API oficial de Meta. Sin cambios para tus pacientes: el mismo número, el mismo nombre, mejor servicio.',
-        en: 'We use your clinic\'s number on Meta\'s official WhatsApp Business API. No change for your patients: same number, same name, better service.',
+        es: 'Sofía se vuelve la asistente virtual de WhatsApp Business de tu clínica, en tu mismo número y con el WhatsApp Business API oficial de Meta. Sin cambios para tus pacientes: el mismo número, el mismo nombre, mejor servicio.',
+        en: 'Sofía becomes your clinic\'s WhatsApp Business virtual assistant, on your existing number through Meta\'s official WhatsApp Business API. No change for your patients: same number, same name, better service.',
       } as Bilingual,
     },
     {
@@ -161,8 +161,8 @@ export const features = {
   tiles: [
     {
       icon: 'chat',
-      title: { es: 'Responde 24/7 en español e inglés', en: 'Replies 24/7 in Spanish and English' } as Bilingual,
-      body: { es: 'Sin esperar a la mañana. Respuesta en segundos, a cualquier hora.', en: 'No waiting until morning. Response in seconds, any time of day.' } as Bilingual,
+      title: { es: 'Recepcionista virtual bilingüe, 24/7', en: 'Bilingual virtual receptionist, 24/7' } as Bilingual,
+      body: { es: 'Responde en español e inglés sin esperar a la mañana. Respuesta en segundos, a cualquier hora.', en: 'Replies in Spanish and English with no waiting until morning. Response in seconds, any time of day.' } as Bilingual,
       wide: true,
     },
     {
@@ -305,6 +305,13 @@ export const faq = {
       a: {
         es: 'No. Usamos tu número actual con el WhatsApp Business API oficial. Tus pacientes no notan nada, solo que ahora siempre les contestan rápido.',
         en: 'No. We use your current number on the official WhatsApp Business API. Your patients notice nothing, except that they\'re always answered quickly now.',
+      } as Bilingual,
+    },
+    {
+      q: { es: '¿Cuánto cuesta una recepcionista virtual con IA para mi clínica?', en: 'How much does an AI dental receptionist cost?' } as Bilingual,
+      a: {
+        es: 'VozClinic empieza en $299 USD al mes más impuestos: 1 doctor, 1 ubicación y hasta 600 conversaciones. El plan Profesional cuesta $599 USD para 2 a 4 doctores. Sin contratos a largo plazo y con tu mismo número de WhatsApp.',
+        en: 'VozClinic starts at $299 USD a month plus tax: 1 doctor, 1 location, and up to 600 conversations. Professional is $599 USD for 2 to 4 doctors. No long-term contracts, and you keep your WhatsApp number.',
       } as Bilingual,
     },
     {

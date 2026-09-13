@@ -27,14 +27,14 @@ export const featurePages: FeaturePageDef[] = [
     },
     head: {
       es: {
-        title: 'Recepcionista de voz y WhatsApp con IA, 24/7 | VozClinic',
+        title: 'Recepcionista virtual con IA bilingüe: voz y WhatsApp 24/7 | VozClinic',
         description:
-          'Sofía contesta cada llamada y mensaje 24/7 en español e inglés, en WhatsApp, Telegram, Slack, SMS, línea de voz y tu sitio web. Agenda, reactiva, da seguimiento y reagenda pacientes. Agenda una demo.',
+          'Sofía, tu recepcionista virtual con IA bilingüe, contesta cada llamada y mensaje de WhatsApp 24/7 en español e inglés, y también en Telegram, Slack, SMS y tu sitio web. Agenda, reactiva y reagenda pacientes. Agenda una demo.',
       },
       en: {
-        title: 'AI Voice & WhatsApp Receptionist, 24/7 | VozClinic',
+        title: 'Bilingual AI Receptionist for Clinics: Voice & WhatsApp 24/7 | VozClinic',
         description:
-          'Sofía answers every call and message 24/7 in English and Spanish, on WhatsApp, Telegram, Slack, SMS, a voice line, and your website. She books, reactivates, follows up, and reschedules patients. Book a demo.',
+          'Sofía, the bilingual AI receptionist for dental and medical clinics, answers every call and WhatsApp message 24/7 in English and Spanish, plus Telegram, Slack, SMS, and your website. She books, reactivates, and reschedules patients. Book a demo.',
       },
     },
     label: { es: 'Recepcionista 24/7', en: '24/7 receptionist' },
@@ -123,14 +123,14 @@ export const featurePages: FeaturePageDef[] = [
     },
     head: {
       es: {
-        title: 'Soluciones por tipo de práctica: dental, medspa, cirugía | VozClinic',
+        title: 'Recepcionista virtual con IA para dental, medspa y cirugía | VozClinic',
         description:
-          'Cómo Sofía atiende clínicas dentales, medspas y prácticas de cirugía cosmética: agenda 24/7, reactivación de pacientes, seguimientos y verificación de seguros en español e inglés.',
+          'Cómo Sofía, la recepcionista virtual con IA bilingüe, atiende clínicas dentales, medspas y prácticas de cirugía cosmética: agenda 24/7, reactivación de pacientes, seguimientos y verificación de seguros en español e inglés.',
       },
       en: {
-        title: 'Solutions by Practice Type: Dental, Med Spa, Surgery | VozClinic',
+        title: 'AI Receptionist for Dental Clinics, Med Spas & Surgery | VozClinic',
         description:
-          'How Sofía serves dental clinics, med spas, and cosmetic surgery practices: 24/7 booking, patient reactivation, follow-ups, and insurance verification in English and Spanish.',
+          'How Sofía, the bilingual AI receptionist, serves dental clinics, med spas, and cosmetic surgery practices: 24/7 booking, patient reactivation, follow-ups, and insurance verification in English and Spanish.',
       },
     },
     label: { es: 'Soluciones por práctica', en: 'Solutions by practice' },

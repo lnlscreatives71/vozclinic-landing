@@ -50,12 +50,12 @@ function swap(html, from, to) {
 const EN_HEAD = [
   ['<html lang="es">', '<html lang="en">'],
   [
-    '<title>VozClinic: recepcionista de IA en WhatsApp y llamadas</title>',
-    '<title>VozClinic: AI receptionist for dental & medical clinics</title>',
+    '<title>VozClinic: recepcionista virtual con IA bilingüe para clínicas</title>',
+    '<title>Bilingual AI Receptionist for Dental & Medical Clinics | VozClinic</title>',
   ],
   [
-    '<meta name="description" content="Recepcionista de IA para WhatsApp y llamadas en clínicas: agenda citas 24/7, recordatorios, verifica seguros, reactiva pacientes y lanza promociones. Hecho en Tijuana." />',
-    '<meta name="description" content="AI receptionist for WhatsApp and calls in clinics: 24/7 appointment booking, reminders, insurance verification, patient reactivation, and promotions. Tijuana + San Diego." />',
+    '<meta name="description" content="Recepcionista virtual con IA bilingüe para clínicas dentales y médicas. Contesta WhatsApp Business y llamadas 24/7, agenda citas, envía recordatorios y reactiva pacientes. Hecho en Tijuana." />',
+    '<meta name="description" content="Bilingual AI receptionist for dental clinics and medical offices. Answers WhatsApp and phone calls 24/7, books appointments, sends reminders, verifies insurance, and reactivates patients. Tijuana + San Diego." />',
   ],
   [
     '<link rel="canonical" href="https://www.vozclinic.com/" />',
@@ -66,12 +66,12 @@ const EN_HEAD = [
     '<meta property="og:url" content="https://www.vozclinic.com/en/" />',
   ],
   [
-    '<meta property="og:title" content="VozClinic — Tu recepcionista de WhatsApp que nunca duerme" />',
-    '<meta property="og:title" content="VozClinic: AI receptionist for dental & medical clinics" />',
+    '<meta property="og:title" content="Recepcionista virtual con IA bilingüe que nunca duerme | VozClinic" />',
+    '<meta property="og:title" content="Bilingual AI Receptionist for Dental & Medical Clinics | VozClinic" />',
   ],
   [
-    '<meta property="og:description" content="Sofía contesta a tus pacientes en segundos, agenda citas y envía recordatorios — en español e inglés, 24/7. Hecho en Tijuana para clínicas en Baja California." />',
-    '<meta property="og:description" content="Sofía books appointments 24/7, sends reminders, verifies insurance, and reactivates patients, in English and Spanish. Built in Tijuana for cross-border clinics." />',
+    '<meta property="og:description" content="Sofía, tu recepcionista virtual con IA, contesta WhatsApp y llamadas en segundos, agenda citas y envía recordatorios en español e inglés, 24/7. Hecho en Tijuana para clínicas en Baja California." />',
+    '<meta property="og:description" content="Sofía, the bilingual AI receptionist for dental and medical clinics, books appointments 24/7, sends reminders, verifies insurance, and reactivates patients. Built in Tijuana for cross-border clinics." />',
   ],
   [
     '<meta property="og:locale" content="es_MX" />',
@@ -82,12 +82,12 @@ const EN_HEAD = [
     '<meta property="og:locale:alternate" content="es_MX" />',
   ],
   [
-    '<meta name="twitter:title" content="VozClinic — Tu recepcionista de WhatsApp que nunca duerme" />',
-    '<meta name="twitter:title" content="VozClinic: AI receptionist for dental & medical clinics" />',
+    '<meta name="twitter:title" content="Recepcionista virtual con IA bilingüe que nunca duerme | VozClinic" />',
+    '<meta name="twitter:title" content="Bilingual AI Receptionist for Dental & Medical Clinics | VozClinic" />',
   ],
   [
-    '<meta name="twitter:description" content="Sofía contesta a tus pacientes en segundos, agenda citas y envía recordatorios — en español e inglés, 24/7." />',
-    '<meta name="twitter:description" content="Sofía books appointments 24/7, sends reminders, verifies insurance, and reactivates patients, in English and Spanish." />',
+    '<meta name="twitter:description" content="Sofía, tu recepcionista virtual con IA, contesta WhatsApp y llamadas en segundos, agenda citas y envía recordatorios en español e inglés, 24/7." />',
+    '<meta name="twitter:description" content="Sofía, the bilingual AI receptionist for dental and medical clinics, books appointments 24/7, sends reminders, verifies insurance, and reactivates patients." />',
   ],
 ];
 
@@ -129,17 +129,17 @@ function featureHtml(page, lang) {
   const h = page.head[lang];
 
   if (lang === 'en') html = swap(html, '<html lang="es">', '<html lang="en">');
-  html = swap(html, '<title>VozClinic: recepcionista de IA en WhatsApp y llamadas</title>', `<title>${escAttr(h.title)}</title>`);
-  html = swap(html, '<meta name="description" content="Recepcionista de IA para WhatsApp y llamadas en clínicas: agenda citas 24/7, recordatorios, verifica seguros, reactiva pacientes y lanza promociones. Hecho en Tijuana." />', `<meta name="description" content="${escAttr(h.description)}" />`);
+  html = swap(html, '<title>VozClinic: recepcionista virtual con IA bilingüe para clínicas</title>', `<title>${escAttr(h.title)}</title>`);
+  html = swap(html, '<meta name="description" content="Recepcionista virtual con IA bilingüe para clínicas dentales y médicas. Contesta WhatsApp Business y llamadas 24/7, agenda citas, envía recordatorios y reactiva pacientes. Hecho en Tijuana." />', `<meta name="description" content="${escAttr(h.description)}" />`);
   html = swap(html, '<link rel="canonical" href="https://www.vozclinic.com/" />', `<link rel="canonical" href="${selfUrl}" />`);
   html = swap(html, '<link rel="alternate" hreflang="es" href="https://www.vozclinic.com/" />', `<link rel="alternate" hreflang="es" href="${esUrl}" />`);
   html = swap(html, '<link rel="alternate" hreflang="en" href="https://www.vozclinic.com/en/" />', `<link rel="alternate" hreflang="en" href="${enUrl}" />`);
   html = swap(html, '<link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/" />', `<link rel="alternate" hreflang="x-default" href="${esUrl}" />`);
   html = swap(html, '<meta property="og:url" content="https://www.vozclinic.com/" />', `<meta property="og:url" content="${selfUrl}" />`);
-  html = swap(html, '<meta property="og:title" content="VozClinic — Tu recepcionista de WhatsApp que nunca duerme" />', `<meta property="og:title" content="${escAttr(h.title)}" />`);
-  html = swap(html, '<meta property="og:description" content="Sofía contesta a tus pacientes en segundos, agenda citas y envía recordatorios — en español e inglés, 24/7. Hecho en Tijuana para clínicas en Baja California." />', `<meta property="og:description" content="${escAttr(h.description)}" />`);
-  html = swap(html, '<meta name="twitter:title" content="VozClinic — Tu recepcionista de WhatsApp que nunca duerme" />', `<meta name="twitter:title" content="${escAttr(h.title)}" />`);
-  html = swap(html, '<meta name="twitter:description" content="Sofía contesta a tus pacientes en segundos, agenda citas y envía recordatorios — en español e inglés, 24/7." />', `<meta name="twitter:description" content="${escAttr(h.description)}" />`);
+  html = swap(html, '<meta property="og:title" content="Recepcionista virtual con IA bilingüe que nunca duerme | VozClinic" />', `<meta property="og:title" content="${escAttr(h.title)}" />`);
+  html = swap(html, '<meta property="og:description" content="Sofía, tu recepcionista virtual con IA, contesta WhatsApp y llamadas en segundos, agenda citas y envía recordatorios en español e inglés, 24/7. Hecho en Tijuana para clínicas en Baja California." />', `<meta property="og:description" content="${escAttr(h.description)}" />`);
+  html = swap(html, '<meta name="twitter:title" content="Recepcionista virtual con IA bilingüe que nunca duerme | VozClinic" />', `<meta name="twitter:title" content="${escAttr(h.title)}" />`);
+  html = swap(html, '<meta name="twitter:description" content="Sofía, tu recepcionista virtual con IA, contesta WhatsApp y llamadas en segundos, agenda citas y envía recordatorios en español e inglés, 24/7." />', `<meta name="twitter:description" content="${escAttr(h.description)}" />`);
   if (lang === 'en') {
     html = swap(html, '<meta property="og:locale" content="es_MX" />', '<meta property="og:locale" content="en_US" />');
     html = swap(html, '<meta property="og:locale:alternate" content="en_US" />', '<meta property="og:locale:alternate" content="es_MX" />');
