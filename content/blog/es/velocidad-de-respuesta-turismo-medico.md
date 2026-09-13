@@ -35,7 +35,7 @@ Ahora súmale la realidad transfronteriza. Este paciente no te compara con la cl
 
 ## La cuenta que tu recepción no puede ganar
 
-![Una curva de intención: un agente de voz con IA bilingüe contesta en menos de 2 segundos, mientras la llamada de regreso a la mañana siguiente llega cuando la intención del paciente ya cayó.](/blog-assets/vozclinic-speed-to-lead-inline-ES.webp)
+![Una curva de intención: un agente de voz con IA bilingüe contesta en segundos, mientras la llamada de regreso a la mañana siguiente llega cuando la intención del paciente ya cayó.](/blog-assets/vozclinic-speed-to-lead-inline-ES.webp)
 
 Aquí viene la parte incómoda. Ni una excelente recepción bilingüe puede ganar la velocidad de respuesta de forma confiable, porque los momentos que más importan son justo los momentos en que menos disponible está. La consulta llega mientras tu recepcionista está con un paciente, o en la otra línea, o ya se fue, o llega en inglés mientras tu personal que habla español está saturado. Nada de eso es una falla de tu equipo. Es simplemente que la cobertura humana tiene huecos, y la intención del paciente no se agenda alrededor de tus huecos.
 

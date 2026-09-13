@@ -35,7 +35,7 @@ Now layer on the cross-border reality. This patient is not comparing you to the 
 
 ## The math your front desk cannot beat
 
-![An intent-decay curve: a bilingual AI voice agent answers in under 2 seconds, while a next-morning callback arrives after the patient's intent has already dropped.](/blog-assets/vozclinic-speed-to-lead-inline-EN.webp)
+![An intent-decay curve: a bilingual AI voice agent answers in seconds, while a next-morning callback arrives after the patient's intent has already dropped.](/blog-assets/vozclinic-speed-to-lead-inline-EN.webp)
 
 Here is the uncomfortable part. Even a great bilingual front desk cannot win speed to lead reliably, because the moments that matter most are the moments they are least available. The inquiry lands while your receptionist is with a patient, or on the other line, or gone for the day, or it comes in English while your Spanish-speaking staff is slammed. None of that is a staffing failure. It is just that human coverage has gaps, and patient intent does not schedule itself around your gaps.
 
