@@ -32,9 +32,9 @@ export const featurePages: FeaturePageDef[] = [
           'Sofía, tu recepcionista virtual con IA bilingüe, contesta cada llamada y mensaje de WhatsApp 24/7 en español e inglés, y también en Telegram, Slack, SMS y tu sitio web. Agenda, reactiva y reagenda pacientes. Agenda una demo.',
       },
       en: {
-        title: 'Bilingual AI Receptionist for Clinics: Voice & WhatsApp 24/7 | VozClinic',
+        title: 'AI Receptionist & Phone Answering Service for Clinics, 24/7 | VozClinic',
         description:
-          'Sofía, the bilingual AI receptionist for dental and medical clinics, answers every call and WhatsApp message 24/7 in English and Spanish, plus Telegram, Slack, SMS, and your website. She books, reactivates, and reschedules patients. Book a demo.',
+          'Sofía, the bilingual AI virtual receptionist for dental and medical clinics, answers every call and WhatsApp message 24/7 in English and Spanish, plus Telegram, Slack, SMS, and your website. She books, reactivates, and reschedules patients. Book a demo.',
       },
     },
     label: { es: 'Recepcionista 24/7', en: '24/7 receptionist' },
@@ -130,7 +130,7 @@ export const featurePages: FeaturePageDef[] = [
       en: {
         title: 'AI Receptionist for Dental Clinics, Med Spas & Surgery | VozClinic',
         description:
-          'How Sofía, the bilingual AI receptionist, serves dental clinics, med spas, and cosmetic surgery practices: 24/7 booking, patient reactivation, follow-ups, and insurance verification in English and Spanish.',
+          'How Sofía, the bilingual AI receptionist and dental answering service, serves dental clinics, med spas, and cosmetic surgery practices: 24/7 booking, patient reactivation, follow-ups, and insurance verification in English and Spanish.',
       },
     },
     label: { es: 'Soluciones por práctica', en: 'Solutions by practice' },

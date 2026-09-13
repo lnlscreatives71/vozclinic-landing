@@ -131,7 +131,7 @@ export const howItWorks = {
       title: { es: 'Conecta tu WhatsApp en 48 horas', en: 'Connect your WhatsApp in 48 hours' } as Bilingual,
       body: {
         es: 'Sofía se vuelve la asistente virtual de WhatsApp Business de tu clínica, en tu mismo número y con el WhatsApp Business API oficial de Meta. Sin cambios para tus pacientes: el mismo número, el mismo nombre, mejor servicio.',
-        en: 'Sofía becomes your clinic\'s WhatsApp Business virtual assistant, on your existing number through Meta\'s official WhatsApp Business API. No change for your patients: same number, same name, better service.',
+        en: 'Sofía answers on your clinic\'s existing number through Meta\'s official WhatsApp Business API. No change for your patients: same number, same name, better service.',
       } as Bilingual,
     },
     {
@@ -308,7 +308,7 @@ export const faq = {
       } as Bilingual,
     },
     {
-      q: { es: '¿Cuánto cuesta una recepcionista virtual con IA para mi clínica?', en: 'How much does an AI dental receptionist cost?' } as Bilingual,
+      q: { es: '¿Cuánto cuesta una recepcionista virtual con IA para mi clínica?', en: 'How much does an AI receptionist cost for a clinic?' } as Bilingual,
       a: {
         es: 'VozClinic empieza en $299 USD al mes más impuestos: 1 doctor, 1 ubicación y hasta 600 conversaciones. El plan Profesional cuesta $599 USD para 2 a 4 doctores. Sin contratos a largo plazo y con tu mismo número de WhatsApp.',
         en: 'VozClinic starts at $299 USD a month plus tax: 1 doctor, 1 location, and up to 600 conversations. Professional is $599 USD for 2 to 4 doctors. No long-term contracts, and you keep your WhatsApp number.',

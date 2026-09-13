@@ -54,8 +54,8 @@ const EN_HEAD = [
     '<title>Bilingual AI Receptionist for Dental & Medical Clinics | VozClinic</title>',
   ],
   [
-    '<meta name="description" content="Recepcionista virtual con IA bilingüe para clínicas dentales y médicas. Contesta WhatsApp Business y llamadas 24/7, agenda citas, envía recordatorios y reactiva pacientes. Hecho en Tijuana." />',
-    '<meta name="description" content="Bilingual AI receptionist for dental clinics and medical offices. Answers WhatsApp and phone calls 24/7, books appointments, sends reminders, verifies insurance, and reactivates patients. Tijuana + San Diego." />',
+    '<meta name="description" content="Recepcionista virtual con IA bilingüe para clínicas dentales y médicas. Contesta WhatsApp y llamadas 24/7 con la WhatsApp Business API oficial, agenda citas por WhatsApp y reactiva pacientes. Hecho en Tijuana." />',
+    '<meta name="description" content="Bilingual AI receptionist and AI phone answering service for dental and medical clinics. Answers calls and WhatsApp 24/7, books appointments, sends reminders, and reactivates patients. Tijuana + San Diego." />',
   ],
   [
     '<link rel="canonical" href="https://www.vozclinic.com/" />',
@@ -71,7 +71,7 @@ const EN_HEAD = [
   ],
   [
     '<meta property="og:description" content="Sofía, tu recepcionista virtual con IA, contesta WhatsApp y llamadas en segundos, agenda citas y envía recordatorios en español e inglés, 24/7. Hecho en Tijuana para clínicas en Baja California." />',
-    '<meta property="og:description" content="Sofía, the bilingual AI receptionist for dental and medical clinics, books appointments 24/7, sends reminders, verifies insurance, and reactivates patients. Built in Tijuana for cross-border clinics." />',
+    '<meta property="og:description" content="Sofía, the bilingual AI virtual receptionist for dental and medical clinics, answers calls and WhatsApp 24/7, books appointments, sends reminders, and reactivates patients. Built in Tijuana for cross-border clinics." />',
   ],
   [
     '<meta property="og:locale" content="es_MX" />',
@@ -87,7 +87,7 @@ const EN_HEAD = [
   ],
   [
     '<meta name="twitter:description" content="Sofía, tu recepcionista virtual con IA, contesta WhatsApp y llamadas en segundos, agenda citas y envía recordatorios en español e inglés, 24/7." />',
-    '<meta name="twitter:description" content="Sofía, the bilingual AI receptionist for dental and medical clinics, books appointments 24/7, sends reminders, verifies insurance, and reactivates patients." />',
+    '<meta name="twitter:description" content="Sofía, the bilingual AI virtual receptionist for dental and medical clinics, answers calls and WhatsApp 24/7, books appointments, sends reminders, and reactivates patients." />',
   ],
 ];
 
@@ -130,7 +130,7 @@ function featureHtml(page, lang) {
 
   if (lang === 'en') html = swap(html, '<html lang="es">', '<html lang="en">');
   html = swap(html, '<title>VozClinic: recepcionista virtual con IA bilingüe para clínicas</title>', `<title>${escAttr(h.title)}</title>`);
-  html = swap(html, '<meta name="description" content="Recepcionista virtual con IA bilingüe para clínicas dentales y médicas. Contesta WhatsApp Business y llamadas 24/7, agenda citas, envía recordatorios y reactiva pacientes. Hecho en Tijuana." />', `<meta name="description" content="${escAttr(h.description)}" />`);
+  html = swap(html, '<meta name="description" content="Recepcionista virtual con IA bilingüe para clínicas dentales y médicas. Contesta WhatsApp y llamadas 24/7 con la WhatsApp Business API oficial, agenda citas por WhatsApp y reactiva pacientes. Hecho en Tijuana." />', `<meta name="description" content="${escAttr(h.description)}" />`);
   html = swap(html, '<link rel="canonical" href="https://www.vozclinic.com/" />', `<link rel="canonical" href="${selfUrl}" />`);
   html = swap(html, '<link rel="alternate" hreflang="es" href="https://www.vozclinic.com/" />', `<link rel="alternate" hreflang="es" href="${esUrl}" />`);
   html = swap(html, '<link rel="alternate" hreflang="en" href="https://www.vozclinic.com/en/" />', `<link rel="alternate" hreflang="en" href="${enUrl}" />`);
