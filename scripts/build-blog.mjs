@@ -407,10 +407,12 @@ async function injectSitemap(urls) {
   const sitemapPath = path.join(dist, 'sitemap.xml');
   let xml;
   try { xml = await fs.readFile(sitemapPath, 'utf-8'); } catch { return; }
-  const blocks = urls.map(({ loc, lastmod, priority }) => `  <url>
+  // Drop blog entries from a previous run so re-running the blog step never duplicates URLs.
+  xml = xml.replace(/  <url>\n    <loc>[^<]*\/blog\/[^<]*<\/loc>[\s\S]*?<\/url>\n/g, '');
+  const blocks = urls.map(({ loc, lastmod, priority, alternates = [] }) => `  <url>
     <loc>${loc}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}
     <changefreq>monthly</changefreq>
-    <priority>${priority}</priority>
+    <priority>${priority}</priority>${alternates.map(a => `\n    <xhtml:link rel="alternate" hreflang="${a.lang}" href="${a.href}"/>`).join('')}
   </url>`).join('\n');
   xml = xml.replace('</urlset>', `${blocks}\n</urlset>`);
   await fs.writeFile(sitemapPath, xml, 'utf-8');
@@ -448,13 +450,23 @@ async function main() {
     for (const post of posts) {
       const out = path.join(LOCALES[locale].dir, 'blog', post.slug, 'index.html');
       await writeFile(out, renderPost(post, pairIndex, bySlug));
-      sitemapUrls.push({ loc: `${SITE}${postUrl(locale, post.slug)}`, lastmod: /^\d{4}-\d{2}-\d{2}/.test(post.date) ? post.date.slice(0, 10) : '', priority: '0.6' });
+      const urls = localeUrls(post, pairIndex, bySlug);
+      sitemapUrls.push({
+        loc: `${SITE}${postUrl(locale, post.slug)}`,
+        lastmod: /^\d{4}-\d{2}-\d{2}/.test(post.date) ? post.date.slice(0, 10) : '',
+        priority: '0.6',
+        alternates: urls.es && urls.en ? alternatesFrom(urls) : [],
+      });
       console.log(`✓ Blog post: ${postUrl(locale, post.slug)}`);
     }
 
     const listingOut = path.join(LOCALES[locale].dir, 'blog', 'index.html');
     await writeFile(listingOut, renderListing(locale, posts, bySlug));
-    sitemapUrls.push({ loc: `${SITE}${LOCALES[locale].urlBase}/`, lastmod: '', priority: '0.7' });
+    const latest = posts.map(p => String(p.date)).filter(d => /^\d{4}-\d{2}-\d{2}/.test(d)).map(d => d.slice(0, 10)).sort().at(-1) || '';
+    const listingAlternates = postsByLocale.es.length && postsByLocale.en.length
+      ? alternatesFrom({ es: `${SITE}${LOCALES.es.urlBase}/`, en: `${SITE}${LOCALES.en.urlBase}/` })
+      : [];
+    sitemapUrls.push({ loc: `${SITE}${LOCALES[locale].urlBase}/`, lastmod: latest, priority: '0.7', alternates: listingAlternates });
     console.log(`✓ Blog index: ${LOCALES[locale].urlBase}/`);
   }
 

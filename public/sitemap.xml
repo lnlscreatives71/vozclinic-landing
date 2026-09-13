@@ -127,4 +127,46 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/terminos/"/>
   </url>
+  <url>
+    <loc>https://www.vozclinic.com/canales/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/canales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/channels/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/canales/"/>
+  </url>
+  <url>
+    <loc>https://www.vozclinic.com/channels/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/canales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/channels/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/canales/"/>
+  </url>
+  <url>
+    <loc>https://www.vozclinic.com/calculadora/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.vozclinic.com/aviso-de-privacidad/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/aviso-de-privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/aviso-de-privacidad/"/>
+  </url>
+  <url>
+    <loc>https://www.vozclinic.com/privacy/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.vozclinic.com/aviso-de-privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vozclinic.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vozclinic.com/aviso-de-privacidad/"/>
+  </url>
 </urlset>

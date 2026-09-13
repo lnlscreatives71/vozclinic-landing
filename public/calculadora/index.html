@@ -40,6 +40,19 @@ document.addEventListener('click', function (e) {
 <title>VozClinic · Calculadora de ROI</title>
 <meta name="description" content="Calcula cuánto recupera tu clínica con VozClinic: ingresos recuperados, menos inasistencias y horas de personal ahorradas. Ajusta los valores y mira tu ROI anual.">
 <link rel="canonical" href="https://www.vozclinic.com/calculadora/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VozClinic">
+<meta property="og:locale" content="es_MX">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://www.vozclinic.com/calculadora/">
+<meta property="og:title" content="¿Cuánto recupera tu clínica con Sofía? · Calculadora de ROI de VozClinic">
+<meta property="og:description" content="Calcula cuánto recupera tu clínica con VozClinic: ingresos recuperados, menos inasistencias y horas de personal ahorradas. Ajusta los valores y mira tu ROI anual.">
+<meta property="og:image" content="https://www.vozclinic.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="¿Cuánto recupera tu clínica con Sofía? · Calculadora de ROI de VozClinic">
+<meta name="twitter:description" content="Calcula cuánto recupera tu clínica con VozClinic: ingresos recuperados, menos inasistencias y horas de personal ahorradas. Ajusta los valores y mira tu ROI anual.">
+<meta name="twitter:image" content="https://www.vozclinic.com/og-image.png">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -163,53 +176,53 @@ document.addEventListener('click', function (e) {
   </div>
 
   <div class="hero">
-    <span class="eyebrow" data-i="eyebrow"></span>
-    <h1><span data-i="h1a"></span> <span class="accent" data-i="h1b"></span></h1>
-    <p class="sub" data-i="sub"></p>
+    <span class="eyebrow" data-i="eyebrow">Calculadora de ROI</span>
+    <h1><span data-i="h1a">¿Cuánto recupera tu clínica</span> <span class="accent" data-i="h1b">con Sofía?</span></h1>
+    <p class="sub" data-i="sub">Mira cuántos ingresos recuperas y cuántas horas ahorras cuando Sofía contesta, agenda y reactiva pacientes 24/7.</p>
   </div>
 
   <div class="grid">
     <!-- INPUTS -->
     <div class="card">
-      <h2><span class="ic">🏥</span><span data-i="inputsTitle"></span></h2>
+      <h2><span class="ic" aria-hidden="true">🏥</span><span data-i="inputsTitle">Datos de tu clínica</span></h2>
 
       <div class="planrow">
-        <span class="lbl" data-i="planLabel"></span>
+        <span class="lbl" data-i="planLabel">Plan de VozClinic</span>
         <div class="plans" id="plans"></div>
       </div>
 
       <div class="field">
-        <div class="row"><span class="name" data-i="f1"></span><span class="val" id="v1"></span></div>
+        <div class="row"><span class="name" data-i="f1">Citas al mes</span><span class="val" id="v1"></span></div>
         <input type="range" id="appts" min="50" max="1200" step="10" value="300">
         <div class="ends"><span>50</span><span>1200</span></div>
       </div>
 
       <div class="field">
-        <div class="row"><span class="name" data-i="f2"></span><span class="val" id="v2"></span></div>
+        <div class="row"><span class="name" data-i="f2">Valor promedio de cita (USD)</span><span class="val" id="v2"></span></div>
         <input type="range" id="value" min="50" max="1500" step="10" value="250">
         <div class="ends"><span>$50</span><span>$1,500</span></div>
       </div>
 
       <div class="field">
-        <div class="row"><span class="name" data-i="f3"></span><span class="val" id="v3"></span></div>
+        <div class="row"><span class="name" data-i="f3">Mensajes sin contestar (%)</span><span class="val" id="v3"></span></div>
         <input type="range" id="missed" min="5" max="50" step="1" value="30">
         <div class="ends"><span>5%</span><span>50%</span></div>
       </div>
 
       <div class="field">
-        <div class="row"><span class="name" data-i="f4"></span><span class="val" id="v4"></span></div>
+        <div class="row"><span class="name" data-i="f4">Tasa de inasistencia actual (%)</span><span class="val" id="v4"></span></div>
         <input type="range" id="noshow" min="2" max="40" step="1" value="15">
         <div class="ends"><span>2%</span><span>40%</span></div>
       </div>
 
       <div class="field">
-        <div class="row"><span class="name" data-i="f5"></span><span class="val" id="v5"></span></div>
+        <div class="row"><span class="name" data-i="f5">Horas de personal ahorradas al mes</span><span class="val" id="v5"></span></div>
         <input type="range" id="hours" min="5" max="160" step="5" value="35">
         <div class="ends"><span>5</span><span>160</span></div>
       </div>
 
       <div class="field">
-        <div class="row"><span class="name" data-i="f6"></span><span class="val" id="v6"></span></div>
+        <div class="row"><span class="name" data-i="f6">Costo del personal por hora (USD)</span><span class="val" id="v6"></span></div>
         <input type="range" id="rate" min="5" max="50" step="1" value="12">
         <div class="ends"><span>$5</span><span>$50</span></div>
       </div>
@@ -218,49 +231,49 @@ document.addEventListener('click', function (e) {
     <!-- RESULTS -->
     <div class="stack">
       <div class="card roihead">
-        <h2><span class="ic">📈</span><span data-i="roiTitle"></span></h2>
+        <h2><span class="ic" aria-hidden="true">📈</span><span data-i="roiTitle">ROI anual</span></h2>
         <div class="roi-big" id="roi">…</div>
-        <div class="roi-cap" data-i="roiCap"></div>
+        <div class="roi-cap" data-i="roiCap">Retorno sobre la inversión</div>
       </div>
 
       <div class="card">
-        <h2><span class="ic">💵</span><span data-i="revTitle"></span></h2>
+        <h2><span class="ic" aria-hidden="true">💵</span><span data-i="revTitle">Ingresos recuperados</span></h2>
         <div style="margin-top:10px">
-          <div class="line"><span class="k" data-i="rev1"></span><span class="v neg" id="revLost"></span></div>
-          <div class="line"><span class="k" data-i="rev2"></span><span class="v pos" id="revMo"></span></div>
-          <div class="line"><span class="k" data-i="rev3"></span><span class="v pos" id="revYr"></span></div>
+          <div class="line"><span class="k" data-i="rev1">Ingreso perdido al mes</span><span class="v neg" id="revLost"></span></div>
+          <div class="line"><span class="k" data-i="rev2">Recuperación mensual</span><span class="v pos" id="revMo"></span></div>
+          <div class="line"><span class="k" data-i="rev3">Recuperación anual</span><span class="v pos" id="revYr"></span></div>
         </div>
       </div>
 
       <div class="card">
-        <h2><span class="ic">📅</span><span data-i="nsTitle"></span></h2>
+        <h2><span class="ic" aria-hidden="true">📅</span><span data-i="nsTitle">Menos inasistencias</span></h2>
         <div style="margin-top:10px">
-          <div class="line"><span class="k" data-i="ns1"></span><span class="v navy" id="nsNow"></span></div>
-          <div class="line"><span class="k" data-i="ns2"></span><span class="v pos" id="nsMo"></span></div>
-          <div class="line"><span class="k" data-i="ns3"></span><span class="v pos" id="nsYr"></span></div>
+          <div class="line"><span class="k" data-i="ns1">Inasistencias actuales al mes</span><span class="v navy" id="nsNow"></span></div>
+          <div class="line"><span class="k" data-i="ns2">Citas recuperadas al mes</span><span class="v pos" id="nsMo"></span></div>
+          <div class="line"><span class="k" data-i="ns3">Valor recuperado al año</span><span class="v pos" id="nsYr"></span></div>
         </div>
       </div>
 
       <div class="card">
-        <h2><span class="ic">⏱️</span><span data-i="staffTitle"></span></h2>
+        <h2><span class="ic" aria-hidden="true">⏱️</span><span data-i="staffTitle">Ahorro en personal</span></h2>
         <div style="margin-top:10px">
-          <div class="line"><span class="k" data-i="st1"></span><span class="v navy" id="stMo"></span></div>
-          <div class="line"><span class="k" data-i="st2"></span><span class="v navy" id="stYr"></span></div>
+          <div class="line"><span class="k" data-i="st1">Ahorro mensual</span><span class="v navy" id="stMo"></span></div>
+          <div class="line"><span class="k" data-i="st2">Ahorro anual</span><span class="v navy" id="stYr"></span></div>
         </div>
       </div>
 
       <div class="card totals">
-        <div class="line"><span class="k" data-i="t1"></span><span class="v navy" id="tSave"></span></div>
-        <div class="line"><span class="k" data-i="t2"></span><span class="v neg" id="tCost"></span></div>
-        <div class="net"><span class="k" data-i="t3"></span><span class="v" id="tNet"></span></div>
-        <a class="cta gold" id="ctaBtn" href="https://www.vozclinic.com/agendar-demo/" target="_blank" rel="noopener" data-i="cta"></a>
-        <p class="note" data-i="note"></p>
+        <div class="line"><span class="k" data-i="t1">Ahorro total anual</span><span class="v navy" id="tSave"></span></div>
+        <div class="line"><span class="k" data-i="t2">Costo anual de VozClinic</span><span class="v neg" id="tCost"></span></div>
+        <div class="net"><span class="k" data-i="t3">Beneficio neto anual</span><span class="v" id="tNet"></span></div>
+        <a class="cta gold" id="ctaBtn" href="https://www.vozclinic.com/agendar-demo/" target="_blank" rel="noopener" data-i="cta">Agenda una demo →</a>
+        <p class="note" data-i="note">Estimaciones ilustrativas. El modelo asume que Sofía recupera ~70% de los mensajes sin contestar y reduce las inasistencias ~40% con recordatorios automáticos. Ajusta los valores a tu clínica. Precios reales: Esencial $299, Profesional $599, Pro Claims $1,499 USD/mes.</p>
       </div>
     </div>
   </div>
 
   <footer>
-    <span data-i="footer"></span> · <a href="https://www.vozclinic.com" target="_blank" rel="noopener">vozclinic.com</a>
+    <span data-i="footer">VozClinic · Hecho en Tijuana</span> · <a href="https://www.vozclinic.com" target="_blank" rel="noopener">vozclinic.com</a>
   </footer>
 </div>
 
