@@ -208,6 +208,158 @@ export function StepsSection({
   );
 }
 
+// Two-column comparison: the status quo on the left, Sofía on the right.
+export interface CompareColumn {
+  title: B;
+  points: B[];
+}
+
+export function CompareSection({
+  kicker,
+  title,
+  sub,
+  left,
+  right,
+  bg = 'white',
+}: {
+  kicker: B;
+  title: B;
+  sub?: B;
+  left: CompareColumn;
+  right: CompareColumn;
+  bg?: 'offwhite' | 'white';
+}) {
+  const { t } = useLang();
+  return (
+    <section className={`${bg === 'white' ? 'bg-white' : 'bg-offwhite'} py-24`}>
+      <div className="section-container">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <span className="text-teal text-xs font-bold tracking-widest uppercase">{t(kicker)}</span>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-charcoal mt-3 leading-tight">
+            {t(title)}
+          </h2>
+          {sub && <p className="text-gray-500 mt-4">{t(sub)}</p>}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+          <div className="bg-offwhite border border-gray-100 rounded-2xl p-7">
+            <h3 className="font-display text-xl font-bold text-gray-500 mb-4">{t(left.title)}</h3>
+            <ul className="space-y-3">
+              {left.points.map((p, i) => (
+                <li key={i} className="flex items-start gap-2.5 text-sm text-gray-500 leading-relaxed">
+                  <span className="shrink-0 font-bold" aria-hidden="true">✕</span>
+                  <span>{t(p)}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-teal/5 border border-teal/30 rounded-2xl p-7">
+            <h3 className="font-display text-xl font-bold text-charcoal mb-4">{t(right.title)}</h3>
+            <ul className="space-y-3">
+              {right.points.map((p, i) => (
+                <li key={i} className="flex items-start gap-2.5 text-sm text-charcoal leading-relaxed">
+                  <span className="text-teal shrink-0 font-bold" aria-hidden="true">✓</span>
+                  <span>{t(p)}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// FAQ with matching FAQPage JSON-LD rendered alongside it, so the structured
+// data can never drift from the visible questions.
+export interface FaqItem {
+  q: B;
+  a: B;
+}
+
+export function FaqSection({
+  title,
+  items,
+  bg = 'white',
+}: {
+  title: B;
+  items: FaqItem[];
+  bg?: 'offwhite' | 'white';
+}) {
+  const { lang, t } = useLang();
+  const jsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((it) => ({
+      '@type': 'Question',
+      name: it.q[lang],
+      acceptedAnswer: { '@type': 'Answer', text: it.a[lang] },
+    })),
+  }).replaceAll('<', '\\u003c');
+  return (
+    <section className={`${bg === 'white' ? 'bg-white' : 'bg-offwhite'} py-24`}>
+      <div className="section-container">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-charcoal text-center leading-tight mb-10">
+            {t(title)}
+          </h2>
+          <div className="space-y-3">
+            {items.map((it, i) => (
+              <details key={i} className="group bg-white border border-gray-100 rounded-2xl p-5 open:border-teal/30">
+                <summary className="cursor-pointer list-none flex items-start justify-between gap-4 font-semibold text-charcoal">
+                  <span>{t(it.q)}</span>
+                  <span className="text-teal text-xl leading-none shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">
+                    +
+                  </span>
+                </summary>
+                <p className="text-gray-500 text-sm leading-relaxed mt-3">{t(it.a)}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+    </section>
+  );
+}
+
+// Shared by the keyword landing pages (ids prefixed `lp-` in manifest.ts).
+export const onboardingSteps: Step[] = [
+  {
+    t: { es: 'Conecta tu número en 48 horas', en: 'Connect your number in 48 hours' },
+    d: {
+      es: 'Usamos el número actual de tu clínica con la WhatsApp Business API oficial de Meta. Para tus pacientes no cambia nada.',
+      en: 'We use your clinic’s existing number through Meta’s official WhatsApp Business API. Nothing changes for your patients.',
+    },
+  },
+  {
+    t: { es: 'Una sesión de entrenamiento de 90 minutos', en: 'One 90-minute training session' },
+    d: {
+      es: 'Te entrevistamos sobre precios, servicios, doctores, horarios y preguntas frecuentes. Sofía contesta con tus palabras, tus precios y tus reglas.',
+      en: 'We interview you about pricing, services, doctors, hours, and FAQs. Sofía answers with your words, your prices, and your rules.',
+    },
+  },
+  {
+    t: { es: 'En vivo con tus pacientes', en: 'Live with your patients' },
+    d: {
+      es: 'La sesión sucede en los primeros 5 días y la producción completa llega alrededor del día 7.',
+      en: 'The session happens in the first 5 days, and full production arrives around day 7.',
+    },
+  },
+];
+
+export const pricingAnswer: B = {
+  es: 'Desde $299 USD al mes más impuestos en el plan Esencial: 1 doctor, 1 ubicación y hasta 600 conversaciones. El plan Profesional cuesta $599 USD para 2 a 4 doctores y hasta 1,500 conversaciones. Sin contratos a largo plazo.',
+  en: 'From $299 USD a month plus tax on Essential: 1 doctor, 1 location, and up to 600 conversations. Professional is $599 USD for 2 to 4 doctors and up to 1,500 conversations. No long-term contracts.',
+};
+
+export const fitFaq: FaqItem = {
+  q: { es: '¿Para qué clínicas está hecho VozClinic?', en: 'Who is VozClinic built for?' },
+  a: {
+    es: 'Para clínicas en México que atienden pacientes de los dos lados de la frontera: dentales, medspas, cirugía cosmética y consultorios médicos. VozClinic opera bajo la LFPDPPP, la ley mexicana de protección de datos. Si tu práctica está en Estados Unidos, agenda una demo y te decimos con honestidad si te queda.',
+    en: 'Clinics in Mexico that serve patients from both sides of the border: dental, med spa, cosmetic surgery, and medical practices. VozClinic operates under the LFPDPPP, Mexico’s data protection law. If your practice is in the United States, book a demo and we’ll tell you honestly whether it’s a fit.',
+  },
+};
+
 // Compact strip: every channel Sofía covers, linking to the flagship page
 // where the full channel grid lives.
 export function ChannelsRibbon() {
@@ -251,7 +403,8 @@ export function ChannelsRibbon() {
 // Cross-links to the sibling feature pages, for readers and crawlers alike.
 export function MoreFeatures({ currentId }: { currentId: string }) {
   const { lang, t } = useLang();
-  const others = featurePages.filter((p) => p.id !== currentId);
+  // Keyword landing pages (`lp-`) stay out of the feature grid; the footer links them.
+  const others = featurePages.filter((p) => p.id !== currentId && !p.id.startsWith('lp-'));
   return (
     <section className="bg-offwhite py-20">
       <div className="section-container">
@@ -260,7 +413,11 @@ export function MoreFeatures({ currentId }: { currentId: string }) {
             {t({ es: 'Explora todo lo que hace Sofía', en: 'Explore everything Sofía does' })}
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+        <div
+          className={`grid grid-cols-1 sm:grid-cols-2 gap-4 mx-auto ${
+            others.length >= 5 ? 'lg:grid-cols-5 max-w-6xl' : 'lg:grid-cols-4 max-w-5xl'
+          }`}
+        >
           {others.map((p) => (
             <a
               key={p.id}

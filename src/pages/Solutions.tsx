@@ -18,6 +18,7 @@ interface Practice {
   name: B;
   pain: B;
   points: B[];
+  link?: { href: B; label: B };
 }
 
 const practices: Practice[] = [
@@ -35,6 +36,10 @@ const practices: Practice[] = [
       { es: 'Reactiva a pacientes que no regresaron', en: 'Reactivates patients who never came back' },
       { es: 'Llena huecos de cancelación con quien espera cita', en: 'Fills cancellation gaps with patients waiting for a slot' },
     ],
+    link: {
+      href: { es: '/servicio-de-contestacion-dental/', en: '/en/dental-answering-service/' },
+      label: { es: 'Servicio de contestación dental →', en: 'Dental answering service →' },
+    },
   },
   {
     icon: '✨',
@@ -97,6 +102,14 @@ function PracticeBlocks() {
                   </li>
                 ))}
               </ul>
+              {p.link && (
+                <a
+                  href={t(p.link.href)}
+                  className="text-teal text-sm font-semibold mt-5 inline-block underline-offset-2 hover:underline"
+                >
+                  {t(p.link.label)}
+                </a>
+              )}
             </div>
           ))}
         </div>

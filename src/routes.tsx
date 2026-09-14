@@ -6,6 +6,8 @@ import FeatureScheduling from './pages/FeatureScheduling';
 import FeatureCommunication from './pages/FeatureCommunication';
 import FeatureInsurance from './pages/FeatureInsurance';
 import Solutions from './pages/Solutions';
+import BilingualReceptionist from './pages/BilingualReceptionist';
+import DentalAnsweringService from './pages/DentalAnsweringService';
 import { featurePathToRoute } from './pages/manifest';
 
 // One place that maps a URL to (which page component, which language). Used by
@@ -17,7 +19,9 @@ export type RouteId =
   | 'feature-scheduling'
   | 'feature-communication'
   | 'feature-insurance'
-  | 'solutions';
+  | 'solutions'
+  | 'lp-bilingual-receptionist'
+  | 'lp-dental-answering';
 
 export function resolveRoute(pathname: string): { id: RouteId; lang: Lang } {
   const p = pathname.replace(/\/+$/, '') || '/';
@@ -37,6 +41,8 @@ const pageComponents: Record<
   'feature-communication': FeatureCommunication,
   'feature-insurance': FeatureInsurance,
   solutions: Solutions,
+  'lp-bilingual-receptionist': BilingualReceptionist,
+  'lp-dental-answering': DentalAnsweringService,
 };
 
 export function renderRoute(id: RouteId, lang: Lang): ReactElement {

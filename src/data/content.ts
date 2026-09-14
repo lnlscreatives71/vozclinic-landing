@@ -414,6 +414,8 @@ export const footerData = {
       { label: { es: 'Cómo funciona', en: 'How it works' } as Bilingual, href: '/#como-funciona' },
       { label: { es: 'Precios', en: 'Pricing' } as Bilingual, href: '/#precios' },
       { label: { es: 'Canales y complementos', en: 'Channels & add-ons' } as Bilingual, href: { es: '/canales/', en: '/channels/' } as Bilingual },
+      { label: { es: 'Recepcionista virtual bilingüe', en: 'Bilingual virtual receptionist' } as Bilingual, href: { es: '/recepcionista-virtual-bilingue/', en: '/en/bilingual-virtual-receptionist/' } as Bilingual },
+      { label: { es: 'Servicio de contestación dental', en: 'Dental answering service' } as Bilingual, href: { es: '/servicio-de-contestacion-dental/', en: '/en/dental-answering-service/' } as Bilingual },
       { label: { es: 'Demo', en: 'Demo' } as Bilingual, href: '/#sofia' },
       { label: { es: 'FAQ', en: 'FAQ' } as Bilingual, href: '/#faq' },
     ],

@@ -97,6 +97,10 @@ All plans are month-to-month with no long-term contracts. Setup takes approximat
 - [Insurance Verification (English)](https://www.vozclinic.com/en/features/insurance/)
 - [Clinic Solutions Overview (Spanish)](https://www.vozclinic.com/soluciones/)
 - [Clinic Solutions Overview (English)](https://www.vozclinic.com/en/solutions/)
+- [Bilingual Virtual Receptionist (English)](https://www.vozclinic.com/en/bilingual-virtual-receptionist/)
+- [Recepcionista virtual bilingüe (Spanish)](https://www.vozclinic.com/recepcionista-virtual-bilingue/)
+- [Dental Answering Service (English)](https://www.vozclinic.com/en/dental-answering-service/)
+- [Servicio de contestación dental (Spanish)](https://www.vozclinic.com/servicio-de-contestacion-dental/)
 
 ### Clinical & Educational Guides
 - [AI for Medical Clinics Guide (ES)](https://www.vozclinic.com/blog/ia-para-clinicas-medicas/)

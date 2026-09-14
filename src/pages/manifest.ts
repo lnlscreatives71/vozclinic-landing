@@ -139,6 +139,54 @@ export const featurePages: FeaturePageDef[] = [
       en: 'Dental, med spa, and cosmetic surgery.',
     },
   },
+  {
+    id: 'lp-bilingual-receptionist',
+    path: {
+      es: '/recepcionista-virtual-bilingue/',
+      en: '/en/bilingual-virtual-receptionist/',
+    },
+    head: {
+      es: {
+        title: 'Recepcionista virtual bilingüe para clínicas, 24/7 | VozClinic',
+        description:
+          'Una recepcionista virtual bilingüe que contesta llamadas y WhatsApp en español e inglés, 24/7. Sofía agenda citas, envía recordatorios y escala a tu equipo. Desde $299 USD al mes. Agenda una demo.',
+      },
+      en: {
+        title: 'Bilingual Virtual Receptionist for Clinics, 24/7 | VozClinic',
+        description:
+          'A bilingual virtual receptionist that answers calls and WhatsApp in English and Spanish, 24/7. Sofía books appointments, sends reminders, and escalates to your team. From $299 USD a month. Book a demo.',
+      },
+    },
+    label: { es: 'Recepcionista virtual bilingüe', en: 'Bilingual virtual receptionist' },
+    blurb: {
+      es: 'Contesta en español e inglés, en cada turno.',
+      en: 'Answers in English and Spanish, on every shift.',
+    },
+  },
+  {
+    id: 'lp-dental-answering',
+    path: {
+      es: '/servicio-de-contestacion-dental/',
+      en: '/en/dental-answering-service/',
+    },
+    head: {
+      es: {
+        title: 'Servicio de contestación para clínicas dentales, 24/7 | VozClinic',
+        description:
+          'Un servicio de contestación con IA para clínicas dentales que no solo toma recados: Sofía contesta llamadas y WhatsApp 24/7 en español e inglés, agenda la cita y hace recall de limpiezas. Agenda una demo.',
+      },
+      en: {
+        title: 'Dental Answering Service That Books Appointments, 24/7 | VozClinic',
+        description:
+          'An AI dental answering service that does more than take messages: Sofía answers calls and WhatsApp 24/7 in English and Spanish, books the appointment, and recalls patients due for cleanings. Book a demo.',
+      },
+    },
+    label: { es: 'Servicio de contestación dental', en: 'Dental answering service' },
+    blurb: {
+      es: 'Agenda la cita en lugar de tomar un recado.',
+      en: 'Books the appointment instead of taking a message.',
+    },
+  },
 ];
 
 // The pages listed under the "Funciones" nav dropdown (solutions is its own
