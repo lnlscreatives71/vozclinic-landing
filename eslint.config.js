@@ -15,7 +15,6 @@ export default defineConfig([
     'dist-server',
     'src/components/agents-ui/**',
     'src/hooks/agents-ui/**',
-    'src/components/ui/**',
   ]),
   {
     files: ['**/*.{ts,tsx}'],
