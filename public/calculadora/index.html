@@ -158,6 +158,8 @@ document.addEventListener('click', function (e) {
   .cta.gold:hover{background:#b8985293}
 
   .stack{display:flex;flex-direction:column;gap:24px}
+  .warn{display:none;margin-top:10px;padding:10px 12px;border-radius:10px;background:rgba(192,73,43,.08);color:var(--red);font-size:13px;font-weight:600;line-height:1.45}
+  .warn.on{display:block}
   .note{font-size:12px;color:var(--muted);line-height:1.55;margin-top:18px;padding:0 2px}
   .note b{color:var(--navy)}
 
@@ -189,6 +191,12 @@ document.addEventListener('click', function (e) {
       <div class="planrow">
         <span class="lbl" data-i="planLabel">Plan de VozClinic</span>
         <div class="plans" id="plans"></div>
+      </div>
+
+      <div class="field">
+        <div class="row"><span class="name" data-i="f0">Llamadas y mensajes al mes</span><span class="val" id="v0"></span></div>
+        <input type="range" id="inbound" min="50" max="3000" step="10" value="500">
+        <div class="ends"><span>50</span><span>3,000</span></div>
       </div>
 
       <div class="field">
@@ -239,11 +247,16 @@ document.addEventListener('click', function (e) {
       <div class="card">
         <h2><span class="ic" aria-hidden="true">💵</span><span data-i="revTitle">Ingresos recuperados</span></h2>
         <div style="margin-top:10px">
+          <div class="line"><span class="k" data-i="fn0">Llamadas y mensajes totales</span><span class="v navy" id="fnTotal"></span></div>
+          <div class="line"><span class="k" data-i="fn1">Contestadas al mes</span><span class="v navy" id="fnAns"></span></div>
+          <div class="line"><span class="k" data-i="fn2">Sin contestar al mes</span><span class="v navy" id="fnMiss"></span></div>
+          <div class="line"><span class="k" data-i="fn3">Tasa de cita (de las contestadas)</span><span class="v navy" id="fnRate"></span></div>
           <div class="line"><span class="k" data-i="rev0">Citas perdidas al mes</span><span class="v navy" id="lostAppts"></span></div>
           <div class="line"><span class="k" data-i="rev1">Ingreso perdido al mes</span><span class="v neg" id="revLost"></span></div>
           <div class="line"><span class="k" data-i="rev2">Recuperación mensual</span><span class="v pos" id="revMo"></span></div>
           <div class="line"><span class="k" data-i="rev3">Recuperación anual</span><span class="v pos" id="revYr"></span></div>
         </div>
+        <div class="warn" id="warn"></div>
       </div>
 
       <div class="card">
@@ -268,7 +281,7 @@ document.addEventListener('click', function (e) {
         <div class="line"><span class="k" data-i="t2">Costo anual de VozClinic</span><span class="v neg" id="tCost"></span></div>
         <div class="net"><span class="k" data-i="t3">Beneficio neto anual</span><span class="v" id="tNet"></span></div>
         <a class="cta gold" id="ctaBtn" href="https://www.vozclinic.com/agendar-demo/" target="_blank" rel="noopener" data-i="cta">Agenda una demo →</a>
-        <p class="note" data-i="note">Estimaciones ilustrativas. Tus citas al mes son las que llegan de las llamadas y mensajes que sí contestas; las citas perdidas son las que habrían llegado de los que no contestas, a la misma tasa. Sofía contesta todos, así que esas citas se recuperan. Las inasistencias se calculan aparte: el modelo asume que los recordatorios las reducen ~40%. Ajusta los valores a tu clínica. Precios reales: Esencial $299, Profesional $599, Pro Claims $1,499 USD/mes.</p>
+        <p class="note" data-i="note">Estimaciones ilustrativas. Tus citas salen de las llamadas y mensajes que sí contestas; esa es tu tasa de cita. Las citas perdidas son las que no contestas multiplicadas por esa misma tasa. Sofía contesta todos, así que esas citas se recuperan. Las inasistencias se calculan aparte: el modelo asume que los recordatorios las reducen ~40%. Ajusta los valores a tu clínica. Precios reales: Esencial $299, Profesional $599, Pro Claims $1,499 USD/mes.</p>
       </div>
     </div>
   </div>
@@ -301,23 +314,24 @@ const T = {
     sub:"Mira cuántos ingresos recuperas y cuántas horas ahorras cuando Sofía contesta, agenda y reactiva pacientes 24/7.",
     inputsTitle:"Datos de tu clínica",
     planLabel:"Plan de VozClinic",
-    f1:"Citas al mes", f2:"Valor promedio de cita (USD)",
+    f0:"Llamadas y mensajes al mes", f1:"Citas al mes", f2:"Valor promedio de cita (USD)",
     f3:"Llamadas y mensajes sin contestar (%)", f4:"Tasa de inasistencia actual (%)",
     f5:"Horas de personal ahorradas al mes", f6:"Costo del personal por hora (USD)",
     roiTitle:"ROI anual", roiCap:"Retorno sobre la inversión",
     revTitle:"Ingresos recuperados",
-    rev0:"Citas perdidas al mes", rev1:"Ingreso perdido al mes", rev2:"Recuperación mensual", rev3:"Recuperación anual",
+    fn0:"Llamadas y mensajes totales", fn1:"Contestadas al mes", fn2:"Sin contestar al mes", fn3:"Tasa de cita (de las contestadas)", rev0:"Citas perdidas al mes", rev1:"Ingreso perdido al mes", rev2:"Recuperación mensual", rev3:"Recuperación anual",
     nsTitle:"Menos inasistencias",
     ns1:"Inasistencias actuales al mes", ns2:"Citas recuperadas al mes", ns3:"Valor recuperado al año",
     staffTitle:"Ahorro en personal",
     st1:"Ahorro mensual", st2:"Ahorro anual",
     t1:"Ahorro total anual", t2:"Costo anual de VozClinic", t3:"Beneficio neto anual",
     cta:"Agenda una demo →",
-    note:"Estimaciones ilustrativas. Tus citas al mes son las que llegan de las llamadas y mensajes que sí contestas; las citas perdidas son las que habrían llegado de los que no contestas, a la misma tasa. Sofía contesta todos, así que esas citas se recuperan. Las inasistencias se calculan aparte: el modelo asume que los recordatorios las reducen ~40%. Ajusta los valores a tu clínica. Precios reales: Esencial $299, Profesional $599, Pro Claims $1,499 USD/mes.",
+    note:"Estimaciones ilustrativas. Tus citas salen de las llamadas y mensajes que sí contestas; esa es tu tasa de cita. Las citas perdidas son las que no contestas multiplicadas por esa misma tasa. Sofía contesta todos, así que esas citas se recuperan. Las inasistencias se calculan aparte: el modelo asume que los recordatorios las reducen ~40%. Ajusta los valores a tu clínica. Precios reales: Esencial $299, Profesional $599, Pro Claims $1,499 USD/mes.",
     footer:"VozClinic · Hecho en Tijuana",
     planNames:{esencial:"Esencial",pro:"Profesional",claims:"Pro Claims"},
     planTag:"Más popular",
-    units:{appts:" citas", hrs:" hrs", apptsShort:" citas/año"}
+    units:{appts:" citas", hrs:" hrs", apptsShort:" citas/año"},
+    warn:(b,a)=>`Con estos números contestas ${a} y agendas ${b}: no puedes agendar más citas de las que contestas. Sube las llamadas y mensajes o baja el % sin contestar. Calculamos con una tasa de cita de 100%.`
   },
   en:{
     eyebrow:"ROI Calculator",
@@ -325,23 +339,24 @@ const T = {
     sub:"See the revenue you recover and the hours you save when Sofía answers, books, and reactivates patients 24/7.",
     inputsTitle:"Your clinic details",
     planLabel:"VozClinic plan",
-    f1:"Appointments per month", f2:"Average appointment value (USD)",
+    f0:"Calls and messages per month", f1:"Appointments per month", f2:"Average appointment value (USD)",
     f3:"Unanswered calls and messages (%)", f4:"Current no-show rate (%)",
     f5:"Staff hours saved per month", f6:"Staff hourly cost (USD)",
     roiTitle:"Annual ROI", roiCap:"Return on investment",
     revTitle:"Revenue recovery",
-    rev0:"Appointments lost per month", rev1:"Monthly revenue lost", rev2:"Monthly recovery", rev3:"Annual recovery",
+    fn0:"Total calls and messages", fn1:"Answered per month", fn2:"Unanswered per month", fn3:"Booking rate (of answered)", rev0:"Appointments lost per month", rev1:"Monthly revenue lost", rev2:"Monthly recovery", rev3:"Annual recovery",
     nsTitle:"Fewer no-shows",
     ns1:"Current no-shows per month", ns2:"Appointments recovered/mo", ns3:"Value recovered per year",
     staffTitle:"Staff cost savings",
     st1:"Monthly savings", st2:"Annual savings",
     t1:"Total annual savings", t2:"VozClinic annual cost", t3:"Net annual benefit",
     cta:"Book a demo →",
-    note:"Illustrative estimates. Your monthly appointments come from the calls and messages you do answer; lost appointments are the ones the unanswered ones would have produced at the same rate. Sofía answers all of them, so those appointments are recovered. No-shows are calculated separately: the model assumes reminders cut them ~40%. Adjust the inputs to fit your clinic. Real pricing: Essential $299, Professional $599, Pro Claims $1,499 USD/mo.",
+    note:"Illustrative estimates. Your appointments come from the calls and messages you do answer; that is your booking rate. Lost appointments are the unanswered ones multiplied by that same rate. Sofía answers all of them, so those appointments are recovered. No-shows are calculated separately: the model assumes reminders cut them ~40%. Adjust the inputs to fit your clinic. Real pricing: Essential $299, Professional $599, Pro Claims $1,499 USD/mo.",
     footer:"VozClinic · Made in Tijuana",
     planNames:{esencial:"Essential",pro:"Professional",claims:"Pro Claims"},
     planTag:"Most popular",
-    units:{appts:" appts", hrs:" hrs", apptsShort:" appts/yr"}
+    units:{appts:" appts", hrs:" hrs", apptsShort:" appts/yr"},
+    warn:(b,a)=>`With these numbers you answer ${a} and book ${b}: you can't book more appointments than you answer. Raise calls and messages or lower the unanswered %. We calculated with a 100% booking rate.`
   }
 };
 
@@ -380,6 +395,7 @@ function setLang(l){
 
 function calc(){
   const u=T[lang].units;
+  const inbound=+$('inbound').value;
   const appts =+$('appts').value;
   const value =+$('value').value;
   const missed=+$('missed').value/100;
@@ -388,6 +404,7 @@ function calc(){
   const rate  =+$('rate').value;
 
   // slider value labels
+  $('v0').textContent=inbound.toLocaleString('en-US');
   $('v1').textContent=appts.toLocaleString('en-US')+u.appts;
   $('v2').textContent=money(value);
   $('v3').textContent=$('missed').value+'%';
@@ -396,11 +413,14 @@ function calc(){
   $('v6').textContent=money(rate);
 
   // Revenue recovery from unanswered calls and messages.
-  // Booked appointments come only from the share that gets answered (1 - missed),
-  // so the unanswered share would have produced appts * missed/(1 - missed) more
-  // at the same booking rate. Booking rate cancels out, and loss and recovery
-  // use the same base, so there's no phantom "unrecovered" gap.
-  const lostApptsMo = appts*missed/(1-missed);
+  // Funnel: inbound -> answered / unanswered. Booked appointments come only from
+  // the answered ones, so booking rate = appts / answered. Unanswered inquiries
+  // would have booked at that same rate. Loss and recovery share one base.
+  const missedMo  = inbound*missed;
+  const answered  = inbound-missedMo;
+  const impossible= appts>answered;
+  const bookRate  = impossible ? 1 : appts/answered;
+  const lostApptsMo = missedMo*bookRate;
   const revLostMo   = lostApptsMo*value;
   const revRecovMo  = revLostMo*CAPTURE;
   const revRecovYr  = revRecovMo*12;
@@ -422,6 +442,12 @@ function calc(){
   const roi = costYr>0 ? (netYr/costYr)*100 : 0;
 
   $('roi').textContent = Math.round(roi).toLocaleString('en-US')+'%';
+  $('fnTotal').textContent=inbound.toLocaleString('en-US');
+  $('fnAns').textContent=Math.round(answered).toLocaleString('en-US');
+  $('fnMiss').textContent=Math.round(missedMo).toLocaleString('en-US');
+  $('fnRate').textContent=Math.round(bookRate*100)+'%';
+  $('warn').classList.toggle('on',impossible);
+  $('warn').textContent=impossible?T[lang].warn(appts.toLocaleString('en-US'),Math.round(answered).toLocaleString('en-US')):'';
   $('lostAppts').textContent=lostApptsMo.toFixed(1)+u.appts;
   $('revLost').textContent='-'+money(revLostMo);
   $('revMo').textContent='+'+money(revRecovMo);
@@ -436,7 +462,7 @@ function calc(){
   $('tNet').textContent=money(netYr);
 }
 
-['appts','value','missed','noshow','hours','rate'].forEach(id=>$(id).addEventListener('input',calc));
+['inbound','appts','value','missed','noshow','hours','rate'].forEach(id=>$(id).addEventListener('input',calc));
 setLang('es');
 </script>
 
