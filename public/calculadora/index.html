@@ -268,7 +268,7 @@ document.addEventListener('click', function (e) {
         <div class="line"><span class="k" data-i="t2">Costo anual de VozClinic</span><span class="v neg" id="tCost"></span></div>
         <div class="net"><span class="k" data-i="t3">Beneficio neto anual</span><span class="v" id="tNet"></span></div>
         <a class="cta gold" id="ctaBtn" href="https://www.vozclinic.com/agendar-demo/" target="_blank" rel="noopener" data-i="cta">Agenda una demo →</a>
-        <p class="note" data-i="note">Estimaciones ilustrativas. Tus citas al mes son las que llegan de las llamadas y mensajes que sí contestas; las citas perdidas son las que habrían llegado de los que no contestas, a la misma tasa. Sofía contesta todos; el modelo asume que recupera ~95% de esas citas (algunos cuelgan antes de que conteste) y que los recordatorios reducen las inasistencias ~40%. Ajusta los valores a tu clínica. Precios reales: Esencial $299, Profesional $599, Pro Claims $1,499 USD/mes.</p>
+        <p class="note" data-i="note">Estimaciones ilustrativas. Tus citas al mes son las que llegan de las llamadas y mensajes que sí contestas; las citas perdidas son las que habrían llegado de los que no contestas, a la misma tasa. Sofía contesta todos, así que esas citas se recuperan. Las inasistencias se calculan aparte: el modelo asume que los recordatorios las reducen ~40%. Ajusta los valores a tu clínica. Precios reales: Esencial $299, Profesional $599, Pro Claims $1,499 USD/mes.</p>
       </div>
     </div>
   </div>
@@ -287,9 +287,10 @@ const PLANS = [
 ];
 
 /* ---------- Model assumptions ---------- */
-// Sofía answers every call and message. The only leakage left is people who
-// hang up or drop off before she picks up, so recovery is close to 100%.
-const CAPTURE   = 0.95;  // share of lost appointments Sofía recovers
+// Sofía answers every call and message, and missed callers book at the same
+// rate as answered ones, so every lost appointment is recovered. No-shows are
+// the only leakage and are modeled separately below.
+const CAPTURE   = 1.00;  // share of lost appointments Sofía recovers
 const NS_REDUCE = 0.40;  // reduction in no-shows from automated reminders
 
 /* ---------- i18n ---------- */
@@ -312,7 +313,7 @@ const T = {
     st1:"Ahorro mensual", st2:"Ahorro anual",
     t1:"Ahorro total anual", t2:"Costo anual de VozClinic", t3:"Beneficio neto anual",
     cta:"Agenda una demo →",
-    note:"Estimaciones ilustrativas. Tus citas al mes son las que llegan de las llamadas y mensajes que sí contestas; las citas perdidas son las que habrían llegado de los que no contestas, a la misma tasa. Sofía contesta todos; el modelo asume que recupera ~95% de esas citas (algunos cuelgan antes de que conteste) y que los recordatorios reducen las inasistencias ~40%. Ajusta los valores a tu clínica. Precios reales: Esencial $299, Profesional $599, Pro Claims $1,499 USD/mes.",
+    note:"Estimaciones ilustrativas. Tus citas al mes son las que llegan de las llamadas y mensajes que sí contestas; las citas perdidas son las que habrían llegado de los que no contestas, a la misma tasa. Sofía contesta todos, así que esas citas se recuperan. Las inasistencias se calculan aparte: el modelo asume que los recordatorios las reducen ~40%. Ajusta los valores a tu clínica. Precios reales: Esencial $299, Profesional $599, Pro Claims $1,499 USD/mes.",
     footer:"VozClinic · Hecho en Tijuana",
     planNames:{esencial:"Esencial",pro:"Profesional",claims:"Pro Claims"},
     planTag:"Más popular",
@@ -336,7 +337,7 @@ const T = {
     st1:"Monthly savings", st2:"Annual savings",
     t1:"Total annual savings", t2:"VozClinic annual cost", t3:"Net annual benefit",
     cta:"Book a demo →",
-    note:"Illustrative estimates. Your monthly appointments come from the calls and messages you do answer; lost appointments are the ones the unanswered ones would have produced at the same rate. Sofía answers all of them; the model assumes she recovers ~95% of those appointments (some people hang up before she picks up) and that reminders cut no-shows ~40%. Adjust the inputs to fit your clinic. Real pricing: Essential $299, Professional $599, Pro Claims $1,499 USD/mo.",
+    note:"Illustrative estimates. Your monthly appointments come from the calls and messages you do answer; lost appointments are the ones the unanswered ones would have produced at the same rate. Sofía answers all of them, so those appointments are recovered. No-shows are calculated separately: the model assumes reminders cut them ~40%. Adjust the inputs to fit your clinic. Real pricing: Essential $299, Professional $599, Pro Claims $1,499 USD/mo.",
     footer:"VozClinic · Made in Tijuana",
     planNames:{esencial:"Essential",pro:"Professional",claims:"Pro Claims"},
     planTag:"Most popular",
