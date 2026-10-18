@@ -290,7 +290,7 @@ export const pricing = {
   } as Bilingual,
   footer: {
     es: 'Los precios no incluyen impuestos. Cobramos en USD; el monto en pesos es aproximado y varía según el tipo de cambio del día. El tratamiento fiscal y la facturación que corresponden a tu clínica se establecen en tu acuerdo de servicio. Sin contratos a largo plazo, cancela cuando quieras. Implementación: $399 USD, pago único (incluida para miembros del Baja Health Cluster). Una conversación cuenta cuando tiene más de dos turnos; las conversaciones arriba del límite de tu plan se cobran por uso. Incluye WhatsApp Business API oficial y soporte en español.',
-    en: 'Prices do not include tax. We bill in USD; the peso amount is approximate and moves with the daily exchange rate. The tax treatment and invoicing that apply to your clinic are set out in your service agreement. No long-term contracts, cancel anytime. Implementation: $399 USD, one time (included for Baja Health Cluster members). A conversation counts once it has more than two turns; conversations above your plan's limit are billed by usage. Includes official WhatsApp Business API and Spanish-language support.',
+    en: 'Prices do not include tax. We bill in USD; the peso amount is approximate and moves with the daily exchange rate. The tax treatment and invoicing that apply to your clinic are set out in your service agreement. No long-term contracts, cancel anytime. Implementation: $399 USD, one time (included for Baja Health Cluster members). A conversation counts once it has more than two turns; conversations above the limit of your plan are billed by usage. Includes official WhatsApp Business API and Spanish-language support.',
   } as Bilingual,
 };
 
