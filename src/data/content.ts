@@ -186,7 +186,7 @@ export const features = {
     {
       icon: 'badge',
       title: { es: 'Verifica seguros antes de la cita', en: 'Verifies insurance before the visit' } as Bilingual,
-      body: { es: 'Confirma cobertura y elegibilidad con el paciente antes de que llegue, para que no haya sorpresas ni citas que se caen.', en: 'Confirms coverage and eligibility with the patient before they arrive, so there are no surprises or cancelled visits.' } as Bilingual,
+      body: { es: 'Llama a la aseguradora antes de la cita para confirmar beneficios, vigencia y autorización previa, y da seguimiento a tus reclamaciones. Complemento disponible en cualquier plan.', en: 'Calls the insurer before the visit to confirm benefits, eligibility, and pre-authorization, and follows up on your claims. Add-on available on any plan.' } as Bilingual,
       wide: false,
     },
     {
@@ -266,10 +266,10 @@ export const pricing = {
       highlight: true,
     },
     {
-      name: 'Pro Claims',
+      name: 'Avanzado',
       usd: '$1,499',
       mxn: '$25,440 MXN',
-      desc: { es: 'Multi-doctor con seguros y reclamaciones automáticas, hasta 4,000 conversaciones/mes', en: 'Multi-doctor with insurance and automatic claims, up to 4,000 conversations/mo' } as Bilingual,
+      desc: { es: '5 o más doctores, hasta 4,000 conversaciones/mes', en: '5 or more doctors, up to 4,000 conversations/mo' } as Bilingual,
       highlight: false,
     },
     {
@@ -285,8 +285,8 @@ export const pricing = {
     en: 'Peso amounts calculated at 16.97 MXN per dollar (27 August 2026). Reference only, and they move with the exchange rate.',
   } as Bilingual,
   addons: {
-    es: 'Las promociones, la verificación de seguros y la reactivación de listas son complementos opcionales, disponibles en cualquier plan. Las campañas salientes (promociones y reactivación) se activan una vez que Meta aprueba tu cuenta de WhatsApp Business; contestar a tus pacientes funciona desde el primer día.',
-    en: 'Promotions, insurance verification, and list reactivation are optional add-ons, available on any plan. Outbound campaigns (promotions and reactivation) switch on once Meta approves your WhatsApp Business account; answering your patients works from day one.',
+    es: 'Seguros y reclamaciones es un complemento disponible en cualquier plan: $149 USD/mes más $2 USD por revisión (cada verificación de beneficios o seguimiento de reclamación). Antes de la cita, Sofía llama a la aseguradora para confirmar beneficios, vigencia y si se requiere autorización previa; después, da seguimiento al estatus de tus reclamaciones y, si una se rechaza, le pasa la información a tu clínica para la apelación. Las promociones y la reactivación de listas también son complementos opcionales. Las campañas salientes (promociones y reactivación) se activan una vez que Meta aprueba tu cuenta de WhatsApp Business; contestar a tus pacientes funciona desde el primer día.',
+    en: 'Insurance & Claims is an add-on available on any plan: $149 USD/mo plus $2 USD per check (each benefits verification or claim follow-up). Before the visit, Sofía calls the insurer to confirm benefits, eligibility, and whether pre-authorization is required; afterward, she follows up on your claim status and, if a claim is denied, passes the details to your clinic for the appeal. Promotions and list reactivation are optional add-ons too. Outbound campaigns (promotions and reactivation) switch on once Meta approves your WhatsApp Business account; answering your patients works from day one.',
   } as Bilingual,
   footer: {
     es: 'Los precios no incluyen impuestos. Cobramos en USD; el monto en pesos es aproximado y varía según el tipo de cambio del día. El tratamiento fiscal y la facturación que corresponden a tu clínica se establecen en tu acuerdo de servicio. Sin contratos a largo plazo, cancela cuando quieras. Incluye WhatsApp Business API oficial y soporte en español.',

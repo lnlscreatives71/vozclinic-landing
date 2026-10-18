@@ -46,10 +46,10 @@ All plans are month-to-month with no long-term contracts. Setup takes approximat
   - 2 to 4 doctors, 1 location.
   - Up to 1,500 conversations/month.
   - Full reception, scheduling, insurance collection, and weekly reporting.
-- **Pro Claims ($1,499 USD/mo)**:
-  - Multi-doctor clinics with high patient volume.
+- **Avanzado ($1,499 USD/mo)**:
+  - Clinics with 5 or more doctors and high patient volume.
   - Up to 4,000 conversations/month.
-  - Integrated US insurance verification, automated claim paperwork, and priority onboarding.
+  - Everything in Profesional, plus priority onboarding. Insurance is a separate add-on (below).
 - **White-label ($4,999 USD/mo)**:
   - For healthcare marketing agencies and large hospital / clinic groups.
   - Custom branding, dedicated infrastructure, and multi-clinic management.
@@ -67,6 +67,7 @@ All plans are month-to-month with no long-term contracts. Setup takes approximat
   - Slack and Telegram team channels.
   - SMS text messages (carries US A2P 10DLC carrier registration and sending volume fees).
   - Outbound WhatsApp marketing campaigns and seasonal promotions.
+  - Insurance & Claims ($149 USD/mo plus $2 USD per check, on any plan): before the visit, the agent calls the insurer to verify benefits, eligibility, and whether pre-authorization is required; afterward, it follows up on claim status and passes denied claims to the clinic for appeal.
 
 ## Target Specialties & Locations
 
