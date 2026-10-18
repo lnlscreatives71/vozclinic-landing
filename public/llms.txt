@@ -50,6 +50,9 @@ All plans are month-to-month with no long-term contracts. Setup takes approximat
   - Clinics with 5 or more doctors and high patient volume.
   - Up to 4,000 conversations/month.
   - Everything in Profesional, plus priority onboarding. Insurance is a separate add-on (below).
+- **Implementation**: $399 USD one time (included for Baja Health Cluster members).
+- **Conversation count**: a conversation counts once it has more than two turns; conversations above a plan's limit are billed by usage.
+- **Reminders**: confirmation at booking plus reminders 24h and 2h before; clinics can opt out.
 - **White-label ($4,999 USD/mo)**:
   - For healthcare marketing agencies and large hospital / clinic groups.
   - Custom branding, dedicated infrastructure, and multi-clinic management.

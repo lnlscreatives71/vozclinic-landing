@@ -142,8 +142,8 @@ export default function DentalAnsweringService({ initialLang = 'es' }: { initial
           {
             q: { es: '¿Puede agendar directo en Open Dental?', en: 'Can it book directly into Open Dental?' },
             a: {
-              es: 'Sí. En el plan Profesional y superiores se integra con Open Dental o con cualquier sistema que tenga una API disponible. En Esencial te damos un dashboard para ver todo; la mayoría de las clínicas empieza sin integración y la agrega después.',
-              en: 'Yes. On Professional and above it integrates with Open Dental or any practice management system that has an available API. On Essential you get a dashboard to see everything; most clinics start without the integration and add it later.',
+              es: 'Sí, en todos los planes. Se integra con Open Dental o con cualquier sistema que tenga una API disponible, con agenda por doctor.',
+              en: 'Yes, on every plan. It integrates with Open Dental or any practice management system that has an available API, with a calendar per doctor.',
             },
           },
           {

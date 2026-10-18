@@ -289,8 +289,8 @@ export const pricing = {
     en: 'Insurance & Claims is an add-on available on any plan: $149 USD/mo plus $2 USD per check (each benefits verification or claim follow-up). Before the visit, Sofía calls the insurer to confirm benefits, eligibility, and whether pre-authorization is required; afterward, she follows up on your claim status and, if a claim is denied, passes the details to your clinic for the appeal. Promotions and list reactivation are optional add-ons too. Outbound campaigns (promotions and reactivation) switch on once Meta approves your WhatsApp Business account; answering your patients works from day one.',
   } as Bilingual,
   footer: {
-    es: 'Los precios no incluyen impuestos. Cobramos en USD; el monto en pesos es aproximado y varía según el tipo de cambio del día. El tratamiento fiscal y la facturación que corresponden a tu clínica se establecen en tu acuerdo de servicio. Sin contratos a largo plazo, cancela cuando quieras. Incluye WhatsApp Business API oficial y soporte en español.',
-    en: 'Prices do not include tax. We bill in USD; the peso amount is approximate and moves with the daily exchange rate. The tax treatment and invoicing that apply to your clinic are set out in your service agreement. No long-term contracts, cancel anytime. Includes official WhatsApp Business API and Spanish-language support.',
+    es: 'Los precios no incluyen impuestos. Cobramos en USD; el monto en pesos es aproximado y varía según el tipo de cambio del día. El tratamiento fiscal y la facturación que corresponden a tu clínica se establecen en tu acuerdo de servicio. Sin contratos a largo plazo, cancela cuando quieras. Implementación: $399 USD, pago único (incluida para miembros del Baja Health Cluster). Una conversación cuenta cuando tiene más de dos turnos; las conversaciones arriba del límite de tu plan se cobran por uso. Incluye WhatsApp Business API oficial y soporte en español.',
+    en: 'Prices do not include tax. We bill in USD; the peso amount is approximate and moves with the daily exchange rate. The tax treatment and invoicing that apply to your clinic are set out in your service agreement. No long-term contracts, cancel anytime. Implementation: $399 USD, one time (included for Baja Health Cluster members). A conversation counts once it has more than two turns; conversations above your plan's limit are billed by usage. Includes official WhatsApp Business API and Spanish-language support.',
   } as Bilingual,
 };
 
@@ -331,8 +331,8 @@ export const faq = {
     {
       q: { es: '¿Qué tan rápido se instala?', en: 'How quickly does it install?' } as Bilingual,
       a: {
-        es: '48 horas desde que firmas el acuerdo. La sesión de entrenamiento de 90 minutos sucede en los primeros 5 días. Producción completa: día 7.',
-        en: '48 hours from signing. The 90-minute training session happens in the first 5 days. Full production: day 7.',
+        es: '48 horas desde que inicias el servicio. La sesión de entrenamiento de 90 minutos sucede en los primeros 5 días. Producción completa: día 7.',
+        en: '48 hours from the day you start service. The 90-minute training session happens in the first 5 days. Full production: day 7.',
       } as Bilingual,
     },
     {
@@ -352,8 +352,8 @@ export const faq = {
     {
       q: { es: '¿Pueden integrarse con mi sistema (Open Dental, Eaglesoft, etc.)?', en: 'Can it integrate with my system (Open Dental, Eaglesoft, etc.)?' } as Bilingual,
       a: {
-        es: 'En el plan Profesional y arriba, sí. En Esencial, te damos un dashboard para ver todo. La mayoría de las clínicas empiezan sin integración y la agregan después.',
-        en: 'On Professional and above, yes. On Essential, we give you a dashboard to see everything. Most clinics start without integration and add it later.',
+        es: 'Sí, en todos los planes. Nos integramos con Google Calendar, Outlook, Open Dental y cualquier sistema de gestión que tenga una API disponible, con agenda por doctor.',
+        en: 'Yes, on every plan. We integrate with Google Calendar, Outlook, Open Dental, and any practice management system that has an available API, with a calendar per doctor.',
       } as Bilingual,
     },
     {
