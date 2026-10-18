@@ -18,10 +18,36 @@
 export const config = { runtime: "nodejs" };
 
 import { AccessToken, RoomConfiguration } from "livekit-server-sdk";
-import {
-  requiredWebsiteEmail,
-  websiteParticipantAttributes,
-} from "../src/lib/website-token.ts";
+
+// Keep these helpers local. Vercel Node functions do not reliably load
+// `src/lib/*.ts` with explicit extensions, and a failed import 500s before
+// the email gate can run.
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const VOZ_CHANNEL_ATTR = "voz_channel";
+const VOZ_EMAIL_ATTR = "voz_email";
+const WEBSITE_CHANNEL = "website";
+
+function normalizeVisitorEmail(raw: string | null | undefined): string | null {
+  const email = (raw ?? "").trim().toLowerCase();
+  if (!email || !EMAIL_RE.test(email)) return null;
+  return email;
+}
+
+function websiteParticipantAttributes(email: string): Record<string, string> {
+  return {
+    [VOZ_CHANNEL_ATTR]: WEBSITE_CHANNEL,
+    [VOZ_EMAIL_ATTR]: email,
+  };
+}
+
+function requiredWebsiteEmail(input: {
+  visitor_email?: string;
+  participant_attributes?: Record<string, string>;
+}): string | null {
+  return normalizeVisitorEmail(
+    input.visitor_email ?? input.participant_attributes?.[VOZ_EMAIL_ATTR],
+  );
+}
 
 const ORIGIN_ALLOWLIST = [
   /^https:\/\/vozclinic\.com$/,
