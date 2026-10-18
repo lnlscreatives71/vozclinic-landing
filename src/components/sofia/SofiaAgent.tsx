@@ -1,9 +1,11 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react';
 import { Room, TokenSource } from 'livekit-client';
 import { useSession, useAgent } from '@livekit/components-react';
 import { AgentSessionProvider } from '@/components/agents-ui/agent-session-provider';
 import { AgentAudioVisualizerAura } from '@/components/agents-ui/agent-audio-visualizer-aura';
 import { useLang } from '@/context/LangContext';
+import { normalizeVisitorEmail } from '@/lib/visitor-email';
+import { websiteParticipantAttributes } from '@/lib/website-token';
 
 // Our own token endpoint (api/livekit-token.ts). The SDK packs the
 // `vozclinic` agent dispatch into room_config before POSTing here.
@@ -51,8 +53,12 @@ function LiveOrb({ onEnd }: { onEnd: () => void }) {
 // https://docs.livekit.io/transport/media/noise-cancellation/#agents
 
 /** Live session: connects on mount, cleans up on unmount. */
-function SofiaLive({ onEnd }: { onEnd: () => void }) {
+function SofiaLive({ email, onEnd }: { email: string; onEnd: () => void }) {
   const { t } = useLang();
+  const participantAttributes = useMemo(
+    () => websiteParticipantAttributes(email),
+    [email],
+  );
 
   // Own the Room so we can override the mic capture constraints. livekit-client's
   // defaults turn on `voiceIsolation` AND `autoGainControl` — aggressive Chrome
@@ -74,7 +80,11 @@ function SofiaLive({ onEnd }: { onEnd: () => void }) {
       }),
     [],
   );
-  const session = useSession(tokenSource, { agentName: 'vozclinic', room });
+  const session = useSession(tokenSource, {
+    agentName: 'vozclinic',
+    room,
+    participantAttributes,
+  });
   // Distinguish WHY start() failed so the message isn't a misleading blanket
   // "check your microphone" — a token/connect/network failure has nothing to do
   // with the mic. We classify the rejection and always log the real error.
@@ -168,9 +178,86 @@ function SofiaIdle({ onStart }: { onStart: () => void }) {
   );
 }
 
+function SofiaEmailGate({
+  onSubmit,
+  onCancel,
+}: {
+  onSubmit: (email: string) => void;
+  onCancel: () => void;
+}) {
+  const { t } = useLang();
+  const [value, setValue] = useState('');
+  const [error, setError] = useState(false);
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const email = normalizeVisitorEmail(value);
+    if (!email) {
+      setError(true);
+      return;
+    }
+    onSubmit(email);
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col items-center gap-4 max-w-md mx-auto w-full">
+      <label htmlFor="sofia-visitor-email" className="text-center text-lg text-gray-200">
+        {t({
+          es: 'Antes de hablar con Sofía, deja tu correo.',
+          en: 'Before talking to Sofía, leave your email.',
+        })}
+      </label>
+      <input
+        id="sofia-visitor-email"
+        type="email"
+        required
+        autoComplete="email"
+        inputMode="email"
+        value={value}
+        onChange={(event) => {
+          setValue(event.target.value);
+          setError(false);
+        }}
+        className="w-full rounded-xl bg-white text-charcoal px-4 py-3"
+        placeholder={t({ es: 'tu@clinica.com', en: 'you@clinic.com' })}
+      />
+      {error ? (
+        <p className="text-sm text-red-300">
+          {t({
+            es: 'Necesitamos un correo válido para iniciar la demostración.',
+            en: 'A valid email is required to start the demo.',
+          })}
+        </p>
+      ) : null}
+      <p className="text-sm text-gray-400 text-center leading-relaxed">
+        {t({
+          es: 'Usamos este correo para iniciar la demostración y dar seguimiento sobre VozClinic. No es un consentimiento de marketing.',
+          en: 'We use this email to start the demo and follow up about VozClinic. This is not marketing consent.',
+        })}
+      </p>
+      <div className="flex flex-wrap items-center justify-center gap-3">
+        <button
+          type="submit"
+          className="inline-flex items-center gap-3 bg-teal text-white font-semibold px-8 py-3 rounded-2xl hover:bg-teal-dark transition-colors"
+        >
+          {t({ es: 'Continuar', en: 'Continue' })}
+        </button>
+        <button
+          type="button"
+          onClick={onCancel}
+          className="inline-flex items-center px-6 py-3 rounded-2xl border border-white/20 text-white hover:bg-white/10 transition-colors"
+        >
+          {t({ es: 'Cancelar', en: 'Cancel' })}
+        </button>
+      </div>
+    </form>
+  );
+}
+
 export default function SofiaAgent() {
   const { t } = useLang();
-  const [connected, setConnected] = useState(false);
+  const [phase, setPhase] = useState<'idle' | 'email' | 'live'>('idle');
+  const [email, setEmail] = useState('');
 
   return (
     <section
@@ -194,10 +281,24 @@ export default function SofiaAgent() {
           </p>
         </div>
 
-        {connected ? (
-          <SofiaLive onEnd={() => setConnected(false)} />
+        {phase === 'live' && email ? (
+          <SofiaLive
+            email={email}
+            onEnd={() => {
+              setPhase('idle');
+              setEmail('');
+            }}
+          />
+        ) : phase === 'email' ? (
+          <SofiaEmailGate
+            onSubmit={(next) => {
+              setEmail(next);
+              setPhase('live');
+            }}
+            onCancel={() => setPhase('idle')}
+          />
         ) : (
-          <SofiaIdle onStart={() => setConnected(true)} />
+          <SofiaIdle onStart={() => setPhase('email')} />
         )}
       </div>
     </section>

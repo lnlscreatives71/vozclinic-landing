@@ -13,6 +13,7 @@ export default defineConfig([
   globalIgnores([
     'dist',
     'dist-server',
+    'tests/**',
     'src/components/agents-ui/**',
     'src/hooks/agents-ui/**',
     'src/components/ui/**',

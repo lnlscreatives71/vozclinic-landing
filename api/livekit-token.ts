@@ -18,6 +18,10 @@
 export const config = { runtime: "nodejs" };
 
 import { AccessToken, RoomConfiguration } from "livekit-server-sdk";
+import {
+  requiredWebsiteEmail,
+  websiteParticipantAttributes,
+} from "../src/lib/website-token.ts";
 
 const ORIGIN_ALLOWLIST = [
   /^https:\/\/vozclinic\.com$/,
@@ -44,6 +48,7 @@ interface TokenRequestBody {
   participant_name?: string;
   participant_metadata?: string;
   participant_attributes?: Record<string, string>;
+  visitor_email?: string;
   // RoomConfiguration as proto JSON — the client packs agent dispatch here,
   // using snake_case proto field names (e.g. agent_name).
   room_config?: Record<string, unknown>;
@@ -69,11 +74,22 @@ export async function POST(req: Request): Promise<Response> {
     });
   }
 
-  let body: TokenRequestBody = {};
+  let body: TokenRequestBody;
   try {
     body = (await req.json()) as TokenRequestBody;
   } catch {
-    // empty body is fine — defaults below
+    body = {};
+  }
+
+  const email = requiredWebsiteEmail({
+    visitor_email: body.visitor_email,
+    participant_attributes: body.participant_attributes,
+  });
+  if (!email) {
+    return new Response(JSON.stringify({ error: "A valid email is required" }), {
+      status: 400,
+      headers: { "Content-Type": "application/json", ...cors },
+    });
   }
 
   const stamp = Date.now();
@@ -84,7 +100,7 @@ export async function POST(req: Request): Promise<Response> {
     identity,
     name: body.participant_name || "Web visitor",
     metadata: body.participant_metadata || "",
-    attributes: body.participant_attributes || {},
+    attributes: websiteParticipantAttributes(email),
     ttl: "15m",
   });
   at.addGrant({
