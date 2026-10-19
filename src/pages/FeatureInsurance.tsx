@@ -95,11 +95,11 @@ export default function FeatureInsurance({ initialLang = 'es' }: { initialLang?:
             },
           },
           {
-            icon: '🗂️',
-            t: { es: 'Entrega un expediente ordenado', en: 'Hands over an organized file' },
+            icon: '📞',
+            t: { es: 'Verifica con la aseguradora y sigue reclamaciones', en: 'Verifies with the insurer and tracks claims' },
             d: {
-              es: 'Tu equipo recibe la información completa y organizada antes de que el paciente llegue.',
-              en: 'Your team gets the complete, organized information before the patient arrives.',
+              es: 'Complemento de Seguros y reclamaciones: Sofía llama a la aseguradora para confirmar beneficios, vigencia y autorización previa, y da seguimiento al estatus de tus reclamaciones. $149 USD/mes + $2 por revisión.',
+              en: 'Insurance & Claims add-on: Sofía calls the insurer to confirm benefits, eligibility, and pre-authorization, and follows up on your claim status. $149 USD/mo + $2 per check.',
             },
           },
         ]}
@@ -132,8 +132,8 @@ export default function FeatureInsurance({ initialLang = 'es' }: { initialLang?:
           {
             t: { es: 'Tu equipo confirma', en: 'Your team confirms' },
             d: {
-              es: 'Recibe todo organizado, confirma la cobertura y la cita queda cerrada.',
-              en: 'They get everything organized, confirm coverage, and the visit is locked in.',
+              es: 'Recibe todo organizado y la cita queda cerrada. Con el complemento de Seguros y reclamaciones, Sofía confirma la cobertura con la aseguradora por tu equipo.',
+              en: 'They get everything organized and the visit is locked in. With the Insurance & Claims add-on, Sofía confirms coverage with the insurer for your team.',
             },
           },
         ]}
