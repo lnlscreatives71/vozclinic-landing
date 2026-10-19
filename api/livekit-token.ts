@@ -3,7 +3,11 @@
 // (POST { room_config, ... } -> 201 { server_url, participant_token }).
 //
 // The client SDK (useSession with { agentName: 'vozclinic' }) packages the
-// agent-dispatch info into room_config, so we just pass it through.
+// agent-dispatch info into room_config. It is IGNORED: this endpoint is public,
+// so the server alone decides the room, the identity and the agent. A caller
+// who could choose them could join a live call by its (predictable) room name,
+// or dispatch a clinic's own agent (lia-fertilite) from the marketing site.
+// Found 2026-08-29, fixed 2026-10-19 (vozclinic-admin bead vozapp-ies).
 // API key/secret/url live in Vercel env vars only:
 //   LIVEKIT_URL, LIVEKIT_API_KEY, LIVEKIT_API_SECRET
 //
@@ -17,7 +21,11 @@
 
 export const config = { runtime: "nodejs" };
 
+import { randomUUID } from "node:crypto";
 import { AccessToken, RoomConfiguration } from "livekit-server-sdk";
+
+/** The only agent this endpoint ever dispatches: Sofía, the website demo. */
+const WEBSITE_AGENT = "vozclinic";
 
 // Keep these helpers local. Vercel Node functions do not reliably load
 // `src/lib/*.ts` with explicit extensions, and a failed import 500s before
@@ -69,6 +77,7 @@ function corsHeaders(origin: string | null): Record<string, string> {
 }
 
 interface TokenRequestBody {
+  // Sent by the SDK; ignored (see the header).
   room_name?: string;
   participant_identity?: string;
   participant_name?: string;
@@ -118,9 +127,12 @@ export async function POST(req: Request): Promise<Response> {
     });
   }
 
-  const stamp = Date.now();
-  const roomName = body.room_name || `sofia-web-${stamp}`;
-  const identity = body.participant_identity || `web-${stamp}`;
+  // Unguessable and server-made: a fresh room nobody else is in, and an
+  // identity the caller cannot choose. body.room_name and
+  // body.participant_identity are deliberately not read.
+  const id = randomUUID();
+  const roomName = `sofia-web-${id}`;
+  const identity = `web-${id}`;
 
   const at = new AccessToken(apiKey, apiSecret, {
     identity,
@@ -136,13 +148,9 @@ export async function POST(req: Request): Promise<Response> {
     canSubscribe: true,
   });
 
-  // Use fromJson (NOT the constructor) so snake_case proto fields like
-  // `agent_name` that the client sends are parsed correctly.
-  if (body.room_config) {
-    at.roomConfig = RoomConfiguration.fromJson(
-      body.room_config as Parameters<typeof RoomConfiguration.fromJson>[0],
-    );
-  }
+  // The agent is pinned here, never taken from body.room_config. fromJson (not
+  // the constructor) so the snake_case proto field name parses.
+  at.roomConfig = RoomConfiguration.fromJson({ agents: [{ agent_name: WEBSITE_AGENT }] });
 
   const participantToken = await at.toJwt();
 

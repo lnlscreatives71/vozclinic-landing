@@ -46,3 +46,38 @@ describe("livekit token email gate", () => {
     assert.equal(payload.attributes?.[VOZ_EMAIL_ATTR], "ada@clinic.mx");
   });
 });
+
+function claims(token: string): Record<string, unknown> {
+  return JSON.parse(Buffer.from(token.split(".")[1], "base64url").toString()) as Record<string, unknown>;
+}
+
+describe("livekit token: the server decides room, identity and agent", () => {
+  it("ignores a caller-chosen room, identity and agent", async () => {
+    process.env.LIVEKIT_API_KEY = "devkey";
+    process.env.LIVEKIT_API_SECRET = "secretsecretsecretsecretsecret12";
+    process.env.LIVEKIT_URL = "wss://example.livekit.cloud";
+    const res = await POST(
+      req({
+        visitor_email: "a@b.co",
+        // A live outbound call's room, a spoofed identity, and the clinic's own agent.
+        room_name: "outreach-16197342374-20260829-101019",
+        participant_identity: "lia-fertilite",
+        room_config: { agents: [{ agent_name: "lia-fertilite" }] },
+      }),
+      "https://evil.example",
+    );
+    assert.equal(res.status, 201);
+    const c = claims(((await res.json()) as { participant_token: string }).participant_token);
+    const video = c.video as { room: string };
+    assert.match(video.room, /^sofia-web-[0-9a-f-]{36}$/);
+    assert.match(String(c.sub), /^web-[0-9a-f-]{36}$/);
+    const roomConfig = c.roomConfig as { agents: { agentName: string }[] };
+    assert.deepEqual(roomConfig.agents.map((a) => a.agentName), ["vozclinic"]);
+  });
+
+  it("gives every token its own room", async () => {
+    const one = claims(((await (await POST(req({ visitor_email: "a@b.co" }))).json()) as { participant_token: string }).participant_token);
+    const two = claims(((await (await POST(req({ visitor_email: "a@b.co" }))).json()) as { participant_token: string }).participant_token);
+    assert.notEqual((one.video as { room: string }).room, (two.video as { room: string }).room);
+  });
+});
