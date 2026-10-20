@@ -53,11 +53,11 @@ function LiveOrb({ onEnd }: { onEnd: () => void }) {
 // https://docs.livekit.io/transport/media/noise-cancellation/#agents
 
 /** Live session: connects on mount, cleans up on unmount. */
-function SofiaLive({ email, onEnd }: { email: string; onEnd: () => void }) {
+function SofiaLive({ email, proof, onEnd }: { email: string; proof: string; onEnd: () => void }) {
   const { t } = useLang();
   const participantAttributes = useMemo(
-    () => websiteParticipantAttributes(email),
-    [email],
+    () => websiteParticipantAttributes(email, proof),
+    [email, proof],
   );
 
   // Own the Room so we can override the mic capture constraints. livekit-client's
@@ -178,25 +178,86 @@ function SofiaIdle({ onStart }: { onStart: () => void }) {
   );
 }
 
+type EmailGateCode = 'malformed' | 'invalid' | 'disposable' | 'locked' | 'unavailable';
+
+function emailGateMessage(
+  code: EmailGateCode,
+  t: (copy: { es: string; en: string }) => string,
+  suggestion?: string,
+): string {
+  const base = {
+    malformed: t({
+      es: 'Necesitamos un correo válido para iniciar la demostración.',
+      en: 'A valid email is required to start the demo.',
+    }),
+    invalid: t({
+      es: 'Ese correo no recibe mensajes. Usa uno que sí revises.',
+      en: "That email doesn't accept mail. Use an inbox you actually check.",
+    }),
+    disposable: t({
+      es: 'Los correos temporales no pueden iniciar la demostración. Usa tu correo de trabajo.',
+      en: "Temporary inboxes can't start the demo. Use your work email.",
+    }),
+    locked: t({
+      es: 'Demasiados intentos. Espera una hora y usa un correo real.',
+      en: 'Too many attempts. Wait an hour and use a real email.',
+    }),
+    unavailable: t({
+      es: 'No pudimos revisar ese correo. Inténtalo de nuevo en un momento.',
+      en: "We couldn't check that email. Try again in a moment.",
+    }),
+  }[code];
+  if (!suggestion) return base;
+  return `${base} ${t({ es: `¿Quisiste decir ${suggestion}?`, en: `Did you mean ${suggestion}?` })}`;
+}
+
 function SofiaEmailGate({
   onSubmit,
   onCancel,
 }: {
-  onSubmit: (email: string) => void;
+  onSubmit: (email: string, proof: string) => void;
   onCancel: () => void;
 }) {
   const { t } = useLang();
   const [value, setValue] = useState('');
-  const [error, setError] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [pending, setPending] = useState(false);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const email = normalizeVisitorEmail(value);
     if (!email) {
-      setError(true);
+      setError(
+        emailGateMessage('malformed', t),
+      );
       return;
     }
-    onSubmit(email);
+    setPending(true);
+    try {
+      const res = await fetch('/api/verify-visitor-email', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({ email }),
+      });
+      const json = (await res.json().catch(() => ({}))) as { proof?: string; code?: string; suggestion?: string };
+      if (!res.ok || !json.proof) {
+        const code: EmailGateCode =
+          json.code === 'malformed' ||
+          json.code === 'invalid' ||
+          json.code === 'disposable' ||
+          json.code === 'locked'
+            ? json.code
+            : 'unavailable';
+        setError(emailGateMessage(code, t, json.suggestion));
+        return;
+      }
+      onSubmit(email, json.proof);
+    } catch {
+      setError(emailGateMessage('unavailable', t));
+    } finally {
+      setPending(false);
+    }
   };
 
   return (
@@ -216,19 +277,13 @@ function SofiaEmailGate({
         value={value}
         onChange={(event) => {
           setValue(event.target.value);
-          setError(false);
+          setError(null);
         }}
+        disabled={pending}
         className="w-full rounded-xl bg-white text-charcoal px-4 py-3"
         placeholder={t({ es: 'tu@clinica.com', en: 'you@clinic.com' })}
       />
-      {error ? (
-        <p className="text-sm text-red-300">
-          {t({
-            es: 'Necesitamos un correo válido para iniciar la demostración.',
-            en: 'A valid email is required to start the demo.',
-          })}
-        </p>
-      ) : null}
+      {error ? <p className="text-sm text-red-300">{error}</p> : null}
       <p className="text-sm text-gray-400 text-center leading-relaxed">
         {t({
           es: 'Usamos este correo para iniciar la demostración y dar seguimiento sobre VozClinic. No es un consentimiento de marketing.',
@@ -238,9 +293,12 @@ function SofiaEmailGate({
       <div className="flex flex-wrap items-center justify-center gap-3">
         <button
           type="submit"
-          className="inline-flex items-center gap-3 bg-teal text-white font-semibold px-8 py-3 rounded-2xl hover:bg-teal-dark transition-colors"
+          disabled={pending}
+          className="inline-flex items-center gap-3 bg-teal text-white font-semibold px-8 py-3 rounded-2xl hover:bg-teal-dark transition-colors disabled:opacity-60"
         >
-          {t({ es: 'Continuar', en: 'Continue' })}
+          {pending
+            ? t({ es: 'Revisando…', en: 'Checking…' })
+            : t({ es: 'Continuar', en: 'Continue' })}
         </button>
         <button
           type="button"
@@ -258,6 +316,7 @@ export default function SofiaAgent() {
   const { t } = useLang();
   const [phase, setPhase] = useState<'idle' | 'email' | 'live'>('idle');
   const [email, setEmail] = useState('');
+  const [proof, setProof] = useState('');
 
   return (
     <section
@@ -281,18 +340,21 @@ export default function SofiaAgent() {
           </p>
         </div>
 
-        {phase === 'live' && email ? (
+        {phase === 'live' && email && proof ? (
           <SofiaLive
             email={email}
+            proof={proof}
             onEnd={() => {
               setPhase('idle');
               setEmail('');
+              setProof('');
             }}
           />
         ) : phase === 'email' ? (
           <SofiaEmailGate
-            onSubmit={(next) => {
+            onSubmit={(next, nextProof) => {
               setEmail(next);
+              setProof(nextProof);
               setPhase('live');
             }}
             onCancel={() => setPhase('idle')}

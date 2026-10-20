@@ -23,6 +23,7 @@ export const config = { runtime: "nodejs" };
 
 import { randomUUID } from "node:crypto";
 import { AccessToken, RoomConfiguration } from "livekit-server-sdk";
+import { VOZ_EMAIL_PROOF_ATTR, emailProofMatches, normalizeVisitorEmail } from "./_email-gate.ts";
 
 /** The only agent this endpoint ever dispatches: Sofía, the website demo. */
 const WEBSITE_AGENT = "vozclinic";
@@ -30,16 +31,9 @@ const WEBSITE_AGENT = "vozclinic";
 // Keep these helpers local. Vercel Node functions do not reliably load
 // `src/lib/*.ts` with explicit extensions, and a failed import 500s before
 // the email gate can run.
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const VOZ_CHANNEL_ATTR = "voz_channel";
 const VOZ_EMAIL_ATTR = "voz_email";
 const WEBSITE_CHANNEL = "website";
-
-function normalizeVisitorEmail(raw: string | null | undefined): string | null {
-  const email = (raw ?? "").trim().toLowerCase();
-  if (!email || !EMAIL_RE.test(email)) return null;
-  return email;
-}
 
 function websiteParticipantAttributes(email: string): Record<string, string> {
   return {
@@ -84,6 +78,7 @@ interface TokenRequestBody {
   participant_metadata?: string;
   participant_attributes?: Record<string, string>;
   visitor_email?: string;
+  visitor_email_proof?: string;
   // RoomConfiguration as proto JSON — the client packs agent dispatch here,
   // using snake_case proto field names (e.g. agent_name).
   room_config?: Record<string, unknown>;
@@ -122,6 +117,14 @@ export async function POST(req: Request): Promise<Response> {
   });
   if (!email) {
     return new Response(JSON.stringify({ error: "A valid email is required" }), {
+      status: 400,
+      headers: { "Content-Type": "application/json", ...cors },
+    });
+  }
+
+  const proof = body.visitor_email_proof ?? body.participant_attributes?.[VOZ_EMAIL_PROOF_ATTR];
+  if (!emailProofMatches(email, proof, apiSecret)) {
+    return new Response(JSON.stringify({ error: "Confirm this email before starting the demo" }), {
       status: 400,
       headers: { "Content-Type": "application/json", ...cors },
     });

@@ -14,6 +14,8 @@ describe("Sofía website email gate", () => {
     assert.match(src, /phase === 'email'/);
     assert.match(src, /SofiaEmailGate/);
     assert.match(src, /normalizeVisitorEmail/);
+    assert.match(src, /\/api\/verify-visitor-email/);
+    assert.match(src, /Too many attempts/);
     assert.match(src, /websiteParticipantAttributes/);
     assert.doesNotMatch(src, /SofiaIdle[\s\S]*onStart=\{\(\) => setPhase\('live'\)\}/);
   });

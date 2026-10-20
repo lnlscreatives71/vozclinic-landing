@@ -2,7 +2,21 @@ import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 
 import { POST } from "../api/livekit-token.ts";
-import { VOZ_CHANNEL_ATTR, VOZ_EMAIL_ATTR, WEBSITE_CHANNEL } from "../src/lib/website-token.ts";
+import { signEmailProof } from "../api/_email-gate.ts";
+import { VOZ_CHANNEL_ATTR, VOZ_EMAIL_ATTR, VOZ_EMAIL_PROOF_ATTR, WEBSITE_CHANNEL } from "../src/lib/website-token.ts";
+
+const SECRET = "secretsecretsecretsecretsecret12";
+
+function withProof(email: string, extra: Record<string, unknown> = {}) {
+  const normalized = email.trim().toLowerCase();
+  return {
+    visitor_email: email,
+    participant_attributes: {
+      [VOZ_EMAIL_PROOF_ATTR]: signEmailProof(normalized, SECRET),
+    },
+    ...extra,
+  };
+}
 
 function req(body: unknown, origin = "https://vozclinic.com"): Request {
   return new Request("https://vozclinic.com/api/livekit-token", {
@@ -15,7 +29,7 @@ function req(body: unknown, origin = "https://vozclinic.com"): Request {
 describe("livekit token email gate", () => {
   it("refuses to mint a token without a valid email", async () => {
     process.env.LIVEKIT_API_KEY = "devkey";
-    process.env.LIVEKIT_API_SECRET = "secretsecretsecretsecretsecret12";
+    process.env.LIVEKIT_API_SECRET = SECRET;
     process.env.LIVEKIT_URL = "wss://example.livekit.cloud";
     const res = await POST(req({}));
     assert.equal(res.status, 400);
@@ -25,16 +39,18 @@ describe("livekit token email gate", () => {
 
   it("stamps signed website attributes from a valid email", async () => {
     process.env.LIVEKIT_API_KEY = "devkey";
-    process.env.LIVEKIT_API_SECRET = "secretsecretsecretsecretsecret12";
+    process.env.LIVEKIT_API_SECRET = SECRET;
     process.env.LIVEKIT_URL = "wss://example.livekit.cloud";
     const res = await POST(
-      req({
-        visitor_email: "Ada@Clinic.mx",
-        participant_attributes: {
-          [VOZ_CHANNEL_ATTR]: "playground",
-          [VOZ_EMAIL_ATTR]: "spoof@example.com",
-        },
-      }),
+      req(
+        withProof("Ada@Clinic.mx", {
+          participant_attributes: {
+            [VOZ_CHANNEL_ATTR]: "playground",
+            [VOZ_EMAIL_ATTR]: "spoof@example.com",
+            [VOZ_EMAIL_PROOF_ATTR]: signEmailProof("ada@clinic.mx", SECRET),
+          },
+        }),
+      ),
     );
     assert.equal(res.status, 201);
     const json = (await res.json()) as { participant_token: string; server_url: string };
@@ -54,11 +70,11 @@ function claims(token: string): Record<string, unknown> {
 describe("livekit token: the server decides room, identity and agent", () => {
   it("ignores a caller-chosen room, identity and agent", async () => {
     process.env.LIVEKIT_API_KEY = "devkey";
-    process.env.LIVEKIT_API_SECRET = "secretsecretsecretsecretsecret12";
+    process.env.LIVEKIT_API_SECRET = SECRET;
     process.env.LIVEKIT_URL = "wss://example.livekit.cloud";
     const res = await POST(
       req({
-        visitor_email: "a@b.co",
+        ...withProof("a@b.co"),
         // A live outbound call's room, a spoofed identity, and the clinic's own agent.
         room_name: "outreach-16197342374-20260829-101019",
         participant_identity: "lia-fertilite",
@@ -75,9 +91,14 @@ describe("livekit token: the server decides room, identity and agent", () => {
     assert.deepEqual(roomConfig.agents.map((a) => a.agentName), ["vozclinic"]);
   });
 
+  it("refuses a valid email that has not been checked", async () => {
+    const res = await POST(req({ visitor_email: "ada@clinic.mx" }));
+    assert.equal(res.status, 400);
+  });
+
   it("gives every token its own room", async () => {
-    const one = claims(((await (await POST(req({ visitor_email: "a@b.co" }))).json()) as { participant_token: string }).participant_token);
-    const two = claims(((await (await POST(req({ visitor_email: "a@b.co" }))).json()) as { participant_token: string }).participant_token);
+    const one = claims(((await (await POST(req(withProof("a@b.co")))).json()) as { participant_token: string }).participant_token);
+    const two = claims(((await (await POST(req(withProof("b@c.co")))).json()) as { participant_token: string }).participant_token);
     assert.notEqual((one.video as { room: string }).room, (two.video as { room: string }).room);
   });
 });
