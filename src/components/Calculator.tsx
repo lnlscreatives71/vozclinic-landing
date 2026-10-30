@@ -1,10 +1,11 @@
 import { useLang } from '../context/LangContext';
+import { calculatorUrl } from '../utils/links';
 
 // Teaser band linking to the standalone ROI calculator at /calculadora/.
 // The full interactive tool lives on its own page to keep the funnel lean;
 // this band is the in-funnel entry point to it.
 export default function Calculator() {
-  const { t } = useLang();
+  const { lang, t } = useLang();
 
   return (
     <section className="bg-offwhite py-16" id="roi" aria-label="ROI calculator">
@@ -37,7 +38,7 @@ export default function Calculator() {
               })}
             </p>
             <a
-              href="/calculadora/"
+              href={calculatorUrl(lang)}
               className="inline-flex items-center gap-2 bg-gold hover:bg-gold-muted text-white font-bold text-base px-8 py-4 rounded-xl transition-colors"
             >
               {t({ es: 'Abrir la calculadora →', en: 'Open the calculator →' })}

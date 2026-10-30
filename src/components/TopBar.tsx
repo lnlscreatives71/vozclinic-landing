@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLang } from '../context/LangContext';
 import { nav } from '../data/content';
-import { bookDemoUrl } from '../utils/links';
+import { bookDemoUrl, calculatorUrl } from '../utils/links';
 import { featureNavPages, solutionsPage } from '../pages/manifest';
 
 export default function TopBar() {
@@ -77,7 +77,7 @@ export default function TopBar() {
           <a href={solutionsPage.path[lang]} className="hover:text-teal transition-colors">
             {t({ es: 'Soluciones', en: 'Solutions' })}
           </a>
-          <a href="/calculadora/" className="hover:text-teal transition-colors">
+          <a href={calculatorUrl(lang)} className="hover:text-teal transition-colors">
             {t({ es: 'Calculadora', en: 'Calculator' })}
           </a>
           <a href={lang === 'en' ? '/en/blog/' : '/blog/'} className="hover:text-teal transition-colors">

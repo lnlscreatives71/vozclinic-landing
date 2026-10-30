@@ -6,6 +6,11 @@ import type { Lang } from '../types/lang';
 export const bookDemoUrl = (lang: Lang): string =>
   lang === 'en' ? '/book-demo/' : '/agendar-demo/';
 
+// The standalone ROI calculator is one page with an in-page ES/EN toggle;
+// /en/calculadora/ (a Vercel rewrite to the same page) opens it in English.
+export const calculatorUrl = (lang: Lang): string =>
+  lang === 'en' ? '/en/calculadora/' : '/calculadora/';
+
 export const waUrl =
   `https://wa.me/526633154686?text=${encodeURIComponent('Hola Lainie, vi VozClinic y quiero agendar una demo.')}`;
 

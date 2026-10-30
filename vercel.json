@@ -30,5 +30,15 @@
       "destination": "/agendar-demo/",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/en/calculadora",
+      "destination": "/calculadora/index.html"
+    },
+    {
+      "source": "/en/calculadora/",
+      "destination": "/calculadora/index.html"
+    }
   ]
 }

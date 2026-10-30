@@ -6,7 +6,7 @@ import type { Lang } from '../types/lang';
 import TopBar from '../components/TopBar';
 import FloatingWhatsApp from '../components/FloatingWhatsApp';
 import Footer from '../components/Footer';
-import { bookDemoUrl } from '../utils/links';
+import { bookDemoUrl, calculatorUrl } from '../utils/links';
 import { featurePages } from './manifest';
 
 // Shared building blocks for the feature pages (see manifest.ts). Pre-launch:
@@ -93,7 +93,7 @@ export function FeatureHero({
               {t({ es: 'Agenda una demo →', en: 'Book a demo →' })}
             </a>
             <a
-              href="/calculadora/"
+              href={calculatorUrl(lang)}
               className="inline-flex items-center border border-gray-300 text-charcoal font-semibold px-6 py-3.5 rounded-xl hover:bg-charcoal/5 transition-colors"
             >
               {t({ es: 'Calcula tu ROI', en: 'Calculate your ROI' })}

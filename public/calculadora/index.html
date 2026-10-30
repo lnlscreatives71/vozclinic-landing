@@ -463,7 +463,8 @@ function calc(){
 }
 
 ['inbound','appts','value','missed','noshow','hours','rate'].forEach(id=>$(id).addEventListener('input',calc));
-setLang('es');
+// Start in English when reached as /en/calculadora/ (Vercel rewrite) or with ?lang=en.
+setLang(/^\/en(\/|$)/.test(location.pathname) || new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'es');
 </script>
 
 <a href="https://wa.me/526633154686?text=Hola%20Lainie%2C%20vi%20VozClinic%20y%20tengo%20una%20pregunta." target="_blank" rel="noopener noreferrer" aria-label="Chatear por WhatsApp" style="position:fixed;bottom:20px;right:20px;z-index:9999;display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.2);text-decoration:none;">
