@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { useLang } from '../context/LangContext';
 import { nav } from '../data/content';
 import { bookDemoUrl, calculatorUrl } from '../utils/links';
@@ -6,30 +5,13 @@ import { featureNavPages, solutionsPage } from '../pages/manifest';
 
 export default function TopBar() {
   const { lang, t } = useLang();
-  const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
 
-  useEffect(() => {
-    // Slide the bar up out of view while scrolling down; bring it back on scroll up.
-    let lastY = window.scrollY;
-    const onScroll = () => {
-      const y = window.scrollY;
-      setScrolled(y > 40);
-      if (Math.abs(y - lastY) < 6) return;
-      setHidden(y > lastY && y > 120);
-      lastY = y;
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
+  // Sits at the top of the page and scrolls away with the content. It used to
+  // be position:fixed and slide in and out with the scroll direction, which
+  // read as the menu following you down the page.
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
-      } ${hidden ? '-translate-y-full' : 'translate-y-0'}`}
-    >
-      <div className="section-container flex items-center justify-between h-24 sm:h-32 gap-4">
+    <header className="absolute top-0 left-0 right-0 z-40 bg-white/95 shadow-sm">
+      <div className="section-container px-4 sm:px-6 flex items-center justify-between h-20 sm:h-32 gap-3 sm:gap-4">
         {/* Logo */}
         <a
           href="/"
@@ -39,14 +21,14 @@ export default function TopBar() {
           <img
             src="/vozclinic-logo.png"
             alt="VozClinic"
-            className="h-20 sm:h-28 w-auto"
+            className="h-11 sm:h-28 w-auto"
             width="440"
             height="88"
           />
         </a>
 
         {/* Primary nav */}
-        <nav className="hidden md:flex items-center gap-7 text-sm font-semibold text-charcoal">
+        <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-charcoal">
           {/* CSS-only dropdown (hover + focus-within) so it works prerendered, no JS */}
           <div className="relative group">
             <a
@@ -86,32 +68,33 @@ export default function TopBar() {
         </nav>
 
         {/* Right side */}
-        <div className="flex items-center gap-3 sm:gap-4">
-          {/* Language toggle — real URLs so each language is indexable */}
+        <div className="flex items-center gap-2 sm:gap-4">
+          {/* Language toggle — real URLs so each language is indexable. On phones only
+              the other language shows, to keep the bar inside a 320px screen. */}
           <div
-            className="flex items-center gap-1 text-sm font-semibold"
+            className="flex items-center gap-0.5 sm:gap-1 text-xs sm:text-sm font-semibold"
             role="group"
             aria-label="Language selection"
           >
             <a
               href="/"
               hrefLang="es"
-              className={`px-2 py-1 rounded transition-colors ${
+              className={`px-1.5 sm:px-2 py-1 rounded transition-colors ${
                 lang === 'es'
-                  ? 'text-teal bg-teal/10'
+                  ? 'hidden sm:inline text-teal bg-teal/10'
                   : 'text-gray-400 hover:text-charcoal'
               }`}
               aria-current={lang === 'es' ? 'page' : undefined}
             >
               ES
             </a>
-            <span className="text-gray-300 select-none">|</span>
+            <span className="hidden sm:inline text-gray-300 select-none">|</span>
             <a
               href="/en/"
               hrefLang="en"
-              className={`px-2 py-1 rounded transition-colors ${
+              className={`px-1.5 sm:px-2 py-1 rounded transition-colors ${
                 lang === 'en'
-                  ? 'text-teal bg-teal/10'
+                  ? 'hidden sm:inline text-teal bg-teal/10'
                   : 'text-gray-400 hover:text-charcoal'
               }`}
               aria-current={lang === 'en' ? 'page' : undefined}
@@ -123,9 +106,11 @@ export default function TopBar() {
           {/* CTA */}
           <a
             href={bookDemoUrl(lang)}
-            className="inline-flex items-center bg-teal text-white text-sm font-semibold px-3 py-2 sm:px-4 rounded-xl hover:bg-teal-dark transition-colors"
+            className="inline-flex items-center whitespace-nowrap bg-teal text-white text-xs sm:text-sm font-semibold px-2.5 py-2 sm:px-4 rounded-xl hover:bg-teal-dark transition-colors"
           >
-            {t(nav.cta)}
+            {/* The arrow is dropped on phones so the bar fits a 320px screen. */}
+            {t(nav.cta).replace(/\s*→$/, '')}
+            <span aria-hidden="true" className="hidden sm:inline">&nbsp;→</span>
           </a>
         </div>
       </div>
