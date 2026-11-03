@@ -1,9 +1,15 @@
+import { useEffect, useState } from 'react';
 import { useLang } from '../context/LangContext';
 import { pricing } from '../data/content';
 import { bookDemoUrl } from '../utils/links';
 
 export default function Pricing() {
   const { lang, t } = useLang();
+  // Rendered at build time; hidden on the client once the promotion has ended.
+  const [promoLive, setPromoLive] = useState(true);
+  useEffect(() => {
+    if (Date.now() >= Date.parse(pricing.promoEnds)) setPromoLive(false);
+  }, []);
 
   return (
     <section className="bg-white py-24" id="precios" aria-label="Pricing">
@@ -27,6 +33,14 @@ export default function Pricing() {
             </p>
           </div>
         </div>
+
+        {/* Time-limited promotion */}
+        {promoLive && (
+          <div className="max-w-3xl mx-auto -mt-6 mb-12 rounded-2xl border border-gold/40 bg-gold/10 px-6 py-5 text-center">
+            <p className="font-bold text-charcoal">{t(pricing.promo.title)}</p>
+            <p className="text-sm text-charcoal/80 mt-1 leading-relaxed">{t(pricing.promo.body)}</p>
+          </div>
+        )}
 
         {/* Plans grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">

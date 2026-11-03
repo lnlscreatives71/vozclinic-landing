@@ -291,6 +291,16 @@ export const pricing = {
     es: 'Detalles de cobro, conversaciones y tipo de cambio en los Términos',
     en: 'Billing, conversation and exchange-rate details are in our Terms',
   } as Bilingual,
+  // November 2026 promotion. Hidden automatically after `promoEnds`
+  // (end of Nov 30, 2026, Tijuana time). Remove or replace once it expires.
+  promoEnds: '2026-12-01T00:00:00-08:00',
+  promo: {
+    title: { es: 'Promoción de noviembre', en: 'November offer' } as Bilingual,
+    body: {
+      es: 'Inscríbete a más tardar el 30 de noviembre de 2026: el primer mes de tu plan es gratis y no pagas la implementación ($399 USD). También aplica para miembros del Baja Health Cluster, que ya tienen la implementación incluida. No incluye complementos.',
+      en: 'Sign up by November 30, 2026: your first month on any plan is free, and the $399 USD implementation fee is waived. Baja Health Cluster members qualify too (their implementation is already included). Add-ons are not included.',
+    } as Bilingual,
+  },
 };
 
 // ──────────────────────────────────────────────────────────────
