@@ -54,6 +54,25 @@ const UI = {
     by: 'Por',
     toggleLabel: 'EN',
     toggleAria: 'Switch to English',
+    otherLangName: 'English',
+    nav: {
+      features: 'Funciones',
+      featureLinks: [
+        ['Recepcionista 24/7', '/funciones/recepcionista/'],
+        ['Agenda y recordatorios', '/funciones/agenda/'],
+        ['Comunicación y reactivación', '/funciones/comunicacion/'],
+        ['Seguros e intake', '/funciones/seguros/'],
+      ],
+      links: [
+        ['Soluciones', '/soluciones/'],
+        ['Calculadora', '/calculadora/'],
+        ['Blog', '/blog/'],
+        ['Contacto', '/#contacto'],
+      ],
+      cta: ['Agenda una demo', '/agendar-demo/'],
+      menu: 'Menú',
+      menuLabel: 'Menú principal',
+    },
     metaListDesc: 'Artículos de VozClinic para clínicas dentales y médicas en Baja California.',
     footerText: '¿Preguntas? Escríbeme a',
     footerOr: 'o por',
@@ -69,6 +88,25 @@ const UI = {
     by: 'By',
     toggleLabel: 'ES',
     toggleAria: 'Cambiar a español',
+    otherLangName: 'Español',
+    nav: {
+      features: 'Features',
+      featureLinks: [
+        ['24/7 receptionist', '/en/features/receptionist/'],
+        ['Scheduling & reminders', '/en/features/scheduling/'],
+        ['Communication & reactivation', '/en/features/communication/'],
+        ['Insurance & intake', '/en/features/insurance/'],
+      ],
+      links: [
+        ['Solutions', '/en/solutions/'],
+        ['Calculator', '/en/calculadora/'],
+        ['Blog', '/en/blog/'],
+        ['Contact', '/en/#contacto'],
+      ],
+      cta: ['Book a demo', '/book-demo/'],
+      menu: 'Menu',
+      menuLabel: 'Main menu',
+    },
     metaListDesc: 'VozClinic articles for dental and medical clinics in Baja California.',
     footerText: 'Questions? Email me at',
     footerOr: 'or via',
@@ -115,16 +153,46 @@ function fmtDate(iso, lang) {
 
 function chrome(lang, toggleHref) {
   const u = UI[lang];
-  const header = `  <header>
+  const n = u.nav;
+  const link = ([label, href]) => `<a href="${href}">${esc(label)}</a>`;
+  // Same links as the React top bar (src/components/TopBar.tsx). Full nav from
+  // 1024px; below that a native <details> menu, which needs no JS.
+  const header = `  <header class="blog-header">
     <div class="nav-container">
-      <a href="/" class="logo-link" aria-label="VozClinic Home">
+      <a href="${lang === 'en' ? '/en/' : '/'}" class="logo-link" aria-label="VozClinic Home">
         <svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="100" height="100" rx="20" fill="#008080"/>
           <path d="M 20 25 L 46 80 Q 50 88 54 80 L 80 25 L 64 25 L 50 56 L 36 25 Z" fill="#FFFFFF"/>
         </svg>
         <span class="logo-text">VozClinic</span>
       </a>
-      <a href="${toggleHref}" class="lang-toggle" aria-label="${u.toggleAria}">${u.toggleLabel}</a>
+      <nav class="site-nav" aria-label="${esc(n.menuLabel)}">
+        <div class="nav-drop">
+          <a href="${n.featureLinks[0][1]}" aria-haspopup="true">${esc(n.features)} <span aria-hidden="true">▾</span></a>
+          <div class="nav-drop-panel">${n.featureLinks.map(link).join('')}</div>
+        </div>
+        ${n.links.map(link).join('\n        ')}
+      </nav>
+      <div class="nav-right">
+        <a href="${toggleHref}" class="lang-toggle" aria-label="${u.toggleAria}">${u.toggleLabel}</a>
+        <a href="${n.cta[1]}" class="nav-cta">${esc(n.cta[0])}</a>
+        <details class="nav-menu">
+          <summary aria-label="${esc(n.menu)}">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path class="i-open" d="M4 7h16M4 12h16M4 17h16"/><path class="i-close" d="M6 6l12 12M18 6L6 18"/>
+            </svg>
+          </summary>
+          <nav class="nav-menu-panel" aria-label="${esc(n.menuLabel)}">
+            <p class="nav-menu-kicker">${esc(n.features)}</p>
+            ${n.featureLinks.map(link).join('\n            ')}
+            <hr>
+            ${n.links.map(link).join('\n            ')}
+            <hr>
+            <a href="${n.cta[1]}" class="nav-menu-cta">${esc(n.cta[0])}</a>
+            <a href="${toggleHref}" class="nav-menu-lang">${esc(u.otherLangName)}</a>
+          </nav>
+        </details>
+      </div>
     </div>
   </header>`;
   const footer = `  <footer>
@@ -140,7 +208,40 @@ function chrome(lang, toggleHref) {
   return { header, footer };
 }
 
-const POST_STYLES = `    .post { padding-bottom: 2rem; }
+const POST_STYLES = `    /* Blog header: scrolls away with the page (the shared style.css makes it
+       sticky for the legal pages), full nav from 1024px, <details> menu below. */
+    header.blog-header { position: relative; }
+    .blog-header .nav-container { gap: 1rem; }
+    .blog-header .site-nav { display: none; align-items: center; gap: 1.5rem; font: 600 0.9rem 'Inter', sans-serif; }
+    .blog-header .site-nav a { color: #1F2937; text-decoration: none; }
+    .blog-header .site-nav a:hover { color: #008080; }
+    .blog-header .nav-drop { position: relative; }
+    .blog-header .nav-drop-panel { display: none; position: absolute; left: 0; top: 100%; padding-top: 0.5rem; z-index: 10; }
+    .blog-header .nav-drop:hover .nav-drop-panel, .blog-header .nav-drop:focus-within .nav-drop-panel { display: block; }
+    .blog-header .nav-drop-panel a { display: block; white-space: nowrap; background: #fff; padding: 0.6rem 1rem; border-left: 1px solid #E5E7EB; border-right: 1px solid #E5E7EB; }
+    .blog-header .nav-drop-panel a:first-child { border-top: 1px solid #E5E7EB; border-radius: 0.75rem 0.75rem 0 0; }
+    .blog-header .nav-drop-panel a:last-child { border-bottom: 1px solid #E5E7EB; border-radius: 0 0 0.75rem 0.75rem; box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+    .blog-header .nav-right { display: flex; align-items: center; gap: 0.75rem; }
+    .blog-header .nav-cta { display: none; background: #008080; color: #fff; font: 600 0.875rem 'Inter', sans-serif; padding: 0.55rem 1rem; border-radius: 0.75rem; text-decoration: none; white-space: nowrap; }
+    .blog-header .nav-cta:hover { background: #006666; }
+    .blog-header .nav-menu summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 0.75rem; color: #1F2937; }
+    .blog-header .nav-menu summary::-webkit-details-marker { display: none; }
+    .blog-header .nav-menu summary:hover { background: #F3F4F6; }
+    .blog-header .nav-menu .i-close, .blog-header .nav-menu[open] .i-open { display: none; }
+    .blog-header .nav-menu[open] .i-close { display: inline; }
+    .blog-header .nav-menu-panel { position: absolute; left: 0; right: 0; top: 100%; background: #fff; border-top: 1px solid #E5E7EB; box-shadow: 0 12px 24px rgba(0,0,0,0.08); padding: 0.75rem 1.5rem 1rem; max-height: calc(100vh - 80px); overflow-y: auto; z-index: 20; font: 600 0.95rem 'Inter', sans-serif; }
+    .blog-header .nav-menu-panel a { display: block; color: #1F2937; text-decoration: none; padding: 0.65rem 0.25rem; }
+    .blog-header .nav-menu-panel a:hover { color: #008080; }
+    .blog-header .nav-menu-panel hr { border: 0; border-top: 1px solid #F3F4F6; margin: 0.5rem 0; }
+    .blog-header .nav-menu-kicker { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #9CA3AF; padding: 0.5rem 0.25rem 0.25rem; }
+    .blog-header .nav-menu-panel .nav-menu-cta { color: #008080; }
+    .blog-header .nav-menu-panel .nav-menu-lang { color: #6B7280; }
+    @media (min-width: 640px) { .blog-header .nav-cta { display: inline-block; } }
+    @media (min-width: 1024px) {
+      .blog-header .site-nav { display: flex; }
+      .blog-header .nav-menu { display: none; }
+    }
+    .post { padding-bottom: 2rem; }
     .post .post-meta { color: #6B7280; font-size: 0.9rem; margin-bottom: 2rem; }
     .post h2 { color: #006666; font-size: 1.4rem; margin: 2.25rem 0 0.75rem; }
     .post h3 { color: #1F2937; font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
