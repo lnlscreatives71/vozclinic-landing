@@ -16,6 +16,7 @@ import ChannelsAndAddons from './components/ChannelsAndAddons';
 import FAQ from './components/FAQ';
 import FounderNote from './components/FounderNote';
 import FinalCTA from './components/FinalCTA';
+import Contact from './components/Contact';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Footer from './components/Footer';
 import SofiaAgent from './components/sofia/SofiaAgent';
@@ -40,6 +41,7 @@ export default function App({ initialLang = 'es' }: { initialLang?: Lang }) {
           <FAQ />
           <FounderNote />
           <FinalCTA />
+          <Contact />
         </main>
         <FloatingWhatsApp />
         <Footer />

@@ -27,6 +27,9 @@ export default function TopBar() {
     };
   }, []);
 
+  // The contact form lives at the bottom of the home page in each language.
+  const contactHref = lang === 'en' ? '/en/#contacto' : '/#contacto';
+
   const otherLang = lang === 'es'
     ? { href: '/en/', hrefLang: 'en', label: 'English' }
     : { href: '/', hrefLang: 'es', label: 'Español' };
@@ -53,7 +56,7 @@ export default function TopBar() {
         </a>
 
         {/* Primary nav */}
-        <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-charcoal">
+        <nav className="hidden xl:flex items-center gap-7 text-sm font-semibold text-charcoal">
           {/* CSS-only dropdown (hover + focus-within) so it works prerendered, no JS */}
           <div className="relative group">
             <a
@@ -89,6 +92,9 @@ export default function TopBar() {
           </a>
           <a href={lang === 'en' ? '/en/blog/' : '/blog/'} className="hover:text-teal transition-colors">
             Blog
+          </a>
+          <a href={contactHref} className="hover:text-teal transition-colors">
+            {t({ es: 'Contacto', en: 'Contact' })}
           </a>
         </nav>
 
@@ -138,8 +144,8 @@ export default function TopBar() {
             <span aria-hidden="true" className="hidden sm:inline">&nbsp;→</span>
           </a>
 
-          {/* Mobile / tablet menu: the full nav only fits from 1024px (lg). */}
-          <details ref={menuRef} className="group/menu lg:hidden">
+          {/* Mobile / tablet menu: the full nav only fits from 1280px (xl). */}
+          <details ref={menuRef} className="group/menu xl:hidden">
             <summary
               className="list-none [&::-webkit-details-marker]:hidden cursor-pointer flex items-center justify-center w-9 sm:w-10 h-10 -mr-1.5 rounded-xl text-charcoal hover:bg-gray-100 transition-colors"
               aria-label={t({ es: 'Menú', en: 'Menu' })}
@@ -175,6 +181,9 @@ export default function TopBar() {
                 </a>
                 <a href={lang === 'en' ? '/en/blog/' : '/blog/'} className="block rounded-xl px-3 py-2.5 hover:bg-teal/5 transition-colors">
                   Blog
+                </a>
+                <a href={contactHref} className="block rounded-xl px-3 py-2.5 hover:bg-teal/5 transition-colors">
+                  {t({ es: 'Contacto', en: 'Contact' })}
                 </a>
                 <div className="my-2 border-t border-gray-100" />
                 <a

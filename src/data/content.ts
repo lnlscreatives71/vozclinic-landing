@@ -280,17 +280,19 @@ export const pricing = {
       highlight: false,
     },
   ],
-  fxNote: {
-    es: 'Montos en pesos calculados a 16.97 MXN por dólar (27 de agosto de 2026). Son solo de referencia y cambian con el tipo de cambio.',
-    en: 'Peso amounts calculated at 16.97 MXN per dollar (27 August 2026). Reference only, and they move with the exchange rate.',
-  } as Bilingual,
   addons: {
-    es: 'Seguros y reclamaciones es un complemento disponible en cualquier plan: $149 USD/mes más $2 USD por revisión (cada verificación de beneficios o seguimiento de reclamación). Antes de la cita, Sofía llama a la aseguradora para confirmar beneficios, vigencia y si se requiere autorización previa; después, da seguimiento al estatus de tus reclamaciones y, si una se rechaza, le pasa la información a tu clínica para la apelación. Las promociones y la reactivación de listas también son complementos opcionales. Las campañas salientes (promociones y reactivación) se activan una vez que Meta aprueba tu cuenta de WhatsApp Business; contestar a tus pacientes funciona desde el primer día.',
-    en: 'Insurance & Claims is an add-on available on any plan: $149 USD/mo plus $2 USD per check (each benefits verification or claim follow-up). Before the visit, Sofía calls the insurer to confirm benefits, eligibility, and whether pre-authorization is required; afterward, she follows up on your claim status and, if a claim is denied, passes the details to your clinic for the appeal. Promotions and list reactivation are optional add-ons too. Outbound campaigns (promotions and reactivation) switch on once Meta approves your WhatsApp Business account; answering your patients works from day one.',
+    es: 'Complementos para cualquier plan: Seguros y reclamaciones ($149 USD/mes + $2 USD por revisión), promociones y reactivación de pacientes.',
+    en: 'Add-ons for any plan: Insurance & Claims ($149 USD/mo + $2 USD per check), promotions and patient reactivation.',
   } as Bilingual,
+  // The billing detail (tax, currency, exchange rate, how conversations are
+  // counted, overage, add-on terms) lives in section 8 of /terminos/ and /terms/.
   footer: {
-    es: 'Los precios no incluyen impuestos. Cobramos en USD; el monto en pesos es aproximado y varía según el tipo de cambio del día. El tratamiento fiscal y la facturación que corresponden a tu clínica se establecen en tu acuerdo de servicio. Sin contratos a largo plazo, cancela cuando quieras. Implementación: $399 USD, pago único (incluida para miembros del Baja Health Cluster). Una conversación cuenta cuando tiene más de dos turnos; las conversaciones arriba del límite de tu plan se cobran por uso. Incluye WhatsApp Business API oficial y soporte en español.',
-    en: 'Prices do not include tax. We bill in USD; the peso amount is approximate and moves with the daily exchange rate. The tax treatment and invoicing that apply to your clinic are set out in your service agreement. No long-term contracts, cancel anytime. Implementation: $399 USD, one time (included for Baja Health Cluster members). A conversation counts once it has more than two turns; conversations above the limit of your plan are billed by usage. Includes official WhatsApp Business API and Spanish-language support.',
+    es: 'Implementación: $399 USD, pago único (incluida para miembros del Baja Health Cluster).',
+    en: 'Implementation: $399 USD, one time (included for Baja Health Cluster members).',
+  } as Bilingual,
+  termsLink: {
+    es: 'Detalles de cobro, conversaciones y tipo de cambio en los Términos',
+    en: 'Billing, conversation and exchange-rate details are in our Terms',
   } as Bilingual,
 };
 
@@ -434,7 +436,7 @@ export const footerData = {
       { label: { es: 'Sobre nosotros', en: 'About us' } as Bilingual, href: '#' },
       { label: { es: 'Afiliados', en: 'Affiliates' } as Bilingual, href: { es: '/afiliados/', en: '/affiliates/' } as Bilingual },
       { label: { es: 'Blog', en: 'Blog' } as Bilingual, href: '/blog/' },
-      { label: { es: 'Contacto', en: 'Contact' } as Bilingual, href: '#' },
+      { label: { es: 'Contacto', en: 'Contact' } as Bilingual, href: { es: '/#contacto', en: '/en/#contacto' } as Bilingual },
     ],
   },
 };

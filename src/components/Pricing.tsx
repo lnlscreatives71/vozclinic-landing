@@ -86,14 +86,6 @@ export default function Pricing() {
               >
                 {t({ es: 'Agendar una demo →', en: 'Book a demo →' })}
               </a>
-
-              {/* Add-ons note */}
-              <p className={`text-xs text-center mt-3 ${plan.highlight ? 'text-white/70' : 'text-gray-400'}`}>
-                {t({
-                  es: 'Lanzamiento previsto: septiembre 2026',
-                  en: 'Expected release: September 2026',
-                })}
-              </p>
             </div>
           ))}
         </div>
@@ -106,15 +98,16 @@ export default function Pricing() {
           </p>
         </div>
 
-        {/* Footer note */}
+        {/* Footer note: one line here, the full billing detail is in the Terms */}
         <p className="text-center text-gray-400 text-sm mt-6 max-w-2xl mx-auto">
-          {t(pricing.footer)}
-        </p>
-
-        {/* Exchange rate the peso figures were derived from, dated so a stale
-            number reads as out of date rather than as a second price. */}
-        <p className="text-center text-gray-400 text-xs mt-3 max-w-2xl mx-auto">
-          {t(pricing.fxNote)}
+          {t(pricing.footer)}{' '}
+          <a
+            href={lang === 'en' ? '/terms/#pricing' : '/terminos/#precios'}
+            className="underline underline-offset-2 hover:text-teal transition-colors"
+          >
+            {t(pricing.termsLink)}
+          </a>
+          .
         </p>
       </div>
     </section>
