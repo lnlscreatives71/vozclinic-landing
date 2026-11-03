@@ -297,9 +297,11 @@ export const pricing = {
   promo: {
     title: { es: 'Promoción de noviembre', en: 'November offer' } as Bilingual,
     body: {
-      es: 'Inscríbete a más tardar el 30 de noviembre de 2026: el primer mes de tu plan es gratis y no pagas la implementación ($399 USD). También aplica para miembros del Baja Health Cluster, que ya tienen la implementación incluida. No incluye complementos.',
-      en: 'Sign up by November 30, 2026: your first month on any plan is free, and the $399 USD implementation fee is waived. Baja Health Cluster members qualify too (their implementation is already included). Add-ons are not included.',
+      es: 'Contrata a más tardar el 30 de noviembre de 2026 (hora de Tijuana): la mensualidad de tu primer mes es gratis y no pagas la implementación ($399 USD). Para clínicas nuevas, una vez por clínica; también aplica para miembros del Baja Health Cluster. Los complementos se cobran a su precio normal.',
+      en: 'Sign up by November 30, 2026 (Tijuana time): your first month\'s plan fee is free and the $399 USD implementation fee is waived. New clinics, once per clinic; Baja Health Cluster members qualify too. Add-ons are billed at their regular price.',
     } as Bilingual,
+    cta: { es: 'Menciónala al agendar tu demo →', en: 'Mention it when you book your demo →' } as Bilingual,
+    footerNote: { es: ' Sin costo con la promoción de noviembre.', en: ' Waived under the November offer.' } as Bilingual,
   },
 };
 
