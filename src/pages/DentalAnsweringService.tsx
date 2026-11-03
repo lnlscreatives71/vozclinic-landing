@@ -9,10 +9,8 @@ import {
   ChannelsRibbon,
   MoreFeatures,
   FeatureCTA,
-  onboardingSteps,
-  pricingAnswer,
-  fitFaq,
 } from './featureShared';
+import { onboardingSteps, pricingAnswer, fitFaq } from './featureContent';
 
 // Keyword landing page: "dental answering service" (EN) /
 // "servicio de contestación dental" (ES). Prerendered bilingual route

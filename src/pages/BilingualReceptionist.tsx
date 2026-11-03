@@ -9,10 +9,8 @@ import {
   ChannelsRibbon,
   MoreFeatures,
   FeatureCTA,
-  onboardingSteps,
-  pricingAnswer,
-  fitFaq,
 } from './featureShared';
+import { onboardingSteps, pricingAnswer, fitFaq } from './featureContent';
 
 // Keyword landing page: "bilingual virtual receptionist" (EN) /
 // "recepcionista virtual bilingüe" (ES). Prerendered bilingual route
