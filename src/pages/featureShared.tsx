@@ -348,8 +348,8 @@ export const onboardingSteps: Step[] = [
 ];
 
 export const pricingAnswer: B = {
-  es: 'Desde $299 USD al mes más impuestos en el plan Esencial: 1 doctor, 1 ubicación y hasta 600 conversaciones. El plan Profesional cuesta $599 USD para 2 a 4 doctores y hasta 1,500 conversaciones. Sin contratos a largo plazo.',
-  en: 'From $299 USD a month plus tax on Essential: 1 doctor, 1 location, and up to 600 conversations. Professional is $599 USD for 2 to 4 doctors and up to 1,500 conversations. No long-term contracts.',
+  es: 'Desde $299 USD al mes en el plan Esencial (impuestos no incluidos): 1 doctor, 1 ubicación y hasta 600 conversaciones. El plan Profesional cuesta $599 USD para 2 a 4 doctores y hasta 1,500 conversaciones. Sin contratos a largo plazo.',
+  en: 'From $299 USD a month on Essential (taxes not included): 1 doctor, 1 location, and up to 600 conversations. Professional is $599 USD for 2 to 4 doctors and up to 1,500 conversations. No long-term contracts.',
 };
 
 export const fitFaq: FaqItem = {

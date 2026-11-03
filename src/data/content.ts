@@ -247,8 +247,8 @@ export const demo = {
 export const pricing = {
   title: { es: 'Precios mensuales', en: 'Monthly pricing' } as Bilingual,
   subtitle: {
-    es: 'Precios más impuestos aplicables, sin contratos a largo plazo. Cambia de plan cuando tu volumen cambie.',
-    en: 'Prices plus applicable tax, no long-term contracts. Change plans when your volume changes.',
+    es: 'Sin contratos a largo plazo. Cambia de plan cuando tu volumen cambie.',
+    en: 'No long-term contracts. Change plans when your volume changes.',
   } as Bilingual,
   plans: [
     {
@@ -280,12 +280,9 @@ export const pricing = {
       highlight: false,
     },
   ],
-  addons: {
-    es: 'Complementos para cualquier plan: Seguros y reclamaciones ($149 USD/mes + $2 USD por revisión), promociones y reactivación de pacientes.',
-    en: 'Add-ons for any plan: Insurance & Claims ($149 USD/mo + $2 USD per check), promotions and patient reactivation.',
-  } as Bilingual,
   // The billing detail (tax, currency, exchange rate, how conversations are
-  // counted, overage, add-on terms) lives in section 8 of /terminos/ and /terms/.
+  // counted, overage, add-on terms) lives in section 8 of /terminos/ and /terms/;
+  // add-on descriptions and prices are also on /canales/ and /channels/.
   footer: {
     es: 'Implementación: $399 USD, pago único (incluida para miembros del Baja Health Cluster).',
     en: 'Implementation: $399 USD, one time (included for Baja Health Cluster members).',
@@ -312,8 +309,8 @@ export const faq = {
     {
       q: { es: '¿Cuánto cuesta una recepcionista virtual con IA para mi clínica?', en: 'How much does an AI receptionist cost for a clinic?' } as Bilingual,
       a: {
-        es: 'VozClinic empieza en $299 USD al mes más impuestos: 1 doctor, 1 ubicación y hasta 600 conversaciones. El plan Profesional cuesta $599 USD para 2 a 4 doctores. Sin contratos a largo plazo y con tu mismo número de WhatsApp.',
-        en: 'VozClinic starts at $299 USD a month plus tax: 1 doctor, 1 location, and up to 600 conversations. Professional is $599 USD for 2 to 4 doctors. No long-term contracts, and you keep your WhatsApp number.',
+        es: 'VozClinic empieza en $299 USD al mes (impuestos no incluidos): 1 doctor, 1 ubicación y hasta 600 conversaciones. El plan Profesional cuesta $599 USD para 2 a 4 doctores. Sin contratos a largo plazo y con tu mismo número de WhatsApp.',
+        en: 'VozClinic starts at $299 USD a month (taxes not included): 1 doctor, 1 location, and up to 600 conversations. Professional is $599 USD for 2 to 4 doctors. No long-term contracts, and you keep your WhatsApp number.',
       } as Bilingual,
     },
     {
