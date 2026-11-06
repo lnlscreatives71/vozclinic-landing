@@ -1,9 +1,16 @@
+import { useSyncExternalStore } from 'react';
 import { useLang } from '../context/LangContext';
 import { pricing } from '../data/content';
 import { bookDemoUrl } from '../utils/links';
 
 export default function Pricing() {
   const { lang, t } = useLang();
+  // Prerendered as live; hidden on the client once the promotion has ended.
+  const promoLive = useSyncExternalStore(
+    () => () => {},
+    () => Date.now() < Date.parse(pricing.promoEnds),
+    () => true,
+  );
 
   return (
     <section className="bg-white py-24" id="precios" aria-label="Pricing">
@@ -27,6 +34,17 @@ export default function Pricing() {
             </p>
           </div>
         </div>
+
+        {/* Time-limited promotion */}
+        {promoLive && (
+          <div className="max-w-3xl mx-auto -mt-6 mb-12 rounded-2xl border border-gold/40 bg-gold/10 px-6 py-5 text-left sm:text-center">
+            <h3 className="font-bold text-charcoal">{t(pricing.promo.title)}</h3>
+            <p className="text-sm text-charcoal/80 mt-1 leading-relaxed">{t(pricing.promo.body)}</p>
+            <a href={bookDemoUrl(lang)} className="inline-block mt-2 text-sm font-semibold text-teal hover:text-teal-dark underline underline-offset-2">
+              {t(pricing.promo.cta)}
+            </a>
+          </div>
+        )}
 
         {/* Plans grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
@@ -95,7 +113,8 @@ export default function Pricing() {
 
         {/* Footer note: one line here, the full billing detail is in the Terms */}
         <p className="text-center text-gray-400 text-sm mt-10 max-w-2xl mx-auto">
-          {t(pricing.footer)}{' '}
+          {t(pricing.footer)}
+          {promoLive && t(pricing.promo.footerNote)}{' '}
           <a
             href={lang === 'en' ? '/terms/#pricing' : '/terminos/#precios'}
             className="underline underline-offset-2 hover:text-teal transition-colors"
