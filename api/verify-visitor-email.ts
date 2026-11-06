@@ -25,7 +25,7 @@ import {
   type GateState,
   type IpFailMap,
   type RejectCode,
-} from "./_email-gate.ts";
+} from "./_email-gate.js";
 
 const ORIGIN_ALLOWLIST = [
   /^https:\/\/vozclinic\.com$/,
