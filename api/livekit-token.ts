@@ -23,7 +23,7 @@ export const config = { runtime: "nodejs" };
 
 import { randomUUID } from "node:crypto";
 import { AccessToken, RoomConfiguration } from "livekit-server-sdk";
-import { VOZ_EMAIL_PROOF_ATTR, emailProofMatches, normalizeVisitorEmail } from "./_email-gate.ts";
+import { VOZ_EMAIL_PROOF_ATTR, emailProofMatches, normalizeVisitorEmail } from "./_email-gate.js";
 
 /** The only agent this endpoint ever dispatches: Sofía, the website demo. */
 const WEBSITE_AGENT = "vozclinic";
