@@ -109,7 +109,7 @@
   .line{display:flex;justify-content:space-between;align-items:center;padding:9px 0;font-size:14.5px}
   .line + .line{border-top:1px solid var(--line)}
   .line .k{color:var(--ink)}
-  .line .v{font-weight:700}
+  .line .v{font-weight:700;white-space:nowrap;margin-left:12px}
   .v.pos{color:var(--green)}
   .v.neg{color:var(--red)}
   .v.navy{color:var(--navy)}
@@ -218,7 +218,7 @@
       <div class="card roihead">
         <h2><span class="ic" aria-hidden="true">📈</span><span data-i="roiTitle">ROI anual</span></h2>
         <div class="roi-big" id="roi">…</div>
-        <div class="roi-cap" data-i="roiCap">Retorno sobre la inversión</div>
+        <div class="roi-cap" data-i="roiCap">Retorno calculado sobre ingreso, no utilidad</div>
         <div class="roi-be" id="be"></div>
       </div>
 
@@ -241,8 +241,8 @@
       <div class="card">
         <h2><span class="ic" aria-hidden="true">⏱️</span><span data-i="staffTitle">Ahorro en personal</span></h2>
         <div style="margin-top:10px">
-          <div class="line"><span class="k" data-i="st0a">Recordatorios al mes</span><span class="v navy" id="stRem"></span></div>
-          <div class="line"><span class="k" data-i="st0b">Otras tareas al mes</span><span class="v navy" id="stOther"></span></div>
+          <div class="line"><span class="k" data-i="st0a">Tiempo de personal en recordatorios</span><span class="v navy" id="stRem"></span></div>
+          <div class="line"><span class="k" data-i="st0b">Tiempo en otras tareas</span><span class="v navy" id="stOther"></span></div>
           <div class="line"><span class="k" data-i="st1">Ahorro mensual</span><span class="v navy" id="stMo"></span></div>
           <div class="line"><span class="k" data-i="st2">Ahorro anual</span><span class="v navy" id="stYr"></span></div>
         </div>
@@ -253,7 +253,7 @@
         <div class="line"><span class="k" data-i="t2">Costo anual de VozClinic</span><span class="v neg" id="tCost"></span></div>
         <div class="net"><span class="k" data-i="t3">Diferencia neta al año</span><span class="v" id="tNet"></span></div>
         <a class="cta gold" id="ctaBtn" href="https://www.vozclinic.com/agendar-demo/" target="_blank" rel="noopener" data-i="cta">Agenda una demo →</a>
-        <p class="note" data-i="note">Estimaciones ilustrativas con valores conservadores. Tus citas salen de las llamadas y mensajes que sí contestas; esa es tu tasa de cita. Las citas perdidas son las que no contestas multiplicadas por esa misma tasa. Sofía contesta todos, así que esas citas se recuperan, pero algunos de esos pacientes también faltarían, así que descontamos tu tasa de inasistencia. Los recordatorios cuentan solo como tiempo de personal (citas al mes × minutos por recordatorio); no sumamos la posible reducción de inasistencias, para que el cálculo sea conservador. El valor de la cita es ingreso, no utilidad. Ajusta los valores a tu clínica. Precios de lista: Esencial $299, Profesional $599, Avanzado $1,499 USD/mes.</p>
+        <p class="note" data-i="note">Estimaciones ilustrativas con valores conservadores. Tus citas salen de las llamadas y mensajes que sí contestas; esa es tu tasa de cita. Las citas perdidas son las que no contestas multiplicadas por esa misma tasa. Sofía contesta todas las llamadas y mensajes, así que esas citas se recuperan; como algunos de esos pacientes también faltarían, aplicamos tu tasa de inasistencia. Los recordatorios cuentan solo como tiempo de personal (citas al mes × minutos por recordatorio); no sumamos la posible reducción de inasistencias, para que el cálculo sea conservador. El valor de la cita es ingreso, no utilidad. Si parte de tus citas viene de seguimientos en consulta, baja «Citas al mes». Ajusta los valores a tu clínica. Precios de lista: Esencial $299, Profesional $599, Avanzado $1,499 USD/mes.</p>
       </div>
     </div>
   </div>
@@ -290,19 +290,19 @@ const T = {
     f0:"Llamadas y mensajes al mes", f1:"Citas al mes", f2:"Valor promedio de cita (USD)",
     f3:"Llamadas y mensajes sin contestar (%)", f4:"Tasa de inasistencia actual (%)",
     f5:"Otras horas de personal ahorradas al mes (sin contar recordatorios)", f6:"Costo del personal por hora (USD)", f7:"Minutos de personal por recordatorio (0 si hoy no los envías)",
-    roiTitle:"ROI anual", roiCap:"Retorno sobre la inversión",
+    roiTitle:"ROI anual", roiCap:"Retorno calculado sobre ingreso, no utilidad",
     revTitle:"Ingresos recuperados",
     fn0:"Llamadas y mensajes totales", fn1:"Contestadas al mes", fn2:"Sin contestar al mes", fn3:"Tasa de cita (de las contestadas)", rev0:"Citas perdidas al mes", rev0b:"De ellas, pacientes que sí llegarían", rev1:"Ingreso perdido al mes", rev2:"Recuperación mensual", rev3:"Recuperación anual",
     staffTitle:"Ahorro en personal",
-    st0a:"Recordatorios al mes", st0b:"Otras tareas al mes", st1:"Ahorro mensual", st2:"Ahorro anual",
+    st0a:"Tiempo de personal en recordatorios", st0b:"Tiempo en otras tareas", st1:"Ahorro mensual", st2:"Ahorro anual",
     t1:"Ingreso recuperado y ahorro al año", t2:"Costo anual de VozClinic", t3:"Diferencia neta al año",
     cta:"Agenda una demo →",
-    note:"Estimaciones ilustrativas con valores conservadores. Tus citas salen de las llamadas y mensajes que sí contestas; esa es tu tasa de cita. Las citas perdidas son las que no contestas multiplicadas por esa misma tasa. Sofía contesta todos, así que esas citas se recuperan, pero algunos de esos pacientes también faltarían, así que descontamos tu tasa de inasistencia. Los recordatorios cuentan solo como tiempo de personal (citas al mes × minutos por recordatorio); no sumamos la posible reducción de inasistencias, para que el cálculo sea conservador. El valor de la cita es ingreso, no utilidad. Ajusta los valores a tu clínica. Precios de lista: Esencial $299, Profesional $599, Avanzado $1,499 USD/mes.",
+    note:"Estimaciones ilustrativas con valores conservadores. Tus citas salen de las llamadas y mensajes que sí contestas; esa es tu tasa de cita. Las citas perdidas son las que no contestas multiplicadas por esa misma tasa. Sofía contesta todas las llamadas y mensajes, así que esas citas se recuperan; como algunos de esos pacientes también faltarían, aplicamos tu tasa de inasistencia. Los recordatorios cuentan solo como tiempo de personal (citas al mes × minutos por recordatorio); no sumamos la posible reducción de inasistencias, para que el cálculo sea conservador. El valor de la cita es ingreso, no utilidad. Si parte de tus citas viene de seguimientos en consulta, baja «Citas al mes». Ajusta los valores a tu clínica. Precios de lista: Esencial $299, Profesional $599, Avanzado $1,499 USD/mes.",
     footer:"VozClinic · Hecho en Tijuana",
     planNames:{esencial:"Esencial",pro:"Profesional",claims:"Avanzado"},
-    planTag:"Más popular", mo:"/mes",
-    be:(n)=>`Se paga sola con <b>${n}</b> ${n===1?"cita":"citas"} al mes que sí lleguen.`,
-    units:{appts:" citas", hrs:" hrs", apptsShort:" citas/año"},
+    planTag:"Recomendado", mo:"/mes",
+    be:(n)=>`El plan se paga solo con <b>${n}</b> ${n===1?"cita recuperada":"citas recuperadas"} al mes que sí ${n===1?"llegue":"lleguen"}.`, beShort:(x)=>` Con estos números recuperas ${x}.`,
+    units:{appts:" citas", hrs:" hrs"},
     warn:(b,a)=>`Con estos números contestas ${a} y agendas ${b}: no puedes agendar más citas de las que contestas. Sube las llamadas y mensajes o baja el % sin contestar. Calculamos con una tasa de cita de 100%.`
   },
   en:{
@@ -314,19 +314,19 @@ const T = {
     f0:"Calls and messages per month", f1:"Appointments per month", f2:"Average appointment value (USD)",
     f3:"Unanswered calls and messages (%)", f4:"Current no-show rate (%)",
     f5:"Other staff hours saved per month (excluding reminders)", f6:"Staff hourly cost (USD)", f7:"Staff minutes per reminder (0 if you send none today)",
-    roiTitle:"Annual ROI", roiCap:"Return on investment",
+    roiTitle:"Annual ROI", roiCap:"Return based on revenue, not profit",
     revTitle:"Revenue recovery",
     fn0:"Total calls and messages", fn1:"Answered per month", fn2:"Unanswered per month", fn3:"Booking rate (of answered)", rev0:"Appointments lost per month", rev0b:"Of those, patients who would show up", rev1:"Monthly revenue lost", rev2:"Monthly recovery", rev3:"Annual recovery",
     staffTitle:"Staff cost savings",
-    st0a:"Reminders per month", st0b:"Other tasks per month", st1:"Monthly savings", st2:"Annual savings",
-    t1:"Annual revenue recovered and savings", t2:"VozClinic annual cost", t3:"Net difference per year",
+    st0a:"Staff time on reminders", st0b:"Staff time on other tasks", st1:"Monthly savings", st2:"Annual savings",
+    t1:"Recovered revenue + savings per year", t2:"VozClinic annual cost", t3:"Net difference per year",
     cta:"Book a demo →",
-    note:"Illustrative estimates with conservative values. Your appointments come from the calls and messages you do answer; that is your booking rate. Lost appointments are the unanswered ones multiplied by that same rate. Sofía answers all of them, so those appointments are recovered, but some of those patients would also no-show, so we discount your no-show rate. Reminders count only as staff time (appointments per month × minutes per reminder); we don't add any possible no-show reduction, to keep the estimate conservative. Appointment value is revenue, not profit. Adjust the inputs to fit your clinic. List pricing: Essential $299, Professional $599, Advanced $1,499 USD/mo.",
+    note:"Illustrative estimates with conservative values. Your appointments come from the calls and messages you do answer; that is your booking rate. Lost appointments are the unanswered ones multiplied by that same rate. Sofía answers every call and message, so those appointments are recovered; since some of those patients would also no-show, we apply your no-show rate. Reminders count only as staff time (appointments per month × minutes per reminder); we don't add any possible no-show reduction, to keep the estimate conservative. Appointment value is revenue, not profit. If some of your appointments come from in-clinic follow-ups, lower “Appointments per month”. Adjust the inputs to fit your clinic. List pricing: Essential $299, Professional $599, Advanced $1,499 USD/mo.",
     footer:"VozClinic · Made in Tijuana",
     planNames:{esencial:"Essential",pro:"Professional",claims:"Advanced"},
-    planTag:"Most popular", mo:"/mo",
-    be:(n)=>`Pays for itself with <b>${n}</b> ${n===1?"appointment":"appointments"} a month that show up.`,
-    units:{appts:" appts", hrs:" hrs", apptsShort:" appts/yr"},
+    planTag:"Recommended", mo:"/mo",
+    be:(n)=>`The plan pays for itself with <b>${n}</b> recovered ${n===1?"appointment":"appointments"} a month that ${n===1?"shows":"show"} up.`, beShort:(x)=>` With these numbers you recover ${x}.`,
+    units:{appts:" appts", hrs:" hrs"},
     warn:(b,a)=>`With these numbers you answer ${a} and book ${b}: you can't book more appointments than you answer. Raise calls and messages or lower the unanswered %. We calculated with a 100% booking rate.`
   }
 };
@@ -397,12 +397,12 @@ function calc(){
   const lostApptsMo = missedMo*bookRate;
   const lostShowMo  = lostApptsMo*(1-noshow);
   const revLostMo   = lostShowMo*value;
-  const revRecovMo  = revLostMo*CAPTURE;
+  const revRecovMo  = Math.round(revLostMo*CAPTURE);
   const revRecovYr  = revRecovMo*12;
 
   // Staff savings: reminder time (appointments x minutes each) plus other hours.
-  const stRemMo   = appts*remmin/60*rate;
-  const stOtherMo = hours*rate;
+  const stRemMo   = Math.round(appts*remmin/60*rate);
+  const stOtherMo = Math.round(hours*rate);
   const stMo = stRemMo+stOtherMo;
   const stYr = stMo*12;
 
@@ -416,7 +416,7 @@ function calc(){
   const breakEven = Math.ceil(cost/value);
 
   $('roi').textContent = Math.round(roi).toLocaleString('en-US')+'%';
-  $('be').innerHTML = T[lang].be(breakEven);
+  $('be').innerHTML = T[lang].be(breakEven) + (lostShowMo<breakEven ? T[lang].beShort(lostShowMo.toFixed(1)+u.appts) : '');
   $('fnTotal').textContent=inbound.toLocaleString('en-US');
   $('fnAns').textContent=Math.round(answered).toLocaleString('en-US');
   $('fnMiss').textContent=Math.round(missedMo).toLocaleString('en-US');
@@ -425,7 +425,7 @@ function calc(){
   $('warn').textContent=impossible?T[lang].warn(appts.toLocaleString('en-US'),Math.round(answered).toLocaleString('en-US')):'';
   $('lostAppts').textContent=lostApptsMo.toFixed(1)+u.appts;
   $('lostShow').textContent=lostShowMo.toFixed(1)+u.appts;
-  $('revLost').textContent='-'+money(revLostMo);
+  $('revLost').textContent='-'+money(revRecovMo);
   $('revMo').textContent='+'+money(revRecovMo);
   $('revYr').textContent='+'+money(revRecovYr);
   $('stRem').textContent=money(stRemMo);
